@@ -31,6 +31,7 @@
   * [Relationships](catalog/products/relationships/README.md)
     * [Brand Relationship](catalog/products/relationships/brand-relationship.md)
     * [Category Relationship](catalog/products/relationships/category-relationship.md)
+    * [Collection Relationships](catalog/products/relationships/collection-relationships.md)
 * [Product Variations](catalog/product-variations/README.md)
   * [Options](catalog/product-variations/options/README.md)
     * [Create Product Variation](catalog/product-variations/options/create-product-variation.md)
