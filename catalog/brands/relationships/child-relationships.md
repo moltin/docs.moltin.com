@@ -6,7 +6,7 @@ Create Child Brand Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent brand. If any relationship(s) already exists, new ones will be added to the,
+Create a relationship to a parent brand. If any relationship(s) already exists, new ones will be added.
 {% endapi-method-description %}
 
 {% api-method-spec %}
