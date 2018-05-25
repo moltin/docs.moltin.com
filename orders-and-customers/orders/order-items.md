@@ -41,11 +41,8 @@
 ## The meta object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- |
-| `meta.display_price` | `object` | A collection of fields related to the totals and currency of this item |
-| `meta.display_price.with_tax` | `object` | Tax inclusive totals |
-| `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single |
-|  |  |  |
+| --- | --- |
+| Insert here |  |  |
 
 ## The relationships object
 

@@ -28,32 +28,32 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-	"data": [
-		{
-			"id": "a636c261-0259-4975-ac8e-77246ec9cfe0",
-			"type": "category",
-			"status": "live",
-			"name": "Unique",
-			"slug": "unique",
-			"description": "Unique Category"
-		},
-		{
-			"id": "b8fac5c9-8605-48d0-bcf7-e6ada1a8c6bd",
-			"type": "category",
-			"status": "live",
-			"name": "Modern",
-			"slug": "modern",
-			"description": "Modern Category"
-		},
-		{
-			"id": "521e6029-0e0e-4704-b9a5-9777047ada04",
-			"type": "category",
-			"status": "live",
-			"name": "Bright",
-			"slug": "bright",
-			"description": "Bright Category"
-		}
-	]
+    "data": [
+        {
+            "id": "a636c261-0259-4975-ac8e-77246ec9cfe0",
+            "type": "category",
+            "status": "live",
+            "name": "Unique",
+            "slug": "unique",
+            "description": "Unique Category"
+        },
+        {
+            "id": "b8fac5c9-8605-48d0-bcf7-e6ada1a8c6bd",
+            "type": "category",
+            "status": "live",
+            "name": "Modern",
+            "slug": "modern",
+            "description": "Modern Category"
+        },
+        {
+            "id": "521e6029-0e0e-4704-b9a5-9777047ada04",
+            "type": "category",
+            "status": "live",
+            "name": "Bright",
+            "slug": "bright",
+            "description": "Bright Category"
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}

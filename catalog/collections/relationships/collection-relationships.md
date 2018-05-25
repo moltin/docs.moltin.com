@@ -25,18 +25,18 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="parent.type" type="string" required=true %}
-The type of the related object (should be `collection`)
+The type of the related object \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="parent.id" type="string" required=true %}
 The ID of the parent collection
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="children[].type" type="string" required=true %}
-The type of related object (should be `collection`)
+{% api-method-parameter name="children\[\].type" type="string" required=true %}
+The type of related object \(should be `collection`\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="children[].id" type="string" required=true %}
+{% api-method-parameter name="children\[\].id" type="string" required=true %}
 The ID of the collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

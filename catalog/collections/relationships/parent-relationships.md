@@ -19,7 +19,7 @@ The ID of the collection you wish to make relationships to
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-The type of related object. (should be collection)
+The type of related object. \(should be collection\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
@@ -77,7 +77,7 @@ The ID of the collection you wish to make relationships to
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-The type of related object. (should be collection)
+The type of related object. \(should be collection\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
@@ -156,3 +156,4 @@ curl -X DELETE https://api.moltin.com/v2/collections/:id/relationships/parent \
 ```
 {% endtab %}
 {% endtabs %}
+

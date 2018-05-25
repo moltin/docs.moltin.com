@@ -6,7 +6,7 @@ Create Child Collection Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent collection. If any relationship(s) already exists, new ones will be added.
+Create a relationship to a parent collection. If any relationship\(s\) already exists, new ones will be added.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -19,7 +19,7 @@ The ID of the collection you wish to make relationships to.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object (should be be collection).
+The type of related object \(should be be collection\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
@@ -79,7 +79,7 @@ The ID of the collection you wish to make relationships to.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object (should be collection).
+The type of related object \(should be collection\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
@@ -142,11 +142,11 @@ The ID of the collection you wish to update relationships to.
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data[].type" type="string" required=false %}
-The type of related object. (should be collection)
+{% api-method-parameter name="data\[\].type" type="string" required=false %}
+The type of related object. \(should be collection\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data[].id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=false %}
 The ID of the child collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

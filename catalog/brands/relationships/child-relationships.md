@@ -6,7 +6,7 @@ Create Child Brand Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent brand. If any relationship(s) already exists, new ones will be added.
+Create a relationship to a parent brand. If any relationship\(s\) already exists, new ones will be added.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -142,11 +142,11 @@ The ID of the brand you wish to update relationships to.
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data[].type" type="string" required=false %}
-The type of related object. (should be brand)
+{% api-method-parameter name="data\[\].type" type="string" required=false %}
+The type of related object. \(should be brand\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data[].id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=false %}
 The ID of the child brand.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

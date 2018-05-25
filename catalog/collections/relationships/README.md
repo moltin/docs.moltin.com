@@ -28,16 +28,16 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-	"data": [
-		{
-			"id": "12912957-4159-4eea-b1c4-685876588300",
-			"type": "collection",
-			"status": "live",
-			"name": "Top Picks",
-			"slug": "top_picks",
-			"description": "Top Picks Collection"
-		}
-	]
+    "data": [
+        {
+            "id": "12912957-4159-4eea-b1c4-685876588300",
+            "type": "collection",
+            "status": "live",
+            "name": "Top Picks",
+            "slug": "top_picks",
+            "description": "Top Picks Collection"
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
