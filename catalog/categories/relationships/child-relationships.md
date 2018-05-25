@@ -1,29 +1,29 @@
 # Child Relationships
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/categories/:categoryId/relationships/children" %}
+{% api-method method="post" host="https://api.moltin.com" path="/v2/collections/:collectionId/relationships/children" %}
 {% api-method-summary %}
-Create Child Category Relationships
+Create Child Collection Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent category. If any relationship(s) already exists, new ones will be added.
+Create a relationship to a parent collection. If any relationship\(s\) already exists, new ones will be added.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="categoryId" type="string" required=true %}
-The ID of the category you wish to make relationships to.
+{% api-method-parameter name="collectionId" type="string" required=true %}
+The ID of the collection you wish to make relationships to.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object (should be be category).
+The type of related object \(should be be collection\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent category.
+The ID of the parent collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -45,13 +45,13 @@ The ID of the parent category.
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/categories/:categoryId/relationships/children \
+curl -X "POST" https://api.moltin.com/v2/collections/:collectionId/relationships/children \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
       "data": [
         {
-          "type": "category",
+          "type": "collection",
           "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
         }
       ]
@@ -60,9 +60,9 @@ curl -X POST https://api.moltin.com/v2/categories/:categoryId/relationships/chil
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="put" host="https://api.moltin.com" path="/v2/categories/:categoryId/relationships/children" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/collections/:collectionId/relationships/children" %}
 {% api-method-summary %}
-Update Child category Relationship
+Update Child Collection Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -72,18 +72,18 @@ Update Child category Relationship
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="categoryId" type="string" required=true %}
-The ID of the category you wish to make relationships to.
+{% api-method-parameter name="collectionId" type="string" required=true %}
+The ID of the collection you wish to make relationships to.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object (should be category).
+The type of related object \(should be collection\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent category.
+The ID of the parent collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -105,13 +105,13 @@ The ID of the parent category.
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X PUT https://api.moltin.com/v2/categories/:categoryId/relationships/children \
+curl -X PUT https://api.moltin.com/v2/collections/:collectionId/relationships/children \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
       "data": [
         {
-          "type": "category",
+          "type": "collection",
           "id": "c902aea9-ec90-4fdd-8084-3c2d879a2c52"
         }
       ]
@@ -120,9 +120,9 @@ curl -X PUT https://api.moltin.com/v2/categories/:categoryId/relationships/child
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="delete" host="https://api.moltin.com/" path="/v2/categories/:categoryId/relationships/parent" %}
+{% api-method method="delete" host="https://api.moltin.com/" path="/v2/collections/:collectionId/relationships/parent" %}
 {% api-method-summary %}
-Delete Child category Relationship
+Delete Child Collection Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -132,8 +132,8 @@ Delete Child category Relationship
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="categoryId" type="string" required=true %}
-The ID of the category you wish to update relationships to.
+{% api-method-parameter name="collectionId" type="string" required=true %}
+The ID of the collection you wish to update relationships to.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -142,12 +142,12 @@ The ID of the category you wish to update relationships to.
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data[].type" type="string" required=false %}
-The type of related object. (should be category)
+{% api-method-parameter name="data\[\].type" type="string" required=false %}
+The type of related object. \(should be collection\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data[].id" type="string" required=false %}
-The ID of the child category.
+{% api-method-parameter name="data\[\].id" type="string" required=false %}
+The ID of the child collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -169,13 +169,13 @@ The ID of the child category.
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X DELETE https://api.moltin.com/v2/categories/:categoryId/relationships/parent \
+curl -X DELETE https://api.moltin.com/v2/collections/:collectionId/relationships/parent \
      -H "Authorization: Bearer XXXX" \
      -d $'{
        "data": [{
-         "type": "category",
+         "type": "collection",
          "id": "c902aea9-ec90-4fdd-8084-3c2d879a2c52"
-         }]
+        }]
       }'
 ```
 {% endtab %}
