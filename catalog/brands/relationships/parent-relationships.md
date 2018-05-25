@@ -45,7 +45,7 @@ The ID of the parent brand
 {% code-tabs %}
 {% code-tabs-item title="cURL" %}
 ```bash
-curl -X "POST" https://api.moltin.com/v2/brands/:id/relationships/parent \
+curl -X POST https://api.moltin.com/v2/brands/:id/relationships/parent \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -103,7 +103,7 @@ The ID of the parent brand.
 {% code-tabs %}
 {% code-tabs-item title="cURL" %}
 ```bash
-curl -X "PUT" https://api.moltin.com/v2/brands/:id/relationships/parent \
+curl -X PUT https://api.moltin.com/v2/brands/:id/relationships/parent \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -149,7 +149,7 @@ The ID of the parent brand you with to delete the relationship to
 {% endapi-method %}
 
 ```bash
-curl -X "DELETE" https://api.moltin.com/v2/brands/:id/relationships/parent \
-     -H "Authorization: Bearer XXXX"}'
+curl -X DELETE https://api.moltin.com/v2/brands/:id/relationships/parent \
+     -H "Authorization: Bearer XXXX"
 ```
 

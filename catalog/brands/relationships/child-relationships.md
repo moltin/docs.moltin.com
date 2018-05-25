@@ -6,7 +6,7 @@ Create Child Brand Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent brand. If any relationship\(s\) already exists, new ones will be added to the,
+Create a relationship to a parent brand. If any relationship(s) already exists, new ones will be added to the,
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -45,7 +45,7 @@ The ID of the parent brand.
 {% code-tabs %}
 {% code-tabs-item title="cURL" %}
 ```bash
-curl -X "POST" https://api.moltin.com/v2/brands/{BRAND_ID}/relationships/children \
+curl -X "POST" https://api.moltin.com/v2/brands/:brandId/relationships/children \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -105,7 +105,7 @@ The ID of the parent brand.
 {% code-tabs %}
 {% code-tabs-item title="cURL" %}
 ```bash
-curl -X "PUT" https://api.moltin.com/v2/brands/{BRAND_ID}/relationships/children \
+curl -X PUT https://api.moltin.com/v2/brands/:brandId/relationships/children \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -142,11 +142,11 @@ The ID of the brand you wish to update relationships to.
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data\[\].type" type="string" required=false %}
-The type of related object. \(should be brand\)
+{% api-method-parameter name="data[].type" type="string" required=false %}
+The type of related object. (should be brand)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data\[\].id" type="string" required=false %}
+{% api-method-parameter name="data[].id" type="string" required=false %}
 The ID of the child brand.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -168,9 +168,15 @@ The ID of the child brand.
 
 {% code-tabs %}
 {% code-tabs-item title="cURL" %}
-```javascript
-curl -X "DELETE" https://api.moltin.com/v2/brands/{BRAND_ID}/relationships/parent \
-     -H "Authorization: Bearer XXXX" \     -d $'{  "data": [    {      "type": "brand",      "id": "c902aea9-ec90-4fdd-8084-3c2d879a2c52"    }  ]}'
+```bash
+curl -X DELETE https://api.moltin.com/v2/brands/:brandId/relationships/parent \
+     -H "Authorization: Bearer XXXX" \
+     -d $'{
+       "data": [{
+         "type": "brand",
+         "id": "c902aea9-ec90-4fdd-8084-3c2d879a2c52"
+        }]
+      }'
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
