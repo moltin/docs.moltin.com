@@ -34,6 +34,7 @@
     * [Collection Relationships](catalog/products/relationships/collection-relationships.md)
     * [File Relationships](catalog/products/relationships/file-relationships.md)
     * [Main Image Relationship](catalog/products/relationships/main-image-relationship.md)
+    * [Variations Relationship](catalog/products/relationships/variations-relationship.md)
 * [Product Variations](catalog/product-variations/README.md)
   * [Options](catalog/product-variations/options/README.md)
     * [Create Product Variation](catalog/product-variations/options/create-product-variation.md)
