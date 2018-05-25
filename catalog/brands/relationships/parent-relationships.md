@@ -42,8 +42,8 @@ The ID of the parent brand
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/brands/:id/relationships/parent \
      -H "Content-Type: application/json" \
@@ -55,8 +55,8 @@ curl -X POST https://api.moltin.com/v2/brands/:id/relationships/parent \
       }
     }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/brands/:id/relationships/parent" %}
 {% api-method-summary %}
@@ -64,24 +64,24 @@ Update Parent Brand Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Change the parent of a brand.
+Change the parent of a brand
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the brand you wish to make relationships to.
+The ID of the brand you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-The type of related object \(should be brand\).
+The type of related object. (should be brand)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The ID of the parent brand.
+The ID of the parent brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -100,8 +100,8 @@ The ID of the parent brand.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/brands/:id/relationships/parent \
      -H "Content-Type: application/json" \
@@ -113,8 +113,8 @@ curl -X PUT https://api.moltin.com/v2/brands/:id/relationships/parent \
       }
     }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/brands/:id/relationships/parent" %}
 {% api-method-summary %}
@@ -148,8 +148,11 @@ The ID of the parent brand you with to delete the relationship to
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X DELETE https://api.moltin.com/v2/brands/:id/relationships/parent \
      -H "Authorization: Bearer XXXX"
 ```
-
+{% endtab %}
+{% endtabs %}

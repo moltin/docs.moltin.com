@@ -42,8 +42,8 @@ The ID of the parent category.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/categories/:categoryId/relationships/children \
      -H "Content-Type: application/json" \
@@ -57,8 +57,8 @@ curl -X POST https://api.moltin.com/v2/categories/:categoryId/relationships/chil
       ]
     }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/categories/:categoryId/relationships/children" %}
 {% api-method-summary %}
@@ -102,8 +102,8 @@ The ID of the parent category.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/categories/:categoryId/relationships/children \
      -H "Content-Type: application/json" \
@@ -117,12 +117,12 @@ curl -X PUT https://api.moltin.com/v2/categories/:categoryId/relationships/child
       ]
     }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% api-method method="get" host="https://api.moltin.com/" path="/v2/categories/:categoryId/relationships/parent" %}
+{% api-method method="delete" host="https://api.moltin.com/" path="/v2/categories/:categoryId/relationships/parent" %}
 {% api-method-summary %}
-
+Delete Child category Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -166,8 +166,8 @@ The ID of the child category.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X DELETE https://api.moltin.com/v2/categories/:categoryId/relationships/parent \
      -H "Authorization: Bearer XXXX" \
@@ -178,6 +178,6 @@ curl -X DELETE https://api.moltin.com/v2/categories/:categoryId/relationships/pa
          }]
       }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
