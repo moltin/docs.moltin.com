@@ -159,7 +159,11 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-const address = {
+
+const reference = 'XXXX'
+const customerId = 'XXXX'
+
+const billing = {
   first_name: 'John',
   last_name: 'Doe',
   line_1: '2nd Floor British India House',
@@ -170,11 +174,13 @@ const address = {
   country: 'United Kingdom'
 }
 
-const reference = 'XXXX'
-const customerId = 'XXXX'
-
-Moltin.Cart(reference).Checkout(customerId, address)
+Moltin.Cart(reference).Checkout(customerId, billing, shipping)
+// Moltin.Cart(reference).Checkout(customerId, billing)
 ```
+
+{% hint style="info" %}
+`shipping` is optional. `billing` will be `shipping` if not provided.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -330,12 +336,14 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
+const reference = 'XXXX'
+
 const customer = {
   email: 'john@moltin.com',
   name: 'John Doe'
 }
 
-const address = {
+const billing = {
   first_name: 'John',
   last_name: 'Doe',
   line_1: '2nd Floor British India House',
@@ -346,11 +354,24 @@ const address = {
   country: 'United Kingdom'
 }
 
-const reference = 'XXXX'
-const customerId = 'XXXX'
+const shipping = {
+  first_name: 'John',
+  last_name: 'Doe',
+  line_1: '2nd Floor British India House',
+  line_2: '15 Carliol Square',
+  city: 'Newcastle Upon Tyne',
+  postcode: 'NE1 6UF',
+  county: 'Tyne & Wear',
+  country: 'United Kingdom'
+}
 
-Moltin.Cart(reference).Checkout(customerId, address)
+Moltin.Cart(reference).Checkout(customer, billing, shipping)
+// Moltin.Cart(reference).Checkout(customer, billing)
 ```
+
+{% hint style="info" %}
+`shipping` is optional. `billing` will be `shipping` if not provided.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Swift SDK" %}
