@@ -17,12 +17,18 @@ The **id** of the product you wish to relate to the variation\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
 Represents the type of object \(should be product-variation\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=false %}
 The **id** of the product-variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -107,7 +113,7 @@ The **id** of the product you wish to relate to the collection\(s\).
 Represents the type of object \(should be **product-variation\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=false %}
 The **id** of the variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

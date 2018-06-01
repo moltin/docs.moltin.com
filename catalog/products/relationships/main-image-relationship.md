@@ -17,6 +17,12 @@ The id of the product you wish to relate to the image.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
 Represents they type of the object \(should be main\_image\).
@@ -87,12 +93,18 @@ The **id** of the product you wish to relate to the image.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
 Represents the type of object \(should be **main\_image**\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=false %}
 The **id** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -161,12 +173,18 @@ The **id** of the product you wish to remove the relationship for.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
 Represents the type of object \(should be **main\_image\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=false %}
 The **id**  of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
