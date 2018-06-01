@@ -12,7 +12,7 @@ Create a product variation
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 The Bearer token used to access the API.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}

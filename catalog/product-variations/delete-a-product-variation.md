@@ -18,7 +18,7 @@ The ID of the variation you wish to delete.
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 The Bearer used to access the API.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}

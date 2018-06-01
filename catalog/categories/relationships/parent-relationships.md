@@ -17,6 +17,12 @@ The ID of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
 The type of related object. \(should be collection\)
