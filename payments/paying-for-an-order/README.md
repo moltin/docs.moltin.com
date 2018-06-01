@@ -7,7 +7,7 @@ You will need to configure and enable a payment gateway before you can accept pa
 {% endhint %}
 
 {% hint style="warning" %}
-You can use the [Manual Gateway]() to handle payments from non-supported payment providers, such as PayPal. 🎉
+You can use the [Manual Gateway](manual-payments.md) to handle payments from non-supported payment providers, such as PayPal. 🎉
 {% endhint %}
 
 ## Payment methods
