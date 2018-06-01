@@ -70,6 +70,31 @@ The Bearer token to grant access to the API
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl https://api.moltin.com/v2/flows/:id \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const flowID = 'XXXX';
+
+Moltin.Flows.Get(flowID).then(flows => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="post" host="https://api.moltin.com" path="/v2/flows" %}
 {% api-method-summary %}
 Create a Flow
@@ -142,6 +167,46 @@ Represents the type of object being returned.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X "POST" "https://api.moltin.com/v2/flows" \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "data": {
+    "type": "flow",
+    "name": "Products",
+    "slug": "products",
+    "description": "Extends the default product object",
+    "enabled": true
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="JavaScript SDL" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const data = {
+  name: 'Products flow',
+  slug: 'products',
+  description: 'Extends the default product object',
+  enabled: true
+}
+
+Moltin.Flows.Create(data).then(flow => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/flows/:id" %}
 {% api-method-summary %}
@@ -226,6 +291,46 @@ The Bearer token to grant access to the API.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X "POST" "https://api.moltin.com/v2/flows/:id" \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "data": {
+    "id": "{FLOW_ID}",
+    "type": "flow",
+    "name": "Categories",
+    "slug": "categories",
+    "description": "Extends the default category object",
+    "enabled": true
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const data = {
+  name: 'Categories',
+  slug: 'categories'
+  description: 'Extends the default category object'
+}
+
+Moltin.Flows.Update('{FLOW_ID}', data).then(flow => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/flows/:id" %}
 {% api-method-summary %}
 Delete a Flow
@@ -263,4 +368,29 @@ The Bearer token to grant access to the API
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X DELETE https://api.moltin.com/v2/flows/:id \
+    -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const flowId = 'xxx'
+
+Moltin.Flows.Delete(flowId).then(flow => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
 
