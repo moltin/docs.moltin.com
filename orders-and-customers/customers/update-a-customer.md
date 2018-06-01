@@ -60,3 +60,38 @@ The customers password.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X PUT https://api.moltin.com/v2/customers/:customerId \
+    -H "Authorization: Bearer XXXX" \
+    -d $'{
+     "data": {
+       "type": "customer",
+       "email": "ron@swanson.com"
+     }
+}'
+```
+{% endtab %}
+
+{% tab title="JavaScriptSDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+var customerId = 'xx'
+
+var customer = {
+    email: "ron@swanson.com"
+}
+
+Moltin.Customers.Update({customerId}, customer).then((response) => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
+
