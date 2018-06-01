@@ -1,5 +1,21 @@
 # Transactions
 
+### The transaction object
+
+{% tabs %}
+{% tab title="Attributes" %}
+| **Attribute** | **Type** | **Description** |
+| --- | --- |
+|  |  |  |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+```javascript
+
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/orders/:order\_id/transactions" %}
 {% api-method-summary %}
 Get all transactions
