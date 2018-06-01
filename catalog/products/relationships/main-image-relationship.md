@@ -18,8 +18,8 @@ The id of the product you wish to relate to the image.
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="type" type="string" required=false %}
+Represents they type of the object \(should be main\_image\).
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
