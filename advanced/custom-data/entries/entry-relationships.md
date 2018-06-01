@@ -59,7 +59,14 @@ Data to be stored
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "data": [
+        {
+            "type": "brand",
+            "id": "0d28e5b6-f615-4e1c-b038-275cfde97927"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -117,7 +124,14 @@ Data to be stored
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "data": [
+        {
+            "type": "brand",
+            "id": "0d28e5b6-f615-4e1c-b038-275cfde97927"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
