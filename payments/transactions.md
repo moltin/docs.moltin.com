@@ -5,13 +5,42 @@
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- |
-|  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `id` | `string` | The ID of the transaction |
+| `type` | `string` | Always transaction |
+| `reference` | `string` | The payment gateway reference |
+| `gateway` | `string` | The name of the payment gateway used |
+| `amount` | `integer` | The amount for this transaction |
+| `currency` | `string` | The transaction currency |
+| `transaction-type` | `string` | The type of transaction \(`capture`, `authorize` or `refund`\) |
+| `status` | `string` | The status provided by the gateway for this transaction. `complete` or `failed` |
+| `relationships` | `object` | This will contain the order object this transaction relates to |
 {% endtab %}
 
 {% tab title="Sample Object" %}
 ```javascript
-
+{
+	"data": [
+		{
+			"id": "03f634c3-9c70-4aa1-8178-f7d41a45d92z",
+			"type": "transaction",
+			"reference": "ch_1CVFEDCTrBHFHIc3NNG6EaFU",
+			"gateway": "stripe",
+			"amount": 40000,
+			"currency": "USD",
+			"transaction-type": "purchase",
+			"status": "complete",
+			"relationships": {
+				"order": {
+					"data": {
+						"type": "order",
+						"id": "f6f63e5b-1e04-47aa-9213-993ead03d441"
+					}
+				}
+			}
+		}
+	]
+}
 ```
 {% endtab %}
 {% endtabs %}
