@@ -92,6 +92,30 @@ The Bearer token to grant access to the API.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl https://api.moltin.com/v2/fields \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+Moltin.Fields.All().then(fields => {
+  // Do something
+});
+
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields/:id" %}
 {% api-method-summary %}
 Get a field
@@ -169,6 +193,34 @@ The Bearer token to grant access to the API.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl https://api.moltin.com/v2/fields/:id \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const fieldID = 'XXXX';
+
+Moltin.Fields.Get(fieldID).then(field => {
+  // Do something
+});
+
+curl https://api.moltin.com/v2/fields \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/fields" %}
 {% api-method-summary %}
@@ -287,6 +339,68 @@ A relationship object to link this field to a flow
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X "POST" "https://api.moltin.com/v2/fields" \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "data": {
+    "type": "field",
+    "name": "Product Rating",
+    "slug": "product-rating",
+    "field_type": "integer",
+    "validation_rules": [
+        {
+            "type": "between",
+            "options": {
+                "from": 1,
+                "to": 5
+            }
+        }
+    ],
+    "description": "Average rating as given by our users",
+    "required": false,
+    "unique": false,
+    "default": 0,
+    "enabled": true,
+    "order": 1,
+    "relationships": {
+        "flow": {
+            "data": {
+                "type": "flow",
+                "id": "b2895a6c-8c12-4515-9e4b-a305769e7b25"
+            }
+        }
+    }
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const data = {
+  name: 'Product Rating',
+  slug: 'product-rating',
+  description: 'Average rating as given by our users',
+  enabled: true
+}
+
+Moltin.Fields.Create(data).then(field => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/fields/:id" %}
 {% api-method-summary %}
@@ -412,6 +526,43 @@ A relationship object to link this field to a flow
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X "POST" "https://api.moltin.com/v2/fields/:id" \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "data": {
+    "id": "{FIELD_ID}",
+    "type": "field",
+    "name": "Average Product Rating",
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+var fieldId = 'xx'
+
+const data = {
+  id: '{fieldId}',
+  name: 'Average Product Rating'
+}
+
+Moltin.Fields.Update('{fieldId}', data).then(field => {
+  // Do something
+});
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/fields/:id" %}
 {% api-method-summary %}
 Delete a Field
@@ -449,4 +600,35 @@ The Bearer token to grant access to the API
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X DELETE https://api.moltin.com/v2/fields/:id \
+    -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+var fieldId = 'xx'
+
+const data = {
+  id: '{fieldId}',
+  name: 'Average Product Rating'
+}
+
+Moltin.Fields.Delete('{fieldId}').then(response => {
+  // Do something
+});
+
+```
+{% endtab %}
+{% endtabs %}
 
