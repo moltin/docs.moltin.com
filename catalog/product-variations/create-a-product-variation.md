@@ -11,6 +11,12 @@ Create a product variation
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=false %}
+The Bearer token used to access the API.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
 Represents the type of object being created. \(should be product-variation\)
