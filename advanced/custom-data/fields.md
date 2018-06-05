@@ -240,6 +240,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="flowId" type="string" required=false %}
+The id of the flow you wish to tie the field too.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
@@ -371,7 +375,7 @@ curl -X "POST" "https://api.moltin.com/v2/fields" \
         "flow": {
             "data": {
                 "type": "flow",
-                "id": "b2895a6c-8c12-4515-9e4b-a305769e7b25"
+                "id": :flowID
             }
         }
     }
