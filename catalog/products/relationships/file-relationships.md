@@ -6,7 +6,7 @@ Create File Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to one ore more **file**.  If any relationship already exist, the one's made in the request will be added to them.
+Create a product relationship to one or more **files**.  If any relationship already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
