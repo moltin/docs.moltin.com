@@ -95,7 +95,38 @@ The Bearer token to grant access to the API
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "data": [
+        {
+            "id": "ce1f0b19-23c3-487b-aa2a-552b77abdf0c",
+            "type": "entry",
+            "brand-image": "https://s3-eu-west-1.amazonaws.com/bkt-svc-files-cmty-api-moltin-com/e8c53cb0-120d-4ea5-8941-ce74dec06038/61118f21-14a2-466c-a84b-c30b1f900cf9.png",
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-06-05T20:58:25.596Z",
+                    "updated_at": "2018-06-05T20:58:25.596Z"
+                }
+            },
+            "links": {
+                "self": "https://api.moltin.com/v2/flows/brands/entries/ce1f0b19-23c3-487b-aa2a-552b77abdf0c"
+            }
+        },
+        {
+            "id": "a5fcf6bc-233f-44d7-a3b0-0961eed3df9d",
+            "type": "entry",
+            "brand-image": "someimage for brand x",
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-06-06T14:48:59.006Z",
+                    "updated_at": "2018-06-06T14:48:59.006Z"
+                }
+            },
+            "links": {
+                "self": "https://api.moltin.com/v2/flows/brands/entries/a5fcf6bc-233f-44d7-a3b0-0961eed3df9d"
+            }
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -143,12 +174,48 @@ The name of the Flow
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "data": {
+        "id": "06de90b0-5426-4f61-bcd2-fcdeab40b806",
+        "type": "flow",
+        "name": "Brands",
+        "slug": "Brands",
+        "description": "Extends the default brand object",
+        "enabled": true,
+        "links": {
+            "self": "https://api.moltin.com/v2/flows/06de90b0-5426-4f61-bcd2-fcdeab40b806"
+        },
+        "relationships": {},
+        "meta": {
+            "timestamps": {
+                "created_at": "2018-06-06T14:56:20.860Z",
+                "updated_at": "2018-06-06T14:56:20.860Z"
+            }
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+https://api.moltin.com/v2/flows
+ {
+  "data": {
+    "type": "flow",
+    "name": "Brands",
+    "slug": "brands",
+    "description": "Extends the default brand object",
+    "enabled": true
+   }
+ }
+```
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
 {% api-method-summary %}
@@ -199,12 +266,44 @@ The ID of the entry
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "data": {
+        "id": "03224af8-da41-4761-99fb-a125fa81ed99",
+        "type": "entry",
+        "brand-image": "someimage new things",
+        "meta": {
+            "timestamps": {
+                "created_at": "2018-06-06T14:42:39.312Z",
+                "updated_at": "2018-06-06T14:42:39.312Z"
+            }
+        },
+        "links": {
+            "self": "https://api.moltin.com/v2/flows/brands/entries/03224af8-da41-4761-99fb-a125fa81ed99"
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+{
+  "data": {
+    	"type": "brands",
+    	"brand-image": "someimage new things"
+	}
+}
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 You can have multiple `{FIELD_SLUG}`'s in the request body if they are related to the flow.
