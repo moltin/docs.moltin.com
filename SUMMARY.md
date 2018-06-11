@@ -115,11 +115,13 @@
   * [Configure Adyen](payments/gateways/configure-adyen.md)
   * [Configure Braintree](payments/gateways/configure-braintree.md)
   * [Configure Stripe](payments/gateways/configure-stripe.md)
+  * [Configure Card Connect](payments/gateways/configure-card-connect.md)
 * [Paying for an order](payments/paying-for-an-order/README.md)
   * [Adyen Payments](payments/paying-for-an-order/adyen-payments.md)
   * [Braintree Payments](payments/paying-for-an-order/braintree-payments.md)
   * [Manual Payments](payments/paying-for-an-order/manual-payments.md)
   * [Stripe Payments](payments/paying-for-an-order/stripe-payments.md)
+  * [Card Connect Payments](payments/paying-for-an-order/card-connect-payments.md)
 * [Transactions](payments/transactions.md)
 
 ## Orders & Customers
