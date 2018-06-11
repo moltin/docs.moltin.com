@@ -23,7 +23,7 @@ Product inventory is managed separately. If you wish to increment and allocate s
 | `status` | `string` | `live` or `draft` |
 | `commodity_type` | `string` | `physical` or `digital` |
 | `meta` | [`object`](./#the-meta-object) | Additional information calculated for this product |
-| `relationships` | [object](./#the-relationships-object) | Related resources |
+| `relationships` | [`object`](./#the-relationships-object) | Related resources |
 {% endtab %}
 
 {% tab title="Sample Object" %}
