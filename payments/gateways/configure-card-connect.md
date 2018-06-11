@@ -1,4 +1,4 @@
-# Configure CardConnect
+# Configure Card Connect
 
 You can configure CardConnect programatically using the `/gateways/card_connect` endpoint.
 
@@ -36,7 +36,7 @@ You can configure CardConnect programatically using the `/gateways/card_connect`
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="put" host="https://api.moltin.com" path="/v2/gateways/card_connect" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/gateways/card\_connect" %}
 {% api-method-summary %}
 Update CardConnect settings
 {% endapi-method-summary %}
@@ -62,7 +62,7 @@ Your CardConnect username
 Your CardConnect password
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="merchant_id" type="string" required=false %}
+{% api-method-parameter name="merchant\_id" type="string" required=false %}
 Your CardConnect Merchant ID
 {% endapi-method-parameter %}
 
@@ -118,3 +118,4 @@ curl -X PUT https://api.moltin.com/v2/gateways/card_connect \
 ```
 {% endtab %}
 {% endtabs %}
+

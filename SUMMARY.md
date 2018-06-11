@@ -121,7 +121,7 @@
   * [Braintree Payments](payments/paying-for-an-order/braintree-payments.md)
   * [Manual Payments](payments/paying-for-an-order/manual-payments.md)
   * [Stripe Payments](payments/paying-for-an-order/stripe-payments.md)
-  * [Card Connect Payments](payments/paying-for-an-order/card-connect-payments.md)
+  * [CardConnect Payments](payments/paying-for-an-order/card-connect-payments.md)
 * [Transactions](payments/transactions.md)
 
 ## Orders & Customers

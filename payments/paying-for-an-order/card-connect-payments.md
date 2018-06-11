@@ -28,7 +28,7 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="verification_value" type="string" required=true %}
+{% api-method-parameter name="verification\_value" type="string" required=true %}
 The CVV/CVC code from the back of the card
 {% endapi-method-parameter %}
 
@@ -122,3 +122,4 @@ Moltin.Orders.Payment(orderId, {
 ```
 {% endtab %}
 {% endtabs %}
+
