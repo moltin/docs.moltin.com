@@ -1,4 +1,4 @@
-# Configure Card Connect
+# Configure CardConnect
 
 You can configure CardConnect programatically using the `/gateways/card_connect` endpoint.
 

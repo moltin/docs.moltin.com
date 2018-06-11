@@ -115,7 +115,7 @@
   * [Configure Adyen](payments/gateways/configure-adyen.md)
   * [Configure Braintree](payments/gateways/configure-braintree.md)
   * [Configure Stripe](payments/gateways/configure-stripe.md)
-  * [Configure Card Connect](payments/gateways/configure-card-connect.md)
+  * [Configure CardConnect](payments/gateways/configure-card-connect.md)
 * [Paying for an order](payments/paying-for-an-order/README.md)
   * [Adyen Payments](payments/paying-for-an-order/adyen-payments.md)
   * [Braintree Payments](payments/paying-for-an-order/braintree-payments.md)
