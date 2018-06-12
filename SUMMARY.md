@@ -18,6 +18,7 @@
   * [Chaining](basics/filtering/chaining.md)
 * [Sorting](basics/sorting.md)
 * [Versioning](basics/versioning.md)
+* [API Status](http://status.moltin.com)
 
 ## Catalog
 
@@ -180,5 +181,4 @@
   * [Update Settings](advanced/settings/update-settings.md)
   * [Supported Languages](advanced/settings/supported-languages.md)
 * [Languages](advanced/languages.md)
-* [API Status](http://status.moltin.com)
 
