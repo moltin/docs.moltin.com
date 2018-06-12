@@ -1,70 +1,66 @@
 # Orders
 
-
-
-### The order object {#the-order-object}
+### The Order object {#the-order-object}
 
 The order object is a representation of an order in moltin.
 
 {% tabs %}
 {% tab title="Attributes" %}
-| Attribute | Type | Description |
+| **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| id | **string** | The unique identifier for this order. |
-| type | **string** | Represents the type of object being returned. `order`. |
-| status | **string** | `incomplete`, `cancelled`, `complete`. |
-| payment | **string** | `unpaid`, `authorized`, `paid`, `refunded`. |
-| shipping | **string** | `fulfilled`, `unfulfilled`. |
-| customer | **object** | The customer object associated with this order. |
-| customer.name | **string** | The customers name. |
-| customer.email | **string** | The customers email. |
-| shipping\_address | **object** | The shipping address object. |
-| shipping\_address.first\_name | **string** | The first name of the address holder. `required` |
-| shipping\_address.last\_name | **string** | The last name of the address holder. `required` |
-| shipping\_address.phone\_number | **string** | The phone number of the address holder. `optional` |
-| shipping\_address.company\_name | **string** | The company name. `optional` |
-| shipping\_address.line\_1 | **string** | First line of the address. `required` |
-| shipping\_address.line\_2 | **string** | Second line of the address. `optional` |
-| shipping\_address.city | **string** | City. `optional` |
-| shipping\_address.postcode | **string** | Postcode or Zip Code of the address. `required` |
-| shipping\_address.county | **string** | County or State of the address. `required` |
-| shipping\_address.country | **string** | Country. `required` |
-| shipping\_address.instructions | **string** | Any instructions with the shipping address. `optional` |
-| billing\_address | **object** | The billing address object. |
-| billing\_address.first\_name | **string** | The first name of the billing address holder. `required` |
-| billing\_address.last\_name | **string** | The last name of the billing address holder. `required` |
-| billing\_address.company\_name | **string** | The billing company name. `optional` |
-| billing\_address.line\_1 | **string** | First line of the billing address. `required` |
-| billing\_address.line\_2 | **string** | Second line of the billing address. `optional` |
-| billing\_address.city | **string** | City. `optional` |
-| billing\_address.postcode | **string** | Postcode or Zip Code of the billing address. `required` |
-| billing\_address.county | **string** | Country. `required` |
-| billing\_address.country | **string** | Any instructions with the shipping address. `optional` |
-| links | **object** | A collection of URLs related to this resource. |
-| meta | **object** | Additional information calculated for this order. |
-| meta.display\_price | **object** | A collection of fields related to the totals and currency of this order. |
-| meta.display\_price. with\_tax | **object** | Tax inclusive totals. |
-| meta.display\_price. with\_tax.amount | **integer** | The raw total of this order \(inc tax\). |
-| meta.display\_price. with\_tax.currency | **string** | The currency set for this order. |
-| meta.display\_price. with\_tax.formatted | **string** | The tax inclusive formatted total based on the currency. |
-| meta.display\_price. without\_tax | **object** | Tax exclusive totals. |
-| meta.display\_price. without\_tax.amount | **integer** | The raw total of this cart \(ex tax\). |
-| meta.display\_price. without\_tax.currency | **string** | The currency set for this order. |
-| meta.display\_price. without\_tax.formatted | **string** | The tax exclusive formatted total based on the currency. |
-| meta.timestamps | **object** | Timestamps for this order. |
-| meta.timestamps. created\_at | **string** | The creation date of this order. |
-| meta.timestamps. updated\_at | **string** | The last updated date of this order. |
-| relationships | **object** | A collection of relationships related to this resource. |
-| relationships.items | **object** | The order items object. |
-| relationships.items.data | **array** | An array of order items. |
-| relationships.items.data.type | **string** | Represents the type of object being returned. `item`. |
-| relationships.items.data.id | **string** | The unique identifier for this order item. |
-| relationships.customer | **object** | The customer object. |
-| relationships.customer.data | **object** | The customer object associated with this order. |
-| relationships.customer.data.type | **string** | Represents the type of object being returned. `customer`. |
-| relationships.customer.data.id | **string** | The unique identifier for this customer. |
-
-Remove columnRemove rowRemove  
+| id | string | The unique identifier for this order. |
+| type | string | Represents the type of object being returned. `order`. |
+| status | string | `incomplete`, `cancelled`, `complete`. |
+| payment | string | `unpaid`, `authorized`, `paid`, `refunded`. |
+| shipping | string | `fulfilled`, `unfulfilled`. |
+| customer | object | The customer object associated with this order. |
+| customer.name | string | The customers name. |
+| customer.email | string | The customers email. |
+| shipping\_address | object | The shipping address object. |
+| shipping\_address.first\_name | string | The first name of the address holder. `required` |
+| shipping\_address.last\_name | string | The last name of the address holder. `required` |
+| shipping\_address.phone\_number | string | The phone number of the address holder. `optional` |
+| shipping\_address.company\_name | string | The company name. `optional` |
+| shipping\_address.line\_1 | string | First line of the address. `required` |
+| shipping\_address.line\_2 | string | Second line of the address. `optional` |
+| shipping\_address.city | string | City. `optional` |
+| shipping\_address.postcode | string | Postcode or Zip Code of the address. `required` |
+| shipping\_address.county | string | County or State of the address. `required` |
+| shipping\_address.country | string | Country. `required` |
+| shipping\_address.instructions | string | Any instructions with the shipping address. `optional` |
+| billing\_address | object | The billing address object. |
+| billing\_address.first\_name | string | The first name of the billing address holder. `required` |
+| billing\_address.last\_name | string | The last name of the billing address holder. `required` |
+| billing\_address.company\_name | string | The billing company name. `optional` |
+| billing\_address.line\_1 | string | First line of the billing address. `required` |
+| billing\_address.line\_2 | string | Second line of the billing address. `optional` |
+| billing\_address.city | string | City. `optional` |
+| billing\_address.postcode | string | Postcode or Zip Code of the billing address. `required` |
+| billing\_address.county | string | Country. `required` |
+| billing\_address.country | string | Any instructions with the shipping address. `optional` |
+| links | object | A collection of URLs related to this resource. |
+| meta | object | Additional information calculated for this order. |
+| meta.display\_price | object | A collection of fields related to the totals and currency of this order. |
+| meta.display\_price. with\_tax | object | Tax inclusive totals. |
+| meta.display\_price. with\_tax.amount | integer | The raw total of this order \(inc tax\). |
+| meta.display\_price. with\_tax.currency | string | The currency set for this order. |
+| meta.display\_price. with\_tax.formatted | string | The tax inclusive formatted total based on the currency. |
+| meta.display\_price. without\_tax | object | Tax exclusive totals. |
+| meta.display\_price. without\_tax.amount | integer | The raw total of this cart \(ex tax\). |
+| meta.display\_price. without\_tax.currency | string | The currency set for this order. |
+| meta.display\_price. without\_tax.formatted | string | The tax exclusive formatted total based on the currency. |
+| meta.timestamps | object | Timestamps for this order. |
+| meta.timestamps. created\_at | string | The creation date of this order. |
+| meta.timestamps. updated\_at | string | The last updated date of this order. |
+| relationships | object | A collection of relationships related to this resource. |
+| relationships.items | object | The order items object. |
+| relationships.items.data | array | An array of order items. |
+| relationships.items.data.type | string | Represents the type of object being returned. `item`. |
+| relationships.items.data.id | string | The unique identifier for this order item. |
+| relationships.customer | object | The customer object. |
+| relationships.customer.data | object | The customer object associated with this order. |
+| relationships.customer.data.type | string | Represents the type of object being returned. `customer`. |
+| relationships.customer.data.id | string | The unique identifier for this customer.  |
 {% endtab %}
 
 {% tab title="Sample object" %}
@@ -145,11 +141,11 @@ Remove columnRemove rowRemove
 {% endtab %}
 {% endtabs %}
 
-### The order item object {#the-order-item-object}
+### The Order Item object {#the-order-item-object}
 
 {% tabs %}
 {% tab title="Attributes" %}
-| Attribute | Type | Description |
+| **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | id | **string** | The unique identifier for this order item. |
 | type | **string** | Represents the type of object being returned. `order_item` |
@@ -265,23 +261,23 @@ Remove columnRemove rowRemove
 
 The following attributes are available to [filter](https://docs.moltin.com/#filtering) by:
 
-| Attribute | Type | Acceptable Operators | Example |
+| **Attribute** | **Type** | **Acceptable Operators** | **Example** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| status | **string** | `eq` | `eq(status,complete)` |
-| payment | **string** | `eq` | `eq(payment,paid)` |
-| shipping | **string** | `eq` | `eq(shipping,unfulfilled)` |
-| name \(customer.name\) | **string** | `eq`, `like` | `like(name,Brad*)` |
-| email \(customer.email\) | **string** | `eq`, `like` | `like(email,*@moltin.com)` |
-| customer\_id \(relationships.customer.data.id\) | **string** | `eq`, `like` | `eq(customer_id,e5a0d684-a4af-4919-a348-f66b0b4955e0)` |
-| shipping\_name \(shipping.name\) | **string** | `eq`, `like` | `like(shipping_name,home)` |
-| shipping\_postcode \(shipping.postcode\) | **string** | `eq`, `like` | `like(shipping_postcode,117*)` |
-| billing\_name \(billing.name\) | **string** | `eq`, `like` | `like(billing_name,home)` |
-| billing\_postcode \(billing.postcode\) | **string** | `eq`, `like` | `like(billing_postcode,117*)` |
-| with\_tax | **integer** | `gt`, `ge`, `lt`, `le` | `ge(with_tax,10000)` |
-| without\_tax | **integer** | `gt`, `ge`, `lt`, `le` | `ge(without_tax,10000)` |
-| currency | **string** | `eq` | `eq(currency,USD)` |
-| product\_id | **string** | `eq` | `eq(product_id,6837058c-ae42-46db-b3c6-7f01e0c34b40)` |
-| product\_sku | **string** | `eq` | `eq(product_sku,deck-shoe-001)` |
+| status | string | `eq` | `eq(status,complete)` |
+| payment | string | `eq` | `eq(payment,paid)` |
+| shipping | string | `eq` | `eq(shipping,unfulfilled)` |
+| name \(customer.name\) | string | `eq`, `like` | `like(name,Brad*)` |
+| email \(customer.email\) | string | `eq`, `like` | `like(email,*@moltin.com)` |
+| customer\_id \(relationships.customer.data.id\) | string | `eq`, `like` | `eq(customer_id,e5a0d684-a4af-4919-a348-f66b0b4955e0)` |
+| shipping\_name \(shipping.name\) | string | `eq`, `like` | `like(shipping_name,home)` |
+| shipping\_postcode \(shipping.postcode\) | string | `eq`, `like` | `like(shipping_postcode,117*)` |
+| billing\_name \(billing.name\) | string | `eq`, `like` | `like(billing_name,home)` |
+| billing\_postcode \(billing.postcode\) | string | `eq`, `like` | `like(billing_postcode,117*)` |
+| with\_tax | integer | `gt`, `ge`, `lt`, `le` | `ge(with_tax,10000)` |
+| without\_tax | integer | `gt`, `ge`, `lt`, `le` | `ge(without_tax,10000)` |
+| currency | string | `eq` | `eq(currency,USD)` |
+| product\_id | string | `eq` | `eq(product_id,6837058c-ae42-46db-b3c6-7f01e0c34b40)` |
+| product\_sku | string | `eq` | `eq(product_sku,deck-shoe-001)` |
 
 **Notes:**
 
