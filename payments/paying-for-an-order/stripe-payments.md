@@ -195,7 +195,7 @@ You will use `stripe` in this case
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
      -H "Authorization: Bearer XXXX" \
      -d $'{
         "data": {
@@ -231,6 +231,94 @@ const payment = {
   month: "10",
   year: "2020",
   verification_value: "123"
+}
+
+Moltin.Orders.Payment(id, order).then(() => {
+  // Do something
+})
+```
+{% endtab %}
+{% endtabs %}
+
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/payments" %}
+{% api-method-summary %}
+Pay by Stripe Connect
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Moltin also supports Stripe Connect. Simply pass a destination via the options object.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="orderId" type="string" required=true %}
+The UUID of the order you want to pay for
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to grant access to the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
+     -H "Authorization: Bearer XXXX" \
+     -d $'{
+        "data": {
+          "gateway": "stripe",
+          "method": "purchase",
+          "payment": "tok_visa",
+          "options": {
+            "destination": "acct_XXX"
+          }
+        }
+      }'
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const id = 'XXXX'
+
+const payment = {
+  gateway: 'stripe',
+  method: 'purchase',
+  paymeny: 'tok_visa'
+  options: {
+    destination: 'acct_XXX'
+  }
 }
 
 Moltin.Orders.Payment(id, order).then(() => {
