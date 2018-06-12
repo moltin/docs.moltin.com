@@ -9,11 +9,11 @@ Below are a list of attributes and operators available for [filtering](../../bas
 | `shipping` | `string` | `eq` | `eq(shipping,unfulfilled)` |
 | `name` \(`customer.name`\) | `string` | `eq` / `like` | `like(name,Brad*)` |
 | `email` \(`customer.email`\) | `string` | `eq` / `like` | `like(email,*@moltin.com)` |
-| `customer_id` \(`relationships.customer.data.id`\) | `string` | `eq` / `like` | `eq(customer_id, e5a0d684-a4af-4919-a348-f66b0b4955e0)` |
-| `shipping_name` \(`shipping.name`\) | `string` | `eq` / `like` | `like(shipping_name,home)` |
-| `shipping_postcode` \(`shipping.postcode`\) | `string` | `eq` / `like` | `like(shipping_postcode,117*)` |
-| `billing_name` \(`billing.name`\) | `string` | `eq` / `like` | `like(billing_name,home)` |
-| `billing_postcode` \(`billing.postcode`\) | `string` | `eq` / `like` | `like(billing_postcode,117*)` |
+| `customer_id` | `string` | `eq` / `like` | `eq(customer_id, e5a0d684-a4af-4919-a348-f66b0b4955e0)` |
+| `shipping_name` | `string` | `eq` / `like` | `like(shipping_name,home)` |
+| `shipping_postcode` | `string` | `eq` / `like` | `like(shipping_postcode,117*)` |
+| `billing_name` | `string` | `eq` / `like` | `like(billing_name,home)` |
+| `billing_postcode` | `string` | `eq` / `like` | `like(billing_postcode,117*)` |
 | `with_tax` | `integer` | `gt`/`ge`/`lt`/`le` | `ge(with_tax,10000)` |
 | `without_tax` | `integer` | `gt`/`ge`/`lt`/`le` | `ge(without_tax,10000)` |
 | `currency` | `string` | `eq` | `eq(currency,USD)` |
