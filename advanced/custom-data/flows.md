@@ -4,14 +4,14 @@ A flow describes a collection of fields. It is named after the internal entity t
 
 ## The flow object
 
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `id` | **string** | The unique identifier for this flow. |
-| `type` | **string** | Represents the type of object being returned. |
-| `name` | **string** | The name of the flow. |
-| `slug` | **string** | A unique slug identifier for the flow. |
-| `description` | **string** | Any description for this flow. |
-| `enabled` | **bool** | `true` if enabled, `false` if not. |
+| **Attribute** | **Type** | **Description**                              |
+| ------------- | -------- | -------------------------------------------- |
+| `id`          | `string` | The unique identifier for this flow.         |
+| `type`        | `string` | Represents the type of object being returned |
+| `name`        | `string` | The name of the flow                         |
+| `slug`        | `string` | A unique slug identifier for the flow        |
+| `description` | `string` | Any description for this flow                |
+| `enabled`     | `bool`   | `true` if enabled, `false` if not            |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:id" %}
 {% api-method-summary %}
@@ -72,7 +72,7 @@ The Bearer token to grant access to the API
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+```bash
 curl https://api.moltin.com/v2/flows/:id \
      -H "Authorization: Bearer XXXX"
 ```
@@ -86,9 +86,9 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-const flowID = 'XXXX';
+const flowId = 'XXXX';
 
-Moltin.Flows.Get(flowID).then(flows => {
+Moltin.Flows.Get(flowId).then(flows => {
   // Do something
 });
 ```
@@ -170,19 +170,19 @@ Represents the type of object being returned.
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
-curl -X "POST" "https://api.moltin.com/v2/flows" \
+```bash
+curl -X POST "https://api.moltin.com/v2/flows" \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "flow",
-    "name": "Products",
-    "slug": "products",
-    "description": "Extends the default product object",
-    "enabled": true
-  }
-}'
+        "data": {
+            "type": "flow",
+            "name": "Products",
+            "slug": "products",
+            "description": "Extends the default product object",
+            "enabled": true
+        }
+     }'
 ```
 {% endtab %}
 
@@ -293,20 +293,20 @@ The Bearer token to grant access to the API.
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
-curl -X "POST" "https://api.moltin.com/v2/flows/:id" \
+```bash
+curl -X POST "https://api.moltin.com/v2/flows/:id" \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "id": "{FLOW_ID}",
-    "type": "flow",
-    "name": "Categories",
-    "slug": "categories",
-    "description": "Extends the default category object",
-    "enabled": true
-  }
-}'
+        "data": {
+            "id": "{FLOW_ID}",
+            "type": "flow",
+            "name": "Categories",
+            "slug": "categories",
+            "description": "Extends the default category object",
+            "enabled": true
+        }
+     }'
 ```
 {% endtab %}
 
@@ -318,13 +318,15 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
+const flowId = 'XXX'
+
 const data = {
   name: 'Categories',
-  slug: 'categories'
+  slug: 'categories',
   description: 'Extends the default category object'
 }
 
-Moltin.Flows.Update('{FLOW_ID}', data).then(flow => {
+Moltin.Flows.Update(flowId, data).then(flow => {
   // Do something
 });
 ```
@@ -371,7 +373,7 @@ The Bearer token to grant access to the API
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+```bash
 curl -X DELETE https://api.moltin.com/v2/flows/:id \
     -H "Authorization: Bearer XXXX"
 ```
@@ -385,7 +387,7 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-const flowId = 'xxx'
+const flowId = 'XXX'
 
 Moltin.Flows.Delete(flowId).then(flow => {
   // Do something
