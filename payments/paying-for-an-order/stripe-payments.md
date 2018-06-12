@@ -69,7 +69,10 @@ curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
         "data": {
           "gateway": "stripe",
           "method": "purchase",
-          "payment": "tok_visa"
+          "payment": "tok_visa",
+          "options": {
+            "receipt_email": "john@example.com"
+          }
         }
       }'
 ```
@@ -206,7 +209,10 @@ curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
           "number": "4242424242424242",
           "month": "10",
           "year": "2020",
-          "verification_value": "123"
+          "verification_value": "123",
+          "options": {
+            "receipt_email": "john@example.com"
+          }
         }
       }'
 ```
@@ -264,8 +270,24 @@ The Bearer token used to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="options.destination" type="string" required=false %}
+The Stripe Connect Account ID
+{% endapi-method-parameter %}
 
+{% api-method-parameter name="options.receipt\_email" type="string" required=false %}
+Provide an email for Stripe receipts. `live` mode only
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="payment" type="string" required=true %}
+The Stripe token or source
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="method" type="string" required=true %}
+`purchase`, `authorize`, `capture`
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="gateway" type="string" required=true %}
+You will use stripe in this case
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -295,7 +317,8 @@ curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
           "method": "purchase",
           "payment": "tok_visa",
           "options": {
-            "destination": "acct_XXX"
+            "destination": "acct_XXX",
+            "receipt_email": "john@example.com"
           }
         }
       }'
