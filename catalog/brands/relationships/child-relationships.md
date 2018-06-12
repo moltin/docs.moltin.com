@@ -13,17 +13,23 @@ Create a relationship to a parent brand. If any relationship\(s\) already exists
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="brandId" type="string" required=true %}
-The ID of the brand you wish to make relationships to.
+The ID of the brand you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object \(should be be brand\).
+The type of related object \(should be be `brand`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent brand.
+The ID of the parent brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -42,10 +48,10 @@ The ID of the parent brand.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
-curl -X "POST" https://api.moltin.com/v2/brands/:brandId/relationships/children \
+curl -X POST https://api.moltin.com/v2/brands/:brandId/relationships/children \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -57,8 +63,8 @@ curl -X "POST" https://api.moltin.com/v2/brands/:brandId/relationships/children 
       ]
     }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/brands/:brandId/relationships/children" %}
 {% api-method-summary %}
@@ -73,9 +79,15 @@ Update Child Brand Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="brandId" type="string" required=true %}
-The ID of the brand you wish to make relationships to.
+The ID of the brand you wish to make relationships 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
@@ -102,8 +114,8 @@ The ID of the parent brand.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/brands/:brandId/relationships/children \
      -H "Content-Type: application/json" \
@@ -117,12 +129,12 @@ curl -X PUT https://api.moltin.com/v2/brands/:brandId/relationships/children \
       ]
     }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% api-method method="get" host="https://api.moltin.com/" path="/v2/brands/:brandId/relationships/parent" %}
+{% api-method method="delete" host="https://api.moltin.com/" path="v2/brands/:brandId/relationships/parent" %}
 {% api-method-summary %}
-
+Delete Child Brand Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -133,20 +145,26 @@ curl -X PUT https://api.moltin.com/v2/brands/:brandId/relationships/children \
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="brandId" type="string" required=true %}
-The ID of the brand you wish to update relationships to.
+The ID of the brand you wish to update relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=false %}
+{% api-method-parameter name="data" type="object" required=true %}
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data\[\].type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 The type of related object. \(should be brand\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data\[\].id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The ID of the child brand.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -166,8 +184,8 @@ The ID of the child brand.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X DELETE https://api.moltin.com/v2/brands/:brandId/relationships/parent \
      -H "Authorization: Bearer XXXX" \
@@ -178,6 +196,6 @@ curl -X DELETE https://api.moltin.com/v2/brands/:brandId/relationships/parent \
         }]
       }'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

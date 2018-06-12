@@ -13,23 +13,23 @@ Create a relationship to a parent collection. If any relationship\(s\) already e
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="collectionId" type="string" required=true %}
-The ID of the collection you wish to make relationships to.
+The ID of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
-The Bearer token used to access the API.
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object \(should be be collection\).
+The type of related object \(should be be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection.
+The ID of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -79,23 +79,23 @@ Update Child Collection Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="collectionId" type="string" required=true %}
-The ID of the collection you wish to make relationships to.
+The ID of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token used to access the API.
+The Bearer token used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of related object \(should be collection\).
+The type of related object \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection.
+The ID of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -145,26 +145,26 @@ Delete Child Collection Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="collectionId" type="string" required=true %}
-The ID of the collection you wish to update relationships to.
+The ID of the collection you wish to update relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token used to access the API.
+The Bearer token used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=false %}
+{% api-method-parameter name="data" type="object" required=true %}
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data\[\].type" type="string" required=false %}
-The type of related object. \(should be collection\)
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
+The type of related object. \(should be `collection`\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="data\[\].id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The ID of the child collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

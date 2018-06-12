@@ -24,11 +24,11 @@ The Bearer token used to access the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
-The type of related object. \(should be collection\)
+{% api-method-parameter name="type" type="string" required=true %}
+The type of related object. \(should be `collection`\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 The ID of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -82,17 +82,17 @@ The ID of the collection you wish to make relationships to
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 The Bearer token used to access the API.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
-The type of related object. \(should be collection\)
+{% api-method-parameter name="type" type="string" required=true %}
+The type of related object. \(should be `collection`\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 The ID of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
