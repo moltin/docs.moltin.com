@@ -132,6 +132,7 @@
   * [Get an Order](orders-and-customers/orders/get-an-order.md)
   * [Update an Order](orders-and-customers/orders/update-an-order.md)
   * [Order Items](orders-and-customers/orders/order-items.md)
+  * [Filtering](orders-and-customers/orders/filtering.md)
 * [Customers](orders-and-customers/customers/README.md)
   * [Get all Customers](orders-and-customers/customers/get-all-customers.md)
   * [Get a Customer](orders-and-customers/customers/get-a-customer.md)
