@@ -4,11 +4,11 @@ You can easily include resource relationships on most top-level resources. Multi
 
 Each supported resource includes it's own documentation on the available resources that can be included.
 
-Let's look at an example request to include `products` inside a `category`.
+Below are some common include examples.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/:id?include=products" %}
 {% api-method-summary %}
-Example: Category with included products
+Include Category products
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -30,7 +30,7 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="include" type="string" required=false %}
+{% api-method-parameter name="include" type="string" required=true %}
 `products`
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -178,6 +178,170 @@ let moltin = Moltin(withClientID: "<your client ID>")
 let id = "XXXX"
 
 moltin.category.include([.products]).get(forID: id) { result in
+    switch result {
+        case .success(let response):
+            print(response)
+        case .failure(let error):
+            print(error)
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% api-method method="get" host="https://api.moltin.com" path="/v2/products?include=main\_image" %}
+{% api-method-summary %}
+Include product main\_image
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="include" type="string" required=true %}
+`main_image`
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/products?include=main_image \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const id = 'XXXX'
+
+Moltin.Products.With('main_image')
+  .All()
+  .then(products => {
+    // Do something
+  })
+```
+{% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+let id = "XXXX"
+
+moltin.product.include([.main_image]).all { result in
+    switch result {
+        case .success(let response):
+            print(response)
+        case .failure(let error):
+            print(error)
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% api-method method="get" host="https://api.moltin.com" path="/v2/products?include=main\_images,category" %}
+{% api-method-summary %}
+Multiple includes
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="include" type="string" required=true %}
+`main_images,category`
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token used to access the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/products?include=main_image,category \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const id = 'XXXX'
+
+Moltin.Products.With(['main_image', 'category'])
+  .All()
+  .then(products => {
+    // Do something
+  })
+```
+{% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+let id = "XXXX"
+
+moltin.product.include([.main_image, .category]).all { result in
     switch result {
         case .success(let response):
             print(response)
