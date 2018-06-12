@@ -1,8 +1,8 @@
 # Orders
 
-### The Order object {#the-order-object}
+### The Order Object {#the-order-object}
 
-The order object is a representation of an order in moltin.
+The Order object is a representation of an order in moltin.
 
 {% tabs %}
 {% tab title="Attributes" %}
@@ -14,8 +14,8 @@ The order object is a representation of an order in moltin.
 | `payment` | `string` | `unpaid`, `authorized`, `paid`, `refunded` |
 | `shipping` | `string` | `fulfilled`, `unfulfilled` |
 | `customer` | `object` | The customer object associated with this order |
-| `customer.name` | `string` | The customers name |
-| `customer.email` | `string` | The customers email |
+| `customer.name` | `string` | The customer's name |
+| `customer.email` | `string` | The customer's email |
 | `shipping_address` | `object` | The shipping address object |
 | `shipping_address.first_name` | `string` | The first name of the address holder |
 | `shipping_address.last_name` | `string` | The last name of the address holder |

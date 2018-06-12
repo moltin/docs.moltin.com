@@ -2,7 +2,7 @@
 
 ## Product Variations
 
-Variations allow you to create the variations that your products have. Things like size or colour are examples of a variation. Using this system you can reliably create all possible combinations of your product.
+Variations allow you to create the variations that your products have. Things like size or color are examples of a Variation. Using this system you can reliably create all possible combinations of your product.
 
 ### The variation object
 

@@ -89,7 +89,7 @@ Get logs for an Event
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the event
+The **ID** for the event
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -169,7 +169,7 @@ Get jobs for an Event
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the event
+The **ID** for the event
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -231,11 +231,11 @@ Get all logs for a job
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the job
+The **ID** for the job
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="event\_id" type="string" required=true %}
-The ID for the event
+The **ID** for the event
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

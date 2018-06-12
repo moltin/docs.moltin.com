@@ -1,6 +1,6 @@
 # Settings
 
-The settings endpoint allows you to configure global settings for your project.
+The Settings endpoint allows you to configure global settings for your project.
 
 ## Page length
 

@@ -13,7 +13,7 @@ Get a File by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the file
+The **ID** for the file
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

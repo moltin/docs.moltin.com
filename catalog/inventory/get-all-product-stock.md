@@ -1,8 +1,8 @@
-# Get all Product Stock
+# Get All Product Stock
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/inventories/:productId" %}
 {% api-method-summary %}
-Get all Stock by Product ID
+Get All Stock by Product ID
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -13,7 +13,7 @@ Get all Stock by Product ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The ID for the product you require stock
+The **ID** for the product you require stock
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

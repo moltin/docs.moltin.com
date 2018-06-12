@@ -6,14 +6,14 @@ Create File Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to one or more **files**.  If any relationships already exist, the one's made in the request will be added to them.
+Create a product relationship to one or more **Files**.  If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id**  of the product you wish to relate to the file\(s\).
+The **ID**  of the product you wish to relate to the file\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ Represents the type of object \(should be **file\).**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the file.
+The **ID** of the file.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -97,14 +97,14 @@ Update File Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a product and a file.  Unlike a **POST**  to this endpoint, a **PUT** overrides any existing relationships.
+Replace the relationships between a Product and a File.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the file\(s\).
+The **ID** of the product you wish to relate to the file\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -183,7 +183,7 @@ Delete File Relationships\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a product and file\(s\) deletes the relationships specified in the payload.
+Removing a relationship between a Product and File\(s\) deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}

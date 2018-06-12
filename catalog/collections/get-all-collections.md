@@ -1,8 +1,8 @@
-# Get all Collections
+# Get All Collections
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/collections" %}
 {% api-method-summary %}
-Get all Collections
+Get All Collections
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -23,7 +23,7 @@ collection, products
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="filter" type="string" required=false %}
-Filter the results.
+Filter the results
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

@@ -19,7 +19,7 @@ Create a Translation
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the product you wish to update
+The **ID** of the product you wish to update
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -87,7 +87,7 @@ If the requested language does not have a translation availabe, the default lang
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/products" %}
 {% api-method-summary %}
-Get all products by preferred language
+Get all Products by Preferred Language
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -236,7 +236,7 @@ Get a translated Product by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the product
+The **ID** of the product
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

@@ -1,24 +1,24 @@
 # Fields
 
-A field represents a single field of data \(for example a `Product Rating`\) to be applied to an entity. All fields have a type \(`string`, `integer`, `boolean`, `date` or `relationship`\), a default value and an optional set of validation rules.
+A Field represents a single Field of data \(for example a `Product Rating`\) to be applied to an entity. All Fields have a type \(`string`, `integer`, `boolean`, `date` or `relationship`\), a default value and an optional set of validation rules.
 
-## The Field object
+## The Field Object
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| id | **string** | The unique identifier for this field. |
-| type | **string** | Represents the type of object being returned. |
-| name | **string** | The name of the field. |
-| slug | **string** | A unique slug identifier for the field. |
+| id | **string** | The unique identifier for this field |
+| type | **string** | Represents the type of object being returned |
+| name | **string** | The name of the field |
+| slug | **string** | A unique slug identifier for the field |
 | field\_type | **string** | The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship` |
 | validation\_rules | **array\[object\]** | See [`Flow Field Validation Rules`](https://docs.moltin.com/#flow-field-validation-rules) |
-| description | **string** | Any description for this field. |
-| required | **bool** | `true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship. |
-| unique | **bool** | `true` if each entry should be unique, `false` if not.\` |
-| default | **mixed** | A default value if none is supplied and field is not required. |
-| enabled | **bool** | If this field is enabled on the flow this should be `true`, otherwise `false`. |
-| order | **integer** | Denotes the order in which this field is returned relative to the rest of the flow fields. |
-| relationships | **object** | A relationship object to link this field to a flow. |
+| description | **string** | Any description for this field |
+| required | **bool** | `true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship |
+| unique | **bool** | `true` if each entry should be unique, `false` if not\` |
+| default | **mixed** | A default value if none is supplied and field is not required |
+| enabled | **bool** | If this field is enabled on the flow this should be `true`, otherwise `false` |
+| order | **integer** | Denotes the order in which this field is returned relative to the rest of the flow fields |
+| relationships | **object** | A relationship object to link this field to a flow |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields" %}
 {% api-method-summary %}
@@ -129,7 +129,7 @@ Get a field
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the field you are requesting.
+The **ID** for the field you are requesting.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -241,7 +241,7 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="flowId" type="string" required=false %}
-The id of the flow you wish to tie the field too.
+The **ID** of the flow you wish to tie the field too.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
@@ -419,7 +419,7 @@ Update a Field
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the field you are requesting to be updated
+The **ID** for the field you are requesting to be updated
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -451,11 +451,11 @@ Any description for this field
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="required" type="boolean" required=false %}
-True if required on input, false if not. Always false if the field\_type is a relationship
+`true` if required on input, `false` if not. Always false if the field\_type is a relationship
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="unique" type="boolean" required=true %}
-true if each entry should be unique, false if not
+`true` if each entry should be unique, `false` if not
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="default" type="string" required=false %}
@@ -463,7 +463,7 @@ A default value if none is supplied and field is not required
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="enabled" type="boolean" required=true %}
-If this field is enabled on the flow this should be true, otherwise false
+If this field is enabled on the flow this should be `true`, otherwise `false`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order" type="integer" required=false %}
@@ -580,7 +580,7 @@ Delete a Field
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID fir the field you are requesting to be deleted
+The **ID** fir the field you are requesting to be deleted
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

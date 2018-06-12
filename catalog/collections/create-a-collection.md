@@ -35,7 +35,7 @@ Any description for this collection.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="status" type="string" required=false %}
-live, or draft depending on the collection status. \(defaults to draft\)
+`live`, or `draft` depending on the collection status. \(defaults to draft\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

@@ -10,7 +10,7 @@ We provide a basic `/tokens` endpoint that allows you authenticate customers by 
 | --- | --- | --- |
 | `id` | `string` | The unique identifier for this otken |
 | `type` | `string` | The type represents the object being returned |
-| `customer_id` | `string` | The ID of the customer from which the token is generated |
+| `customer_id` | `string` | The **ID** of the customer from which the token is generated |
 | `token` | `string` | The JSON Web Token to be used for other endpoints |
 | `expires` | `timestamp` | The epoch time that this token expires at |
 {% endtab %}

@@ -1,16 +1,16 @@
 # Carts
 
-A cart contains the product and custom cart items that a user may wish to purchase. Once a cart is ready for checkout, you can use the [checkout](../checkout.md) endpoint to convert the cart to an order.
+A Cart contains the product and custom cart items that a user may wish to purchase. Once a Cart is ready for Checkout, you can use the [Checkout](../checkout.md) endpoint to convert the cart to an order.
 
 {% hint style="info" %}
-Adding, modifying or removing any cart items, custom items or promotions will always return the cart meta. **This is useful to update the client with up to date totals.**
+Adding, modifying or removing any cart items, custom items or promotions will always return the cart meta. **This is useful to update the client with up-to-date totals.**
 {% endhint %}
 
 {% hint style="warning" %}
 We'll automatically delete carts 7 days after they were last updated.
 {% endhint %}
 
-## The Cart object
+## The Cart Object
 
 {% tabs %}
 {% tab title="Attributes" %}

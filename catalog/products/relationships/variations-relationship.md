@@ -13,7 +13,7 @@ Create Variations Relationship\(s\)
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the variation\(s\).
+The **ID** of the product you wish to relate to the variation\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ Represents the type of object \(should be product-variation\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the product-variation.
+The **ID** of the product-variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -104,7 +104,7 @@ Replace the relationships between a product and a variation.  Unlike a **POST** 
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the collection\(s\).
+The **ID** of the product you wish to relate to the variation\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -120,7 +120,7 @@ Represents the type of object \(should be **product-variation\).**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the variation.
+The **ID** of the variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -183,7 +183,7 @@ Delete Variation Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a product and a variation\(s\) deletes the relationships specified in the payload.
+Removing a relationship between a Product and a Variation\(s\) deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}

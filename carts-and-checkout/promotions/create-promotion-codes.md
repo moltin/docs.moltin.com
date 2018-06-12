@@ -33,7 +33,7 @@ An array of objects.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="codes.code" type="string" required=false %}
-A string to use as a code for the promotion.
+A string to use as a code for the promotion
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

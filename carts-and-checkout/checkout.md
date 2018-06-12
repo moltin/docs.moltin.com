@@ -190,7 +190,7 @@ With Customer object
 {% endapi-method-summary %}
 
 {% api-method-description %}
-You can checkout a Cart with an associated customer name and email.
+You can check-out a Cart with an associated customer name and email.
 {% endapi-method-description %}
 
 {% api-method-spec %}

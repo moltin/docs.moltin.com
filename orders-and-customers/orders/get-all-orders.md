@@ -6,7 +6,7 @@ Get all Orders
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Getting all orders will return your orders with custom flow fields
+Getting all orders will return your orders with custom flow fields.
 {% endapi-method-description %}
 
 {% api-method-spec %}

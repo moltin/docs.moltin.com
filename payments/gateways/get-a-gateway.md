@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/gateways/:slug" %}
 {% api-method-summary %}
-Get a Gateway by slug
+Get a Gateway by Slug
 {% endapi-method-summary %}
 
 {% api-method-description %}

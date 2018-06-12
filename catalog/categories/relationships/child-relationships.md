@@ -6,14 +6,14 @@ Create Child Category Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent category. If any relationship\(s\) already exists, new ones will be added.
+Create a relationship to a parent Category. If any relationship\(s\) already exists, new ones will be added.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="categoryId" type="string" required=true %}
-The ID of the category you wish to make relationships to
+The **ID** of the category you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The type of related object \(should be be `category`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent category
+The **ID** of the parent category
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -79,7 +79,7 @@ Update Child Category Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="categoryId" type="string" required=true %}
-The ID of the category you wish to make relationships to
+The **ID** of the category you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -89,7 +89,7 @@ The type of related object \(should be `category`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent category
+The **ID** of the parent category
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

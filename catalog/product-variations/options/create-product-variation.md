@@ -13,7 +13,7 @@ Create a Product Variation Option
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-The ID of the variation belonging to this option
+The **ID** of the variation belonging to this option
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -25,7 +25,7 @@ The Bearer token to grant access to the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-Represents the type of the object being created. \(should be option\)
+Represents the type of the object being created. \(should be `option`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}

@@ -41,7 +41,7 @@ A description of your promotion
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="enabled" type="boolean" required=false %}
-true if enabled, false if not
+`true` if enabled, `false` if not
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="promotion\_type" type="string" required=false %}

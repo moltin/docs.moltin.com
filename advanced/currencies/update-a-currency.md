@@ -13,7 +13,7 @@ Update a Currency by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the requested Currency
+The **ID** for the requested Currency
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

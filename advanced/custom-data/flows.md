@@ -1,17 +1,17 @@
 # Flows
 
-A flow describes a collection of fields. It is named after the internal entity type you wish to associate it with. For example a flow with a slug of `products` will be applied to all product responses in your store.
+A Flow describes a collection of Fields. It is named after the internal entity type you wish to associate it with. For example a Flow with a slug of `products` will be applied to all Product responses in your store.
 
 ## The flow object
 
-| **Attribute** | **Type** | **Description**                              |
-| ------------- | -------- | -------------------------------------------- |
-| `id`          | `string` | The unique identifier for this flow.         |
-| `type`        | `string` | Represents the type of object being returned |
-| `name`        | `string` | The name of the flow                         |
-| `slug`        | `string` | A unique slug identifier for the flow        |
-| `description` | `string` | Any description for this flow                |
-| `enabled`     | `bool`   | `true` if enabled, `false` if not            |
+| **Attribute** | **Type** | **Description** |
+| --- | --- | --- |
+| `id` | `string` | The unique identifier for this flow. |
+| `type` | `string` | Represents the type of object being returned |
+| `name` | `string` | The name of the flow |
+| `slug` | `string` | A unique slug identifier for the flow |
+| `description` | `string` | Any description for this flow |
+| `enabled` | `bool` | `true` if enabled, `false` if not |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:id" %}
 {% api-method-summary %}
@@ -26,7 +26,7 @@ Get a Flow
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the flow you are requesting
+The **ID** for the flow you are requesting
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -114,7 +114,7 @@ The Bearer token to grant access to the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="enabled" type="boolean" required=true %}
-true if enabled, false if not
+`true` if enabled, `false` if not
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=true %}
@@ -221,7 +221,7 @@ Update a Flow
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the flow you are changing.
+The **ID** for the flow you are changing.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -346,7 +346,7 @@ Delete a Flow
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID for the field you are requesting to be deleted
+The **ID** for the field you are requesting to be deleted
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -379,7 +379,7 @@ curl -X DELETE https://api.moltin.com/v2/flows/:id \
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="JavaScript SDK" %}
 ```javascript
 const MoltinGateway = require('@moltin/sdk').gateway
 

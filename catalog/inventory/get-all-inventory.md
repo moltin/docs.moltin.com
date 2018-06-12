@@ -1,8 +1,8 @@
-# Get all Inventory
+# Get All Inventory
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/inventories" %}
 {% api-method-summary %}
-Get Stock for all Products
+Get Stock for All Products
 {% endapi-method-summary %}
 
 {% api-method-description %}

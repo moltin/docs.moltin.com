@@ -24,10 +24,6 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="type" type="string" required=true %}
 `order`
 {% endapi-method-parameter %}

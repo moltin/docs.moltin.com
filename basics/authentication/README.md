@@ -1,12 +1,12 @@
 # Authentication
 
-All requests to the API need to be accompanied by an authorisation header with a authentication token:
+All requests to the API need to be accompanied by an authorization header with an authentication token:
 
 `Authorization: Bearer 212LJ3k0i2382364HIUEjfeJB98yvH`
 
-Authentication tokens are generated via the authentication endpoint.
+Authentication tokens are generated via the `authentication` endpoint.
 
-There are two main token types available for use within your store `client_credentials` and `implicit`. The implicit token is the more limited of the two, restricting access to mostly read-only whereas `client_credentials` has full read and write access.
+There are two main token types available for use within your store `client_credentials` and `implicit`. The implicit token is the more limited of the two, restricting access to mostly read-only, whereas `client_credentials` has full read and write access.
 
 {% hint style="warning" %}
 You should never use or disclose your `client_secret` in public.

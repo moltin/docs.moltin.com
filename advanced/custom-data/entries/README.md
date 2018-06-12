@@ -230,11 +230,11 @@ Update an entry
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="slug" type="string" required=true %}
-The slug for the flow you are requesting an entry for
+The slug for the Flow you are requesting an entry for
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the entry you are updating
+The **ID** of the entry you are updating
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -250,11 +250,11 @@ Represents the type of object being returned
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="fieldSlug" type="string" required=true %}
-The name of the flow
+The name of the Flow
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entryID" type="string" required=false %}
-The ID of the entry
+The **ID** of the entry
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -306,7 +306,7 @@ The ID of the entry
 {% endtabs %}
 
 {% hint style="info" %}
-You can have multiple `{FIELD_SLUG}`'s in the request body if they are related to the flow.
+You can have multiple `{FIELD_SLUG}`s in the request body if they are related to the flow.
 {% endhint %}
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
@@ -322,11 +322,11 @@ Delete an Entry
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the entry you are requesting to delete
+The **ID** of the entry you are requesting to delete
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="slug" type="string" required=true %}
-The slug for the flows you are requesting entries for
+The slug for the Flows you are requesting entries for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

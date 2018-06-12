@@ -1,8 +1,8 @@
 # Cart Items
 
-## The Cart Item object
+## The Cart Item Object
 
-Products add to a cart are referred to as a cart\_item.
+Products added to a cart are referred to as a cart\_item.
 
 {% tabs %}
 {% tab title="Attributes" %}

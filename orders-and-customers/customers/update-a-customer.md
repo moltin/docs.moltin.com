@@ -13,7 +13,7 @@ Update by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="customerId" type="string" required=true %}
-The ID for the customer requested.
+The **ID** for the customer requested
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -37,11 +37,11 @@ The full name of the customer.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="email" type="string" required=false %}
-The customer email.
+The customer email
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="password" type="string" required=false %}
-The customers password.
+The customers password
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -74,7 +74,7 @@ curl -X PUT https://api.moltin.com/v2/customers/:customerId \
 ```
 {% endtab %}
 
-{% tab title="JavaScriptSDK" %}
+{% tab title="JavaScript SDK" %}
 ```javascript
 const MoltinGateway = require('@moltin/sdk').gateway
 

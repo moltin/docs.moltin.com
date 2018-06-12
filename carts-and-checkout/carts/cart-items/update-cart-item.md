@@ -1,6 +1,6 @@
 # Update Cart Item
 
-You can easily update a cart item. A successful update will return the [cart items](./).
+You can easily update a Cart item. A successful update will return the [cart items](./).
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/carts/:reference/items/:itemId" %}
 {% api-method-summary %}
@@ -21,7 +21,7 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="quantity" type="integer" required=true %}
-The amount of products to add cart
+The amount of products to add to cart
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
@@ -29,7 +29,7 @@ The type of the cart item to be updated, `cart_item`, `custom_item`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the item to be updated
+The **ID** of the item to be updated
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

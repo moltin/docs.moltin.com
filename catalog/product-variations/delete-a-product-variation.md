@@ -13,13 +13,13 @@ Delete a product variation
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-The ID of the variation you wish to delete.
+The **ID** of the variation you wish to delete.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer used to access the API.
+The Bearer used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}

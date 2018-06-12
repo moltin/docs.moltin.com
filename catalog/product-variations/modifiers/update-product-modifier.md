@@ -13,15 +13,15 @@ Update a product modifier
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="variationId" type="string" required=true %}
-The ID of the variation belonging to this modifier.
+The **ID** of the variation belonging to this modifier.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="optionId" type="string" required=true %}
-The ID of the option belonging to the modifier.
+The **ID** of the option belonging to the modifier.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="modifierId" type="string" required=true %}
-The ID of the modifier to be updated
+The **ID** of the modifier to be updated
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

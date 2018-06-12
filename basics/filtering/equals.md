@@ -1,6 +1,6 @@
 # Equals
 
-In the example below we will make a request to get all digital products from the moltin catalogue.
+In the example below, we will make a request to get all digital products from the Moltin catalogue.
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -36,4 +36,6 @@ moltin.product.filter(operator: .eq, key: "commodity_type", value: "digital").al
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

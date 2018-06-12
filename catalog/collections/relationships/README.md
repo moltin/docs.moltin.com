@@ -1,6 +1,6 @@
 # Relationships
 
-You can use the Collections API to associate collections with each other in a hierarchical tree structure. The relationship between collections is known as `parents` and `children`.
+You can use the Collections API to associate Collections with each other in a hierarchical tree structure. The relationship between Collections is known as `parents` and `children`.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/collections/tree" %}
 {% api-method-summary %}

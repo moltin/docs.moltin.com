@@ -13,7 +13,7 @@ Create Collection Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the collection you want to modify relationships for
+The **ID** of the collection you want to modify relationships for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The type of the related object \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="parent.id" type="string" required=true %}
-The ID of the parent collection
+The **ID** of the parent collection
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="children\[\].type" type="string" required=true %}
@@ -37,7 +37,7 @@ The type of related object \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="children\[\].id" type="string" required=true %}
-The ID of the collection
+The **ID** of the collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

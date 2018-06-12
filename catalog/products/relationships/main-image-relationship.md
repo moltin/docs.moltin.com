@@ -6,14 +6,14 @@ Create a Main Image Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to a single file, which can be used as a main\_image.  You can only have one main image relationship.
+Create a Product relationship to a single File, which can be used as a main\_image.  You can only have one main image relationship.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The id of the product you wish to relate to the image.
+The **ID** of the product you wish to relate to the image.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -25,7 +25,7 @@ The Bearer token used to access the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-Represents they type of the object \(should be main\_image\).
+Represents the type of the object \(should be main\_image\).
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -89,7 +89,7 @@ Update the main image relationship.  This will replace any currently related ima
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=false %}
-The **id** of the product you wish to relate to the image.
+The **ID** of the product you wish to relate to the image.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -105,7 +105,7 @@ Represents the type of object \(should be **main\_image**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the image.
+The **ID** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -162,14 +162,14 @@ Delete a Main Image Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete the main image relationship.  This will remove the related main image.
+Delete the main image relationship. This will remove the related main image.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=false %}
-The **id** of the product you wish to remove the relationship for.
+The **ID** of the product you wish to remove the relationship for.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -185,7 +185,7 @@ Represents the type of object \(should be **main\_image\).**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id**  of the image.
+The **ID** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -235,4 +235,6 @@ Moltin.Products.DeleteRelationships(productId, 'main_image', 'e9737dc6-876a-4eab
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

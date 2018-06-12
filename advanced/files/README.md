@@ -6,7 +6,7 @@ The immutable files API is available via the `multipart/form-data` [Content-Type
 Accept file types are `jpg`, `jpeg`, `png` and `gif`.
 {% endhint %}
 
-## The file object
+## The File Object
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |

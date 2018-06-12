@@ -1,6 +1,6 @@
 # Add Product to Cart
 
-Adding a product to cart is the most common cart action. If you wish to add any [custom products](add-product-to-cart.md) or [promotions](add-promotion-to-cart.md), you'll need to do that separately.
+Adding a Product to Cart is the most common Cart action. If you wish to add any [custom products](add-product-to-cart.md) or [promotions](add-promotion-to-cart.md), you'll need to do that separately.
 
 {% hint style="info" %}
 Any requests to add a product to cart will return a collection of [cart items](cart-items/).

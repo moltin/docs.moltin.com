@@ -1,6 +1,6 @@
 # Filtering
 
-Below is a list of attributes and operators available for [filtering](../../basics/filtering/) collections.
+Below is a list of attributes and operators available for [filtering](../../basics/filtering/) Collections.
 
 | **Attribute** | **Type** | **Operators** | **Example** |
 | --- | --- | --- | --- |

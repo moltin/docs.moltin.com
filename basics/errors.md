@@ -36,7 +36,7 @@ You'll most likely receive a `401: Unauthorized` response when you provide an in
 
 ### Bad Request
 
-You'll get a `400: Bad Request` when you you fail validation.
+You'll get a `400: Bad Request` when you fail validation.
 
 ```javascript
 {

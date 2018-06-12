@@ -1,6 +1,6 @@
 # Entry Relationships
 
-When you create a field that uses `relationship` as a `field_type`, you update your entry values using relationship endpoints.
+When you create a field that uses `relationship` as a `field_type`, you update your entry values using the Relationship endpoints.
 
 The endpoints are dynamic and take the form of: `/v2/flows/{FLOW_SLUG}/entries/{ENTRY_ID}/relationships/{FIELD_SLUG}`.
 
@@ -23,7 +23,7 @@ The slug of the entry this field belongs to
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entryId" type="string" required=false %}
-The ID of the entry this field belongs to
+The **ID** of the entry this field belongs to
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="flowSlug" type="string" required=false %}
@@ -39,7 +39,7 @@ The Bearer token used to access the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="data.id" type="string" required=false %}
-The ID of the related resource.
+The **ID** of the related resource.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="data.type" type="string" required=false %}
@@ -90,11 +90,11 @@ Replace the relationships between an entry and a resource. Unlike a POST to this
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="fieldSlug" type="string" required=true %}
-The slug of the flow the entry belongs to
+The slug of the Flow the entry belongs to
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entryId" type="string" required=true %}
-The ID of the entry this field belongs to
+The **ID** of the entry this field belongs to
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="flowSlug" type="string" required=true %}
@@ -159,11 +159,11 @@ The slug of the entry this field belongs to
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entryId" type="string" required=true %}
-The ID of the entry this field belongs to
+The **ID** of the entry this field belongs to
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="flowSlug" type="string" required=true %}
-The slug of the flow the entry belongs to
+The slug of the Flow the entry belongs to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -175,7 +175,7 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="data.id" type="string" required=true %}
-The ID of the related resource
+The **ID** of the related resource
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="data.type" type="string" required=true %}

@@ -1,8 +1,8 @@
 # Categories
 
-Categories allow you to organize your products into hierarchical groups. That means these groups can also contain other categories, which can then be viewed in a tree structure.
+Categories allow you to organize your Products into hierarchical groups. That means these groups can also contain other Categories, which can then be viewed in a tree structure.
 
-## The Category object
+## The Category Object
 
 {% tabs %}
 {% tab title="Attributes" %}
@@ -34,7 +34,7 @@ Categories allow you to organize your products into hierarchical groups. That me
 {% endtab %}
 {% endtabs %}
 
-## The `meta` object
+## The `meta` Object
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ Categories allow you to organize your products into hierarchical groups. That me
 | `meta.timestamps.created_at` | `string` | The creation date of this category |
 | `meta.timestamps.updated_at` | `string` | The updated date of this category |
 
-## The `relationships` object
+## The `relationships` Object
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |

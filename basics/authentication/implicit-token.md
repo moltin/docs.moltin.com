@@ -2,7 +2,7 @@
 
 An `implicit` token is typically used for situations where you are requesting data on the client side and you are exposing your public key.
 
-You will use most likely use an `implicit` token inside client side applications, such as JavaScript.
+You will use most likely use an `implicit` token inside client-side applications, such as JavaScript.
 
 {% hint style="warning" %}
 An `implicit` token can be thought of as a **READ ONLY** token.

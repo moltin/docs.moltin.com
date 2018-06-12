@@ -1,8 +1,8 @@
-# Update a product variation
+# Update a Product Variation
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/variation/:id" %}
 {% api-method-summary %}
-Update a product variation
+Update a Product Variation
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -13,7 +13,7 @@ Update a product variation
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-The ID of the variation you wish to update
+The **ID** of the variation you wish to update
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -25,7 +25,7 @@ The Bearer token used to access the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-The ID of the variation being updated
+The **ID** of the variation being updated
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=false %}

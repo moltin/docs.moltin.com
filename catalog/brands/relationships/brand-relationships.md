@@ -2,7 +2,7 @@
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/brands/:id/relationships/brands" %}
 {% api-method-summary %}
-Create Brand Relationship
+Create Brand Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -13,7 +13,7 @@ Create Brand Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the brand you want to modify relationships for
+The **ID** of the brand you want to modify relationships for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The type of the related object \(should be `brand`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="parent.id" type="string" required=true %}
-The ID of the parent brand
+The **ID** of the parent brand
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="children\[\].type" type="string" required=true %}
@@ -37,7 +37,7 @@ The type of related object \(should be `brand`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="children\[\].id" type="string" required=true %}
-The ID of the brand
+The **ID** of the brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

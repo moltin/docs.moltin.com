@@ -1,10 +1,10 @@
 # Promotions
 
-Promotions allow you to provide discounts to customers. By defining a promotion, and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
+Promotions allow you to provide discounts to customers. By defining a Promotion, and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
 
 The promotions you create will require codes to be attached to them, and these codes are subsequently used by end-users \(or your own system\) to apply promotions to carts and provide the discounts stipulated.
 
-## The promotion object
+## The Promotion Object
 
 {% tabs %}
 {% tab title="Sample Response" %}
@@ -52,11 +52,11 @@ A promotion is represented by a promotion object.
 | start | **string** | The start time of the promotion DateTime. |
 | end | **string** | The end time of the promotion DateTime. |
 
-## The schema object
+## The Schema Object
 
-moltin offer different types of promotion all defined by a schema. These schemas are used internally to verify a promotion and calculate a discount.
+Moltin offers different types of Promotion all defined by a Schema. These Schemas are used internally to verify a Promotion and calculate a discount.
 
-Below is the list of currently available promotion type schemas - these are to be used in the [create promotion request](https://docs.moltin.com/?javascript#create-a-promotion).
+Below is the list of currently available promotion type Schemas - these are to be used in the [create promotion request](https://docs.moltin.com/?javascript#create-a-promotion).
 
 ### Fixed Discount
 
@@ -100,7 +100,7 @@ Percent discount provides a method to give a percentage discount to a cart based
 | currencies\[\].currency | **string** | A currency code. |
 | currencies\[\].percentage | **float** | The percentage to discount by. |
 
-## The promotion code object
+## The Promotion Code Object
 
 A promotion code is represented by the following, very simple, object.
 

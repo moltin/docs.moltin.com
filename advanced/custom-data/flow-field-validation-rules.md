@@ -1,6 +1,6 @@
 # Flow Field Validation Rules
 
-When creating a flow field, you can add validation to values that are stored. The validation you can use depends on the `field_type` and each one is expressed as a validation rule object:
+When creating a Flow field, you can add validation to values that are stored. The validation you can use depends on the `field_type` and each one is expressed as a validation rule object:
 
 ## `string` / `enum`
 
@@ -43,7 +43,7 @@ Must be a valid email address.
 }
 ```
 
-Can contain only letters, numbers, hyphens & underscores.
+Can contain only letters, numbers, hyphens and underscores.
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |

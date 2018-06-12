@@ -13,21 +13,21 @@ Delete a product modifier
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="variationId" type="string" required=true %}
-The ID of the variation belonging to this modifier
+The **ID** of the variation belonging to this modifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="optionId" type="string" required=true %}
-The ID of the option belonging to the modifier
+The **ID** of the option belonging to the modifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="modifierId" type="string" required=true %}
-The ID of the modifier to be deleted
+The ID ****of the modifier to be deleted
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token used to access the API.
+The Bearer token used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -50,4 +50,6 @@ The Bearer token used to access the API.
 curl -X "DELETE" https://api.moltin.com/v2/variation/:variationID/option/:optionId/modifiers/:modifierId \
      -H "Authorization: Bearer XXXXX"
 ```
+
+
 

@@ -121,7 +121,7 @@ Product inventory is managed separately. If you wish to increment and allocate s
 | --- | --- | --- |
 | `price.amount` | `integer` | Value of the price in the lowest denomination for that currency |
 | `price.currency` | `string` | Currency code of this price \(3 letter ISO\) |
-| `price.includes_tax` | `boolean` | true if relevant taxes have been included in the price false if not |
+| `price.includes_tax` | `boolean` | `true` if relevant taxes have been included in the price `false` if not |
 
 ## The `meta` object
 
@@ -137,8 +137,8 @@ Product inventory is managed separately. If you wish to increment and allocate s
 | `meta.display_price.with_tax` | `object` | Tax inclusive prices for this product |
 | `meta.display_price.with_tax.amount` | `integer` | The raw total of this product \(includes tax\) |
 | `meta.display_price.with_tax.currency` | `string` | The currency this display price has been formatted for |
-| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total based on the currency |
-| `meta.display_price.without_tax` | `object` | Tax exclusive prices for this product |
+| `meta.display_price.with_tax.formatted` | `string` | The tax-inclusive formatted total based on the currency |
+| `meta.display_price.without_tax` | `object` | Tax-exclusive prices for this product |
 | `meta.display_price.without_tax.amount` | `integer` | The raw total of this product \(excludes tax\) |
 | `meta.display_price.without_tax.currency` | `string` | The currency this display price has been formatted for |
 | `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total based on the currency |
@@ -147,9 +147,8 @@ Product inventory is managed separately. If you wish to increment and allocate s
 | `meta.variations.name` | `string` | The variation name |
 | `meta.variations.options` | `array[object]` | An array of options attached to this variation |
 | `meta.variations.options.name` | `string` | The variation name |
-| `meta.variations.options.name` | `string` | The variation name |
 | `meta.variations.options.description` | `string` | A description of the option |
-| `meta.variation_matrix` | `object` | A matrix of option IDs to child product IDs. |
+| `meta.variation_matrix` | `object` | A matrix of option IDs to child product IDs |
 
 {% hint style="warning" %}
 The variations matrix is only returned when getting a product by ID

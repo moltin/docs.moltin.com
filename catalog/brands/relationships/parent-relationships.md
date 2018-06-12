@@ -6,14 +6,14 @@ Create Parent Brand Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent brand. If a relationship already exists, the one from the request will overwrite it
+Create a relationship to a parent Brand. If a relationship already exists, the one from the request will overwrite it.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the brand you wish to make relationships to
+The **ID** of the brand you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -23,7 +23,7 @@ The type of related object \(should be brand\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The ID of the parent brand
+The **ID** of the parent brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -64,14 +64,14 @@ Update Parent Brand Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Change the parent of a brand
+Change the parent of a Brand.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the brand you wish to make relationships to
+The **ID** of the brand you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -129,7 +129,7 @@ Delete Parent Brand Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent brand you with to delete the relationship to
+The **ID** of the parent brand you with to delete the relationship to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}

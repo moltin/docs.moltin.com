@@ -2,24 +2,24 @@
 
 {% api-method method="post" host="" path="/v2/products/:productId/relationships/categories" %}
 {% api-method-summary %}
-tetsCreate Category Relationship\(s\)
+Create Category Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to on or more **categories.**  If any relationships already exist, the one's made in the request will be added to them.
+Create a Product relationship to on or more C**ategories.**  If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=false %}
-The **id** of the product you wish to relate to the category\(s\).
+The **ID** of the product you wish to relate to the category\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer used to access the API.
+The Bearer used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -29,7 +29,7 @@ Represents the type of object \(should be **category**\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the category.
+The **ID** of the category
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -98,7 +98,7 @@ Update Category Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a product and a category.  Unlike a **POST** to this endpoint a **PUT** overrides any existing relationships. 
+Replace the relationships between a Product and a Category.  Unlike a **POST** to this endpoint a **PUT** overrides any existing relationships. 
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -186,7 +186,7 @@ Delete Category Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationships between a product and category\(s\) deletes the relationships specified in the payload.
+Removing a relationships between a Product and Category\(s\) deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}

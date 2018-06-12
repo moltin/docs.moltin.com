@@ -1,8 +1,8 @@
 # Stock Transactions
 
-Each product has its own inventory and stock history. This is useful when auditing product movements across your project. Below is the Stock Transaction object, request and response examples for getting all stock transaction by Product ID.
+Each product has its own Inventory and stock history. This is useful when auditing product movements across your project. Below is the Stock Transaction object, request and response examples for getting all stock transactions by Product ID.
 
-## The stock transaction object
+## The Stock Transaction Object
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ Each product has its own inventory and stock history. This is useful when auditi
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/inventories/:productId/transactions" %}
 {% api-method-summary %}
-Get all Product Stock Transactions
+Get All Product Stock Transactions
 {% endapi-method-summary %}
 
 {% api-method-description %}

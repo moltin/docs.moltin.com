@@ -1,13 +1,13 @@
 # Order Items
 
-## The order item object
+## The Order Item Object
 
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
 | `id` | `string` | The unique identifier for this order item |
-| `type` | `string` | The type represents the object being returned |
+| `type` | `string` | The `type` represents the object being returned |
 | `product_id` | `string` | The unique identifier for this order item |
 | `name` | `string` | The name of this order item |
 | `sku` | `string` | The SKU code for the order item |
@@ -149,7 +149,7 @@ Get order items
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the order
+The **ID** of the order
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

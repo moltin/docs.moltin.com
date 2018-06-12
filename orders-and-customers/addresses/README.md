@@ -1,6 +1,6 @@
 # Addresses
 
-The Addresses API allows you to organize customer addresses. Addresses are a sub-resource of a [customer](https://github.com/moltin/api.docs.moltin.com/tree/b8200284da4b87dabc0ac52bd3e38b0fd3943097/orders-and-customers/customers/README.md). A customer may have multiple addresses, such as `home`, `work` and `neighbor`.
+The Addresses API allows you to organize customer addresses. Addresses are a sub-resource of a [Customer](https://github.com/moltin/api.docs.moltin.com/tree/b8200284da4b87dabc0ac52bd3e38b0fd3943097/orders-and-customers/customers/README.md). A Customer may have multiple addresses, such as `home`, `work` and `neighbor`.
 
 {% hint style="danger" %}
 This feature is currently in **BETA** and you **should** expect it to change.

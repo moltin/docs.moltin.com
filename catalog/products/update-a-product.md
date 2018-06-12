@@ -6,7 +6,7 @@ Update by ID
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update an existing product
+Updating an existing product.
 {% endapi-method-description %}
 
 {% api-method-spec %}

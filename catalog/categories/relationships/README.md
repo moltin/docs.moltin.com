@@ -1,6 +1,6 @@
 # Relationships
 
-You can use the categories API to associate categories with each other in a hierarchical tree structure. The relationship between categories is known as `parents` and `children`.
+You can use the Categories API to associate categories with each other in a hierarchical tree structure. The relationship between Categories is known as `parents` and `children`.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/tree" %}
 {% api-method-summary %}

@@ -13,11 +13,11 @@ Delete by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="address\_id" type="string" required=true %}
-The ID for the Address to delete
+The **ID** for the Address to delete
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="customer\_id" type="string" required=true %}
-A customer ID that has addresses
+A customer **ID** that has addresses
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

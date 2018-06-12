@@ -1,6 +1,6 @@
 # Gateways
 
-You can programatically configure payment gateways using the gateways endpoint. You can `enable` and `disable` built-in payment gateways.
+You can programatically configure payment gateways using the Gateways endpoint. You can `enable` and `disable` built-in payment gateways.
 
 {% hint style="warning" %}
 Moltin provides a [Manual Gateway](../paying-for-an-order/manual-payments.md) that allows you to use another payment gateway, like PayPal. 🎉

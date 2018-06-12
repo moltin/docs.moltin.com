@@ -1,4 +1,4 @@
-# Get all Categories
+# Get All Categories
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories" %}
 {% api-method-summary %}

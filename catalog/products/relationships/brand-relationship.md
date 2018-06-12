@@ -6,20 +6,20 @@ Create Brand Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to one or more brand.  If any relationships already exist, the one's made in the request will be add to them.
+Create a Product relationship to one or more Brand.  If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the brand\(s\)
+The **ID** of the product you wish to relate to the brand\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer used to access the API.
+The Bearer used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -29,7 +29,7 @@ Represents the type of object \(should be **brand**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the brand
+The **ID** of the brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -92,14 +92,14 @@ Update Brand Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a product and a brand.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
+Replace the relationships between a Product and a Brand.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The id of the product you wish to relate to the brand\(s\).
+The **ID** of the product you wish to relate to the brand\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -115,7 +115,7 @@ Represents the type of object \(should be **brand**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the brand
+The **ID** of the brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -174,11 +174,11 @@ Moltin.Products.UpdateRelationships(productId, 'brand', brandIds).then((relation
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/products/:productId/relationships/brands" %}
 {% api-method-summary %}
-Delete brand Relationship\(s\)
+Delete Brand Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a product and brand\(s\) deletes the relationships specified in the payload.
+Removing a relationship between a Product and Brand\(s\) deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}

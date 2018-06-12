@@ -3,7 +3,7 @@
 You can use the Promotions API to apply discounts to your cart as a special cart item type.
 
 {% hint style="info" %}
-Any requests to add a product to cart will return a collection of [cart items](cart-items/).
+Any requests to add a product to Cart will return a Collection of [cart items](cart-items/).
 {% endhint %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/carts/:reference/items" %}

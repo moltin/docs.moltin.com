@@ -2,7 +2,7 @@
 
 You can easily include resource relationships on most top-level resources. Multiple includes are defined using comma delimited values.
 
-Each supported resource includes it's own documentation on the available resources that can be included.
+Each supported resource includes its own documentation on the available resources that can be included.
 
 Below are some common include examples.
 

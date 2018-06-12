@@ -6,14 +6,14 @@ Create Child Collection Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent collection. If any relationship\(s\) already exists, new ones will be added.
+Create a relationship to a parent Collection. If any relationship\(s\) already exists, new ones will be added.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="collectionId" type="string" required=true %}
-The ID of the collection you wish to make relationships to
+The **ID** of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The type of related object \(should be be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection
+The **ID** of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -79,7 +79,7 @@ Update Child Collection Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="collectionId" type="string" required=true %}
-The ID of the collection you wish to make relationships to
+The **ID** of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -95,7 +95,7 @@ The type of related object \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection
+The **ID** of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -145,7 +145,7 @@ Delete Child Collection Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="collectionId" type="string" required=true %}
-The ID of the collection you wish to update relationships to
+The **ID** of the collection you wish to update relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -165,7 +165,7 @@ The type of related object. \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="data\[\].id" type="string" required=true %}
-The ID of the child collection
+The **ID** of the child collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

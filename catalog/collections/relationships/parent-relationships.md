@@ -6,14 +6,14 @@ Create Parent Collection Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a relationship to a parent collection. If a relationship already exists, the one from the request will overwrite it.
+Create a relationship to a parent Collection. If a relationship already exists, the one from the request will overwrite it.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the collection you wish to make relationships to
+The **ID** of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The type of related object. \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection
+The **ID** of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -70,14 +70,14 @@ Update Parent Collection Relationship
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Change the parent of a collection
+Change the parent of a Collection.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the collection you wish to make relationships to
+The **ID** of the collection you wish to make relationships to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -93,7 +93,7 @@ The type of related object. \(should be `collection`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection
+The **ID** of the parent collection
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

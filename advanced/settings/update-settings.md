@@ -1,6 +1,6 @@
 # Update Settings
 
-You can use the settings endpoint to update your project settings at anytime. These global settings take immediate effect.
+You can use the Settings endpoint to update your project settings at anytime. These global settings take immediate effect.
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/settings" %}
 {% api-method-summary %}

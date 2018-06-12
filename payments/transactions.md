@@ -227,7 +227,7 @@ Capture payment
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Use this endpoint to capture a previously authorized payment. You will use this endpoint when you invoke the manual payments API.
+Use this endpoint to capture a previously authorized payment. You will use this endpoint when you invoke the Manual Payments API.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -315,7 +315,7 @@ The Bearer token to grant access to the API
 {% endapi-method %}
 
 {% hint style="warning" %}
-You will need to handle the actual refund with your payment provider.
+You will need to handle the actual refund with your payment provider
 {% endhint %}
 
 {% tabs %}

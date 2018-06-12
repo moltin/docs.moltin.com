@@ -6,11 +6,11 @@ The payload attributes and types are defined below.
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-| `id` | `string` | A unique ID for this event. |
-| `integration` | `object` | The events `integration_type` being fired. |
-| `trigger` | [`string`](observable-events.md) | The [observable event](observable-events.md) that triggered this event. |
-| `attempt` | `integer` | The number of attempts to deliver this event. |
-| `resources` | `string` | Resources affected by this event. |
+| `id` | `string` | A unique ID for this event |
+| `integration` | `object` | The events `integration_type` being fired |
+| `trigger` | [`string`](observable-events.md) | The [observable event](observable-events.md) that triggered this event |
+| `attempt` | `integer` | The number of attempts to deliver this event |
+| `resources` | `string` | Resources affected by this event |
 
 ## Example payload
 

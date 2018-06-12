@@ -12,14 +12,14 @@ Webhooks that return anything other than a 2XX status code will be considered fa
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-| `id` | `string` | The unique identifier for the event. |
-| `type` | `string` | This represents the type of object being returned. |
-| `name` | `string` | The name of the event. |
-| `description` | `string` | A description for this event. |
-| `integration_type` | `string` | This will be `webhook`. |
-| `enabled` | `boolean` | This will enable the event to fire. |
-| `observes` | [`array[string]`](observable-events.md) | An array of [observable events](observable-events.md). |
-| `configuration` | [`object`]() | A `webhook` [configuration object](). |
+| `id` | `string` | The unique identifier for the event |
+| `type` | `string` | This represents the type of object being returned |
+| `name` | `string` | The name of the event |
+| `description` | `string` | A description for this event |
+| `integration_type` | `string` | This will be `webhook` |
+| `enabled` | `boolean` | This will enable the event to fire |
+| `observes` | [`array[string]`](observable-events.md) | An array of [observable events](observable-events.md) |
+| `configuration` | [`object`]() | A `webhook` [configuration object]() |
 
 ## Example
 

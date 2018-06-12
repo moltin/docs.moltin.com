@@ -6,14 +6,14 @@ Create Collection Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to one or many collection.  If any relationships already exist, the one's made in the request will be added to them.
+Create a product relationship to one or many Collections.  If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the collection\(s\)
+The **ID** of the product you wish to relate to the collection\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -23,7 +23,7 @@ Represents the type of object \(should be **collection**\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="" type="string" required=false %}
-The **id** of the collection.
+The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -91,7 +91,7 @@ Update Collection Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a product and a collection.  Unlike a **POST** to this endpoint, a **PUT**  overrides any existing relationships.
+Replace the relationships between a Product and a Collection.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -167,7 +167,7 @@ Delete Collection Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a product and a collection\(s\) deletes the relationship specified in the payload.
+Removing a relationship between a Product and a Collection\(s\) deletes the relationship specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}

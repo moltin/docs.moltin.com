@@ -22,7 +22,7 @@ Create a Stock Transaction for a Product
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The ID for the product you're performing this action on
+The **ID** for the product you're performing this action on
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -34,7 +34,7 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="quantity" type="integer" required=true %}
-The amount of stock affects by this transaction
+The amount of stock affected by this transaction
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="action" type="string" required=true %}

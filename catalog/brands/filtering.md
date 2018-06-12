@@ -1,6 +1,6 @@
 # Filtering
 
-Below is a list of attributes and operators available for [filtering](../../basics/filtering/) brands.
+Below is a list of attributes and operators available for [filtering](../../basics/filtering/) Brands.
 
 | **Attribute** | **Type** | **Operators** | **Example** |
 | --- | --- | --- | --- |

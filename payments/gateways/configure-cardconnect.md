@@ -2,7 +2,7 @@
 
 You can configure CardConnect programatically using the `/gateways/card_connect` endpoint.
 
-## The CardConnect gateway object
+## The CardConnect Gateway Object
 
 {% tabs %}
 {% tab title="Attributes" %}

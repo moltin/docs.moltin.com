@@ -2,7 +2,7 @@
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/promotions/:id" %}
 {% api-method-summary %}
-Delete a promotion
+Delete a Promotion
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -13,7 +13,7 @@ Delete a promotion
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-The unique promotion identifier.
+The unique promotion identifier
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

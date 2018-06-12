@@ -13,7 +13,7 @@ Get all
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="customerId" type="string" required=true %}
-A customer ID that has addresses
+A customer **ID** that has addresses
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

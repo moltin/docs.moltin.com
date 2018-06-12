@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/customers/:customerId/addresses/:addressId" %}
 {% api-method-summary %}
-Get by ID
+Get By ID
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -71,7 +71,7 @@ The Bearer token to grant access to the API
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## With customer token
+## With Customer Token
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -105,7 +105,7 @@ Moltin.Addresses.Get({
 {% endtab %}
 {% endtabs %}
 
-## Without customer token
+## Without Customer Token
 
 {% tabs %}
 {% tab title="cURL" %}

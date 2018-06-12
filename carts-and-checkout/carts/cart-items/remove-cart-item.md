@@ -1,6 +1,6 @@
 # Remove Cart Item
 
-You can easily remove items from the cart. A successful cart item removal request will return the [cart items](./).
+You can easily remove items from the Cart. A successful Cart item removal request will return the [cart items](./).
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/carts/:reference/items/:itemId" %}
 {% api-method-summary %}

@@ -13,7 +13,7 @@ Create a Customer Address
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="customerId" type="string" required=true %}
-The ID for the customer you are adding an address for
+The **ID** for the customer you are adding an address for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

@@ -14,5 +14,5 @@ Requests to create a new [File](../advanced/files/) must contain the header `Con
 
 ## Response encoding
 
-Responses from the moltin API, including errors are encoded as **JSON**.
+Responses from the Moltin API, including errors, are encoded as **JSON**.
 
