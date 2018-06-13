@@ -193,7 +193,7 @@ With Customer object
 {% endapi-method-summary %}
 
 {% api-method-description %}
-You can check-out a Cart with an associated customer name and email.
+You can checkout a Cart with an associated customer name and email.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -398,4 +398,12 @@ moltin.cart.checkout(
 ```
 {% endtab %}
 {% endtabs %}
+
+## Next steps
+
+Once a Cart has been converted to an Order using either of the methods above, you will most likely want to capture payment for order.
+
+{% page-ref page="../payments/paying-for-an-order/" %}
+
+
 
