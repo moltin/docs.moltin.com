@@ -18,7 +18,7 @@ Authorize payment
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="order\_id" type="string" required=true %}
+{% api-method-parameter name="orderId" type="string" required=true %}
 The UUID of the order you want to authorize payment for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -77,14 +77,14 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-const id = 'XXXX'
+const orderId = 'XXXX'
 
 const payment = {
   gateway: 'manual',
   method: 'authorize'
 }
 
-Moltin.Orders.Payment(id, order).then(() => {
+Moltin.Orders.Payment(orderId, payment).then(() => {
   // Do something
 })
 ```
@@ -125,7 +125,7 @@ Capture transaction
 The UUID of the previously authorized transaction
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="order\_id" type="string" required=true %}
+{% api-method-parameter name="orderId" type="string" required=true %}
 The UUID of the order you want to capture for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
