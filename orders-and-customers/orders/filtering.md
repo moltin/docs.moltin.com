@@ -3,7 +3,7 @@
 Below are a list of attributes and operators available for [filtering](../../basics/filtering/) orders.
 
 | **Attribute** | **Type** | **Operator** | **Example** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `status` | `string` | `eq` | `eq(status,complete)` |
 | `payment` | `string` | `eq` | `eq(payment,paid)` |
 | `shipping` | `string` | `eq` | `eq(shipping,unfulfilled)` |
@@ -19,6 +19,8 @@ Below are a list of attributes and operators available for [filtering](../../bas
 | `currency` | `string` | `eq` | `eq(currency,USD)` |
 | `product_id` | `string` | `eq` | `eq(product_id,6837058c-ae42-46db-b3c6-7f01e0c34b40)` |
 | `product_sku` | `string` | `eq` | `eq(product_sku,deck-shoe-001)` |
+| `created_at` | `date` | `eq` / `gt` / `lt` | `gt(created_at,2018-01-01)` |
+| `updated_at` | `date` | `eq` / `gt` / `lt` | `lt(updated_at,2018-01-01)` |
 
 ### **Notes**
 
