@@ -2,7 +2,7 @@
 
 Once a [Cart](carts/) is ready to checkout, you can easily convert your Cart to an [Order](https://github.com/moltin/api.docs.moltin.com/tree/cbfae6cc90f263c65a62c5eab62b2212cd61695a/orders-and-customers/orders/README.md). The Cart will remain and can be modified and checked out again if required.
 
-Once a successful Checkout is completed, the response will contain [payment ](../payments/gateways/)gateways `data.meta.payment_gateways` that can be used when [paying for an order](../payments/paying-for-an-order/).
+Once a successful Checkout is completed, the response will contain the order.
 
 {% hint style="warning" %}
 We'll automatically delete carts 7 days after they were last updated.
@@ -174,8 +174,11 @@ const billing = {
   country: 'United Kingdom'
 }
 
-Moltin.Cart(reference).Checkout(customerId, billing, shipping)
-// Moltin.Cart(reference).Checkout(customerId, billing)
+Moltin.Cart(reference)
+  .Checkout(customerId, billing, shipping)
+  .then(order => {
+    // Do something
+  })
 ```
 
 {% hint style="info" %}
@@ -365,8 +368,11 @@ const shipping = {
   country: 'United Kingdom'
 }
 
-Moltin.Cart(reference).Checkout(customer, billing, shipping)
-// Moltin.Cart(reference).Checkout(customer, billing)
+Moltin.Cart(reference)
+  .Checkout(customer, billing, shipping)
+  .then(order => {
+    // Do something
+  })
 ```
 
 {% hint style="info" %}
