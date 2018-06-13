@@ -278,7 +278,7 @@ Refund payment
 {% endapi-method-summary %}
 
 {% api-method-description %}
-You can mark a transaction as refunded. You will need to handle the actual refund your side with your payment provider.
+You can mark a transaction as refunded. You will need to handle the actual refund on your side with your payment provider.
 {% endapi-method-description %}
 
 {% api-method-spec %}
