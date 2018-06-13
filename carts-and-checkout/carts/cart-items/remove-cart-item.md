@@ -4,7 +4,7 @@ You can easily remove items from the Cart. A successful Cart item removal reques
 
 {% api-method method="delete" host="https://api.moltin.com/" path="v2/carts/:reference/items/:id" %}
 {% api-method-summary %}
-Remote Item from Cart
+Remove Item from Cart
 {% endapi-method-summary %}
 
 {% api-method-description %}
