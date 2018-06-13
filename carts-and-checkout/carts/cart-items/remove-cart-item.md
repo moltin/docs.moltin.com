@@ -2,7 +2,7 @@
 
 You can easily remove items from the Cart. A successful Cart item removal request will return the [cart items](./).
 
-{% api-method method="delete" host="https://api.moltin.com" path="/v2/carts/:reference/items/:itemId" %}
+{% api-method method="delete" host="https://api.moltin.com/" path="v2/carts/:reference/items/:id" %}
 {% api-method-summary %}
 Remote Item from Cart
 {% endapi-method-summary %}
@@ -13,6 +13,12 @@ Remote Item from Cart
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
 The Bearer token to grant access to the API
@@ -57,7 +63,7 @@ The Bearer token to grant access to the API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X DELETE https://api.moltin.com/v2/carts/:reference/items/:itemId \
+curl -X DELETE https://api.moltin.com/v2/carts/:reference/items/:id \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
