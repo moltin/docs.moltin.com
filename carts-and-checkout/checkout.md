@@ -143,7 +143,7 @@ curl -X POST https://api.moltin.com/v2/carts/:reference/checkout \
            "city": "Newcastle upon Tyne",
            "postcode": "NE1 6UF",
            "county": "Tyne & Wear",
-           "country": "UK"
+           "country": "UK",
            "instructions": "Leave in porch"
          }
        }
