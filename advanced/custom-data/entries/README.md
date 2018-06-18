@@ -1,10 +1,10 @@
 # Entries
 
-| Attribute | Type | Description |
+| **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-| id | **string** | The unique identifier for this entry. |
-| type | **string** | Represents the type of object being returned. |
-| fieldSlug | **mixed** | The `:fieldSlug` key depends on the field's slug value. The value is of fields `field_type`. |
+| `id` | `string` | The unique identifier for this entry |
+| `type` | `string` | Represents the type of object being returned |
+| `fieldSlug` | `mixed` | The `:fieldSlug` key depends on the field's slug value. The value is of fields `field_type` |
 
 If your flow has more than one field related to it, you will see multiple field slugs.
 
@@ -202,17 +202,35 @@ The name of the Flow
 
 {% tabs %}
 {% tab title="cURL" %}
+```bash
+curl -X POST https://api.moltin.com/v2/flows/{FLOW_SLUG}/entries \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+       "data": {
+         "type": "entry",
+         "{FIELD_SLUG}": "a value",
+       }
+     }'
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
 ```javascript
-https://api.moltin.com/v2/flows
- {
-  "data": {
-    "type": "flow",
-    "name": "Brands",
-    "slug": "brands",
-    "description": "Extends the default brand object",
-    "enabled": true
-   }
- }
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const data = {
+  "{FIELD_SLUG}": "A value"
+}
+
+Moltin.Flows.CreateEntry('{FLOW_SLUG}', data).then(entry => {
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -290,18 +308,37 @@ The **ID** of the entry
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
-{
-  "data": {
-    	"type": "brands",
-    	"brand-image": "someimage new things"
-	}
-}
+```bash
+curl -X POST https://api.moltin.com/v2/flows/{FLOW_SLUG}/entries/{ENTRY_ID} \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+       "data": {
+         "id": "{ENTRY_ID}",
+         "type": "entry",
+         "{FIELD_SLUG}": "a new value",
+       }
+     }'
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
 
+const Moltin = MoltinGateway({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const data = {
+  "{FIELD_SLUG}": "A new value"
+}
+
+Moltin.Flows.UpdateEntry('{FLOW_SLUG}', '{ENTRY_ID}', data).then(entry => {
+  // Do something
+})
+```
 {% endtab %}
 {% endtabs %}
 
@@ -332,7 +369,8 @@ The slug for the Flows you are requesting entries for
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+The Bearer token to grant access to the   
+API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -350,4 +388,28 @@ The Bearer token to grant access to the API
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X DELETE https://api.moltin.com/v2/flows/{FLOW_SLUG}/entries/{ENTRY_ID} \
+    -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+Moltin.Flows.DeleteEntry('{FLOW_SLUG}', '{ENTRY_ID}').then(entry => {
+  // Do something
+})
+```
+{% endtab %}
+{% endtabs %}
 
