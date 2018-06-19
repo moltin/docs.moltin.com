@@ -87,5 +87,19 @@ curl -X GET https://api.moltin.com/v2/files \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+Moltin.Files.All().then(files => {
+  // Do something
+})
+```
+{% endtab %}
 {% endtabs %}
 
