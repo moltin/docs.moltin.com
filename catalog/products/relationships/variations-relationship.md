@@ -25,7 +25,7 @@ The Bearer token used to access the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-Represents the type of object \(should be product-variation\).
+Represents the type of object \(should be **product-variation**\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
@@ -97,7 +97,7 @@ Update Variation Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a product and a variation.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships. ****
+Replace the relationships between a product and a variation. Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships. ****
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -183,14 +183,14 @@ Delete Variation Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a Product and a Variation\(s\) deletes the relationships specified in the payload.
+Remove a relationship between a Product and a Variation\(s\). This deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the variations\(s\)
+The **ID** of the product you wish to relate to the variations\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -206,7 +206,7 @@ Represents the type of object \(should be **product-variation\).**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the variation.
+The **ID** of the variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
