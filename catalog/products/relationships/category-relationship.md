@@ -1,6 +1,6 @@
 # Category Relationship
 
-{% api-method method="post" host="" path="/v2/products/:productId/relationships/categories" %}
+{% api-method method="post" host="https://api.moltin.com" path="/v2/products/:productId/relationships/categories" %}
 {% api-method-summary %}
 Create Category Relationship\(s\)
 {% endapi-method-summary %}
