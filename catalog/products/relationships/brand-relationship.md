@@ -40,8 +40,15 @@ The **ID** of the brand
 
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "data": [
+    {
+      "type": "brand",
+      "id": "d1e04526-7870-469c-a940-8f3033893084"
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
