@@ -1,6 +1,6 @@
 # Products
 
-Products are the core resource to any Moltin project. They can be associated by category, collection, brands and more.
+Products are the core resource to any Moltin project. They can be associated by category, collection, brands, and more.
 
 {% hint style="warning" %}
 Product inventory is managed separately. If you wish to increment and allocate stock levels, see the [Product Inventory API](../inventory/)
@@ -19,11 +19,11 @@ Product inventory is managed separately. If you wish to increment and allocate s
 | `sku` | `string` | A unique SKU value |
 | `manage_stock` | `boolean` | This should be `true` if you wish to use the Inventory API to manage stock |
 | `description` | `string` | A human readable description of the product |
-| `price` | [`array[object]`](./#the-price-object) | An array of prices for this product in different currencies |
+| `price` | [`array[object]`](./#the-price-object) | An array of prices for this product in different currencies. Also see: **The price object** below. |
 | `status` | `string` | `live` or `draft` |
 | `commodity_type` | `string` | `physical` or `digital` |
-| `meta` | [`object`](./#the-meta-object) | Additional information calculated for this product |
-| `relationships` | [`object`](./#the-relationships-object) | Related resources |
+| `meta` | [`object`](./#the-meta-object) | Additional information calculated for this product. Also see: **The meta object** below. |
+| `relationships` | [`object`](./#the-relationships-object) | Related resources. Also see: **The relationships object** below. |
 {% endtab %}
 
 {% tab title="Sample Object" %}
@@ -158,27 +158,27 @@ The variations matrix is only returned when getting a product by ID
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-| `relationships.variations` | `object` | Relationships information regarding variations for this product \(hidden if no variation relationships exist\) |
+| `relationships.variations` | `object` | Relationships information regarding variations for this product \(hidden, if no variation relationships exist\) |
 | `relationships.variations.data` | `array[object]` | An array of relationships from this product to variation resources |
 | `relationships.variations.data.type` | `string` | Always `product-variation` |
 | `relationships.variations.data.id` | `string` | The ID of the related variation |
-| `relationships.files` | `object` | Relationships information regarding files for this product \(hidden if no file relationships exist\) |
+| `relationships.files` | `object` | Relationships information regarding files for this product \(hidden, if no file relationships exist\) |
 | `relationships.files.data` | `array[object]` | An array of relationships from this product to `file` resources |
 | `relationships.files.data.type` | `string` | Always `file` |
 | `relationships.files.data.id` | `string` | The ID of the related file |
-| `relationships.main_image` | `object` | Relationships information regarding main\_image for this product \(hidden if no main\_image relationships exist\) |
+| `relationships.main_image` | `object` | Relationships information regarding main\_image for this product \(hidden, if no main\_image relationships exist\) |
 | `relationships.main_image.data` | `array[object]` | An array of relationships from this product to `main_image` resources |
 | `relationships.main_image.data.type` | `string` | Always `main_image` |
 | `relationships.main_image.data.id` | `string` | The ID of the related file |
-| `relationships.categories` | `object` | Relationships information regarding categories for this product \(hidden if no categories relationships exist\) |
+| `relationships.categories` | `object` | Relationships information regarding categories for this product \(hidden, if no categories relationships exist\) |
 | `relationships.categories.data` | `array[object]` | An array of relationships from this product to `category` resources |
 | `relationships.categories.data.type` | `string` | Always `category` |
 | `relationships.categories.data.id` | `string` | The ID of the related category |
-| `relationships.collections` | `object` | Relationships information regarding collections for this product \(hidden if no collections relationships exist\) |
+| `relationships.collections` | `object` | Relationships information regarding collections for this product \(hidden, if no collections relationships exist\) |
 | `relationships.collections.data` | `array[object]` | An array of relationships from this product to `collection` resources |
 | `relationships.collections.data.type` | `string` | Always `collection` |
 | `relationships.collections.data.id` | `string` | The ID of the related collection |
-| `relationships.brands` | `object` | Relationships information regarding brands for this product \(hidden if no brand relationships exist\) |
+| `relationships.brands` | `object` | Relationships information regarding brands for this product \(hidden, if no brand relationships exist\) |
 | `relationships.brands.data` | `array[object]` | An array of relationships from this product to `brand` resources |
 | `relationships.brands.data.type` | `string` | Always `brand` |
 | `relationships.brands.data.id` | `string` | The ID of the related brand |

@@ -1,6 +1,6 @@
 # Errors
 
-Any requests that return an error follow a standard format. Moltin will return an array of `errors` that contains objects containing `status`, `title` and `details`.
+Any request that returns an error follows a standard format. Moltin will return an array of `errors` that contains objects containing `status`, `title` and `details`.
 
 You'll most likely receive an error if validation fails, something doesn't exist or something went wrong on our end. We return errors inline with the [JSON API specification](http://jsonapi.org/format/#error-objects).
 
@@ -84,7 +84,7 @@ When a resource is not found you will get a `404: Not Found` response.
 
 ### Internal Server Error
 
-You'll receive a `500: Internal Server Error` response when something goes wrong on our side. We're automatically notified of these errors and work to resolve as quickly as possible.
+You'll receive a `500: Internal Server Error` response when something goes wrong on our side. We're automatically notified of these errors, and work to resolve them as quickly as possible.
 
 ```javascript
 {
