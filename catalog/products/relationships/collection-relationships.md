@@ -91,7 +91,7 @@ Update Collection Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a Product and a Collection.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
+Replace the relationships between a Product and a Collection. Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -174,7 +174,7 @@ Remove a relationship between a Product and a Collection\(s\). This deletes the 
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **ID** of the product you wish to relate to the collection\(s\)
+The **ID** of the product you wish to relate to the collection\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
