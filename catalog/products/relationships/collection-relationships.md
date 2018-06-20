@@ -115,6 +115,10 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=false %}
+Represents the type of object \(should be **collection**\).
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="id" type="string" required=false %}
 The **ID** of the collection.
 {% endapi-method-parameter %}
@@ -197,6 +201,10 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=false %}
+Represents the type of object \(should be **collection**\).
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="id" type="string" required=false %}
 The **ID** of the collection.
 {% endapi-method-parameter %}
