@@ -25,7 +25,11 @@ The Bearer token used to access the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-Represents the type of the object \(should be main\_image\).
+Represents the type of the object \(should be **main\_image**\).
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="id" type="string" required=false %}
+The **ID** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
