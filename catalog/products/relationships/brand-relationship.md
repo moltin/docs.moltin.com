@@ -185,13 +185,13 @@ Delete Brand Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a Product and Brand\(s\) deletes the relationships specified in the payload.
+Remove a relationship between a Product and Brand\(s\). This deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="productId" type="string" required=false %}
+{% api-method-parameter name="productId" type="string" required=true %}
 The **id** of the product you wish to relate to the brand.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
