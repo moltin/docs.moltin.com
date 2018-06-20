@@ -12,7 +12,7 @@ Create a Product relationship to on or more C**ategories.**  If any relationship
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="productId" type="string" required=false %}
+{% api-method-parameter name="productId" type="string" required=true %}
 The **ID** of the product you wish to relate to the category\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -24,8 +24,8 @@ The Bearer used to access the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="tyoe" type="string" required=false %}
-Represents the type of object \(should be **category**\).
+{% api-method-parameter name="type" type="string" required=false %}
+Represents the type of object \(should be **category**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
@@ -105,13 +105,13 @@ Replace the relationships between a Product and a Category.  Unlike a **POST** t
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The id of the product you wish to relate to the category\(s\).
+The id of the product you wish to relate to the category\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer used to access the API.
+The Bearer used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -121,7 +121,7 @@ Represents the type of objects \(should be **category**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of they category.
+The **id** of the category
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -192,24 +192,24 @@ Removing a relationships between a Product and Category\(s\) deletes the relatio
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="productId" type="string" required=false %}
-The **id** of the product you wish to delete.
+{% api-method-parameter name="productId" type="string" required=true %}
+The **id** of the product you wish to delete
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token used to access the API.
+The Bearer token used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-Represents the type of object \(should be **category**\).
+Represents the type of object \(should be **category**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the category.
+The **id** of the category
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
