@@ -6,14 +6,14 @@ Create Collection Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to one or many Collections.  If any relationships already exist, the one's made in the request will be added to them.
+Create a product relationship to one or many Collections. If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **ID** of the product you wish to relate to the collection\(s\)
+The **ID** of the product you wish to relate to the collection\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -22,7 +22,7 @@ The **ID** of the product you wish to relate to the collection\(s\)
 Represents the type of object \(should be **collection**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=false %}
 The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -98,13 +98,13 @@ Replace the relationships between a Product and a Collection.  Unlike a **POST**
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the collection\(s\).
+The **ID** of the product you wish to relate to the collection\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="id" type="string" required=false %}
+The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -167,20 +167,20 @@ Delete Collection Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a Product and a Collection\(s\) deletes the relationship specified in the payload.
+Remove a relationship between a Product and a Collection\(s\). This deletes the relationship specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the collection\(s\)
+The **ID** of the product you wish to relate to the collection\(s\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="id" type="string" required=false %}
+The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

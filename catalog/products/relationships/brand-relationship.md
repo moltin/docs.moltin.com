@@ -192,7 +192,7 @@ Remove a relationship between a Product and Brand\(s\). This deletes the relatio
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The **id** of the product you wish to relate to the brand.
+The **iID** of the product you wish to relate to the brand.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -208,7 +208,7 @@ Represents the type of object \(should be **brand**\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the brand.
+The **ID** of the brand.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
