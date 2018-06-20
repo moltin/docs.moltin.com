@@ -1,6 +1,6 @@
 # Permissions
 
-There are two main token types available for use within your project.
+Permissions are managed through tokens. There are two main token types available for use within your project.
 
 {% page-ref page="client-credential-token.md" %}
 
