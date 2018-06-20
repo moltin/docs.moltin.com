@@ -6,7 +6,7 @@ Create File Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a product relationship to one or more **Files**.  If any relationships already exist, the one's made in the request will be added to them.
+Create a product relationship to one or more **Files**. If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -91,13 +91,13 @@ Moltin.Products.CreateRelationships(productId, 'file', fileIds).then((relationsh
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="put" host="https://api.moltin.com" path="" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/products/:productId/relationships/file" %}
 {% api-method-summary %}
 Update File Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between a Product and a File.  Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
+Replace the relationships between a Product and a File. Unlike a **POST** to this endpoint, a **PUT** overrides any existing relationships.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -120,7 +120,7 @@ Represents the type of object \(should be **file\).**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the file.
+The **ID** of the file.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -183,14 +183,14 @@ Delete File Relationships\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between a Product and File\(s\) deletes the relationships specified in the payload.
+Remove a relationship between a Product and File\(s\). This deletes the relationships specified in the payload.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="productId" type="string" required=false %}
-The **id** of the product you wish to delete the relationship with file\(s\).
+{% api-method-parameter name="productId" type="string" required=true %}
+The **ID** of the product you wish to delete the relationship with file\(s\).
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -206,7 +206,7 @@ Represents the type of object \(should be **file\).**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=false %}
-The **id** of the file.
+The **ID** of the file.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
