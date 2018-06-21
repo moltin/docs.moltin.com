@@ -4,21 +4,21 @@ A Field represents a single Field of data \(for example a `Product Rating`\) to 
 
 ## The Field Object
 
-| Attribute | Type | Description |
+| **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-| id | **string** | The unique identifier for this field |
-| type | **string** | Represents the type of object being returned |
-| name | **string** | The name of the field |
-| slug | **string** | A unique slug identifier for the field |
-| field\_type | **string** | The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship` |
-| validation\_rules | **array\[object\]** | See [`Flow Field Validation Rules`](https://docs.moltin.com/#flow-field-validation-rules) |
-| description | **string** | Any description for this field |
-| required | **bool** | `true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship |
-| unique | **bool** | `true` if each entry should be unique, `false` if not\` |
-| default | **mixed** | A default value if none is supplied and field is not required |
-| enabled | **bool** | If this field is enabled on the flow this should be `true`, otherwise `false` |
-| order | **integer** | Denotes the order in which this field is returned relative to the rest of the flow fields |
-| relationships | **object** | A relationship object to link this field to a flow |
+| `id` | `string` | The unique identifier for this field |
+| `type` | `string` | Represents the type of object being returned |
+| `name` | `string` | The name of the field |
+| `slug` | `string` | A unique slug identifier for the field |
+| `field_type` | `string` | The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship` |
+| `validation_rules` | `array[object]` | See [`Flow Field Validation Rules`](https://docs.moltin.com/#flow-field-validation-rules) |
+| `description` | `string` | Any description for this field |
+| `required` | `boolean` | `true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship |
+| unique | `boolean` | `true` if each entry should be unique, `false` if not\` |
+| `default` | `mixed` | A default value if none is supplied and field is not required |
+| `enabled` | `boolean` | If this field is enabled on the flow this should be `true`, otherwise `false` |
+| `order` | `integer` | Denotes the order in which this field is returned relative to the rest of the flow fields |
+| `relationships` | `object` | A relationship object to link this field to a flow |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields" %}
 {% api-method-summary %}
