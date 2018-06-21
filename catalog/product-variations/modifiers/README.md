@@ -2,11 +2,11 @@
 
 ## Product Modifiers
 
-Product modifiers create the variation products \(child products\) from your base product by augmenting different properties of that base product. In each case you will specify a modifier type and its value, this will define how that property changes as the child products are built. There is currently a limit on the number of child products you can build from a base product. This limit is set at 200. This means the maximum number of child products generated from a base product cannot exceed this figure.
+Product modifiers create the variation products \(child products\) from your base product by augmenting different properties of that base product. In each case, you will specify a modifier type and its value. This will define how that property changes as the child products are built. There is currently a limit on the number of child products you can build from a base product set at 200. This means the maximum number of child products generated from a base product cannot exceed this figure.
 
 ## Price Modifiers
 
-These obviously help adjust the price of a product. As this kind of modifier deals with prices, it should come as no surprise to you that the **value** of this modifier must be a collection of currency values similar to that when specifying a product price. While the modifier can have any number of currencies applied to it, only the currencies specified on the actual base product will be subjected to any modifiers. ie. If you have USD and GBP values on a base product and apply a modifier that alters GBP, AUD and EUR the ONLY currency value affected will be GBP, the USD value will remain the same and no other currencies will be set on the variation product.
+These obviously help adjust the price of a product. As this kind of modifier deals with prices, it should come as no surprise to you that the **value** of this modifier must be a collection of currency values similar to that when specifying a product price. While the modifier can have any number of currencies applied to it, only the currencies specified on the actual base product will be subjected to any modifiers, i.e. If you have USD and GBP values on a base product, and apply a modifier that alters GBP, AUD and EUR the ONLY currency value affected will be GBP; the USD value will remain the same and no other currencies will be set on the variation product.
 
 ## SKU/Slug Builder Modifiers
 
@@ -22,7 +22,7 @@ The above modifiers applied via variations for size and colour would produce the
 
 `BP01-BLU-LRG` `BP01-BLU-SML` `BP01-RED-LRG` `BP01-RED-SML`
 
-You _could_ create the same via sku\_append modifier using values like `-RED` and `-LRG`, the advantage of the builder modifiers is that they are agnostic of the order the modifiers are applied.
+You _could_ create the same via sku\_append modifier using values like `-RED` and `-LRG`; the advantage of the builder modifiers is that they are agnostic of the order the modifiers are applied.
 
 ## The Product Modifier Objects
 
