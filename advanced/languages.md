@@ -1,6 +1,6 @@
 # Languages
 
-Moltin provides a multilingual service for the [Product API](../catalog/products/). Using the [Settings API](settings/update-settings.md#update-project-settings) you can add additional supported languages and when you [update a product](../catalog/products/update-a-product.md), you can specify the `X-Moltin-Language` header.
+Moltin provides a multilingual service for the [Product API](../catalog/products/). Using the [Settings API](settings/update-settings.md#update-project-settings) you can add additional supported languages, and when you [update a product](../catalog/products/update-a-product.md), you can specify the `X-Moltin-Language` header.
 
 {% hint style="info" %}
 You can create translations for both product `name` and `description` fields.
@@ -39,11 +39,11 @@ The translated `name` value
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The Product ID
+The Product **ID**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
-This will always be `product`
+Always `product`
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
