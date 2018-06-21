@@ -37,7 +37,7 @@ The unique identifier for this modifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=false %}
-Represents the type of object being updated. \(should be modifier\)
+Represents the type of object being updated \(should be **modifier**\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="modifier\_type" type="string" required=false %}
