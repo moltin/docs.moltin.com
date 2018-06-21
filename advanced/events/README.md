@@ -2,7 +2,7 @@
 
 Moltin [observes several events](observable-events.md) that you can attach webhooks to. With a webhook you can attach custom code that performs actions outside of the Moltin ecosystem.
 
-You may want to send a discount code, or a NPS survey email a few days after an order is fulfilled. You can do this via a webhook that sends event data to your custom function.
+You may want to send a discount code or a NPS survey email a few days after an order is fulfilled. You can do this via a webhook that sends event data to your custom function.
 
 {% hint style="warning" %}
 Webhooks that return anything other than a 2XX status code will be considered failed.
