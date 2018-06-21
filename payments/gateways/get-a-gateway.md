@@ -13,7 +13,7 @@ Get a Gateway by Slug
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="slug" type="string" required=true %}
-The **slug** for the gateway
+The slug for the gateway
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
