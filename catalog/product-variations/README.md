@@ -14,7 +14,7 @@ Variations allow you to create the variations that your products have. Things li
 | `relationships` | `object` | Relationships to other resources |
 | `relationships.options` | `object` | Relationships information regarding options for this variation |
 | `relationships.options.data` | `array` | An array of relationships from this variation to options |
-| `relationships options.data.id` | `string` | The unique identifier for the option |
+| `relationships.options.data.id` | `string` | The unique identifier for the option |
 | `relationships.options.data.type` | `string` | The type \(`option`\) |
 | `included` | `object` | Included resources |
 | `included.options` | `array` | Array of options that constitute the variation |
