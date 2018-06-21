@@ -1,6 +1,6 @@
 # Promotions
 
-Promotions allow you to provide discounts to customers. By defining a Promotion, and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
+Promotions allow you to provide discounts to customers. By defining a Promotion and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
 
 The promotions you create will require codes to be attached to them, and these codes are subsequently used by end-users \(or your own system\) to apply promotions to carts and provide the discounts stipulated.
 
@@ -43,14 +43,14 @@ A promotion is represented by a promotion object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| type | **string** | "promotion" |
-| name | **string** | The name of your promotion. |
-| description | **string** | A description of your promotion. |
-| enabled | **boolean** | `true` if enabled, `false` if not. |
-| promotion\_type | **string** | One of: `fixed_discount`, `percent_discount`. |
-| schema | **object** | One of: [`fixed_schema`](https://docs.moltin.com/?javascript#fixed-discount), [`percent_schema`](https://docs.moltin.com/?javascript#percent-discount) |
-| start | **string** | The start time of the promotion DateTime. |
-| end | **string** | The end time of the promotion DateTime. |
+| `type` | `string` | "promotion" |
+| `name` | `string` | The name of your promotion |
+| `description` | `string` | A description of your promotion |
+| `enabled` | `boolean` | `true` if enabled, `false` if not |
+| `promotion_type` | `string` | One of: `fixed_discount`, `percent_discount` |
+| `schema` | `object` | One of: [`fixed_schema`](https://docs.moltin.com/?javascript#fixed-discount), [`percent_schema`](https://docs.moltin.com/?javascript#percent-discount) |
+| `start` | `string` | The start time of the promotion DateTime |
+| `end` | `string` | The end time of the promotion DateTime |
 
 ## The Schema Object
 
@@ -73,11 +73,11 @@ Below is the list of currently available promotion type Schemas - these are to b
 
 Fixed discount provides a method to give a fixed discount to a cart.
 
-| Name | Type | Description |
+| **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| currencies | **array** | An array of objects. |
-| currencies\[\].currency | **string** | A currency code. |
-| currencies\[\].amount | **integer** | The amount to discount by. |
+| `currencies` | `array` | An array of objects |
+| `currencies[].currency` | `string` | A currency code |
+| `currencies[].amount` | `integer` | The amount to discount by |
 
 ### Percent Discount
 
@@ -94,11 +94,11 @@ Fixed discount provides a method to give a fixed discount to a cart.
 
 Percent discount provides a method to give a percentage discount to a cart based on the value of cart\_items and custom\_items.
 
-| Name | Type | Description |
+| **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| currencies | **array** | An array of objects. |
-| currencies\[\].currency | **string** | A currency code. |
-| currencies\[\].percentage | **float** | The percentage to discount by. |
+| `currencies` | `array` | An array of objects |
+| `currencies[].currency` | `string` | A currency code |
+| `currencies[].percentage` | `float` | The percentage to discount by |
 
 ## The Promotion Code Object
 
@@ -110,7 +110,9 @@ A promotion code is represented by the following, very simple, object.
 }
 ```
 
-| Name | Type | Description |
+| **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| code | **string** | Any string |
+| `code` | `string` | Any string |
+
+
 
