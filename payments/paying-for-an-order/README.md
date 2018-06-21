@@ -18,7 +18,7 @@ Depending on the chosen gateway, you may or may **not** have access to `capture`
 
 ### Purchase
 
-The simplest method is `purchase`. The gateway will attempt to charge the customer immediately and the result of the attempt will be returned.
+The simplest method is `purchase`. The gateway will attempt to charge the customer immediately, and the result of the attempt will be returned.
 
 ### Authorize
 
