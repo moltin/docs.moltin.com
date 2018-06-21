@@ -78,5 +78,8 @@ Collections allow you to organize your products into hierarchical groups. Where 
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-
+| `relationships.products` | `array[object]` | An array of products for this collection |
+| `relationships.products.data` | `array[object]` | An array of relationships from this collection to products resources |
+| `relationships.products.data.type` | `string` | Always `collection` |
+| `relationships.products.data.id` | `string` | The unique identifier of the related product |
 

@@ -46,5 +46,8 @@ Categories allow you to organize your Products into hierarchical groups. That me
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-
+| `relationships.products` | `array[object]` | An array of products for this category |
+| `relationships.products.data` | `array[object]` | An array of relationships from this category to products resources |
+| `relationships.products.data.type` | `string` | Always `product` |
+| `relationships.products.data.id` | `string` | the unique identifier of the related product |
 

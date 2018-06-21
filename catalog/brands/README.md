@@ -52,5 +52,8 @@ The Brands API allows you to organize products into hierarchical groups. Where a
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
-
+| `relationships.products` | `array[object]` | An array of products for this brand |
+| `relationships.products.data` | `array[object]` | An array of relationships from this brand to products resources |
+| `relationships.products.data.type` | `string` | Always `product` |
+| `relationships.products.data.id` | `string` | The unique identifier of the related product |
 
