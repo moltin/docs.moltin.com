@@ -3,7 +3,7 @@
 You can only update custom data, `shipping` and `shipping_address` on orders. Everything else inside the order object is immutable.
 
 {% hint style="warning" %}
-You can only update order `shipping` and `shipping_address` when the order has not been fulfilled.
+You can only update order `shipping` and `shipping_address,` if the order has not been fulfilled.
 {% endhint %}
 
 {% api-method method="put" host="https://api.moltin.com" path="/v2/orders/:id" %}
@@ -19,7 +19,7 @@ Update by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the order you wish to update
+The **ID** of the order you wish to update
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
