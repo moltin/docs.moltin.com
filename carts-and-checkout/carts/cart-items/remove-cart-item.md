@@ -15,7 +15,7 @@ Remove Item from Cart
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-
+The unique identifier for this cart item
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
