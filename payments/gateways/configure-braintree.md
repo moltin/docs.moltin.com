@@ -14,7 +14,7 @@ You can configure Braintree programatically using the `/gateways/braintree` endp
 | `name` | `string` | The display name of the gateway |
 | `environment` | `string` | `production` or `sandbox` |
 | `slug` | `string` | A unique slug for this gateway |
-| `type` | `string` | This will always be gateway |
+| `type` | `string` | Always `gateway` |
 | `enabled` | `boolean` | `true` or `false` that will enable the gateway |
 {% endtab %}
 
