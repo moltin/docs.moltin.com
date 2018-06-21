@@ -141,13 +141,13 @@ Delete Parent Collection Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the parent collection you with to delete the relationship to
+The **ID** of the parent collection you with to delete the relationship to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token used to access the API.
+The Bearer token used to access the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
