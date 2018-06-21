@@ -13,7 +13,7 @@ Create Category Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the Category you want to modify relationships for
+The **ID** of the Category you want to modify relationships for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The type of the related object \(should be `category`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="parent.id" type="string" required=true %}
-The ID of the parent Category
+The **ID** of the parent Category
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="children\[\].type" type="string" required=true %}
@@ -37,7 +37,7 @@ The type of related object \(should be `category`\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="children\[\].id" type="string" required=true %}
-The ID of the Category
+The **ID** of the Category
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
