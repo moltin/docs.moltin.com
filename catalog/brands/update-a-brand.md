@@ -24,6 +24,14 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=true %}
+This represents the type of object being returned
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="id" type="string" required=true %}
+The **ID** of the requested brand
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="status" type="string" required=false %}
 `live` or `draft` depending on the status
 {% endapi-method-parameter %}
@@ -38,10 +46,6 @@ A unique slug identifier for the brand
 
 {% api-method-parameter name="name" type="string" required=false %}
 The name of the brand
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="type" type="string" required=true %}
-This represents the type of object being returned
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
