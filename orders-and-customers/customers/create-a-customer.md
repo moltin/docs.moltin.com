@@ -31,7 +31,7 @@ The customer email.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="password" type="string" required=false %}
-The customers password
+The customer's password.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
