@@ -1,6 +1,6 @@
 # Supported Languages
 
-Below are a list of `alpha2` language codes that you can specify when updating the [`additional_languages`](./#available-settings).
+Below is the list of `alpha2` language codes that you can specify when updating [`additional_languages`](./#available-settings).
 
 | **Name** | **Code** |
 | --- | --- |
