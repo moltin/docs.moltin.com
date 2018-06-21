@@ -42,7 +42,7 @@ The amount of stock affected by this transaction
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
-This will always be `stock-transaction`
+Always  `stock-transaction`
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
