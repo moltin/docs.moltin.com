@@ -13,11 +13,11 @@ Update a product modifier
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="variationId" type="string" required=true %}
-The **ID** of the variation belonging to this modifier.
+The **ID** of the variation belonging to this modifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="optionId" type="string" required=true %}
-The **ID** of the option belonging to the modifier.
+The **ID** of the option belonging to the modifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="modifierId" type="string" required=true %}
@@ -27,7 +27,7 @@ The **ID** of the modifier to be updated
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token used to grant access to the API.
+The Bearer token used to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
