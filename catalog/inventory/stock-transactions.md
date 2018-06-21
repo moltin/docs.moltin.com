@@ -25,7 +25,7 @@ Get All Product Stock Transactions
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="productId" type="string" required=true %}
-The ID for the product you're performing this action on
+The **ID** for the product you're performing this action on
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -107,4 +107,6 @@ Moltin.Inventories.GetTransactions(productId).then(transactions => {
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
