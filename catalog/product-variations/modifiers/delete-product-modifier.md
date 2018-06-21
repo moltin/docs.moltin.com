@@ -21,7 +21,7 @@ The **ID** of the option belonging to the modifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="modifierId" type="string" required=true %}
-The ID ****of the modifier to be deleted
+The **ID** of the modifier to be deleted
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
