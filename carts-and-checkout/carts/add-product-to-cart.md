@@ -39,7 +39,7 @@ The amount of products to add to cart
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The ID of the product you wish to add to cart
+The **ID** of the product you wish to add to cart
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
