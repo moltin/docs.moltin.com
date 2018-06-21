@@ -13,11 +13,11 @@ Create a new product modifier
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="variationId" type="string" required=true %}
-The **ID** of the variation belonging to this modifier
+The **ID** of the variation belonging to this modifier.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="optionId" type="string" required=true %}
-The **ID** of the option belonging to the modifier
+The **ID** of the option belonging to the modifier.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -29,7 +29,7 @@ The Bearer token used to grant access to the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=false %}
-Represents the type of object being created. \(should be modifier\)
+Represents the type of object being created \(should be **modifier**\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="modifier\_type" type="string" required=false %}
