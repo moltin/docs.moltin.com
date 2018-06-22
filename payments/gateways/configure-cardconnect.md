@@ -54,6 +54,22 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="test" type="boolean" required=false %}
+Indicates whether test transactions are enabled
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="slug" type="string" required=true %}
+A unique slug for this gateway
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="name" type="string" required=true %}
+The display name of the gateway
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+Always `gateway`
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="username" type="string" required=false %}
 Your CardConnect username
 {% endapi-method-parameter %}
