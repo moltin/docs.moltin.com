@@ -6,7 +6,7 @@ Create Category Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a Product relationship to on or more C**ategories.**  If any relationships already exist, the one's made in the request will be added to them.
+Create a Product relationship to on or more **Categories.**  If any relationships already exist, the one's made in the request will be added to them.
 {% endapi-method-description %}
 
 {% api-method-spec %}
