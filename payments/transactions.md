@@ -170,6 +170,16 @@ The UUID of the order you wish to authorize payment for
 The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="method" type="string" required=true %}
+Payment method to use
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="gateway" type="string" required=true %}
+The type of gateway to use
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
