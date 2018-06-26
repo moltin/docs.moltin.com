@@ -1,4 +1,4 @@
-# Delete Product Variation
+# Delete Product Variation Option
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/variation/:variationId/option/:optionId" %}
 {% api-method-summary %}

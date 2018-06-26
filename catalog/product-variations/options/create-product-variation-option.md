@@ -1,4 +1,4 @@
-# Create Product Variation
+# Create Product Variation Option
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/variations/:id/options" %}
 {% api-method-summary %}
