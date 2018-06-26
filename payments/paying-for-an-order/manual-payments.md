@@ -57,7 +57,7 @@ This will always be `manual` for the manual payment gateway
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -168,7 +168,7 @@ The `capture` method requires [client\_credentials](../../basics/authentication/
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -190,10 +190,11 @@ const Moltin = MoltinGateway({
 })
 
 const orderId = 'XXXX'
+const transactionId = 'XXXX'
 
-Moltin.Orders.Payment(orderId, {
-  gateway: 'manual',
-  method: 'capture'
+Moltin.Orders.Payment({
+  order: orderId,
+  transaction: transactionId
 }).then(() => {
   // Do something
 })
