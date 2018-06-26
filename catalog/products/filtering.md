@@ -14,3 +14,52 @@ Below is a list of attributes and operators available for [filtering](../../basi
 | `category.id` | `string` | `eq` | `eq(category.id,id)` |
 | `collection.id` | `string` | `eq` | `eq(collection.id,id)` |
 
+### Get all products for one category
+
+In the example below, we will make a request to get all products that belong to one category.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/products?filter=eq(category.id,XXXX) \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+Moltin.Products.Filter({
+  eq: {
+    category: {
+      id: 'XXXX'
+    }
+  } 
+})
+  .With(["category"])
+  .All()
+  .then(products => {
+    // Do something
+  })
+```
+{% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+moltin.product.filter(operator: .eq, key: "category.id", value: "xxxx").all {
+response in
+// Do something
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
+

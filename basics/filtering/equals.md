@@ -1,11 +1,19 @@
+---
+description: >-
+  The equals method determines whether two or more object instances are equal,
+  and then, if true, it returns them.
+---
+
 # Equals
 
-In the example below, we will make a request to get all digital products from the Moltin catalogue.
+### Get all digital products
+
+In the example below, we will make a request to get all digital products from the Moltin catalog.
 
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X GET https://api.moltin.com/v2/products?filter=eq(commodity_type,digital) \
+curl -X GET https://api.moltin.com/v2/products?filter=eq(commodity_type, digital) \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
@@ -36,6 +44,8 @@ moltin.product.filter(operator: .eq, key: "commodity_type", value: "digital").al
 ```
 {% endtab %}
 {% endtabs %}
+
+### 
 
 
 

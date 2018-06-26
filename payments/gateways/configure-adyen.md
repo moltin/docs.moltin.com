@@ -54,6 +54,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="test" type="string" required=false %}
+`true` or `false` to enable test transactions
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="username" type="string" required=false %}
 Your web service username
 {% endapi-method-parameter %}
@@ -104,14 +108,15 @@ curl -X PUT https://api.moltin.com/v2/gateways/adyen \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXX" \
      -d $'{
-       "data": {
-         "enabled": true
-         "merchant_account": "xxx",
-         "password": "xxx",
-         "test": false,
-         "username": "xxx"
-       }
-     }'
+    "data": {
+     "data": {
+        "enabled": true,
+        "merchant_account": "xxx",
+        "password": "xxx",
+        "test": false,
+        "username": "xxx"
+     }
+}
 ```
 {% endtab %}
 {% endtabs %}

@@ -31,7 +31,7 @@ A unique slug for this product
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sku" type="string" required=true %}
-A unique slug for this product
+A unique SKU for this product
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="manage\_stock" type="boolean" required=true %}

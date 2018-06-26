@@ -27,3 +27,5 @@ Not all endpoint attributes are available for the supported operators below. Eac
 * `/orders`
 * `/products`
 
+For more detail on filtering, see the Filtering section under each endpoint.
+

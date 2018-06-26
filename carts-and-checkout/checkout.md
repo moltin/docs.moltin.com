@@ -19,17 +19,87 @@ You can checkout a Cart with an existing customer ID
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="reference" type="string" required=true %}
-The reference for the cart to checkout
+{% api-method-body-parameters %}
+{% api-method-parameter name="customer.id" type="string" required=true %}
+The **ID** of the customer
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+{% api-method-parameter name="billing\_address.first\_name" type="string" required=true %}
+First name of the billing recipient
 {% endapi-method-parameter %}
-{% endapi-method-headers %}
+
+{% api-method-parameter name="billing\_address.last\_name" type="string" required=true %}
+Last name of the billing recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.company\_name" type="string" required=true %}
+Company name of the billing recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.line\_1" type="string" required=true %}
+First line of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.line\_2" type="string" required=true %}
+Second line of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.postcode" type="string" required=true %}
+Postcode of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="bililng\_address.county" type="string" required=true %}
+County / state /  region of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.country" type="string" required=true %}
+Country of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.first\_name" type="string" required=false %}
+First name of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.last\_name" type="string" required=false %}
+Last name of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.phone\_number" type="string" required=false %}
+Phone number of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.company\_name" type="string" required=false %}
+Company of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.line\_1" type="string" required=false %}
+First line of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.line\_2" type="string" required=false %}
+Second line of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.city" type="string" required=false %}
+City of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.postcode" type="string" required=false %}
+Post code of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.county" type="string" required=false %}
+County / state/ region of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.country" type="string" required=false %}
+Country of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.instructions" type="string" required=false %}
+Shipping instructions
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -209,6 +279,96 @@ The reference for the cart to checkout
 The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="customer.email" type="string" required=true %}
+Customer email address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="customer.name" type="string" required=true %}
+Full name of the customer
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.first\_name" type="string" required=true %}
+First name of the billing recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.last\_name" type="string" required=true %}
+Last name of the billing recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.company\_name" type="string" required=true %}
+Company name of the billing recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.line\_1" type="string" required=true %}
+First line of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.line\_2" type="string" required=true %}
+Second line of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.city" type="string" required=true %}
+/city of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.postcode" type="string" required=true %}
+Postcode of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.county" type="string" required=true %}
+County / state / region of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="billing\_address.country" type="string" required=true %}
+Country of the billing address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.first\_name" type="string" required=false %}
+First name of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.last\_name" type="string" required=false %}
+Last name of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.company\_name" type="string" required=false %}
+Company name of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.phone\_number" type="string" required=false %}
+Phone number of the shipping recipient
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.line\_1" type="string" required=false %}
+First line of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.line\_2" type="string" required=false %}
+Second line of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.city" type="string" required=false %}
+City of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.postcode" type="string" required=false %}
+Postcode of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.county" type="string" required=false %}
+County / state / region of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.country" type="string" required=false %}
+Country of the shipping address
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="shipping\_address.instructions" type="string" required=false %}
+Shipping instructions
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
