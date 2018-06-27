@@ -1,9 +1,3 @@
----
-description: >-
-  The equals method determines whether two or more object instances are equal,
-  and then, if true, it returns them.
----
-
 # Equals
 
 ### Get all digital products

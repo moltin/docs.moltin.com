@@ -39,7 +39,7 @@
 * [Product Variations](catalog/product-variations/README.md)
   * [Options](catalog/product-variations/options/README.md)
     * [Create Product Variation Option](catalog/product-variations/options/create-product-variation-option.md)
-    * [Update Product Variation Option](catalog/product-variations/options/update-product-variation.md)
+    * [Update Product Variation Option](catalog/product-variations/options/update-product-variation-option.md)
     * [Delete Product Variation Option](catalog/product-variations/options/delete-product-variation-option.md)
   * [Modifiers](catalog/product-variations/modifiers/README.md)
     * [Create Product Modifier](catalog/product-variations/modifiers/create-product-modifier.md)
