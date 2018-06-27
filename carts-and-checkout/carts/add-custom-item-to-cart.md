@@ -6,6 +6,10 @@ You will want to add a custom item to the cart to handle things like shipping, t
 Any requests to add a product to cart will return a collection of [cart items](cart-items/).
 {% endhint %}
 
+{% hint style="warning" %}
+Custom Cart Items are available via [**implicit authentication**](../../basics/authentication/implicit-token.md). You should **always check** each order has the correct details for each item, most importantly, price.
+{% endhint %}
+
 {% api-method method="post" host="https://api.moltin.com" path="/v2/carts/:reference/items" %}
 {% api-method-summary %}
 Add Custom Item to Cart
