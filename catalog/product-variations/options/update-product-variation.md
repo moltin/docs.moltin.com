@@ -1,8 +1,8 @@
-# Create Product Variation Option
+# Update Product Variation Option
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/variations/:id/options" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/variations/:id/options" %}
 {% api-method-summary %}
-Create a Product Variation Option
+Update a Product Variation Option
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -18,22 +18,22 @@ The **ID** of the variation belonging to this option
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=false %}
 The Bearer token to grant access to the API.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
-Represents the type of the object being created. \(should be `option`\)
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="name" type="string" required=false %}
-A human readable name for this variation option
+A human readable description of the option.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=false %}
 A human readable description of the option
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=false %}
+Represents the type of the object being created.  \(should be option\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -44,32 +44,8 @@ A human readable description of the option
 
 {% endapi-method-response-example-description %}
 
-```javascript
-{
-    "data": {
-        "type": "product-variation",
-        "id": "615e4e5a-e43d-4679-9900-191af4724f6d",
-        "name": "Paint colour",
-        "options": [
-            {
-                "id": "aabc3e8e-c6a6-42aa-a64b-9a7dbefedd9f",
-                "name": "Blue",
-                "description": "Our most popular color",
-                "modifiers": []
-            }
-        ],
-        "relationships": {
-            "options": {
-                "data": [
-                    {
-                        "type": "option",
-                        "id": "aabc3e8e-c6a6-42aa-a64b-9a7dbefedd9f"
-                    }
-                ]
-            }
-        }
-    }
-}
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -79,7 +55,7 @@ A human readable description of the option
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
+curl -X PUT https://api.moltin.com/v2/variations/:variationId/options \
      -H "Authorization: Bearer XXXX" \
      -d $'{
         "data": {

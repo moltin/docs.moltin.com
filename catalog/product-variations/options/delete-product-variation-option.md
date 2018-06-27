@@ -42,8 +42,12 @@ The Bearer token to grant access to the API.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-```bash
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
 curl -X DELETE https://api.moltin.com/v2/variation/:variationId/option/:optionId \
      -H "Authorization: Bearer XXXX"
 ```
+{% endtab %}
+{% endtabs %}
 

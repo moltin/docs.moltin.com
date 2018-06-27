@@ -70,3 +70,19 @@ curl -X PUT https://api.moltin.com/v2/variation/{VARIATION_ID} \
 }'
 ```
 
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X PUT https://api.moltin.com/v2/variation/:id \
+     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
+     -d $'{
+  "data": {
+    "type": "product-variation",
+    "id": :id,
+    "name": "Color schemes"
+  }
+}'
+```
+{% endtab %}
+{% endtabs %}
+

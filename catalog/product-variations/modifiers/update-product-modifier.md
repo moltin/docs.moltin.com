@@ -64,7 +64,9 @@ A payload specific to the type of modifier
 {% endapi-method-spec %}
 {% endapi-method %}
 
-```bash
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
 curl -X "PUT" https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers/:modifierId \
      -H "Authorization: Bearer XXXX" \
      -d $'{
@@ -76,4 +78,6 @@ curl -X "PUT" https://api.moltin.com/v2/variations/:variationId/options/:optionI
   }
 }'
 ```
+{% endtab %}
+{% endtabs %}
 

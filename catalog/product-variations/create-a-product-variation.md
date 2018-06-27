@@ -48,7 +48,9 @@ A human readable name for this variation.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-```bash
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
 curl -X POST https://api.moltin.com/v2/variations \
      -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
      -d $'{
@@ -58,4 +60,6 @@ curl -X POST https://api.moltin.com/v2/variations \
   }
 }'
 ```
+{% endtab %}
+{% endtabs %}
 

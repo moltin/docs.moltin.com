@@ -38,8 +38,14 @@ The Bearer used to access the API
 {% endapi-method-spec %}
 {% endapi-method %}
 
-```bash
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
 curl -X DELETE https://api.moltin.com/v2/variation/:id \
      -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819"
 ```
+{% endtab %}
+{% endtabs %}
+
+
 
