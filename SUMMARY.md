@@ -45,7 +45,7 @@
     * [Create Product Modifier](catalog/product-variations/modifiers/create-product-modifier.md)
     * [Update Product Modifier](catalog/product-variations/modifiers/update-product-modifier.md)
     * [Delete Product Modifier](catalog/product-variations/modifiers/delete-product-modifier.md)
-  * [Get All Product Variations](catalog/product-variations/get-all-product-variations.md)
+  * [Get all Product Variations](catalog/product-variations/get-all-product-variations.md)
   * [Get Product Variations](catalog/product-variations/get-product-variations.md)
   * [Create a Product Variation](catalog/product-variations/create-a-product-variation.md)
   * [Update a Product Variation](catalog/product-variations/update-a-product-variation.md)
