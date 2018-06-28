@@ -338,7 +338,7 @@ const id = 'XXXX'
 const payment = {
   gateway: 'stripe',
   method: 'purchase',
-  paymeny: 'tok_visa'
+  payment: 'tok_visa'
   options: {
     destination: 'acct_XXX'
   }
@@ -350,4 +350,3 @@ Moltin.Orders.Payment(id, order).then(() => {
 ```
 {% endtab %}
 {% endtabs %}
-
