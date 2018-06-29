@@ -2,7 +2,7 @@
 
 A Field represents a single Field of data \(for example a `Product Rating`\) to be applied to an entity. All Fields have a type \(`string`, `integer`, `boolean`, `date` or `relationship`\), a default value and an optional set of validation rules.
 
-## The Field Object
+### The Field Object
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ A Field represents a single Field of data \(for example a `Product Rating`\) to 
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields" %}
 {% api-method-summary %}
-Get a list of Fields
+Get all Fields
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -33,7 +33,7 @@ Get a list of Fields
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API.
+The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -116,9 +116,112 @@ Moltin.Fields.All().then(fields => {
 {% endtab %}
 {% endtabs %}
 
+{% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:slug/fields" %}
+{% api-method-summary %}
+Get all Fields by Flow
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="slug" type="string" required=true %}
+The **slug** of the Flow you wish to return fields for
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token to grant access to the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+	"data": [
+		{
+			"id": "23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f",
+			"type": "field",
+			"field_type": "string",
+			"slug": "background_colour",
+			"name": "background colours",
+			"description": "background colour for the product",
+			"required": false,
+			"unique": false,
+			"default": "#ffffff",
+			"enabled": true,
+			"validation_rules": [],
+			"order": null,
+			"links": {
+				"self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f"
+			},
+			"relationships": {
+				"flow": {
+					"data": {
+						"id": "248c7776-bd9f-4075-8980-461b02ed3757",
+						"type": "flow"
+					}
+				}
+			},
+			"meta": {
+				"timestamps": {
+					"created_at": "2017-06-26T12:55:33.560Z",
+					"updated_at": "2017-12-19T12:31:24.570Z"
+				}
+			}
+		},
+		{
+			"id": "5f4be5bd-0c83-417a-b744-7d8c49636ab1",
+			"type": "field",
+			"field_type": "string",
+			"slug": "background_image",
+			"name": "Background Image",
+			"description": "The background image for the category",
+			"required": false,
+			"unique": false,
+			"default": null,
+			"enabled": true,
+			"validation_rules": [],
+			"order": null,
+			"links": {
+				"self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/5f4be5bd-0c83-417a-b744-7d8c49636ab1"
+			},
+			"relationships": {
+				"flow": {
+					"data": {
+						"id": "248c7776-bd9f-4075-8980-461b02ed3757",
+						"type": "flow"
+					}
+				}
+			},
+			"meta": {
+				"timestamps": {
+					"created_at": "2018-03-29T10:33:24.056Z",
+					"updated_at": "2018-03-29T10:33:24.056Z"
+				}
+			}
+		}
+	]
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields/:id" %}
 {% api-method-summary %}
-Get a field
+Get a Field
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -129,13 +232,13 @@ Get a field
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-The **ID** for the field you are requesting.
+The **ID** for the field you are requesting
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API.
+The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -224,7 +327,7 @@ curl https://api.moltin.com/v2/fields \
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/fields" %}
 {% api-method-summary %}
-Create a field
+Create a Field
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -439,7 +542,7 @@ A unique slug identifier for the field
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="field\_type" type="string" required=true %}
-The type of field - string, integer, boolean, float, date, relationship
+The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=true %}
@@ -533,12 +636,12 @@ curl -X "POST" "https://api.moltin.com/v2/fields/:id" \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "id": "{FIELD_ID}",
-    "type": "field",
-    "name": "Average Product Rating",
-  }
-}'
+      "data": {
+        "id": "{FIELD_ID}",
+        "type": "field",
+        "name": "Average Product Rating",
+      }
+    }'
 ```
 {% endtab %}
 
