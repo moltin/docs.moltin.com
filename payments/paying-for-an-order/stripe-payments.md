@@ -298,7 +298,7 @@ You will use stripe in this case
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -350,3 +350,4 @@ Moltin.Orders.Payment(id, order).then(() => {
 ```
 {% endtab %}
 {% endtabs %}
+

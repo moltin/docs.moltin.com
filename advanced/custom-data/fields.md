@@ -14,7 +14,7 @@ A Field represents a single Field of data \(for example a `Product Rating`\) to 
 | `validation_rules` | `array[object]` | See [`Flow Field Validation Rules`](https://docs.moltin.com/#flow-field-validation-rules) |
 | `description` | `string` | Any description for this field |
 | `required` | `boolean` | `true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship |
-| unique | `boolean` | `true` if each entry should be unique, `false` if not\` |
+| `unique` | `boolean` | `true` if each entry should be unique, `false` if not |
 | `default` | `mixed` | A default value if none is supplied and field is not required |
 | `enabled` | `boolean` | If this field is enabled on the flow this should be `true`, otherwise `false` |
 | `order` | `integer` | Denotes the order in which this field is returned relative to the rest of the flow fields |
@@ -240,10 +240,6 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="flowId" type="string" required=false %}
-The **ID** of the flow you wish to tie the field too.
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
@@ -257,19 +253,19 @@ A unique slug identifier for the field
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="field\_type" type="string" required=true %}
-The type of field - string, integer, boolean, float, date, relationship
+The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=true %}
 Any description for this field
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="required" type="boolean" required=false %}
-True if required on input, false if not. Always false if the field\_type is a relationship
+{% api-method-parameter name="required" type="boolean" required=true %}
+`true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="unique" type="boolean" required=true %}
-true if each entry should be unique, false if not
+{% api-method-parameter name="unique" type="boolean" required=false %}
+`true` if each entry should be unique, `false` if not
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="default" type="string" required=false %}
@@ -277,21 +273,21 @@ A default value if none is supplied and field is not required
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="enabled" type="boolean" required=true %}
-If this field is enabled on the flow this should be true, otherwise false
+If this field is enabled on the flow this should be `true`, otherwise `false`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order" type="integer" required=false %}
 Denotes the order in which this field is returned relative to the rest of the flow fields
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="relationships" type="object" required=false %}
+{% api-method-parameter name="relationships" type="object" required=true %}
 A relationship object to link this field to a flow
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -351,36 +347,36 @@ curl -X "POST" "https://api.moltin.com/v2/fields" \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "field",
-    "name": "Product Rating",
-    "slug": "product-rating",
-    "field_type": "integer",
-    "validation_rules": [
-        {
-            "type": "between",
-            "options": {
-                "from": 1,
-                "to": 5
+      "data": {
+        "type": "field",
+        "name": "Product Rating",
+        "slug": "product-rating",
+        "field_type": "integer",
+        "validation_rules": [
+            {
+                "type": "between",
+                "options": {
+                    "from": 1,
+                    "to": 5
+                }
+            }
+        ],
+        "description": "Average rating as given by our users",
+        "required": false,
+        "unique": false,
+        "default": 0,
+        "enabled": true,
+        "order": 1,
+        "relationships": {
+            "flow": {
+                "data": {
+                    "type": "flow",
+                    "id": "e4145c27-aba1-46af-81a3-58f5e1cf7f15"
+                }
             }
         }
-    ],
-    "description": "Average rating as given by our users",
-    "required": false,
-    "unique": false,
-    "default": 0,
-    "enabled": true,
-    "order": 1,
-    "relationships": {
-        "flow": {
-            "data": {
-                "type": "flow",
-                "id": :flowID
-            }
-        }
-    }
-  }
-}'
+      }
+    }'
 ```
 {% endtab %}
 
