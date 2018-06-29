@@ -18,7 +18,7 @@ The **ID** of the variation belonging to this option
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 The Bearer token to grant access to the API.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
