@@ -186,7 +186,7 @@ curl -X POST "https://api.moltin.com/v2/flows" \
 ```
 {% endtab %}
 
-{% tab title="JavaScript SDL" %}
+{% tab title="JavaScript SDK" %}
 ```javascript
 const MoltinGateway = require('@moltin/sdk').gateway
 
