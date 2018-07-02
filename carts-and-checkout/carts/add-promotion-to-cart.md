@@ -249,7 +249,19 @@ Moltin.Cart(reference)
 
 {% tab title="Swift SDK" %}
 ```swift
+const cartReference = 'XXXX'
+const promoCode = 'XXXX'
 
+self.moltin.cart.addPromotion(promoCode, toCart: cartReference) { (result) in
+     switch result {
+        case .success(let status):
+         DispatchQueue.main.async {
+                 print("Promotion: \(status)")
+               }
+            default: break
+         }
+     }
+ }
 ```
 {% endtab %}
 {% endtabs %}
