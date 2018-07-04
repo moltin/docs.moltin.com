@@ -3,7 +3,7 @@
 You can easily get a new or existing cart by providing the unique cart reference in the request.
 
 {% hint style="warning" %}
-An empty cart will be returned for any carts that don't currently exist.
+An empty cart will be returned for any carts that don't currently exist. See [Get Cart Items](cart-items/get-cart-items.md#get-cart-items-by-cart-reference) for how the cart items object looks.
 {% endhint %}
 
 {% hint style="info" %}
