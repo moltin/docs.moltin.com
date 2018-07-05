@@ -19,6 +19,7 @@
 * [Sorting](basics/sorting.md)
 * [Versioning](basics/versioning.md)
 * [API Status](http://status.moltin.com)
+* [Changelog](basics/changelog.md)
 
 ## Catalog
 
