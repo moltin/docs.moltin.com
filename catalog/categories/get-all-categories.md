@@ -113,5 +113,20 @@ Moltin.Categories.All().then(categories => {
 })
 ```
 {% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+moltin.category.all { result in
+    switch result {
+        case .success(let response):
+            print(response)
+        case .failure(let error):
+            print(error)
+    }
+}
+```
+{% endtab %}
 {% endtabs %}
 

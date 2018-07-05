@@ -104,7 +104,7 @@ Moltin.Brands.All().then(brands => {
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")
 
-moltin.product.all { result in
+moltin.brand.all { result in
     switch result {
         case .success(let response):
             print(response)

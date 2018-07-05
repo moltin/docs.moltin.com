@@ -179,5 +179,23 @@ Moltin.Products.All().then(products => {
 })
 ```
 {% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+self.moltin.product.include([.mainImage]).all { (result: Result<PaginatedResponse<[moltin.Product]>>) in
+   switch result {
+       case .success(let response):
+            DispatchQueue.main.async {
+                self.products = response.data ?? []
+            }
+        case .failure(let error):
+            print("Products error", error)
+        }
+    }
+}
+```
+{% endtab %}
 {% endtabs %}
 

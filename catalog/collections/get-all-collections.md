@@ -113,5 +113,20 @@ Moltin.Collections.all().then(collections => {
 })
 ```
 {% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+moltin.collection.all { result in
+    switch result {
+        case .success(let response):
+            print(response)
+        case .failure(let error):
+            print(error)
+    }
+}
+```
+{% endtab %}
 {% endtabs %}
 
