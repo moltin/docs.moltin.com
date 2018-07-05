@@ -24,15 +24,15 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="type" type="string" required=true %}
 Represents the type of the object being created. \(should be `option`\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=false %}
+{% api-method-parameter name="name" type="string" required=true %}
 A human readable name for this variation option
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="description" type="string" required=false %}
+{% api-method-parameter name="description" type="string" required=true %}
 A human readable description of the option
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
