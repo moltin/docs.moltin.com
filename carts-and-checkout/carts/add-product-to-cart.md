@@ -162,15 +162,31 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-const reference = 'XXXX'
+const referenceId = 'XXXX'
 const productId = 'XXXX'
 const quantity = 1
 
-Moltin.Cart(reference)
+Moltin.Cart(referenceId)
   .AddProduct(productId, quantity)
   .then(cart => {
     // Do something
   })
+```
+{% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+let referenceId = 'XXXX'
+let productId = 'XXXX'
+let productQty = 'XXXX'
+
+
+self.moltin.cart.addProduct(withID: productId , ofQuantity: productQty, toCart: referenceId, completionHandler: { (_) in
+
+})
+
 ```
 {% endtab %}
 {% endtabs %}

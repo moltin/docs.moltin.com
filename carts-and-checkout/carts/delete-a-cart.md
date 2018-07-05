@@ -72,5 +72,22 @@ Moltin.Cart(reference)
   })
 ```
 {% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+let referenceId = 'XXXX'
+
+self.moltin.cart.deleteCart(referenceId, completionHandler: { (result)    in
+    switch result {
+        case .success(let result):
+            print("Cart error:", result)
+        case .failure(let error):
+            print("Cart error:", error)
+        }
+})
+```
+{% endtab %}
 {% endtabs %}
 

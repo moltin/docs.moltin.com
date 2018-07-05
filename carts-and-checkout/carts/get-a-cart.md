@@ -99,5 +99,22 @@ Moltin.Cart(reference)
   })
 ```
 {% endtab %}
+
+{% tab title="Swift SDK" %}
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+self.moltin.cart.get(forID: AppDelegate.cartID, completionHandler: { (result) in
+    switch result {    
+        case .success(let result):
+            DispatchQueue.main.async {
+                print("Cart:", result)
+                }
+            case .failure(let error):
+                print("Cart error:", error)
+            }
+    })
+```
+{% endtab %}
 {% endtabs %}
 
