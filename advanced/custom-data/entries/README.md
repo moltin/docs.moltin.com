@@ -8,65 +8,9 @@
 
 If your flow has more than one field related to it, you will see multiple field slugs.
 
-{% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
-{% api-method-summary %}
-Get an Entry
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-The ID of the entry you are requesting
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="slug" type="string" required=true %}
-The slug for the flow you are requesting an entry for
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "data": {
-        "id": "4abb8316-d0a2-4c91-bf29-4d19ba932227",
-        "type": "entry",
-        "meta": {
-            "timestamps": {
-                "created_at": "2018-05-10T15:28:59.192Z",
-                "updated_at": "2018-05-10T15:28:59.192Z"
-            }
-        },
-        "links": {
-            "self": "https://api.moltin.com/v2/flows/products/entries/4abb8316-d0a2-4c91-bf29-4d19ba932227"
-        }
-    }
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
 {% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:slug/entries" %}
 {% api-method-summary %}
-Get a list of Entries
+Get all Entries
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -126,6 +70,62 @@ The Bearer token to grant access to the API
             }
         }
     ]
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
+{% api-method-summary %}
+Get an Entry
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+The ID of the entry you are requesting
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="slug" type="string" required=true %}
+The slug for the flow you are requesting an entry for
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token to grant access to the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "data": {
+        "id": "4abb8316-d0a2-4c91-bf29-4d19ba932227",
+        "type": "entry",
+        "meta": {
+            "timestamps": {
+                "created_at": "2018-05-10T15:28:59.192Z",
+                "updated_at": "2018-05-10T15:28:59.192Z"
+            }
+        },
+        "links": {
+            "self": "https://api.moltin.com/v2/flows/products/entries/4abb8316-d0a2-4c91-bf29-4d19ba932227"
+        }
+    }
 }
 ```
 {% endapi-method-response-example %}
