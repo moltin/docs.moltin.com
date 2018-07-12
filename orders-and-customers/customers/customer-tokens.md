@@ -68,8 +68,16 @@ This must be `token`
 
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+  "data": {
+    "type": "token",
+    "id": "36f05940-0d38-411a-8909-3aea58bc1f09",
+    "customer_id": "79cc0486-bbdf-491b-a0a2-722383b6288b",
+    "token": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJzdWIiOiI3OWNjMDQ4Ni1iYmRmLTQ5MWItYTBhMi03MjIzODNiNjI4OGIiLCJuYW1lIjoiUm9uIFN3YW5zb24iLCJleHAiOjE1MTA2ODQyMDAsImlhdCI6MTUxMDU5NzgwMCwianRpIjoiMzZmMDU5NDAtMGQzOC00MTFhLTg5MDktM2FlYTU4YmMxZjA5In0=.ea948e346d0683803aa4a2c09441bcbf7c79bd9234bed2ce8456ab3af257ea9f",
+    "expires": 1510684200
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -105,7 +113,7 @@ const customer = {
   password: 'mysecretpassword'
 }
 
-Moltin.Customers.Token(customer).then(brands => {
+Moltin.Customers.Token(customer).then(data => {
   // Do something
 })
 ```

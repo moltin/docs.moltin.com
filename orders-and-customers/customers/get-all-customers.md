@@ -75,14 +75,14 @@ const Moltin = MoltinGateway({
   client_id: 'XXXX'
 })
 
-Moltin.Customers.All().then((customer) => {
+Moltin.Customers.All().then(customer => {
   // Do something
-});
+})
 
 //Filter example
 Moltin.Customers.Filter({eq: {email: 'jim@bob.com'}}).All().then(customers => {
   // Do something
-});
+})
 ```
 {% endtab %}
 {% endtabs %}
