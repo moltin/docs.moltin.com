@@ -86,7 +86,7 @@
     * [Child Relationships](catalog/collections/relationships/child-relationships.md)
 * [Inventory](catalog/inventory/README.md)
   * [Get All Inventory](catalog/inventory/get-all-inventory.md)
-  * [Get All Product Stock](catalog/inventory/get-all-product-stock.md)
+  * [Get a Product's Stock](catalog/inventory/get-all-product-stock.md)
   * [Stock Transactions](catalog/inventory/stock-transactions.md)
   * [Update Inventory](catalog/inventory/update-inventory.md)
 

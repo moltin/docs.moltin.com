@@ -1,4 +1,4 @@
-# Get All Product Stock
+# Get a Product's Stock
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/inventories/:productId" %}
 {% api-method-summary %}
