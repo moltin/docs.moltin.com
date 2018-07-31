@@ -24,11 +24,11 @@ The Bearer used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **file\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the file.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -53,18 +53,19 @@ The **ID** of the file.
 ```javascript
 curl -X "POST" https://api.moltin.com/v2/products/:productId/relationships/files \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "file",
-      "id": "82c51711-35f9-403e-aa73-8e6c80c2258b"
-    },
-    {
-      "type": "file",
-      "id": "c090e3c8-0206-4243-9a3b-f28175f7e9de"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "file",
+          "id": "82c51711-35f9-403e-aa73-8e6c80c2258b"
+        },
+        {
+          "type": "file",
+          "id": "c090e3c8-0206-4243-9a3b-f28175f7e9de"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -115,11 +116,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **file\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the file.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -144,14 +145,15 @@ The **ID** of the file.
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/products/:productId/relationships/files \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "file",
-      "id": "82c51711-35f9-403e-aa73-8e6c80c2258b"
+      "data": [
+        {
+          "type": "file",
+          "id": "82c51711-35f9-403e-aa73-8e6c80c2258b"
+        }
+      ]
     }
-  ]
-}
 ```
 {% endtab %}
 
@@ -201,11 +203,11 @@ The Bearer used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **file\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the file.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -230,14 +232,15 @@ The **ID** of the file.
 ```javascript
 curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/files \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "file",
-      "id": "82c51711-35f9-403e-aa73-8e6c80c2258b"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "file",
+          "id": "82c51711-35f9-403e-aa73-8e6c80c2258b"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 

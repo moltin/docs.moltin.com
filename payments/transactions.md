@@ -45,7 +45,7 @@
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="get" host="https://api.moltin.com" path="/v2/orders/:order\_id/transactions" %}
+{% api-method method="get" host="https://api.moltin.com" path="/v2/orders/:orderId/transactions" %}
 {% api-method-summary %}
 Get all transactions
 {% endapi-method-summary %}
@@ -57,7 +57,7 @@ Get all transactions
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="order\_id" type="string" required=true %}
+{% api-method-parameter name="orderId" type="string" required=true %}
 The UUID of the order you require transactions for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -125,7 +125,7 @@ The Bearer token to grant access to the API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X GET https://api.moltin.com/v2/inventories/:order_id/transactions \
+curl -X GET https://api.moltin.com/v2/inventories/:orderId/transactions \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
@@ -148,7 +148,7 @@ Moltin.Orders.Transactions(id).then(transactions => {
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:order\_id/payments" %}
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/payments" %}
 {% api-method-summary %}
 Authorize payment
 {% endapi-method-summary %}
@@ -160,7 +160,7 @@ This endpoint is for those who wish to authorize payments using the manual gatew
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="order\_id" type="string" required=true %}
+{% api-method-parameter name="orderId" type="string" required=true %}
 The UUID of the order you wish to authorize payment for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -199,9 +199,9 @@ The type of gateway to use
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
-     -H "Content-Type: application/json" \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "gateway": "manual",
@@ -231,7 +231,7 @@ Moltin.Orders.Payment(orderId, {
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:order\_id/transactions/:transaction\_id/capture" %}
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/transactions/:transactionId/capture" %}
 {% api-method-summary %}
 Capture payment
 {% endapi-method-summary %}
@@ -243,11 +243,11 @@ Use this endpoint to capture a previously authorized payment. You will use this 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="transaction\_id" type="string" required=true %}
+{% api-method-parameter name="transactionId" type="string" required=true %}
 The UUID of the transaction to capture
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="order\_id" type="string" required=true %}
+{% api-method-parameter name="orderId" type="string" required=true %}
 The UUID of the order
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -276,13 +276,13 @@ The Bearer token to grant access to the API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:order_id/transactions/:transaction_id/capture \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/transactions/:transaction_id/capture \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:order\_id/transactions/:transaction\_id/refund" %}
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/transactions/:transactionId/refund" %}
 {% api-method-summary %}
 Refund payment
 {% endapi-method-summary %}
@@ -294,11 +294,11 @@ You can mark a transaction as refunded. You will need to handle the actual refun
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="transaction\_id" type="string" required=true %}
+{% api-method-parameter name="transactionId" type="string" required=true %}
 The UUID of the transaction you wish to refund
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="order\_id" type="string" required=true %}
+{% api-method-parameter name="orderId" type="string" required=true %}
 The UUID of the order
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -331,7 +331,7 @@ You will need to handle the actual refund with your payment provider
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:order_id/transactions/:transaction_id/refund \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/transactions/:transactionId/refund \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}

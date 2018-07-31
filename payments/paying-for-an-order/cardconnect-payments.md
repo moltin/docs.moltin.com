@@ -80,8 +80,8 @@ You will use `card_connect` in this case
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
         "gateway": "card_connect",

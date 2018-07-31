@@ -84,8 +84,8 @@ Stripe `test` or `live` secret key
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/gateways/stripe \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "enabled": true,

@@ -24,11 +24,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **product-variation**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the product-variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -51,20 +51,21 @@ The **ID** of the product-variation.
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X "POST" https://api.moltin.com/v2/products/:productId/relationships/variations \
+curl -X POST https://api.moltin.com/v2/products/:productId/relationships/variations \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "product-variation",
-      "id": "3ab3deca-1f11-47b7-a409-24ea3234d72c"
-    },
-    {
-      "type": "product-variation",
-      "id": "7c740aa0-7fb7-4bd6-9347-78988cf60f9a"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "product-variation",
+          "id": "3ab3deca-1f11-47b7-a409-24ea3234d72c"
+        },
+        {
+          "type": "product-variation",
+          "id": "7c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -115,11 +116,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **product-variation\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -142,16 +143,17 @@ The **ID** of the variation.
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-url -X "PUT" https://api.moltin.com/v2/products/:productId/relationships/variations \
+url -X PUT https://api.moltin.com/v2/products/:productId/relationships/variations \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "product-variation",
-      "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "product-variation",
+          "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -195,17 +197,17 @@ The **ID** of the product you wish to relate to the variations\(s\)
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 The Bearer token used to access the API.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **product-variation\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -228,16 +230,17 @@ The **ID** of the variation.
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/variations \
+curl -X DELETE https://api.moltin.com/v2/products/:productId/relationships/variations \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "product-variation",
-      "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "product-variation",
+          "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 

@@ -84,8 +84,8 @@ The name of the brand
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/brands/:id \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "brand",

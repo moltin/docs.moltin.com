@@ -24,11 +24,11 @@ The Bearer used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **category**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the category.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -53,18 +53,19 @@ The **ID** of the category.
 ```javascript
 curl -X "POST" https://api.moltin.com/v2/products/:productId/relationships/categories \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "category",
-      "id": "39a13b7e-f2d3-47a5-9bc5-1e98b198748c"
-    },
-    {
-      "type": "category",
-      "id": "0c108707-bb4a-4eda-95e3-f51b35122cb4"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "category",
+          "id": "39a13b7e-f2d3-47a5-9bc5-1e98b198748c"
+        },
+        {
+          "type": "category",
+          "id": "0c108707-bb4a-4eda-95e3-f51b35122cb4"
+        }
+      ]
+    }'
 
 ```
 {% endtab %}
@@ -116,11 +117,11 @@ The Bearer used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of objects \(should be **category**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the category.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -145,15 +146,15 @@ The **ID** of the category.
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/products/:productId/relationships/categories \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "category",
-      "id": "d7290481-8d03-4fe0-a7df-23fc05498a46"
-    }
-  ]
-}'
-
+      "data": [
+        {
+          "type": "category",
+          "id": "d7290481-8d03-4fe0-a7df-23fc05498a46"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -204,11 +205,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **category**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the category.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -233,14 +234,15 @@ The **ID** of the category.
 ```javascript
 curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/categories \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "category",
-      "id": "0c108707-bb4a-4eda-95e3-f51b35122cb4"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "category",
+          "id": "0c108707-bb4a-4eda-95e3-f51b35122cb4"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 

@@ -117,8 +117,8 @@ Your CardConnect Merchant ID
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/gateways/card_connect \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "gateway",

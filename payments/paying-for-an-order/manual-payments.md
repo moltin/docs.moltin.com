@@ -58,8 +58,8 @@ This will always be `manual` for the manual payment gateway
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "gateway": "manual",

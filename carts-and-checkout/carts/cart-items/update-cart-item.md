@@ -152,6 +152,7 @@ The **ID** of the item to be updated
 ```bash
 curl -X PUT https://api.moltin.com/v2/carts/:reference/items/:itemId \
      -H "Authorization: Bearer XXXX"
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
         "type": "cart_item",

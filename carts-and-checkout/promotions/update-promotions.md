@@ -102,25 +102,28 @@ cURL
 {% endapi-method %}
 
 ```javascript
-curl -X PUT https://api.moltin.com/v2/promotions/{PROMOTION_ID} \
+curl -X PUT https://api.moltin.com/v2/promotions/:id \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type":"promotion",
-    "id": "PROMOTION_ID",
-    "name": "Promo #1",
-    "description": "Initial Promotion",
-    "enabled": true,
-    "promotion_type": "fixed_discount",
-    "schema":{
-      "currencies":[
-        {"currency":"USD", "amount":900},
-        {"currency":"GBP", "amount":1100}
-      ]
-    },
-    "start":"2017-11-13",
-    "end":"2019-11-13"
-  }
-}'
+      "data": {
+        "type":"promotion",
+        "id": "PROMOTION_ID",
+        "name": "Promo #1",
+        "description": "Initial Promotion",
+        "enabled": true,
+        "promotion_type": "fixed_discount",
+        "schema":{
+          "currencies":[
+            {"currency":"USD", "amount":900},
+            {"currency":"GBP", "amount":1100}
+          ]
+        },
+        "start":"2017-11-13",
+        "end":"2019-11-13"
+      }
+    }'
 ```
+
+
 

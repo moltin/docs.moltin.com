@@ -57,6 +57,7 @@ Represents the type of the object being created.  \(should be option\)
 ```javascript
 curl -X PUT https://api.moltin.com/v2/variations/:variationId/options \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
         "data": {
             "type": "option",

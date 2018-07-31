@@ -51,9 +51,9 @@ The **ID** of the parent category
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X "POST" https://api.moltin.com/v2/categories/:categoryId/relationships/children \
-     -H "Content-Type: application/json" \
+curl -X POST https://api.moltin.com/v2/categories/:categoryId/relationships/children \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": [
         {
@@ -112,8 +112,8 @@ The **ID** of the parent category
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/categories/:categoryId/relationships/children \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": [
         {

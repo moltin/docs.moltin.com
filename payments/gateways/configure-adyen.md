@@ -108,15 +108,14 @@ curl -X PUT https://api.moltin.com/v2/gateways/adyen \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXX" \
      -d $'{
-    "data": {
-     "data": {
-        "enabled": true,
-        "merchant_account": "xxx",
-        "password": "xxx",
-        "test": false,
-        "username": "xxx"
-     }
-}
+        "data": {
+           "enabled": true,
+           "merchant_account": "xxx",
+           "password": "xxx",
+           "test": false,
+           "username": "xxx"
+        }
+     }'
 ```
 {% endtab %}
 {% endtabs %}

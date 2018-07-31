@@ -80,10 +80,10 @@ Any description for this collection
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/collections/:id \
-    -H "Content-Type: application/json" \
     -H "Authorization: Bearer XXXX" \
+    -H "Content-Type: application/json" \
     -d $'{
-        data": {
+        "data": {
             "type": "collection",
             "id": "645f97aa-ae63-4ee9-9259-062e570ba064",
             "name": "Collection #1 Updated",

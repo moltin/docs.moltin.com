@@ -28,11 +28,11 @@ The Bearer token to grant access to the API
 promotion\_codes
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="codes" type="array" required=false %}
+{% api-method-parameter name="codes\[\]" type="array" required=false %}
 An array of objects.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="codes.code" type="string" required=false %}
+{% api-method-parameter name="codes\[\].code" type="string" required=false %}
 A string to use as a code for the promotion
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -82,6 +82,7 @@ A string to use as a code for the promotion
 ```bash
 curl -X POST https://api.moltin.com/v2/promotions/:id/codes \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data":{
         "type":"promotion_codes",

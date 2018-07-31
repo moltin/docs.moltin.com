@@ -60,23 +60,23 @@ The **ID** of the collection
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/collections/:id/relationships/collections \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-    "data": {
-        "parent": {
-            "type": "collection",
-            "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
-        },
-        "children": [
-            {
-            "type": "collection",
-            "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+        "data": {
+            "parent": {
+                "type": "collection",
+                "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+            },
+            "children": [
+                {
+                "type": "collection",
+                "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+                }
+            ]
             }
-        ]
-        }
-      ]
-    }'
+          ]
+        }'
 ```
 {% endtab %}
 {% endtabs %}

@@ -63,8 +63,8 @@ This describes the type of request payload you're sending
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/settings \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "settings",

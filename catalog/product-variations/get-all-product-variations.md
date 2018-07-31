@@ -127,7 +127,7 @@ The Bearer token that is used access to the API
 {% tab title="cURL" %}
 ```javascript
 curl -X GET https://api.moltin.com/v2/variations/:id \
-     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819"
+     -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 {% endtabs %}

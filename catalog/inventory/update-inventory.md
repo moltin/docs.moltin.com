@@ -95,8 +95,8 @@ You will get an error if you try to perform an action with incorrect amounts
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/inventories/{PRODUCT_ID}/transactions \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "stock-transaction",

@@ -39,7 +39,7 @@ The translated `name` value
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-The Product **ID**
+The Product ID
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}

@@ -68,8 +68,8 @@ live or draft depending on the category status. \(defaults to `draft`\)
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/categories \
-    -H "Content-Type: application/json" \
     -H "Authorization: Bearer XXXX" \
+    -H "Content-Type: application/json" \
     -d $'{
      "data": {
         "type": "category",
@@ -78,7 +78,7 @@ curl -X POST https://api.moltin.com/v2/categories \
         "description": "Browse our clothing line",
         "status": "live"
      }
-}'
+   }'
 ```
 {% endtab %}
 

@@ -219,6 +219,7 @@ If you try to add a code that does not exist, you will get a `404` response.
 ```bash
 curl -X POST https://api.moltin.com/v2/carts/:reference/items \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "promotion_item",

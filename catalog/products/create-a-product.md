@@ -38,7 +38,7 @@ A unique SKU for this product
 True if moltin should manage stock, `false` if not
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="description" type="string" required=false %}
+{% api-method-parameter name="description" type="string" required=true %}
 A human readable description of the product
 {% endapi-method-parameter %}
 
@@ -125,6 +125,7 @@ true if relevant taxes have been included in the price, `false` if not
 ```bash
 curl -X POST https://api.moltin.com/v2/products \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
         "data": {
             "type": "product",
@@ -145,6 +146,8 @@ curl -X POST https://api.moltin.com/v2/products \
         }
     }'
 ```
+
+>
 {% endtab %}
 
 {% tab title="JavaScript SDK" %}

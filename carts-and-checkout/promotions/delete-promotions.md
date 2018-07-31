@@ -12,7 +12,7 @@ Delete a Promotion
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 The unique promotion identifier
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}

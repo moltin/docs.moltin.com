@@ -52,8 +52,8 @@ The **ID** of the parent collection
 {% tab title="cURL" %}
 ```bash
 curl -X "POST" https://api.moltin.com/v2/collections/:collectionId/relationships/children \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": [
         {
@@ -118,8 +118,8 @@ The **ID** of the parent collection
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/collections/:collectionId/relationships/children \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": [
         {
@@ -156,7 +156,7 @@ The Bearer token used to access the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=true %}
+{% api-method-parameter name="data\[\]" type="object" required=true %}
 
 {% endapi-method-parameter %}
 

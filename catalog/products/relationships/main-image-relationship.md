@@ -24,11 +24,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of the object \(should be **main\_image**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -52,13 +52,14 @@ The **ID** of the image.
 {% tab title="cURL" %}
 ```javascript
 curl -X "POST" https://api.moltin.com/v2/products/:productId/relationships/main-image \
-     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "main_image",
-    "id": "98df7738-febe-4987-bc0e-b857297b30e9"
-  }
-}'
+      "data": {
+        "type": "main_image",
+        "id": "98df7738-febe-4987-bc0e-b857297b30e9"
+      }
+    }'
 ```
 {% endtab %}
 
@@ -92,7 +93,7 @@ Update the main image relationship.  This will replace any currently related ima
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="productId" type="string" required=false %}
+{% api-method-parameter name="productId" type="string" required=true %}
 The **ID** of the product you wish to relate to the image.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -104,11 +105,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **main\_image**\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -132,13 +133,14 @@ The **ID** of the image.
 {% tab title="cURL" %}
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/products/:productId/relationships/main-image \
-     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "main_image",
-    "id": "e9737dc6-876a-4eab-b3b7-af62a1999123"
-  }
-}'
+      "data": {
+        "type": "main_image",
+        "id": "e9737dc6-876a-4eab-b3b7-af62a1999123"
+      }
+    }'
 ```
 {% endtab %}
 
@@ -172,7 +174,7 @@ Delete the main image relationship. This will remove the related main image.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="productId" type="string" required=false %}
+{% api-method-parameter name="productId" type="string" required=true %}
 The **ID** of the product you wish to remove the relationship for.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -184,11 +186,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **main\_image\).**
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the image.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -212,13 +214,14 @@ The **ID** of the image.
 {% tab title="cURL" %}
 ```javascript
 curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/main-image \
-     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "main_image",
-    "id": "e9737dc6-876a-4eab-b3b7-af62a1999123"
-  }
-}'
+      "data": {
+        "type": "main_image",
+        "id": "e9737dc6-876a-4eab-b3b7-af62a1999123"
+      }
+    }'
 ```
 {% endtab %}
 

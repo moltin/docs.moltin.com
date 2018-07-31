@@ -144,6 +144,7 @@ The **ID** of the product you wish to add to cart
 ```bash
 curl -X POST https://api.moltin.com/v2/carts/:reference/items \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
           "id": "df32387b-6ce6-4802-9b90-1126a5c5a54f",

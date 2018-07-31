@@ -91,13 +91,14 @@ A payload specific to the type of modifier.
 ```javascript
 curl -X "POST" https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "modifier",
-    "modifier_type": "name_equals",
-    "value": "Promotional product"
-  }
-}'
+      "data": {
+        "type": "modifier",
+        "modifier_type": "name_equals",
+        "value": "Promotional product"
+      }
+    }'
 ```
 {% endtab %}
 {% endtabs %}

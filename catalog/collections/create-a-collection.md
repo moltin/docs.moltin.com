@@ -66,10 +66,10 @@ Any description for this collection.
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+```bash
 curl -X POST https://api.moltin.com/v2/collections \
-    -H "Content-Type: application/json" \
     -H "Authorization: Bearer XXXX" \
+    -H "Content-Type: application/json" \
     -d $'{
      "data": {
         "type": "collection",

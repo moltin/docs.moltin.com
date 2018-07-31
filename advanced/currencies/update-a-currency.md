@@ -103,8 +103,8 @@ The exchange rate from the default currency
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/currencies/:id \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "currency",

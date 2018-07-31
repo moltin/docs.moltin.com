@@ -69,14 +69,15 @@ A payload specific to the type of modifier
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers/:modifierId \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "modifier",
-    "id": modifierId,
-    "modifer_type": "name_equals"
-    "value": "Updated product name"
-  }
-}'
+      "data": {
+        "type": "modifier",
+        "id": "MODIFIER_ID",
+        "modifer_type": "name_equals"
+        "value": "Updated product name"
+      }
+    }'
 ```
 {% endtab %}
 {% endtabs %}

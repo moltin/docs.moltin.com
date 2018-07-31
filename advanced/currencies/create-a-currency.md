@@ -115,8 +115,8 @@ You'll get an error if you try to create a currency with an existing `code`
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/currencies \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "currency",

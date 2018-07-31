@@ -30,7 +30,7 @@ The full name of the customer.
 The customer email.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="password" type="string" required=false %}
+{% api-method-parameter name="password" type="string" required=true %}
 The customer password.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -63,14 +63,15 @@ The customer password.
 ```javascript
 curl -X POST https://api.moltin.com/v2/customers \
     -H "Authorization: Bearer XXXX" \
+    -H "Content-Type: application/json" \
     -d $'{
      "data": {
-     "type": "customer",
-     "name": "Ron Swanson",
-     "email": "ron@swanson.com",
-     "password": "mysecretpassword",
+       "type": "customer",
+       "name": "Ron Swanson",
+       "email": "ron@swanson.com",
+       "password": "mysecretpassword",
      }
-}'
+   }'
 ```
 {% endtab %}
 

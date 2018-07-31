@@ -185,8 +185,8 @@ Shipping instructions
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/carts/:reference/checkout \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "customer": {
@@ -454,8 +454,8 @@ Shipping instructions
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/carts/:reference/checkout \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "customer": {

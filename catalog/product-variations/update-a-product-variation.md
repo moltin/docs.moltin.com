@@ -24,15 +24,15 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 The **ID** of the variation being updated
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being created. \(should be product-variation\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=false %}
+{% api-method-parameter name="name" type="string" required=true %}
 A human readable name for this variation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -58,30 +58,19 @@ A human readable name for this variation.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-```bash
-curl -X PUT https://api.moltin.com/v2/variation/{VARIATION_ID} \
-     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
-     -d $'{
-  "data": {
-    "type": "product-variation",
-    "id": :id,
-    "name": "Color schemes"
-  }
-}'
-```
-
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
 curl -X PUT https://api.moltin.com/v2/variation/:id \
-     -H "Authorization: Bearer 965baf46f390879c213e48cf84dcda16bb6d0819" \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "product-variation",
-    "id": :id,
-    "name": "Color schemes"
-  }
-}'
+      "data": {
+        "type": "product-variation",
+        "id": "XXXX",
+        "name": "Color schemes"
+      }
+    }'
 ```
 {% endtab %}
 {% endtabs %}

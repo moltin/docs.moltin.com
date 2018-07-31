@@ -125,8 +125,8 @@ A two digit code for the country this address is in, expressed as per the ISO 31
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/customers/:customerId/addresses \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "name": "Home",

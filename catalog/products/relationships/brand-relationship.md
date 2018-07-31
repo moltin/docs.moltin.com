@@ -24,11 +24,11 @@ The Bearer used to access the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **brand**\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -60,14 +60,15 @@ The **ID** of the brand
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/products/:productID/relationships/brands \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "brand",
-      "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "brand",
+          "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -117,11 +118,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **brand**\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -146,14 +147,15 @@ The **ID** of the brand
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/products/:productId/relationships/brands \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "brand",
-      "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "brand",
+          "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -203,11 +205,11 @@ The Bearer token used to access the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **brand**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the brand.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -232,14 +234,15 @@ The **ID** of the brand.
 ```javascript
 curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/brands \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "brand",
-      "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "brand",
+          "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 

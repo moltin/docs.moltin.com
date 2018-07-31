@@ -24,11 +24,11 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **collection**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -53,18 +53,19 @@ The **ID** of the collection.
 ```javascript
 curl -X "POST" https://api.moltin.com/v2/products/:productId/relationships/collections \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "collection",
-      "id": "5ab3deca-1f11-47b7-a409-24ea3234d72c"
-    },
-    {
-      "type": "collection",
-      "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "collection",
+          "id": "5ab3deca-1f11-47b7-a409-24ea3234d72c"
+        },
+        {
+          "type": "collection",
+          "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -115,11 +116,11 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **collection**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -144,14 +145,15 @@ The **ID** of the collection.
 ```javascript
 curl -X "PUT" https://api.moltin.com/v2/products/{PRODUCT_ID}/relationships/collections \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "collection",
-      "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "collection",
+          "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 
@@ -201,11 +203,11 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="data\[\].type" type="string" required=true %}
 Represents the type of object \(should be **collection**\).
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="data\[\].id" type="string" required=true %}
 The **ID** of the collection.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -230,14 +232,15 @@ The **ID** of the collection.
 ```javascript
 curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/collections \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-  "data": [
-    {
-      "type": "collection",
-      "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
-    }
-  ]
-}'
+      "data": [
+        {
+          "type": "collection",
+          "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+      ]
+    }'
 ```
 {% endtab %}
 

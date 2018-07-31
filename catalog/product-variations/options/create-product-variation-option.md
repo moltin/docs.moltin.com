@@ -81,6 +81,7 @@ A human readable description of the option
 ```javascript
 curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
         "data": {
             "type": "option",

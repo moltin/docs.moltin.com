@@ -60,23 +60,23 @@ The **ID** of the brand
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/brands/:id/relationships/brands \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-    "data": {
-        "parent": {
-            "type": "brand",
-            "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
-        },
-        "children": [
-            {
-            "type": "brand",
-            "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+        "data": {
+            "parent": {
+                "type": "brand",
+                "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+            },
+            "children": [
+                {
+                "type": "brand",
+                "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+                }
+            ]
             }
-        ]
-        }
-      ]
-    }'
+          ]
+        }'
 ```
 {% endtab %}
 {% endtabs %}

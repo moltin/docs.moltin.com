@@ -18,11 +18,11 @@ The **ID** of the brand you wish to make relationships to
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="type" type="string" required=true %}
 The type of related object \(should be brand\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 The **ID** of the parent brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -76,11 +76,11 @@ The **ID** of the brand you wish to make relationships to
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="type" type="string" required=true %}
 The type of related object. \(should be brand\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 The ID of the parent brand
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -104,8 +104,8 @@ The ID of the parent brand
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/brands/:id/relationships/parent \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
         "type": "brand",

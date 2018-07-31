@@ -52,8 +52,8 @@ The **ID** of the parent collection
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/collections/:id/relationships/parent \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
         "type": "collection",
@@ -116,8 +116,8 @@ The **ID** of the parent collection
 {% tab title="cURL" %}
 ```bash
 curl -X PUT https://api.moltin.com/v2/collections/:id/relationships/parent \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
         "type": "collection",

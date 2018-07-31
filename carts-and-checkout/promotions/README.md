@@ -104,7 +104,7 @@ Percent discount provides a method to give a percentage discount to a cart based
 
 A promotion code is represented by the following, very simple, object.
 
-```text
+```javascript
 {
   "code":"ZXY_CBA"
 }

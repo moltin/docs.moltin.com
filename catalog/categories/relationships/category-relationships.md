@@ -60,23 +60,23 @@ The **ID** of the Category
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/categories/:id/relationships/categories \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
-    "data": {
-        "parent": {
-            "type": "category",
-            "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
-        },
-        "children": [
-            {
-            "type": "category",
-            "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+        "data": {
+            "parent": {
+                "type": "category",
+                "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+            },
+            "children": [
+                {
+                "type": "category",
+                "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+                }
+            ]
             }
-        ]
-        }
-      ]
-    }'
+          ]
+        }'
 ```
 {% endtab %}
 {% endtabs %}

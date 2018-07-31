@@ -157,6 +157,7 @@ The price of the custom item
 ```bash
 curl -X POST https://api.moltin.com/v2/carts/:reference/items \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
       "data": {
         "type": "custom_item",

@@ -85,8 +85,8 @@ In this example we skip passing `name` to fail validation
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/brands \
-     -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -d $'{
        "data": {
           "type": "brand",

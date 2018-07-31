@@ -161,6 +161,7 @@ physical/digital
 ```bash
 curl -X "PUT" https://api.moltin.com/v2/products/:id \
      -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
      -H "X-Moltin-Language: en" \ # Optional language header
      -d $'{
         "data": {

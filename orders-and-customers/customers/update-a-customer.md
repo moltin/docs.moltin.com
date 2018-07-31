@@ -65,6 +65,7 @@ The customer password
 ```javascript
 curl -X PUT https://api.moltin.com/v2/customers/:customerId \
     -H "Authorization: Bearer XXXX" \
+    -H "Content-Type: application/json" \
     -d $'{
      "data": {
        "type": "customer",
