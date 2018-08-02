@@ -1,6 +1,6 @@
 # Update Product Variation Option
 
-{% api-method method="put" host="https://api.moltin.com" path="/v2/variations/:id/options" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/variations/:variationId/options/:optionId" %}
 {% api-method-summary %}
 Update a Product Variation Option
 {% endapi-method-summary %}
@@ -12,8 +12,12 @@ Update a Product Variation Option
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-The **ID** of the variation belonging to this option
+{% api-method-parameter name="optionId" type="string" required=true %}
+The **ID** of the option.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="variationId" type="string" required=true %}
+The **ID** of the variation belonging to this option.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
