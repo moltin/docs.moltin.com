@@ -129,7 +129,7 @@ A unique slug identifier for the flow
 The name of the flow
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -233,27 +233,27 @@ The Bearer token to grant access to the API.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-
+The **ID** of the flow you're requesting
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
-
+Represents the type of object being returned
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
-
+The name of the flow
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="slug" type="string" required=false %}
-
+A unique slug identifier for this flow
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=false %}
-
+Any description for this flow
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="enabled" type="string" required=false %}
-
+`true` if enabled `false` if not
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
