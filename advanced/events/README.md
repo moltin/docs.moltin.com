@@ -21,7 +21,7 @@ Webhooks that return anything other than a 2XX status code will be considered fa
 | `observes` | [`array[string]`](observable-events.md) | An array of [observable events](observable-events.md) |
 | `configuration` | [`object`]() | A `webhook` [configuration object]() |
 
-## Example
+## Example response
 
 ```javascript
 {
