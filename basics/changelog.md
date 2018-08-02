@@ -1,12 +1,12 @@
 # Changelog
 
-## June 19 2018
+## June 19, 2018
 
 ### Added
 
 * Added validation for the currencies array in the promotions schema
 
-## June 5 2018
+## June 5, 2018
 
 ### Fixed
 
@@ -18,7 +18,7 @@
 * [Stripe Connect](../payments/paying-for-an-order/stripe-payments.md#pay-by-stripe-connect) payment method now available.
 * Public facing changelog now available within the API reference.
 
-## May 15 2018
+## May 15, 2018
 
 ### Fixed
 
