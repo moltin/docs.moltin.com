@@ -31,7 +31,7 @@ You _could_ create the same via sku\_append modifier using values like `-RED` an
 {% tabs %}
 {% tab title="Attributes" %}
 | Attribute | Type | Description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | id | **string** | The unique identifier for this product |
 | type | **string** | Represents the type of object \(should be `modifier`\) |
 | modifier\_type | **string** | `price_increment`, `price_decrement`, `price_equals` |
@@ -68,7 +68,7 @@ You _could_ create the same via sku\_append modifier using values like `-RED` an
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this product |
 | `type` | `string` | Represents the type of object \(should be `modifier`\) |
 | `modifier_type` | `string` | `sku_builder`, `slug_builder` |
@@ -96,7 +96,7 @@ You _could_ create the same via sku\_append modifier using values like `-RED` an
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this product |
 | `type` | `string` | Represents the type of object \(should be `modifier`\) |
 | `modifier_type` | `string` | `description_equals`, `description_prepend`, `description_append`, `commoditytype`, `name_equals`, `name_prepend`, `name_append`, `slug_equals`, `slug_prepend`, `slug_append`, `sku_equals`, `sku_prepend`, `sku_append`, `status` |

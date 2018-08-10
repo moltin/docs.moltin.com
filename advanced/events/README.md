@@ -11,7 +11,7 @@ Webhooks that return anything other than a 2XX status code will be considered fa
 ## Event object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for the event |
 | `type` | `string` | This represents the type of object being returned |
 | `name` | `string` | The name of the event |

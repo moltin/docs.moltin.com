@@ -13,7 +13,7 @@ Permissions are managed through tokens. There are two main token types available
 A breakdown of the access given by the token can be seen in the following table.
 
 | **Endpoint** | **Read access** | **Write access** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `/brands` | ✅ | ✅ |
 | `/carts` | ✅ | ✅ |
 | `/categories` | ✅ | ✅ |
@@ -35,7 +35,7 @@ A breakdown of the access given by the token can be seen in the following table.
 The table below shows a breakdown of which API endpoint actions are available to this token type.
 
 | **Endpoint** | **Read access** | **Write access** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `/brands` | ✅ | ⛔️ |
 | `/carts` | ✅ | ✅ |
 | `/categories` | ✅ | ⛔️ |

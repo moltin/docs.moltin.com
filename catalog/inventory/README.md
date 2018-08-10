@@ -15,7 +15,7 @@ You can specify an initial stock level when you create a product. Otherwise set 
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for the stock |
 | `type` | `string` | The type represents the object being returned |
 | `total` | `integer` | The total amount of stock we have |

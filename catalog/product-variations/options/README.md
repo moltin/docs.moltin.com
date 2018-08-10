@@ -5,7 +5,7 @@
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this option |
 | `type` | `string` | Represents the type of object being returned \(should be `option`\) |
 | `name` | `string` | A human readable name for this option |

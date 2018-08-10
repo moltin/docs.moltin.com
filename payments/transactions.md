@@ -5,7 +5,7 @@
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The ID of the transaction |
 | `type` | `string` | Always transaction |
 | `reference` | `string` | The payment gateway reference |

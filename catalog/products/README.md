@@ -11,7 +11,7 @@ Product inventory is managed separately. If you wish to increment and allocate s
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this product |
 | `type` | `string` | Represents the type of object being returned. Always: `product` |
 | `name` | `string` | A human readable name for this product |
@@ -118,7 +118,7 @@ Product inventory is managed separately. If you wish to increment and allocate s
 ## The `price` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `price.amount` | `integer` | Value of the price in the lowest denomination for that currency |
 | `price.currency` | `string` | Currency code of this price \(3 letter ISO\) |
 | `price.includes_tax` | `boolean` | `true` if relevant taxes have been included in the price `false` if not |
@@ -126,7 +126,7 @@ Product inventory is managed separately. If you wish to increment and allocate s
 ## The `meta` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.timestamps` | `object` | Timestamps for this product |
 | `meta.timestamps.created_at` | `string` | The creation date of this product |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this product |
@@ -157,7 +157,7 @@ The variations matrix is only returned when getting a product by ID
 ## The `relationships` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `relationships.variations` | `object` | Relationships information regarding variations for this product \(hidden, if no variation relationships exist\) |
 | `relationships.variations.data` | `array[object]` | An array of relationships from this product to variation resources |
 | `relationships.variations.data.type` | `string` | Always `product-variation` |

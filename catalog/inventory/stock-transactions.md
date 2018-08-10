@@ -5,7 +5,7 @@ Each product has its own Inventory and stock history. This is useful when auditi
 ## The Stock Transaction Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for the stock transaction |
 | `type` | `string` | The type represents the object being returned |
 | `action` | `string` | The type of [action](update-inventory.md#action-types) performed by this transaction |

@@ -5,7 +5,7 @@ You can filter results returned from the API using a standard URI format.
 ## Supported operators
 
 | **Operator** | **Description** |
-| --- | --- |
+| :--- | :--- |
 | `eq` | Equals |
 | `like` | Like |
 | `gt` | Greater than |

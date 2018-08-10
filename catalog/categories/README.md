@@ -7,7 +7,7 @@ Categories allow you to organize your Products into hierarchical groups. That me
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this category |
 | `type` | `string` | Represents the type of object being returned |
 | `name` | `string` | The name of the category |
@@ -37,7 +37,7 @@ Categories allow you to organize your Products into hierarchical groups. That me
 ## The `meta` Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.timestamps` | `object` | Timestamps for this category |
 | `meta.timestamps.created_at` | `string` | The creation date of this category |
 | `meta.timestamps.updated_at` | `string` | The updated date of this category |
@@ -45,7 +45,7 @@ Categories allow you to organize your Products into hierarchical groups. That me
 ## The `relationships` Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `relationships.products` | `array[object]` | An array of products for this category |
 | `relationships.products.data` | `array[object]` | An array of relationships from this category to products resources |
 | `relationships.products.data.type` | `string` | Always `product` |

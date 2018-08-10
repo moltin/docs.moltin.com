@@ -5,7 +5,7 @@
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this currency |
 | `type` | `string` | The type represents the object being returned |
 | `code` | `string` | The currency code |
@@ -50,13 +50,13 @@
 ## The `links` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- |
+| :--- | :--- | :--- |
 | `links.self` | `string` | The URL of this currency |
 
 ## The `meta` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.timestamps` | `object` | Timestamps for this currency |
 | `meta.timestamps.created_at` | `string` | The creation date of this currency |
 | `meta.timestamps.updated_at` | `string` | The updated date of this currency |

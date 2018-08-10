@@ -32,7 +32,7 @@ First name of the billing recipient
 Last name of the billing recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="billing\_address.company\_name" type="string" required=true %}
+{% api-method-parameter name="billing\_address.company\_name" type="string" required=false %}
 Company name of the billing recipient
 {% endapi-method-parameter %}
 
@@ -40,7 +40,7 @@ Company name of the billing recipient
 First line of the billing address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="billing\_address.line\_2" type="string" required=true %}
+{% api-method-parameter name="billing\_address.line\_2" type="string" required=false %}
 Second line of the billing address
 {% endapi-method-parameter %}
 
@@ -56,15 +56,15 @@ County / state /  region of the billing address
 Country of the billing address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.first\_name" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.first\_name" type="string" required=true %}
 First name of the shipping recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.last\_name" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.last\_name" type="string" required=true %}
 Last name of the shipping recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.phone\_number" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.phone\_number" type="string" required=true %}
 Phone number of the shipping recipient
 {% endapi-method-parameter %}
 
@@ -72,7 +72,7 @@ Phone number of the shipping recipient
 Company of the shipping recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.line\_1" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.line\_1" type="string" required=true %}
 First line of the shipping address
 {% endapi-method-parameter %}
 
@@ -84,15 +84,15 @@ Second line of the shipping address
 City of the shipping address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.postcode" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.postcode" type="string" required=true %}
 Post code of the shipping address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.county" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.county" type="string" required=true %}
 County / state/ region of the shipping address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.country" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.country" type="string" required=true %}
 Country of the shipping address
 {% endapi-method-parameter %}
 
@@ -229,7 +229,6 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-
 const reference = 'XXXX'
 const customerId = 'XXXX'
 
@@ -297,7 +296,7 @@ First name of the billing recipient
 Last name of the billing recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="billing\_address.company\_name" type="string" required=true %}
+{% api-method-parameter name="billing\_address.company\_name" type="string" required=false %}
 Company name of the billing recipient
 {% endapi-method-parameter %}
 
@@ -305,11 +304,11 @@ Company name of the billing recipient
 First line of the billing address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="billing\_address.line\_2" type="string" required=true %}
+{% api-method-parameter name="billing\_address.line\_2" type="string" required=false %}
 Second line of the billing address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="billing\_address.city" type="string" required=true %}
+{% api-method-parameter name="billing\_address.city" type="string" required=false %}
 /city of the billing address
 {% endapi-method-parameter %}
 
@@ -325,11 +324,11 @@ County / state / region of the shipping address
 Country of the billing address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.first\_name" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.first\_name" type="string" required=true %}
 First name of the shipping recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.last\_name" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.last\_name" type="string" required=true %}
 Last name of the shipping recipient
 {% endapi-method-parameter %}
 
@@ -341,7 +340,7 @@ Company name of the shipping recipient
 Phone number of the shipping recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.line\_1" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.line\_1" type="string" required=true %}
 First line of the shipping address
 {% endapi-method-parameter %}
 
@@ -353,15 +352,15 @@ Second line of the shipping address
 City of the shipping address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.postcode" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.postcode" type="string" required=true %}
 Postcode of the shipping address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.county" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.county" type="string" required=true %}
 County / state / region of the shipping address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.country" type="string" required=false %}
+{% api-method-parameter name="shipping\_address.country" type="string" required=true %}
 Country of the shipping address
 {% endapi-method-parameter %}
 

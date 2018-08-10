@@ -7,7 +7,7 @@ You can configure CardConnect programatically using the `/gateways/card_connect`
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | Always `gateway` |
 | `name` | `string` | The display name of the gateway |
 | `merchant_id` | `string` | Your CardConnect Merchant ID |

@@ -7,7 +7,7 @@ The Order object is a representation of an order in moltin.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this order |
 | `type` | `string` | Represents the type of object being returned. `order` |
 | `status` | `string` | `incomplete`, `cancelled`, `complete` |

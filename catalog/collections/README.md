@@ -7,7 +7,7 @@ Collections allow you to organize your products into hierarchical groups. Where 
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this collection |
 | `type` | `string` | Represents the type of object being returned |
 | `name` | `string` | The name of the collection |
@@ -69,7 +69,7 @@ Collections allow you to organize your products into hierarchical groups. Where 
 ## The `meta` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.timestamps` | `object` | Timestamps for this collection |
 | `meta.timestamps.created_at` | `string` | The creation date of this collection |
 | `meta.timestamps.updated_at` | `string` | The updated date of this collection |
@@ -77,7 +77,7 @@ Collections allow you to organize your products into hierarchical groups. Where 
 ## The `relationships` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `relationships.products` | `array[object]` | An array of products for this collection |
 | `relationships.products.data` | `array[object]` | An array of relationships from this collection to products resources |
 | `relationships.products.data.type` | `string` | Always `collection` |

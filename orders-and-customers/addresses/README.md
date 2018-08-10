@@ -11,7 +11,7 @@ This feature is currently in **BETA** and you **should** expect it to change.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this address |
 | `type` | `string` | The type represents the object being returned |
 | `first_name` | `string` | The first name of the recipient on this address |

@@ -7,7 +7,7 @@ You can configure Braintree programatically using the `/gateways/braintree` endp
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `merchant_id` | `string` | Your Braintree merchant ID |
 | `public_key` | `string` | Your Braintree public key |
 | `private_key` | `string` | Your Braintree private key |

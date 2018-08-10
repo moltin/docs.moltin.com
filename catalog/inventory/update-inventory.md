@@ -3,7 +3,7 @@
 ## Action types
 
 | **Type** | **Description** |
-| --- | --- |
+| :--- | :--- |
 | `increment` | You'll use this when you receive stock from a supplier, making products available for purchase |
 | `decrement` | You'll use this when you want to remove stock from product inventory |
 | `allocate` | You'll use this when you want to allocate stock, normally to a reseller who will sell on the stock |

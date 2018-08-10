@@ -130,7 +130,7 @@ The webhook configuration object has the following structure.
 {% tabs %}
 {% tab title="Summary" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `url` | string | A **required** URL the observable event will fire. |
 | `secret_key` | string | A _optional_ header. Useful to authenticate the response came from Moltin. Will be sent as `X-MOLTIN-SECRET-KEY` |
 {% endtab %}

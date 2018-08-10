@@ -5,7 +5,7 @@ You can use the Customer API to store customer addresses. The Customer API allow
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this customer |
 | `type` | `string` | The type represents the object being returned |
 | `name` | `string` | The `name` of the customer |

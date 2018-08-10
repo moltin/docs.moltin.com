@@ -7,7 +7,7 @@ You can configure Stripe programatically using the `/gateways/stripe` endpoint.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `login` | `string` | Your `live` or `test` Stripe secret key |
 | `type` | `string` | This will always be `gateway` |
 | `name` | `string` | The display name of the gateway |

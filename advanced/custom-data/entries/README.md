@@ -1,7 +1,7 @@
 # Entries
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this entry |
 | `type` | `string` | Represents the type of object being returned |
 | `fieldSlug` | `mixed` | The `:fieldSlug` key depends on the field's slug value. The value is of fields `field_type` |

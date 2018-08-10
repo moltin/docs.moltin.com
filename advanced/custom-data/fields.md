@@ -5,7 +5,7 @@ A Field represents a single Field of data \(for example a `Product Rating`\) to 
 ### The Field Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this field |
 | `type` | `string` | Represents the type of object being returned |
 | `name` | `string` | The name of the field |

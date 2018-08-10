@@ -3,7 +3,7 @@
 Below is the list of `alpha2` language codes that you can specify when updating [`additional_languages`](./#available-settings)
 
 | **Name** | **Code** |
-| --- | --- |
+| :--- | :--- |
 | Abkhazian | `ab` |
 | Afrikaans | `af` |
 | Albanian | `sq` |

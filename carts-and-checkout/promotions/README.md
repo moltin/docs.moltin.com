@@ -42,7 +42,7 @@ The promotions you create will require codes to be attached to them, and these c
 A promotion is represented by a promotion object.
 
 | **Name** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | "promotion" |
 | `name` | `string` | The name of your promotion |
 | `description` | `string` | A description of your promotion |
@@ -74,7 +74,7 @@ Below is the list of currently available promotion type Schemas - these are to b
 Fixed discount provides a method to give a fixed discount to a cart.
 
 | **Name** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `currencies` | `array` | An array of objects |
 | `currencies[].currency` | `string` | A currency code |
 | `currencies[].amount` | `integer` | The amount to discount by |
@@ -95,7 +95,7 @@ Fixed discount provides a method to give a fixed discount to a cart.
 Percent discount provides a method to give a percentage discount to a cart based on the value of cart\_items and custom\_items.
 
 | **Name** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `currencies` | `array` | An array of objects |
 | `currencies[].currency` | `string` | A currency code |
 | `currencies[].percentage` | `float` | The percentage to discount by |
@@ -111,7 +111,7 @@ A promotion code is represented by the following, very simple, object.
 ```
 
 | **Name** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `code` | `string` | Any string |
 
 

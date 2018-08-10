@@ -15,7 +15,7 @@ We'll automatically delete carts 7 days after they were last updated.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifer for the cart |
 | `type` | `string` | This represents the type of object being returned |
 | `links` | [`object`](./#the-links-object) | The links object |
@@ -58,13 +58,13 @@ We'll automatically delete carts 7 days after they were last updated.
 ## The Cart `links` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `self` | `string` | The URL of this cart |
 
 ## The Cart `meta` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.display_price` | `object` | A collection of fields related to the total and currency of this cart |
 | `meta.display_price.with_tax` | object | Tax inclusive totals |
 | `meta.display_price.with_tax.amount` | integer | The raw total of this cart \(inc tax\) |

@@ -15,7 +15,7 @@ You should never use or disclose your `client_secret` in public.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `expires` | `timestamp` | The epoch time that this token expires at. |
 | `identifier` | `string` | The type of token requested. This can be a `client_credentials` or `implicit`. |
 | `expires_in` | `integer` | The duration in seconds in which the token will expire. |

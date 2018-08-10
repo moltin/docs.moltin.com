@@ -11,7 +11,7 @@ Moltin provides a [Manual Gateway](../paying-for-an-order/manual-payments.md) th
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `name` | `string` | The name of the payment gateway |
 | `slug` | `string` | The slug of the payment gateway |
 | `type` | `string` | The type represents the object being returned |

@@ -9,7 +9,7 @@ Accepted file types are `jpg`, `jpeg`, `png` and `gif`.
 ## The File Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this file |
 | `type` | `string` | The type represents the object being returned |
 | `link` | [`object`](./#the-file-link-object) | The file [link object](./#the-file-link-object) |
@@ -23,13 +23,13 @@ Accepted file types are `jpg`, `jpeg`, `png` and `gif`.
 ## The file link object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `link.href` | `string` | The publicly available URL for this file |
 
 ## The file meta object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.dimensions.width` | `integer` | The width of the file |
 | `meta.dimensions.height` | `integer` | The height of the file |
 | `meta.timestamps.created_at` | `string` | The creation date of the file |
@@ -37,7 +37,7 @@ Accepted file types are `jpg`, `jpeg`, `png` and `gif`.
 ## The file links object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `links.self` | `string` | The URL of this file object |
 
 ## Example response

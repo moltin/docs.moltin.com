@@ -7,7 +7,7 @@ Variations allow you to create the variations that your products have. Things li
 ### The variation object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this variation |
 | `type` | `string` | Represents the type of object being returned \(should be `product-variation`\) |
 | `name` | `string` | A human readable name for this variation |

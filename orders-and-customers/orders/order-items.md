@@ -5,7 +5,7 @@
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this order item |
 | `type` | `string` | The `type` represents the object being returned |
 | `product_id` | `string` | The unique identifier for this order item |
@@ -91,7 +91,7 @@
 ## The unit price object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `unit_price.amount` | `integer` | The singular price of this item |
 | `unit_price.currency` | `string` | The unit price currency of this item |
 | `unit_price.includes_tax` | `boolean` | Is the price inclusive of tax |
@@ -99,7 +99,7 @@
 ## The value object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `value.amount` | `integer` | The total price for this item \(`quantity` \* `unit_price.amount`\) |
 | `value.currency` | `string` | The value currency of this item |
 | `value.includes_tax` | `boolean` | Is the price inclusive of tax |
@@ -107,13 +107,13 @@
 ## The links object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 
 
 ## The meta object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.display_price` | `object` | Formatted display prices based on the currency settings for this request |
 | `meta.display_price.with_tax` | `object` | Tax inclusive prices for this product |
 | `meta.display_price.with_tax.amount` | `integer` | The raw total of this product \(includes tax\) |
@@ -130,7 +130,7 @@
 ## The relationships object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `relationships.cart_item` | `object` | The cart item |
 | `relationships.cart_item.data` | `object` | The associated cart |
 | `relationships.cart_item.data.type` | `string` | The type represents the object being returned |

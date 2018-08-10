@@ -5,7 +5,7 @@ The payload delivered to your webhook `url` will contain information about the f
 The payload attributes and types are defined below.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | A unique ID for this event |
 | `integration` | `object` | The events `integration_type` being fired |
 | `trigger` | [`string`](observable-events.md) | The [observable event](observable-events.md) that triggered this event |

@@ -5,7 +5,7 @@ A Flow describes a collection of Fields. It is named after the internal entity t
 ## The flow object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this flow. |
 | `type` | `string` | Represents the type of object being returned |
 | `name` | `string` | The name of the flow |

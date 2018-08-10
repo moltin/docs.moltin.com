@@ -7,7 +7,7 @@ Products added to a cart are referred to as a cart\_item.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this cart item |
 | `type` | `string` | `cart_item`, `custom_item` or `promotion_item` |
 | `name` | `string` | Denotes the name of this item |
@@ -90,7 +90,7 @@ Products added to a cart are referred to as a cart\_item.
 ## The Cart Item `image` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- |
+| :--- | :--- | :--- |
 | `file_name` | `string` | The name of the image file that was uploaded |
 | `mime_type` | `string` | The MIME type for the uploaded file |
 | `href` | `string` | The link to the image |
@@ -98,7 +98,7 @@ Products added to a cart are referred to as a cart\_item.
 ## The Cart Item `unit_price` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `unit_price.amount` | `integer` | The singular price of this item as an integer |
 | `unit_price.currency` | `string` | The currency this item was added to the cart as |
 | `unit_price.includes_tax` | `boolean` | Whether or not this price is tax inclusive |
@@ -106,7 +106,7 @@ Products added to a cart are referred to as a cart\_item.
 ## The Cart Item `value` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `value.amount` | `integer` | The total price for this item line \(quantity \* unit\_price.amount\) |
 | `value.currency` | `string` | The currency this item was added to the cart as |
 | `value.includes_tax` | `boolean` | Whether or not this price is tax inclusive |
@@ -114,14 +114,14 @@ Products added to a cart are referred to as a cart\_item.
 ## The Cart Item `links` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `links.product` | `string` | A link to the product this cart item is a snapshot of \(not for `custom_items`\) |
 | `value.currency` | `string` | The currency this item was added to the cart as |
 
 ## The Cart Item `meta` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `meta.display_price` | `object` | A collection of fields related to the totals and currency of this cart item |
 | `meta.display_price.with_tax` | `object` | Tax inclusive totals |
 | `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single instance of this cart item |

@@ -3,7 +3,7 @@
 You can pass multiple observable keys to the `observes` field of the [event object](./#event-object), or you can create individual events. You may wish to use an array when you handle multiple webhooks at the same URL.
 
 | **Entity/Resource** | **Action** | **Observable Key** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | **Brand** | Created | `brand.created` |
 |  | Updated | `brand.updated` |
 |  | Deleted | `brand.deleted` |

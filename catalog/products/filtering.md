@@ -3,7 +3,7 @@
 Below is a list of attributes and operators available for [filtering](../../basics/filtering/) products.
 
 | **Attribute** | **Type** | **Operators** | **Example** |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `name` | `string` | `eq` / `like` | `like(name,Deck*)` |
 | `slug` | `string` | `eq` / `like` | `eq(slug,deck-shoe)` |
 | `sku` | `string` | `eq` / `like` | `eq(sku,deck-shoe-001)` |

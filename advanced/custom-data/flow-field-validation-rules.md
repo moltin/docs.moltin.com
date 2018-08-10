@@ -17,7 +17,7 @@ When creating a Flow field, you can add validation to values that are stored. Th
 Must be one of a predefined collection of strings.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `enum` |
 | `options` | `array[string]` | An array of valid string values. |
 
@@ -32,7 +32,7 @@ Must be one of a predefined collection of strings.
 Must be a valid email address.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `email` |
 
 ## `string` / `slug`
@@ -46,7 +46,7 @@ Must be a valid email address.
 Can contain only letters, numbers, hyphens and underscores.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `slug` |
 
 ## `integer` / `between`
@@ -64,7 +64,7 @@ Can contain only letters, numbers, hyphens and underscores.
 Must be between the two provided values.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `enum` |
 | `options` | `object` | an object containing `from` and `to` integers. |
 
@@ -86,7 +86,7 @@ Must be between the two provided values.
 Must be one of a predefined collection of integers.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `enum` |
 | `options` | `array[integer]` | An array of valid integer values. |
 
@@ -105,7 +105,7 @@ Must be one of a predefined collection of integers.
 Must be between the two provided values.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `enum` |
 | `options` | `object` | An object containing `from` and `to` floats. |
 
@@ -125,7 +125,7 @@ Must be between the two provided values.
 Must be one of a predefined collection of floats.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `enum` |
 | `options` | `array[float]` | An array of valid float values. |
 
@@ -144,7 +144,7 @@ Must be one of a predefined collection of floats.
 Must be one of a predefined collection of dates.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `enum` |
 | `options` | `array[string]` | An array of valid date values as strings \(`YYYY-MM-DD HH:MM:SS` - time is optional\). |
 
@@ -160,7 +160,7 @@ Must be one of a predefined collection of dates.
 Allows multiple relationships to be created.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `one-to-many` |
 | `to` | `string` | The entity type you are making relationships with in singular form \(eg: `product`\) |
 
@@ -176,7 +176,7 @@ Allows multiple relationships to be created.
 Allows only a single relationships to be created on an entry.
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `type` | `string` | `one-to-one` |
 | `to` | `string` | The entity type you are making relationships with in singular form \(eg `customer`\) |
 

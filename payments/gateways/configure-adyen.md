@@ -7,7 +7,7 @@ You can configure Adyen programatically using the `/gateways/adyen` endpoint.
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `username` | `string` | Your web service username |
 | `type` | `string` | This will always be `gateway` |
 | `test` | `boolean` | `true` or `false` to enable test transactions |

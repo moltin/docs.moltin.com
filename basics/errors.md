@@ -7,7 +7,7 @@ You'll most likely receive an error if validation fails, something doesn't exist
 The most common response codes you'll get from Moltin will be:
 
 | **Code** | **Response** |
-| --- | --- |
+| :--- | :--- |
 | `201` | Created successfully |
 | `200` | Updated successfully |
 | `204` | Deleted successfully |

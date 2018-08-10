@@ -3,7 +3,7 @@
 Below are a list of attributes and operators available for [filtering](../../basics/filtering/) orders.
 
 | **Attribute** | **Type** | **Operator** | **Example** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `status` | `string` | `eq` | `eq(status,complete)` |
 | `payment` | `string` | `eq` | `eq(payment,paid)` |
 | `shipping` | `string` | `eq` | `eq(shipping,unfulfilled)` |
