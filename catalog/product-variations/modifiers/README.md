@@ -1,43 +1,58 @@
 # Modifiers
 
-## Product Modifiers
+Modifiers help augmenting properties of a variation of a product, price, etc., by creating an array of child products or prices. In each case you specify a `modifier type` and its `value`, which define how that property changes the variation option.
 
-Product modifiers create the variation products \(child products\) from your base product by augmenting different properties of that base product. In each case, you will specify a modifier type and its value. This will define how that property changes as the child products are built. There is currently a limit on the number of child products you can build from a base product set at 200. This means the maximum number of child products generated from a base product cannot exceed this figure.
+See [Modifiers](https://developers.moltin.com/~/drafts/-LJTp18a2-7cLeeCK3px/primary/guides/modifiers) for conceptual details. 
 
-## Price Modifiers
+{% hint style="info" %}
+`variations` are containers for `options` which in turn are containers for `modifiers`.
+{% endhint %}
 
-These obviously help adjust the price of a product. As this kind of modifier deals with prices, it should come as no surprise to you that the **value** of this modifier must be a collection of currency values similar to that when specifying a product price. While the modifier can have any number of currencies applied to it, only the currencies specified on the actual base product will be subjected to any modifiers, i.e. If you have USD and GBP values on a base product, and apply a modifier that alters GBP, AUD and EUR the ONLY currency value affected will be GBP; the USD value will remain the same and no other currencies will be set on the variation product.
+### Modifier types
 
-## SKU/Slug Builder Modifiers
+There's several types of modifiers, and each has a different effect on a property.
 
-These modifiers can help you fulfil a robust SKU and slug strategy. The value of the modifier must contain two property-value pairs: `"seek": "XXX"` and `"set" : "YYY"`. In order for this kind of modifier to participate in the variation products building process, the base product should have a SKU/slug set with a place holder like: `{XXX}`. The modifier works by replacing the placeholder with the value you wish to set. You should only specify the contents of the `{ }` in the seek property - the modifier will take care of the rest.
+| Modifier | Data Type | Effect |
+| :--- | :--- | :--- |
+| `name_equals` | `string` | Overrides the name of the product with the name specified by the modifier. |
+| `name_append` | `string` | Appends the string specified in the modifier to the product's name. |
+| `name_prepend` | `string` | Prepends the string specified in the modifier to the product's name. |
+| `description_equals` | `string` | Overrides the description of the product. |
+| `description_append` | `string` | Appends the string specified in the modifier to the product's description. |
+| `description_prepend` | `string` | Prepends the string specified in the modifier to the product's description. |
+| `commoditytype` | `string` | Sets the commodity type. |
+| `price_increment` | [price collection](./#price-modifiers) | Increases the price of the product. |
+| `price_decrement` | [price collection](./#price-modifiers) | Decreases the price of the product. |
+| `price_equals` | [price collection](./#price-modifiers) | Sets the price of the product. Cannot be further modified. |
+| `slug_equals` | `string` | Sets the slug of the product. |
+| `slug_append` | `string` | Appends the string specified in the modifier to the product's slug. |
+| `slug_prepend` | `string` | Prepends the string specified in the modifier to the product's slug. |
+| `sku_equals` | `string` | Sets the SKU of the product. |
+| `sku_appends` | `string` | Appends the string specified in the modifier to the product's SKU. |
+| `sku_prepends` | `string` | Prepends the string specified in the modifier to the product's SKU. |
+| `sku_builder` | [seek/set object](./#sku-slug-builder-modifiers) | Sets a part of the product's SKU. |
+| `status` | `string` | Sets the status of the product. |
 
-The builder is worthy of a brief example...
+### Seek/set modifier type
 
-BaseProduct SKU: `BP01-{COLOUR}-{SIZE}` Modifier1:`{"seek":"COLOUR", "set":"BLU"}` Modifier2:`{"seek":"COLOUR", "set":"RED"}`
+Used with `sku` and `slug` builder modifiers, must contain two property-value pairs: `seek`: "xxx" and `set`: "xxxx". Use a placeholder { } so that a variation can replace it with a value you wish to set.  
 
-ModifierA:`{"seek":"SIZE", "set":"LRG"}` ModifierB:`{"seek":"SIZE", "set":"SML"}`
+> For example, use the property-value pairs to specify a color modifier: `seek`: {COLOR}, `set`: {GREEN}.
 
-The above modifiers applied via variations for size and colour would produce the following SKUs in the corresponding variation product:
+* For more details, see: [Product SKU/Slug Builder Modifiers](https://developers.moltin.com/guides/product/modifiers).
 
-`BP01-BLU-LRG` `BP01-BLU-SML` `BP01-RED-LRG` `BP01-RED-SML`
-
-You _could_ create the same via sku\_append modifier using values like `-RED` and `-LRG`; the advantage of the builder modifiers is that they are agnostic of the order the modifiers are applied.
-
-## The Product Modifier Objects
-
-### Price modifiers
+### Price modifiers objects
 
 {% tabs %}
 {% tab title="Attributes" %}
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
-| id | **string** | The unique identifier for this product |
-| type | **string** | Represents the type of object \(should be `modifier`\) |
-| modifier\_type | **string** | `price_increment`, `price_decrement`, `price_equals` |
-| value.amount | **integer** | Value of the price modifier |
-| value.currency | **string** | Currency of this price modifier \(3 letter ISO\) |
-| value.includes\_tax | **boolean** | `true` if relevant taxes have been included in the value `false` if not |
+| `id` | `string` | The unique identifier for this product |
+| `type` | `string` | Represents the type of object \(should be `modifier`\) |
+| `modifier_type` | `string` | `price_increment`, `price_decrement`, `price_equals` |
+| `value.amount` | `integer` | Value of the price modifier |
+| `value.currency` | `string` | Currency of this price modifier \(3 letter ISO\) |
+| `value.includes_tax` | `boolean` | `true` if relevant taxes have been included in the value `false` if not |
 {% endtab %}
 
 {% tab title="Sample Object" %}
