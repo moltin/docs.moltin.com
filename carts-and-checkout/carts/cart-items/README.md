@@ -89,6 +89,10 @@ Products added to a cart are referred to as a cart\_item.
 
 ## The Cart Item `image` object
 
+{% hint style="info" %}
+The `image` object will be empty if there is no main image assigned.
+{% endhint %}
+
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | `file_name` | `string` | The name of the image file that was uploaded |
