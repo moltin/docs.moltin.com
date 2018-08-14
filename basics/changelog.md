@@ -1,5 +1,11 @@
 # Changelog
 
+## Aug 14, 2018
+
+### Added
+
+* Beta access to [inventory management](https://developers.moltin.com/guides/work-with-inventory) with orders
+
 ## June 19, 2018
 
 ### Added
