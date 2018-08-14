@@ -10,6 +10,10 @@ You will need to configure and enable a payment gateway before you can accept pa
 You can use the [Manual Gateway](manual-payments.md) to handle payments from non-supported payment providers, such as PayPal. 🎉
 {% endhint %}
 
+{% hint style="danger" %}
+There are a number of actions that happen to your [inventory](https://docs.moltin.com/~/drafts/-LJsFeY2nae5ndXehUDs/primary/catalog/inventory) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://developers.moltin.com/guides/work-with-inventory) explaining the processes.
+{% endhint %}
+
 ## Payment methods
 
 Depending on the chosen gateway, you may or may **not** have access to `capture` funds immediately or `authorize` for later payment.
