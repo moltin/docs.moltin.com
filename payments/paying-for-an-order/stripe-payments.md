@@ -89,9 +89,9 @@ const Moltin = MoltinGateway({
 const id = 'XXXX'
 
 const payment = {
-  gateway: 'manual',
-  method: 'authorize',
-  token: 'tok_visa'
+  gateway: 'stripe',
+  method: 'purchase',
+  payment: 'tok_visa'
 }
 
 Moltin.Orders.Payment(id, order).then(() => {
