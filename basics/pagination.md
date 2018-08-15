@@ -167,9 +167,9 @@ moltin.product.limit(2).all {
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="get" host="https://api.moltin.com" path="/v2/categories?page\[limit\]=2&page=\[offset\]=1" %}
+{% api-method method="get" host="https://api.moltin.com" path="/v2/categories?page\[limit\]=10&page=\[offset\]=20" %}
 {% api-method-summary %}
-Example: Get additional pages
+Example: Get products 21 - 30
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -294,7 +294,7 @@ The number of pages to offset the results by
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -g -X GET https://api.moltin.com/v2/products?page[limit]=2&page[offset]=1 \
+curl -g -X GET https://api.moltin.com/v2/products?page[limit]=10&page[offset]=20 \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
@@ -307,8 +307,8 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-Moltin.Products.Limit(2)
-  .Offset(1)
+Moltin.Products.Limit(10)
+  .Offset(20)
   .All()
   .then(products => {
     // Do something
@@ -320,7 +320,7 @@ Moltin.Products.Limit(2)
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")
 
-moltin.product.limit(2).offset(1).all {
+moltin.product.limit(10).offset(20).all {
   // Do something
 }
 ```
