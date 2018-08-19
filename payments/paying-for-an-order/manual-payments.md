@@ -168,7 +168,7 @@ The `capture` method requires [client\_credentials](../../basics/authentication/
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
+curl -X POST https://api.moltin.com/v2/orders/:orderId/transactions/transactionId/capture \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
@@ -192,7 +192,7 @@ const Moltin = MoltinGateway({
 const orderId = 'XXXX'
 const transactionId = 'XXXX'
 
-Moltin.Orders.Payment({
+Moltin.Transactions.Capture({
   order: orderId,
   transaction: transactionId
 }).then(() => {
