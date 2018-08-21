@@ -1,5 +1,11 @@
 # Changelog
 
+## Aug 21, 2018
+
+### Added
+
+* Inventory Management now Generally Available
+
 ## Aug 14, 2018
 
 ### Added
