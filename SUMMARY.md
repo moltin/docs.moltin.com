@@ -104,6 +104,7 @@
     * [Remove Cart Item](carts-and-checkout/carts/cart-items/remove-cart-item.md)
 * [Checkout](carts-and-checkout/checkout.md)
 * [Promotions](carts-and-checkout/promotions/README.md)
+  * [Create Promotion](carts-and-checkout/promotions/create-promotion.md)
   * [Get Promotions](carts-and-checkout/promotions/get-promotions.md)
   * [Get a Promotion](carts-and-checkout/promotions/get-a-promotion.md)
   * [Update Promotions](carts-and-checkout/promotions/update-promotions.md)
