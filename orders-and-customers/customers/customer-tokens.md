@@ -1,6 +1,6 @@
 # Customer Tokens
 
-We provide a basic `/tokens` endpoint that allows you authenticate customers by `email` and `password` so you can easily allow customers to manage their [addresses](../addresses/) or filter orders by customer.
+We provide a basic `/tokens` endpoint that allows you authenticate customers by `email` and `password` so you can easily allow customers to manage their [addresses](../addresses/) or get orders by `customer`.
 
 ## The customer token object
 
