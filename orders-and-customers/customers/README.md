@@ -2,6 +2,8 @@
 
 You can use the Customer API to store customer addresses. The Customer API allows you to generate JSON Web Tokens inside your client-side applications to authenticate requests to get all customer orders.
 
+### The Customer object
+
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
