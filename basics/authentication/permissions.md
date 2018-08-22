@@ -29,6 +29,7 @@ A breakdown of the access given by the token can be seen in the following table.
 | `/products` | ✅ | ✅ |
 | `/promotions` | ✅ | ✅ |
 | `/settings` | ✅ | ✅ |
+| `/jobs` | ✅ |  |
 {% endtab %}
 
 {% tab title="Implicit" %}
@@ -51,6 +52,7 @@ The table below shows a breakdown of which API endpoint actions are available to
 | `/products` | ✅ | ⛔️ |
 | `/promotions` | ⛔️ | ⛔️ |
 | `/settings` | ⛔️ | ⛔️ |
+| `/jobs` | ⛔️ |  |
 {% endtab %}
 {% endtabs %}
 
