@@ -34,3 +34,25 @@ Below is an example payload that [observes](observable-events.md) the `order.ful
 }
 ```
 
+### Deleted Resources Payload
+
+When resources are deleted and you observe an event you will receive a payload where the \`resources\` attribute is JSON and will _only_ contain the resource type and ID_._ You do not need to parse the resources before handling them on your side. For example:
+
+```javascript
+{
+  "id": "c138854a-5311-4543-a368-01e099f5519b",
+  "integration": {
+    "id": "4596d5e1-26b6-444a-964d-2b6ec46477fd",
+    "integration_type": "webhook",
+    "name": "Product deleted notification",
+    "description": "Let me know when products are deleted from my store."
+  },
+  "trigger": "product.deleted",
+  "attempt": 1,
+  "resources": {
+    "type": "product",
+    "id": "ecdfb02c-3539-449c-854d-0e094a7d5c09"
+  }
+}
+```
+
