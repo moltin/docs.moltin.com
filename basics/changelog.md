@@ -4,7 +4,14 @@
 
 ### Added
 
-* Inventory Management now Generally Available
+* [Inventory Management](../catalog/inventory/) is now available
+* [Order exporting](../orders-and-customers/orders/export-orders/) is now available
+
+### Changes
+
+* `POST` to variation option returns the newly created option object instead of the parent variation
+* `PUT` to variation modifier returns the updated modifier object instead of the parent variation
+* `POST` to variation modifiers returns the newly created modifier instead of the parent variation
 
 ## Aug 14, 2018
 
