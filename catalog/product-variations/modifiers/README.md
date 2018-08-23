@@ -97,7 +97,7 @@ Used with `sku` and `slug` builder modifiers, must contain two property-value pa
 {
   "type": "modifier",
   "id": "6d31b2d1-6a26-47e5-9ea0-96b392490ab7",
-  "modifier_type": "sku-builder",
+  "modifier_type": "sku_builder",
   "value": {
     "seek": "{PLACEHOLDER}",
     "set": "SKU001-",
