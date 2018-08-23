@@ -10,9 +10,9 @@ The payload attributes and types are defined below.
 | `integration` | `object` | The events `integration_type` being fired |
 | `trigger` | [`string`](observable-events.md) | The [observable event](observable-events.md) that triggered this event |
 | `attempt` | `integer` | The number of attempts to deliver this event |
-| `resources` | `string` | Resources affected by this event |
+| `resources` | `string` | The resources affected by this event |
 
-## Example payload
+## Example: Typical payload
 
 Below is an example payload that [observes](observable-events.md) the `order.fulfilled` event. The configured URL will receive the following payload.
 
@@ -34,9 +34,9 @@ Below is an example payload that [observes](observable-events.md) the `order.ful
 }
 ```
 
-### Deleted Resources Payload
+## Example: Deleted Resources Payload
 
-When resources are deleted and you observe an event you will receive a payload where the \`resources\` attribute is JSON and will _only_ contain the resource type and ID_._ You do not need to parse the resources before handling them on your side. For example:
+When resources are deleted and you observe an event you will receive a payload where the `resources` attribute is `JSON` and will **only** __contain the resource type and ID_._ **You do not need to parse the resources before handling them on your side.**
 
 ```javascript
 {
