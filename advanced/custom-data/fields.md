@@ -110,8 +110,7 @@ const Moltin = MoltinGateway({
 
 Moltin.Fields.All().then(fields => {
   // Do something
-});
-
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -219,6 +218,15 @@ The Bearer token to grant access to the API
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl https://api.moltin.com/v2/flows/:slug/fields \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields/:id" %}
 {% api-method-summary %}
 Get a Field
@@ -317,10 +325,7 @@ const fieldID = 'XXXX';
 
 Moltin.Fields.Get(fieldID).then(field => {
   // Do something
-});
-
-curl https://api.moltin.com/v2/fields \
-     -H "Authorization: Bearer XXXX"
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -500,7 +505,7 @@ const data = {
 
 Moltin.Fields.Create(data).then(field => {
   // Do something
-});
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -652,7 +657,8 @@ const MoltinGateway = require('@moltin/sdk').gateway
 const Moltin = MoltinGateway({
   client_id: 'X'
 })
-var fieldId = 'xx'
+
+const fieldId = 'xx'
 
 const data = {
   id: '{fieldId}',
@@ -661,7 +667,7 @@ const data = {
 
 Moltin.Fields.Update('{fieldId}', data).then(field => {
   // Do something
-});
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -720,7 +726,7 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-var fieldId = 'xx'
+const fieldId = 'xx'
 
 const data = {
   id: '{fieldId}',
@@ -729,8 +735,7 @@ const data = {
 
 Moltin.Fields.Delete('{fieldId}').then(response => {
   // Do something
-});
-
+})
 ```
 {% endtab %}
 {% endtabs %}

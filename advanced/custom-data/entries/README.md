@@ -77,6 +77,31 @@ The Bearer token to grant access to the API
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl https://api.moltin.com/v2/flows/:slug/entries \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const slug = 'XXXX'
+
+Moltin.Flows.GetEntries(slug).then(entries => {
+  // Do something
+})
+```
+{% endtab %}
+{% endtabs %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
 {% api-method-summary %}
 Get an Entry
@@ -132,6 +157,32 @@ The Bearer token to grant access to the API
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl https://api.moltin.com/v2/flows/:slug/entries/:id \
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const slug = 'XXXX'
+const entryId = 'XXXX'
+
+Moltin.Flows.GetEntry(slug, entryId).then(entry => {
+  // Do something
+})
+```
+{% endtab %}
+{% endtabs %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/flows/:slug/entries" %}
 {% api-method-summary %}
@@ -203,7 +254,7 @@ The name of the Flow
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/flows/{FLOW_SLUG}/entries \
+curl -X POST https://api.moltin.com/v2/flows/:flowSlug/entries \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
@@ -224,11 +275,13 @@ const Moltin = MoltinGateway({
   client_secret: 'X'
 })
 
+const flowSlug = 'XXXX'
+
 const data = {
   "{FIELD_SLUG}": "A value"
 }
 
-Moltin.Flows.CreateEntry('{FLOW_SLUG}', data).then(entry => {
+Moltin.Flows.CreateEntry(flowSlug, data).then(entry => {
   // Do something
 })
 ```
@@ -309,7 +362,7 @@ The **ID** of the entry
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/flows/{FLOW_SLUG}/entries/{ENTRY_ID} \
+curl -X POST https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
@@ -331,11 +384,15 @@ const Moltin = MoltinGateway({
   client_secret: 'X'
 })
 
+const flowSlug = 'XXXX'
+
+const entryId = 'XXXX'
+
 const data = {
   "{FIELD_SLUG}": "A new value"
 }
 
-Moltin.Flows.UpdateEntry('{FLOW_SLUG}', '{ENTRY_ID}', data).then(entry => {
+Moltin.Flows.UpdateEntry(flowSlug, entryId, data).then(entry => {
   // Do something
 })
 ```
@@ -392,7 +449,7 @@ API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X DELETE https://api.moltin.com/v2/flows/{FLOW_SLUG}/entries/{ENTRY_ID} \
+curl -X DELETE https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId \
     -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
@@ -406,7 +463,11 @@ const Moltin = MoltinGateway({
   client_secret: 'X'
 })
 
-Moltin.Flows.DeleteEntry('{FLOW_SLUG}', '{ENTRY_ID}').then(entry => {
+const flowSlug = 'XXXX'
+
+const entryId = 'XXXX'
+
+Moltin.Flows.DeleteEntry(flowSlug, entryId).then(entry => {
   // Do something
 })
 ```

@@ -2,10 +2,6 @@
 
 When you create a field that uses `relationship` as a `field_type`, you update your entry values using the Relationship endpoints.
 
-The endpoints are dynamic and take the form of: `/v2/flows/{FLOW_SLUG}/entries/{ENTRY_ID}/relationships/{FIELD_SLUG}`.
-
-The value of `required` which is set on the field is ignored - all relationships are optional.
-
 {% api-method method="post" host="https://api.moltin.com" path="/v2/flows/:flowSlug/entries/:entryId/relationships/:fieldSlug" %}
 {% api-method-summary %}
 Create Entry Relationship
@@ -18,15 +14,15 @@ Create an Entry relationship to one or more resources. If any relationships alre
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="fieldSlug" type="string" required=false %}
+{% api-method-parameter name="fieldSlug" type="string" required=true %}
 The slug of the entry this field belongs to
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="entryId" type="string" required=false %}
+{% api-method-parameter name="entryId" type="string" required=true %}
 The **ID** of the entry this field belongs to
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="flowSlug" type="string" required=false %}
+{% api-method-parameter name="flowSlug" type="string" required=true %}
 The slug of the flow the entry belongs to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -83,7 +79,7 @@ Update Entry Relationship\(s\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Replace the relationships between an entry and a resource. Unlike a POST to this endpoint, a PUT overrides any existing relationships
+Replace the relationships between an entry and a resource. Unlike a `POST` to this endpoint, a `PUT` overrides any existing relationships
 {% endapi-method-description %}
 
 {% api-method-spec %}
