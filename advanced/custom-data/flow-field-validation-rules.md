@@ -1,4 +1,4 @@
-# Flow Field Validation Rules
+# Flow Field Validation
 
 When creating a Flow field, you can add validation to values that are stored. The validation you can use depends on the `field_type` and each one is expressed as a validation rule object:
 
