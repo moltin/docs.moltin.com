@@ -137,7 +137,6 @@
   * [Update an Order](orders-and-customers/orders/update-an-order.md)
   * [Order Items](orders-and-customers/orders/order-items.md)
   * [Filtering](orders-and-customers/orders/filtering.md)
-  * [Get Users Order](orders-and-customers/orders/get-a-users-order.md)
   * [Exporting](orders-and-customers/orders/exporting/README.md)
     * [Get all Jobs](orders-and-customers/orders/exporting/get-all-jobs.md)
     * [Get a Job](orders-and-customers/orders/exporting/get-a-job.md)

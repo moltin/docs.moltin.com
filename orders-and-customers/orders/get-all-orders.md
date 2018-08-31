@@ -147,6 +147,10 @@ Filter attributes
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+Pass the `X-Moltin-Customer-Token` header to limit orders to a specific customer. [Read more](../customers/customer-tokens.md).
+{% endhint %}
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
