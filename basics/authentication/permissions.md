@@ -6,6 +6,10 @@ Permissions are managed through tokens. There are two main token types available
 
 {% page-ref page="implicit-token.md" %}
 
+Customer tokens can be used with an Implicit Bearer token to manage user interfaces that involved sensitive data the user may need to access or modify such as reading orders, addresses and customer details.
+
+{% page-ref page="../../orders-and-customers/customers/customer-tokens.md" %}
+
 ## Breakdown of access
 
 {% tabs %}
@@ -53,6 +57,28 @@ The table below shows a breakdown of which API endpoint actions are available to
 | `/promotions` | ⛔️ | ⛔️ |
 | `/settings` | ⛔️ | ⛔️ |
 | `/jobs` | ⛔️ |  |
+{% endtab %}
+
+{% tab title="Implicit + Customer Token" %}
+| Endpoint | Read access | Write access |
+| :--- | :--- | :--- |
+| `/brands` | ✅ | ⛔️ |
+| `/carts` | ✅ | ✅ |
+| `/categories` | ✅ | ⛔️ |
+| `/checkout` | ✅ | ✅ |
+| `/collections` | ✅ | ⛔️ |
+| `/currencies` | ✅ | ⛔️ |
+| `/customers` | ✅ | ✅ |
+| `/customers/addresses` | ✅ | ✅ |
+| `/files` | ✅ | ⛔️ |
+| `/flows` | ✅ | ⛔️ |
+| `/integrations` | ⛔️ | ⛔️ |
+| `/orders` | ✅ | ⛔️ |
+| `/payment-gateways` | ⛔️ | ⛔️ |
+| `/products` | ✅ | ⛔️ |
+| `/promotions` | ⛔️ | ⛔️ |
+| `/settings` | ⛔️ | ⛔️ |
+| `/jobs` | ⛔️ | ⛔️ |
 {% endtab %}
 {% endtabs %}
 
