@@ -25,6 +25,7 @@ A breakdown of the access given by the token can be seen in the following table.
 | `/collections` | ✅ | ✅ |
 | `/currencies` | ✅ | ✅ |
 | `/customers` | ✅ | ✅ |
+| `/customers/addresses` | ✅ | ✅ |
 | `/files` | ✅ | ✅ |
 | `/flows` | ✅ | ✅ |
 | `/integrations` | ✅ | ✅ |
@@ -48,6 +49,7 @@ The table below shows a breakdown of which API endpoint actions are available to
 | `/collections` | ✅ | ⛔️ |
 | `/currencies` | ✅ | ⛔️ |
 | `/customers` | ⛔️ | ⛔️ |
+| `/customers/addresses` | ⛔️ | ⛔️ |
 | `/files` | ✅ | ⛔️ |
 | `/flows` | ✅ | ⛔️ |
 | `/integrations` | ⛔️ | ⛔️ |
@@ -56,10 +58,12 @@ The table below shows a breakdown of which API endpoint actions are available to
 | `/products` | ✅ | ⛔️ |
 | `/promotions` | ⛔️ | ⛔️ |
 | `/settings` | ⛔️ | ⛔️ |
-| `/jobs` | ⛔️ |  |
+| `/jobs` | ⛔️ | ⛔️ |
 {% endtab %}
 
 {% tab title="Implicit + Customer Token" %}
+
+
 | Endpoint | Read access | Write access |
 | :--- | :--- | :--- |
 | `/brands` | ✅ | ⛔️ |
