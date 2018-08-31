@@ -27,7 +27,7 @@ The Bearer token to grant access to the API
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="page\[limit\]" type="number" required=false %}
-The number of items to return per page
+The number of records to offset the results by
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -186,7 +186,7 @@ The Bearer token to grant access to the API
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="page\[offset\]" type="number" required=false %}
-The number of pages to offset the results by
+The number of records to offset the results by
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
