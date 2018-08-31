@@ -137,8 +137,7 @@
   * [Update an Order](orders-and-customers/orders/update-an-order.md)
   * [Order Items](orders-and-customers/orders/order-items.md)
   * [Filtering](orders-and-customers/orders/filtering.md)
-  * [Exporting](orders-and-customers/orders/exporting1/README.md)
-    * [Exporting](orders-and-customers/orders/exporting1/exporting.md)
+  * [Exporting](orders-and-customers/orders/exporting.md)
 * [Customers](orders-and-customers/customers/README.md)
   * [Get all Customers](orders-and-customers/customers/get-all-customers.md)
   * [Get a Customer](orders-and-customers/customers/get-a-customer.md)
@@ -156,6 +155,10 @@
 
 ## Advanced
 
+* [Jobs](advanced/jobs/README.md)
+  * [Get all Jobs](advanced/jobs/get-all-jobs.md)
+  * [Get a Job](advanced/jobs/get-a-job.md)
+  * [Create a Job](advanced/jobs/create-a-job.md)
 * [Currencies](advanced/currencies/README.md)
   * [Get all Currencies](advanced/currencies/get-all-currencies.md)
   * [Get a Currency](advanced/currencies/get-a-currency.md)
@@ -189,8 +192,4 @@
   * [Supported Languages](advanced/settings/supported-languages.md)
 * [Languages](advanced/languages.md)
 * [Safe Characters](advanced/safe-characters.md)
-* [Jobs](advanced/jobs/README.md)
-  * [Get all Jobs](advanced/jobs/get-all-jobs.md)
-  * [Get a Job](advanced/jobs/get-a-job.md)
-  * [Create a Job](advanced/jobs/create-a-job.md)
 
