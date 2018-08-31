@@ -1,6 +1,6 @@
 # Customer Tokens
 
-We provide a basic `/tokens` endpoint that allows you authenticate customers by `email` and `password` so you can easily allow customers to manage their [addresses](../addresses/) or [get orders]() by `customer`.  
+We provide a basic `/tokens` endpoint that allows you authenticate customers by `email` and `password` so you can easily allow customers to manage their [addresses](../addresses/) or [get orders](../orders/get-all-orders.md) by `customer`.  
 
 ## The customer token object
 
@@ -119,4 +119,26 @@ Moltin.Customers.Token(customer).then(data => {
 ```
 {% endtab %}
 {% endtabs %}
+
+### Using a token
+
+You can use a `X-Moltin-Customer-Token` header with the following endpoints. They're available implicitly for you to read, create and update various resources.
+
+{% page-ref page="get-a-customer.md" %}
+
+{% page-ref page="update-a-customer.md" %}
+
+{% page-ref page="../addresses/get-all-addresses.md" %}
+
+{% page-ref page="../addresses/get-an-address.md" %}
+
+{% page-ref page="../addresses/create-an-address.md" %}
+
+{% page-ref page="../addresses/update-an-address.md" %}
+
+{% page-ref page="../orders/get-all-orders.md" %}
+
+{% page-ref page="../orders/get-an-order.md" %}
+
+
 
