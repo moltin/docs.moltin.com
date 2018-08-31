@@ -1,6 +1,6 @@
 # Filtering
 
-Below are a list of attributes and operators available for [filtering](../../basics/filtering/) orders. These filters also apply to [exporting orders](exporting1/).
+Below are a list of attributes and operators available for [filtering](../../basics/filtering/) orders. These filters also apply to [exporting orders](exporting.md).
 
 | **Attribute** | **Type** | **Operator** | **Example** |
 | :--- | :--- | :--- | :--- |

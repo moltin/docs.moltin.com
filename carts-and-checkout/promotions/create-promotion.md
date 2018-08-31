@@ -1,7 +1,3 @@
----
-description: Create a promotion
----
-
 # Create Promotion
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/promotions" %}

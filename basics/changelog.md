@@ -5,7 +5,7 @@
 ### Added
 
 * [Inventory Management](../catalog/inventory/) is now available
-* [Order exporting](../orders-and-customers/orders/exporting1/) is now available
+* [Order exporting]() is now available
 
 ### Changes
 
