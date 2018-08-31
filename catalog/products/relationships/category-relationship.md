@@ -40,8 +40,19 @@ The **ID** of the category.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "category",
+            "id": "39a13b7e-f2d3-47a5-9bc5-1e98b198748c"
+        },
+        {
+          "type": "category",
+          "id": "0c108707-bb4a-4eda-95e3-f51b35122cb4"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -81,14 +92,14 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var categoryIds = [
+const categoryIds = [
     '39a13b7e-f2d3-47a5-9bc5-1e98b198748c',
     '0c108707-bb4a-4eda-95e3-f51b35122cb4'
-];
+]
 
 Moltin.Products.CreateRelationships(productId, 'category', categoryIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -133,8 +144,15 @@ The **ID** of the category.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "category",
+            "id": "d7290481-8d03-4fe0-a7df-23fc05498a46"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -169,14 +187,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var categoryIds = [
+const categoryIds = [
     'd7290481-8d03-4fe0-a7df-23fc05498a46'
-];
+]
 
 Moltin.Products.UpdateRelationships(productId, 'category', categoryIds).then((relationships) => {
-    // Do something
-});
-
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -257,13 +274,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var categoryIds = [
+const categoryIds = [
     '0c108707-bb4a-4eda-95e3-f51b35122cb4
-];
+]
 
 Moltin.Products.DeleteRelationships(productId, 'category', categoryIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}

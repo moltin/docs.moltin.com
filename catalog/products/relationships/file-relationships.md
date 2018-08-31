@@ -40,8 +40,19 @@ The **ID** of the file.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "file",
+            "id": "2c51711-35f9-403e-aa73-8e6c80c2258b"
+        },
+        {
+          "type": "file",
+          "id": "2C090e3c8-0206-4243-9a3b-f28175f7e9de"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -80,14 +91,14 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var fileIds = [
+const fileIds = [
     '82c51711-35f9-403e-aa73-8e6c80c2258b',
     'c090e3c8-0206-4243-9a3b-f28175f7e9de'
-];
+]
 
 Moltin.Products.CreateRelationships(productId, 'file', fileIds).then((relationships) => {
-    // Do something
-});T
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -132,8 +143,14 @@ The **ID** of the file.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "file",
+            "id": "2c51711-35f9-403e-aa73-8e6c80c2258b"
+        }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -168,13 +185,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var fileIds = [
+const fileIds = [
     '82c51711-35f9-403e-aa73-8e6c80c2258b'
-];
+]
 
 Moltin.Products.UpdateRelationships(productId, 'file', fileIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -255,13 +272,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var fileIds = [
+const fileIds = [
     '82c51711-35f9-403e-aa73-8e6c80c2258b'
-];
+]
 
 Moltin.Products.DeleteRelationships(productId, 'file', fileIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}

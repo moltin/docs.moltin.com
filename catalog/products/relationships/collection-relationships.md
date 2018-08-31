@@ -40,8 +40,19 @@ The **ID** of the collection.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "collection",
+            "id": "5ab3deca-1f11-47b7-a409-24ea3234d72c"
+        },
+        {
+          "type": "collection",
+          "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -80,14 +91,14 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var collectionIds = [
+const collectionIds = [
     '5ab3deca-1f11-47b7-a409-24ea3234d72c',
     '2c740aa0-7fb7-4bd6-9347-78988cf60f9a'
-];
+]
 
 Moltin.Products.CreateRelationships(productId, 'collection', collectionIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -132,8 +143,15 @@ The **ID** of the collection.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "collection",
+            "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

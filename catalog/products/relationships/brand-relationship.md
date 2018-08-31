@@ -83,14 +83,16 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var brandIds = [
-    '8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c'
+const brandIds = [
+  '8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c'
 ]
 
 Moltin.Products.UpdateRelationships(productId, 'brand', brandIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
+
+>
 {% endtab %}
 {% endtabs %}
 
@@ -134,8 +136,15 @@ The **ID** of the brand
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+  "data": [
+      {
+        "type": "brand",
+        "id": "0af10e37-066a-47a9-ad14-cc17eb31eed4"
+      }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -170,13 +179,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var brandIds = [
+const brandIds = [
     '8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c'
-];
+]
 
 Moltin.Products.UpdateRelationships(productId, 'brand', brandIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -257,13 +266,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var brandIds = [
-    '8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c'
-];
+const brandIds = [
+  '8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c'
+]
 
 Moltin.Products.DeleteRelationships(productId, 'brand', brandIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}

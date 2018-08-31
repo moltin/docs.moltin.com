@@ -40,8 +40,19 @@ The **ID** of the product-variation.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "product-variation",
+            "id": "3ab3deca-1f11-47b7-a409-24ea3234d72c"
+        },
+        {
+          "type": "product-variation",
+          "id": "7c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -80,14 +91,14 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var variationIds = [
+const variationIds = [
     '5ab3deca-1f11-47b7-a409-24ea3234d72c',
     '2c740aa0-7fb7-4bd6-9347-78988cf60f9a'
-];
+]
 
 Moltin.Products.CreateRelationships('{PRODUCT_ID}', 'product-variation', variationIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -132,8 +143,15 @@ The **ID** of the variation.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "product-variation",
+            "id": "2c740aa0-7fb7-4bd6-9347-78988cf60f9a"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -168,13 +186,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var variationIds = [
+const variationIds = [
     '2c740aa0-7fb7-4bd6-9347-78988cf60f9a'
-];
+]
 
 Moltin.Products.UpdateRelationships(productId, 'variation', variationIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -255,13 +273,13 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-var variationIds = [
+const variationIds = [
     '2c740aa0-7fb7-4bd6-9347-78988cf60f9a'
-];
+]
 
 Moltin.Products.DeleteRelationships(productId, variationIds, 'variation', variationIds).then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}

@@ -40,8 +40,15 @@ The **ID** of the image.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "main_image",
+            "id": "8df7738-febe-4987-bc0e-b857297b30e9"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -75,8 +82,8 @@ const Moltin = MoltinGateway({
 const productId = 'XXXX'
 
 Moltin.Products.CreateRelationships(productId, 'main_image', '98df7738-febe-4987-bc0e-b857297b30e9').then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -121,8 +128,15 @@ The **ID** of the image.
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": [
+        {
+            "type": "main_image",
+            "id": "e9737dc6-876a-4eab-b3b7-af62a1999123"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -156,8 +170,8 @@ const Moltin = MoltinGateway({
 const productId = 'XXXX'
 
 Moltin.Products.UpdateRelationships(productId, 'main_image', 'e9737dc6-876a-4eab-b3b7-af62a1999123').then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}
@@ -237,8 +251,8 @@ const Moltin = MoltinGateway({
 const productId = 'XXXX'
 
 Moltin.Products.DeleteRelationships(productId, 'main_image', 'e9737dc6-876a-4eab-b3b7-af62a1999123').then((relationships) => {
-    // Do something
-});
+  // Do something
+})
 ```
 {% endtab %}
 {% endtabs %}

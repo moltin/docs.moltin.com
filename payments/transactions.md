@@ -205,7 +205,7 @@ curl -X POST https://api.moltin.com/v2/orders/:orderId/payments \
      -d $'{
        "data": {
          "gateway": "manual",
-         "method": "authorize",
+         "method": "authorize"
        }
      }'
 ```
@@ -316,8 +316,27 @@ The Bearer token to grant access to the API
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": {
+        "id": "78cf43c3-b8fa-4b84-9444-d2adf81ed8bd",
+        "type": "transaction",
+        "reference": "manual",
+        "gateway": "manual",
+        "amount": 59992,
+        "currency": "USD",
+        "transaction-type": "refund",
+        "status": "complete",
+        "relationships": {
+            "order": {
+                "data": {
+                    "type": "order",
+                    "id": "a15894b0-7e6c-49e8-aad0-85b92e6501d4"
+                }
+            }
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
