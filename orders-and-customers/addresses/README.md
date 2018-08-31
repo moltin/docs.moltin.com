@@ -1,10 +1,6 @@
 # Addresses
 
-The Addresses API allows you to organize customer addresses. Addresses are a sub-resource of a [Customer](https://github.com/moltin/api.docs.moltin.com/tree/b8200284da4b87dabc0ac52bd3e38b0fd3943097/orders-and-customers/customers/README.md). A Customer may have multiple addresses, such as `home`, `work` and `neighbor`.
-
-{% hint style="danger" %}
-This feature is currently in **BETA** and you **should** expect it to change.
-{% endhint %}
+The Addresses API allows you to organize customer addresses. Addresses are a sub-resource of a [Customer](https://github.com/moltin/api.docs.moltin.com/tree/b8200284da4b87dabc0ac52bd3e38b0fd3943097/orders-and-customers/customers/README.md). A Customer may have multiple addresses, such as `home`, `work` and `neighbor`.  You are able to use a customer with an [implicit ](../../basics/authentication/implicit-token.md#create-an-implicit-token)Bearer token.  This is recommend for client-side interactions.  Or you can use a [client\_credentials](../../basics/authentication/client-credential-token.md#create-a-client-credential-token) Bearer token.  This is recommended for back end interactions.
 
 ## The Address object
 
@@ -30,7 +26,32 @@ This feature is currently in **BETA** and you **should** expect it to change.
 
 {% tab title="Sample Response" %}
 ```javascript
-
+{
+  "id": "5f8da740-6680-463e-b31c-190b2db4bf9d",
+  "type": "address",
+  "name": "Home",
+  "first_name": "Ron",
+  "last_name": "Swanson",
+  "company_name": "",
+  "phone_number": "(555) 555-1234",
+  "line_1": "1 Sunny Street",
+  "line_2": "Sunny Place",
+  "city": "Sunny Town",
+  "postcode": "SU33 1YY",
+  "county": "Sunnyville",
+  "country": "GB",
+  "instructions": "Leave in the shed",
+  "links": {
+    "self":
+      "https://api.moltin.com/v2/addresses/5f8da740-6680-463e-b31c-190b2db4bf9d"
+  },
+  "meta": {
+    "timestamps": {
+      "created_at": "2018-05-04T15:20:09.734Z",
+      "updated_at": "2018-05-04T15:20:09.734Z"
+    }
+  }
+}
 ```
 {% endtab %}
 {% endtabs %}

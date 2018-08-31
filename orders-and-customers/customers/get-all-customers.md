@@ -13,11 +13,7 @@ Get a list of customers
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="X-Moltin-Customer-Token" type="string" required=false %}
-A customer token to access specific customer orders.
+The Bearer token to grant access to the API.  Grant type must be `client_credentials`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -34,7 +30,7 @@ Filter the results.
 
 {% endapi-method-response-example-description %}
 
-```text
+```bash
 {
     "data": [
         {

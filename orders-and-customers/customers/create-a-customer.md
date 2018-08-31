@@ -13,7 +13,7 @@ Create a customer
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API.
+The Bearer token to grant access to the API. 
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 

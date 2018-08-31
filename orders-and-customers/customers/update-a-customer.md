@@ -19,11 +19,11 @@ The **ID** for the customer requested
 
 {% api-method-headers %}
 {% api-method-parameter name="X-Moltin-Customer-Token" type="string" required=false %}
-The customer specific token.
+A customer token used to access customer implicitly.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+The Bearer token to grant access to the API.  If there is no customer token the grant type must be `client_credentials.`  
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -52,8 +52,16 @@ The customer password
 
 {% endapi-method-response-example-description %}
 
-```text
-
+```bash
+{
+    "data": {
+        "type": "customer",
+        "id": "b57022cf-c80e-4b85-9fd1-5af3156d8adf",
+        "name": "George example",
+        "email": "ron@swanson.com",
+        "password": true
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -92,6 +100,41 @@ var customer = {
 Moltin.Customers.Update({customerId}, customer).then((response) => {
   // Do something
 });
+```
+{% endtab %}
+{% endtabs %}
+
+## With customer token
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/customers/:id \
+     -H "X-Moltin-Customer-Token: XXXX"
+     -H "Authorization: Bearer XXXX"
+     -d $'{
+     "data": {
+       "type": "customer",
+       "email": "ron@swanson.com"
+     }
+}'
+```
+{% endtab %}
+{% endtabs %}
+
+## Without customer token
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/customers/:id \
+     -H "Authorization: Bearer XXXX"
+     -d $'{
+     "data": {
+       "type": "customer",
+       "email": "ron@swanson.com"
+     }
+}'
 ```
 {% endtab %}
 {% endtabs %}

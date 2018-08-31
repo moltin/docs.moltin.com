@@ -1,8 +1,8 @@
-# Get all Addresses
+# Get Customer Addresses
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/customers/:customerId/addresses" %}
 {% api-method-summary %}
-Get all
+Get all of a customers addresses
 {% endapi-method-summary %}
 
 {% api-method-description %}

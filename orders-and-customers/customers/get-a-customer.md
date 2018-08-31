@@ -18,8 +18,12 @@ The **ID** for the requested Customer.
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
+{% api-method-parameter name="X-Moltin-Customer-Token" type="string" required=false %}
+A customer token used to access a customer implicitly.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+The Bearer token to grant access to the API.  If there is no customer token the grant type must be `client_credentials`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -52,7 +56,7 @@ The Bearer token to grant access to the API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X GET https://api.moltin.com/v2/brands/:id \
+curl -X GET https://api.moltin.com/v2/customers/:id \
      -H "Authorization: Bearer XXXX" \
 ```
 {% endtab %}
@@ -88,6 +92,51 @@ moltin.customer.get(forID: id) { result in
             print(error)
     }
 }
+```
+{% endtab %}
+{% endtabs %}
+
+## With customer token
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/customers/:id \
+     -H "X-Moltin-Customer-Token: XXXX"
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X'
+})
+
+const customerId = 'XXXX'
+const addressId = 'XXXX'
+const customerToken = 'XXXX'
+
+Moltin.Addresses.All({
+  customer: customerId,
+  addresss: addressId,
+  token: customerToken
+}).then(address => {
+  // Do something
+})
+```
+{% endtab %}
+{% endtabs %}
+
+## Without customer token
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/customers/:id \
+     -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 {% endtabs %}

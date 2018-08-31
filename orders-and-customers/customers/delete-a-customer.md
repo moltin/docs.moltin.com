@@ -18,8 +18,12 @@ The **ID** for the Customer to delete
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
+{% api-method-parameter name="X-Moltin-Customer-Token" type="string" required=false %}
+A customer token used to access customer implicitly.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+The Bearer token to grant access to the API.  If there is no customer token the grant type must be client\_credentials.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -60,6 +64,29 @@ const id = 'XXXX'
 Moltin.Customers.Delete(id).then(response => {
   // Do something
 })
+```
+{% endtab %}
+{% endtabs %}
+
+## With customer token
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/customers/:id \
+     -H "X-Moltin-Customer-Token: XXXX"
+     -H "Authorization: Bearer XXXX"
+```
+{% endtab %}
+{% endtabs %}
+
+## Without customer token
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/customers/:id \
+     -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 {% endtabs %}

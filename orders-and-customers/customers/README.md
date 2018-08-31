@@ -1,6 +1,12 @@
 # Customers
 
-You can use the Customer API to store customer addresses. The Customer API allows you to generate JSON Web Tokens inside your client-side applications to authenticate requests to get all customer orders.
+You can use the Customer endpoint to store customer addresses and other information.  
+
+The Customer endpoint allows you to generate JSON Web Tokens inside your client-side applications to authenticate requests to get all customer orders.  
+
+{% page-ref page="customer-tokens.md" %}
+
+You are able to use a [customer](customer-tokens.md) token with an [implicit](../../basics/authentication/implicit-token.md#create-an-implicit-token) Bearer token.  This is recommend for client-side interactions.  Or you can use a [client\_credentials](../../basics/authentication/client-credential-token.md#create-a-client-credential-token) Bearer token.  This is recommended for back end interactions.
 
 ### The Customer object
 
