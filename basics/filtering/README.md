@@ -14,7 +14,7 @@ You can filter results returned from the API using a standard URI format.
 | `le` | Less than or equal to |
 
 {% hint style="info" %}
-Not all endpoint attributes are available for the supported operators below. Each endpoint provides a list of filter attributes.
+Not all endpoint attributes are available for the supported operators below. Each endpoint provides a list of filter attributes.  You are not able to filter on custom data fields \(flows\).
 {% endhint %}
 
 ## Supported endpoints
