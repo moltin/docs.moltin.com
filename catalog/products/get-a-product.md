@@ -1,9 +1,5 @@
 # Get a Product
 
-{% hint style="info" %}
-The product status must be set to `live` when requesting via [implicit](../../basics/authentication/implicit-token.md) authentication otherwise it will return a `404`.
-{% endhint %}
-
 {% api-method method="get" host="https://api.moltin.com" path="/v2/products/:id" %}
 {% api-method-summary %}
 Get by ID
