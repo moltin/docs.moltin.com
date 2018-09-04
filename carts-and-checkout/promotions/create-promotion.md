@@ -31,7 +31,7 @@ The type should be promotion.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="promotion\_type" type="string" required=true %}
-The type of schema being used for the promotion.  \(fixed\_discount or percentage\_discount\)
+The type of schema being used for the promotion.  \(fixed\_discount or percent\_discount\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="enabled" type="string" required=true %}

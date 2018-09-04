@@ -45,7 +45,7 @@ A description of your promotion
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="promotion\_type" type="string" required=false %}
-One of: fixed\_discount, per cent\_discount
+One of: fixed\_discount or percent\_discount
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="schema" type="object" required=false %}
