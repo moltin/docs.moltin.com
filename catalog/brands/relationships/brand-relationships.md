@@ -75,7 +75,6 @@ curl -X POST https://api.moltin.com/v2/brands/:id/relationships/brands \
                 }
             ]
             }
-          ]
         }'
 ```
 {% endtab %}
