@@ -2,10 +2,6 @@
 
 You can easily sort results that are returned from the API. **For example** you could make the following request to get all products and sort them by the `created_at` timestamp.
 
-{% hint style="warning" %}
-Sorting is **only available** on the get all products endpoint.
-{% endhint %}
-
 ## Sort products by `created_at` ASC
 
 {% tabs %}
