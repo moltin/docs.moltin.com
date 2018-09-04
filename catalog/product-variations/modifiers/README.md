@@ -21,9 +21,9 @@ There's several types of modifiers, and each has a different effect on a propert
 | `description_append` | `string` | Appends the string specified in the modifier to the product's description. |
 | `description_prepend` | `string` | Prepends the string specified in the modifier to the product's description. |
 | `commoditytype` | `string` | Sets the commodity type. |
-| `price_increment` | [price collection](./#price-modifiers) | Increases the price of the product. |
-| `price_decrement` | [price collection](./#price-modifiers) | Decreases the price of the product. |
-| `price_equals` | [price collection](./#price-modifiers) | Sets the price of the product. Cannot be further modified. |
+| `price_increment` | [price collection](./#price-modifiers-objects) | Increases the price of the product. |
+| `price_decrement` | [price collection](./#price-modifiers-objects) | Decreases the price of the product. |
+| `price_equals` | [price collection](./#price-modifiers-objects) | Sets the price of the product. Cannot be further modified. |
 | `slug_equals` | `string` | Sets the slug of the product. |
 | `slug_append` | `string` | Appends the string specified in the modifier to the product's slug. |
 | `slug_prepend` | `string` | Prepends the string specified in the modifier to the product's slug. |
