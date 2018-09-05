@@ -6,6 +6,10 @@ Products are the core resource to any Moltin project. They can be associated by 
 Product inventory is managed separately. If you wish to increment and allocate stock levels, see the [Product Inventory API](../inventory/)
 {% endhint %}
 
+{% hint style="info" %}
+Products with a **`live`** status will only be returned when requesting via [implicit](https://docs.moltin.com/~/edit/drafts/-LLe5rO3GT_yAak6KMhT/basics/authentication/implicit-token) authentication.
+{% endhint %}
+
 ## The Product object
 
 {% tabs %}

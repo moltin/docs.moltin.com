@@ -19,7 +19,7 @@ The ID for the requested Product
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+The Bearer token to grant access to the API.  Implicit Bearer token only returns products with live status; products with draft status won't be included.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}

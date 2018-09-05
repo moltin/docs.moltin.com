@@ -1,9 +1,5 @@
 # Get all Products
 
-{% hint style="info" %}
-Products with a `live` status will only be returned when requesting via [implicit](../../basics/authentication/implicit-token.md) authentication.
-{% endhint %}
-
 {% api-method method="get" host="https://api.moltin.com" path="/v2/products" %}
 {% api-method-summary %}
 Get all Products
@@ -17,7 +13,7 @@ Get all Products
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API
+The Bearer token to grant access to the API.  Implicit Bearer token only returns products with live status; products with draft status won't be included.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="X-Moltin-Currency" type="string" required=false %}
