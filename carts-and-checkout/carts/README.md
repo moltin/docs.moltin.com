@@ -10,6 +10,10 @@ Adding, modifying or removing any cart items, custom items or promotions will al
 We'll automatically delete carts 7 days after they were last updated.
 {% endhint %}
 
+{% hint style="info" %}
+If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you would like the cart to use, the products in the cart will be converted to your default currency.
+{% endhint %}
+
 ## The Cart Object
 
 {% tabs %}
