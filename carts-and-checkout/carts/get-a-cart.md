@@ -1,6 +1,6 @@
 # Get a Cart
 
-You can easily get a new or existing cart by providing the unique cart reference in the request.
+You can easily get a new or existing cart by providing the unique cart reference in the request. Please be aware that if you do not pass an X-MOLTIN-CURRENCY header specifying what currency you would like the cart retrieved in, it will be returned with values in your default currency.
 
 {% hint style="warning" %}
 An empty cart will be returned for any carts that don't currently exist. See [Get Cart Items](cart-items/get-cart-items.md#get-cart-items-by-cart-reference) for how the cart items object looks.
