@@ -162,7 +162,7 @@ Allows multiple relationships to be created.
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | `type` | `string` | `one-to-many` |
-| `to` | `string` | The entity type you are making relationships with in singular form \(eg: `product`\) |
+| `to` | `string` | The entity type you are making relationships with in singular form \(e.g. `product`\). |
 
 ## `relationship` / `one-to-one`
 
@@ -178,5 +178,5 @@ Allows only a single relationships to be created on an entry.
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | `type` | `string` | `one-to-one` |
-| `to` | `string` | The entity type you are making relationships with in singular form \(eg `customer`\) |
+| `to` | `string` | The entity type you are making relationships with in singular form \(e.g. `customer`\). |
 
