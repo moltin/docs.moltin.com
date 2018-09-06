@@ -6,7 +6,7 @@ Get all Products
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+The endpoint retrieves all your products \(draft + live\)
 {% endapi-method-description %}
 
 {% api-method-spec %}
