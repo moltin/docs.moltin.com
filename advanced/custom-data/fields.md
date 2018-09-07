@@ -538,19 +538,19 @@ The Bearer token to grant access to the API
 Represents the type of object being returned
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=true %}
+{% api-method-parameter name="name" type="string" required=false %}
 The name of the field
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="slug" type="string" required=true %}
+{% api-method-parameter name="slug" type="string" required=false %}
 A unique slug identifier for the field
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="field\_type" type="string" required=true %}
+{% api-method-parameter name="field\_type" type="string" required=false %}
 The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship`
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="description" type="string" required=true %}
+{% api-method-parameter name="description" type="string" required=false %}
 Any description for this field
 {% endapi-method-parameter %}
 
@@ -558,7 +558,7 @@ Any description for this field
 `true` if required on input, `false` if not. Always false if the field\_type is a relationship
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="unique" type="boolean" required=true %}
+{% api-method-parameter name="unique" type="boolean" required=false %}
 `true` if each entry should be unique, `false` if not
 {% endapi-method-parameter %}
 
@@ -566,7 +566,7 @@ Any description for this field
 A default value if none is supplied and field is not required
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="enabled" type="boolean" required=true %}
+{% api-method-parameter name="enabled" type="boolean" required=false %}
 If this field is enabled on the flow this should be `true`, otherwise `false`
 {% endapi-method-parameter %}
 
