@@ -68,7 +68,7 @@ First name of the shipping recipient
 Last name of the shipping recipient
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="shipping\_address.phone\_number" type="string" required=true %}
+{% api-method-parameter name="shipping\_address.phone\_number" type="string" required=false %}
 Phone number of the shipping recipient
 {% endapi-method-parameter %}
 
