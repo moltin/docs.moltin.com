@@ -42,9 +42,6 @@ The Bearer token to grant access to the API.  If there is no customer token the 
         "name": "Ron Swanson",
         "email": "ronwanson@example.com",
         "password": true,
-        "phone_number": null,
-        "promo_sent": "no",
-        "username": null
     }
 }
 ```
@@ -140,4 +137,6 @@ curl -X GET https://api.moltin.com/v2/customers/:id \
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

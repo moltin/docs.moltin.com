@@ -106,18 +106,7 @@ The Bearer token to grant access to the API
           }
         ]
       }
-    },
-    "order_reference": null,
-    "phone_number": null,
-    "shipping_sms_sent": null,
-    "delivery_status": null,
-    "delivery_details": null,
-    "delivery_date": null,
-    "confirmation_sms_sent": null,
-    "confirmation_email_sent": null,
-    "shipping_email_sent": null,
-    "refund_sms_sent": null,
-    "short_id": null
+    }
   }
 }
 ```

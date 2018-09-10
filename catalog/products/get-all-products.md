@@ -119,15 +119,7 @@ Filter the results
                         "id": "7cc08cbb-256e-4271-9b01-d03a9fac9f0a"
                     }
                 }
-            },
-            "material": null,
-            "max_watt": null,
-            "bulb_qty": null,
-            "bulb": null,
-            "new": null,
-            "on_sale": null,
-            "background_colour": "#d9d9d9",
-            "finish": "test"
+            }
         }
     ],
     "links": {
