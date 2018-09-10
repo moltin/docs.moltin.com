@@ -448,6 +448,10 @@ A relationship object to link this field to a flow
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="warning" %}
+You cannot update the `field_type` once a Field has been created.
+{% endhint %}
+
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
@@ -544,10 +548,6 @@ The name of the field
 
 {% api-method-parameter name="slug" type="string" required=false %}
 A unique slug identifier for the field
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="field\_type" type="string" required=false %}
-The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=false %}
