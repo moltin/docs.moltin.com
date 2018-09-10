@@ -41,7 +41,7 @@ The Bearer token to grant access to the API.  If there is no customer token the 
         "id": "a23cc59d-a6c2-4c14-89c7-80fd7e4fc6c0",
         "name": "Ron Swanson",
         "email": "ronwanson@example.com",
-        "password": true,
+        "password": true
     }
 }
 ```
