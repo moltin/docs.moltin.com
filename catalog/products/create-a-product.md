@@ -146,8 +146,6 @@ curl -X POST https://api.moltin.com/v2/products \
         }
     }'
 ```
-
->
 {% endtab %}
 
 {% tab title="JavaScript SDK" %}
