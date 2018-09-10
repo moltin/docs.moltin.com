@@ -10,7 +10,7 @@ The Order object is a representation of an order in moltin.
 | :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this order |
 | `type` | `string` | Represents the type of object being returned. `order` |
-| `status` | `string` | `incomplete`, `cancelled`, `complete` |
+| `status` | `string` | `incomplete`, `complete` |
 | `payment` | `string` | `unpaid`, `authorized`, `paid`, `refunded` |
 | `shipping` | `string` | `fulfilled`, `unfulfilled` |
 | `customer` | `object` | The customer object associated with this order |
