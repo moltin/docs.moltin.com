@@ -1,8 +1,25 @@
 # Sorting
 
-You can easily sort results that are returned from the API. **For example** you could make the following request to get all products and sort them by the `created_at` timestamp.
+Sort results that are returned from the API by using the `sort` parameter with the field name you wish to sort against. 
 
-## Sort products by `created_at` ASC
+{% hint style="info" %}
+To reverse the sort order, prepend the field with a minus.
+{% endhint %}
+
+Currently, sorting is supported for the following endpoints, and against the following fields:
+
+| Endpoint | Fields to sort against |
+| :--- | :--- |
+| Brands | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
+| Categories | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
+| Collections | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
+| Products | `commodity_type`, `created_at`, `description`, `manage_stock`, `name`, `slug`, `status`, `updated_at` |
+| Product Variations | `name` |
+| Orders | `payment`, `shipping`, `status` |
+
+The example below shows how to make a request to get all products, and sort them by the `created_at` timestamp.
+
+### Sort products by `created_at` ASC
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -39,11 +56,7 @@ moltin.product.sort("created_at").all {
 {% endtab %}
 {% endtabs %}
 
-## Sort products by `created_at` DESC
-
-{% hint style="info" %}
-To reverse the sort order, you must prepend a minus.
-{% endhint %}
+### Sort products by `created_at` DESC
 
 {% tabs %}
 {% tab title="cURL" %}
