@@ -2,7 +2,7 @@
 
 Below is a list of the permitted safe characters for use with the Moltin API.
 
-Safe characters are considered to be 0 through - 9, letters and dash `-` in the URI.
+Safe characters are considered to be 0 through - 9, letters, underscore `_`, and dash `-` in the URI.
 
 ### Reserved characters
 
@@ -28,8 +28,7 @@ Safe characters are considered to be 0 through - 9, letters and dash `-` in the 
 * `backslash "\"`
 * `caret "^"`
 * `percent "%"`
-* `underscore _`
-* `tilde ~`
+* `tilde "~"`
 
 
 
