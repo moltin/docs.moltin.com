@@ -43,6 +43,7 @@
   * [Create a Product Variation](catalog/product-variations/create-a-product-variation.md)
   * [Update a Product Variation](catalog/product-variations/update-a-product-variation.md)
   * [Delete a Product Variation](catalog/product-variations/delete-a-product-variation.md)
+  * [Build Child Products](catalog/product-variations/build-child-products.md)
   * [Options](catalog/product-variations/options/README.md)
     * [Create Product Variation Option](catalog/product-variations/options/create-product-variation-option.md)
     * [Update Product Variation Option](catalog/product-variations/options/update-product-variation-option.md)
