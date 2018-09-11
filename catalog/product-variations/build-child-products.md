@@ -1,6 +1,10 @@
 # Build Child Products
 
-You will need to run the following request to build child variations.
+This endpoint builds your child/variation products. Once you have a base product and have attached some variations, this endpoint will trigger the process that applies those variations to the base product.
+
+The result will be a list of child products that each have one combination of the variation options applied to it. 
+
+The `id` you should use in the url is that of the base product.
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/products/:id/build" %}
 {% api-method-summary %}
