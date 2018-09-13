@@ -17,6 +17,7 @@
   * [Like](basics/filtering/like.md)
   * [Chaining](basics/filtering/chaining.md)
 * [Sorting](basics/sorting.md)
+* [Safe Characters](basics/safe-characters.md)
 * [Versioning](basics/versioning.md)
 * [API Status](http://status.moltin.com)
 * [Changelog](basics/changelog.md)
@@ -192,5 +193,4 @@
   * [Update Settings](advanced/settings/update-settings.md)
   * [Supported Languages](advanced/settings/supported-languages.md)
 * [Languages](advanced/languages.md)
-* [Safe Characters](advanced/safe-characters.md)
 
