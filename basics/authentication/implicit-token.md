@@ -8,6 +8,8 @@ You will use most likely use an `implicit` token inside client-side applications
 An `implicit` token can be thought of as a **READ ONLY** token.
 {% endhint %}
 
+![](../../.gitbook/assets/authentication-flow-implicit-2x.png)
+
 {% api-method method="post" host="https://api.moltin.com" path="/oauth/access\_token" %}
 {% api-method-summary %}
 Create an implicit token

@@ -82,7 +82,7 @@ curl -X PUT https://api.moltin.com/v2/products/:id \
 {% endtabs %}
 
 {% hint style="warning" %}
-If the requested language does not have a translation availabe, the default language will be returned.
+If the requested language does not have a translation available, the default language will be returned.
 {% endhint %}
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/products" %}

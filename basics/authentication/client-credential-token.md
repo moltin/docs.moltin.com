@@ -6,6 +6,8 @@ A `client_credentials` token is used when the credentials are not publicly expos
 `client_credentials` allows full read and write access to endpoints.
 {% endhint %}
 
+![](../../.gitbook/assets/authentication-flow-client-credentials-2x.png)
+
 {% api-method method="post" host="https://api.moltin.com" path="/oauth/access\_token" %}
 {% api-method-summary %}
 Create a client credential token
