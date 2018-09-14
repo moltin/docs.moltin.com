@@ -112,6 +112,7 @@
   * [Update Promotions](carts-and-checkout/promotions/update-promotions.md)
   * [Get Promotion Codes](carts-and-checkout/promotions/get-promotion-codes.md)
   * [Create Promotion codes](carts-and-checkout/promotions/create-promotion-codes.md)
+  * [Delete Promotion Codes](carts-and-checkout/promotions/delete-promotion-codes.md)
 
 ## Payments
 

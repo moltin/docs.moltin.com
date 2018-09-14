@@ -1,10 +1,12 @@
 # Client credential token
 
-A `client_credentials` token is used when the credentials are not publicly exposed, usually a server-side language such as PHP or Node.js.
+A `client_credentials` token is used when the credentials are not publicly exposed, usually a server-side language such as PHP or Node.js. This type of authentication enables CRUD access to all resources.
 
 {% hint style="warning" %}
 `client_credentials` allows full read and write access to endpoints.
 {% endhint %}
+
+The diagram below illustrates the process flow for authentication for a server-side client credential application and a subsequent request to POST products.
 
 ![](../../.gitbook/assets/authentication-flow-client-credentials-2x.png)
 
