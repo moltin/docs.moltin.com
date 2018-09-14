@@ -288,7 +288,7 @@ Moltin.Flows.CreateEntry(flowSlug, data).then(entry => {
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
 {% api-method-summary %}
 Update an entry
 {% endapi-method-summary %}
@@ -362,7 +362,7 @@ The **ID** of the entry
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId \
+curl -X PUT https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
