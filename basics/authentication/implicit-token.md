@@ -8,6 +8,8 @@ You will use most likely use an `implicit` token inside client-side applications
 An `implicit` token can be thought of as a **READ ONLY** token.
 {% endhint %}
 
+The diagram below illustrates the process flow for authentication for a client-side implicit application and a subsequent request to GET products.
+
 ![](../../.gitbook/assets/authentication-flow-implicit-2x.png)
 
 {% api-method method="post" host="https://api.moltin.com" path="/oauth/access\_token" %}
