@@ -22,6 +22,12 @@ The ID for the requested Product
 The Bearer token to grant access to the API.  Implicit Bearer token only returns products with live status; products with draft status won't be included.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="include" type="string" required=false %}
+`main_image`, `files`, `brands`, `categories`, `collections`
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
