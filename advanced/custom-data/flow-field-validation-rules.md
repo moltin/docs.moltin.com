@@ -159,12 +159,38 @@ Must be one of a predefined collection of dates.
 
 Allows multiple relationships to be created.
 
-| **Attribute** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `type` | `string` | `one-to-many` |
-| `to` | `string` | The entity type you are making relationships with in singular form \(e.g. `product`\). |
-
-## `relationship` / `one-to-one`
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Attribute</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+      <th style="text-align:left"><b>Description</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>type</code>
+      </td>
+      <td style="text-align:left"><code>string</code>
+      </td>
+      <td style="text-align:left"><code>one-to-many</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>to</code>
+      </td>
+      <td style="text-align:left"><code>string</code>
+      </td>
+      <td style="text-align:left">
+        <p>The entity type you are making relationships with in singular form</p>
+        <p>(e.g. <code>product</code>).</p>
+      </td>
+    </tr>
+  </tbody>
+</table>## `relationship` / `one-to-one`
 
 ```javascript
 {
@@ -175,8 +201,35 @@ Allows multiple relationships to be created.
 
 Allows only a single relationships to be created on an entry.
 
-| **Attribute** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `type` | `string` | `one-to-one` |
-| `to` | `string` | The entity type you are making relationships with in singular form \(e.g. `customer`\). |
-
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Attribute</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+      <th style="text-align:left"><b>Description</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>type</code>
+      </td>
+      <td style="text-align:left"><code>string</code>
+      </td>
+      <td style="text-align:left"><code>one-to-one</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>to</code>
+      </td>
+      <td style="text-align:left"><code>string</code>
+      </td>
+      <td style="text-align:left">
+        <p>The entity type you are making relationships with in singular form</p>
+        <p>(e.g. <code>customer</code>).</p>
+      </td>
+    </tr>
+  </tbody>
+</table>

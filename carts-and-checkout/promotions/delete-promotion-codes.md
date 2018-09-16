@@ -12,7 +12,7 @@ This endpoint allows you to delete one or more promotion codes
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
+{% api-method-parameter name="id" type="string" required=true %}
 ID of the promotion associated with the codes
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -33,7 +33,7 @@ an array of codes
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
-promotion\_codes
+`promotion_codes`
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -52,6 +52,8 @@ This response indicates your delete request has succeeded
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
 ```bash
 curl -X DELETE https://api.moltin.com/v2/promotions/:id/codes \
      -H "Authorization: Bearer XXXX" \
@@ -66,4 +68,8 @@ curl -X DELETE https://api.moltin.com/v2/promotions/:id/codes \
       }
     }'
 ```
+{% endtab %}
+{% endtabs %}
+
+
 
