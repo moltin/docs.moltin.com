@@ -1,10 +1,10 @@
 # Inventory
 
+The Moltin Inventory API allows you to manage stock for products in your project catalog. Each product keeps a history of inventory transactions, enabling easier stock auditing.
+
 {% hint style="danger" %}
 This feature is currently in **BETA** and you **should** expect it to change.
 {% endhint %}
-
-The Moltin Inventory API allows you to manage stock for products in your project catalog. Each product keeps a history of inventory transactions, enabling easier stock auditing.
 
 {% hint style="info" %}
 You can specify an initial stock level when you create a product. Otherwise set to`0`by default, if not specified.
@@ -14,7 +14,7 @@ You can specify an initial stock level when you create a product. Otherwise set 
 There are a number of actions that happen to your [inventory](https://docs.moltin.com/catalog/inventory) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://developers.moltin.com/guides/work-with-inventory) explaining the processes.
 {% endhint %}
 
-### The stock object
+### The Stock object
 
 {% tabs %}
 {% tab title="Attributes" %}

@@ -1,8 +1,10 @@
 # Orders
 
+An Order is created via the [checkout](../../carts-and-checkout/checkout.md) endpoint within the Carts API.
+
 ### The Order Object {#the-order-object}
 
-The Order object is a representation of an order in moltin.
+The Order object is a representation of an order in Moltin.
 
 {% tabs %}
 {% tab title="Attributes" %}
@@ -141,5 +143,7 @@ The Order object is a representation of an order in moltin.
 {% endtab %}
 {% endtabs %}
 
+### Payments
 
+Once an order is created, it is marked unpaid. See [Paying for an order](../../payments/paying-for-an-order/) for how you can mark this order as paid.
 
