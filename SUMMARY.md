@@ -18,9 +18,7 @@
   * [Chaining](basics/filtering/chaining.md)
 * [Sorting](basics/sorting.md)
 * [Safe Characters](basics/safe-characters.md)
-* [Versioning](basics/versioning.md)
 * [API Status](http://status.moltin.com)
-* [Changelog](basics/changelog.md)
 
 ## Catalog
 
