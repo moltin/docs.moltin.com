@@ -29,8 +29,8 @@ There's several types of modifiers, and each has a different effect on a propert
 | `slug_prepend` | `string` | Prepends the string specified in the modifier to the product's slug. |
 | `slug_builder` | [seek/set object](./#sku-slug-builder-modifiers) | Sets a part of the product's slug. |
 | `sku_equals` | `string` | Sets the SKU of the product. |
-| `sku_appends` | `string` | Appends the string specified in the modifier to the product's SKU. |
-| `sku_prepends` | `string` | Prepends the string specified in the modifier to the product's SKU. |
+| `sku_append` | `string` | Appends the string specified in the modifier to the product's SKU. |
+| `sku_prepend` | `string` | Prepends the string specified in the modifier to the product's SKU. |
 | `sku_builder` | [seek/set object](./#sku-slug-builder-modifiers) | Sets a part of the product's SKU. |
 | `status` | `string` | Sets the status of the product. |
 
