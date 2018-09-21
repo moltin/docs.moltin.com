@@ -49,7 +49,7 @@ The Bearer token to grant access to the API
 
 {% tabs %}
 {% tab title="cURL" %}
-```bash
+```javascript
 curl https://api.moltin.com/v2/promotions/:id/codes \
      -H "Authorization: Bearer XXXX"
 ```

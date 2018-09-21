@@ -54,7 +54,7 @@ This response indicates your delete request has succeeded
 
 {% tabs %}
 {% tab title="cURL" %}
-```bash
+```javascript
 curl -X DELETE https://api.moltin.com/v2/promotions/:id/codes \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \

@@ -101,6 +101,8 @@ cURL
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="cURL" %}
 ```javascript
 curl -X PUT https://api.moltin.com/v2/promotions/:id \
      -H "Authorization: Bearer XXXX" \
@@ -122,7 +124,13 @@ curl -X PUT https://api.moltin.com/v2/promotions/:id \
         "start":"2017-11-13",
         "end":"2019-11-13"
       }
-    }'
+    }
+```
+{% endtab %}
+{% endtabs %}
+
+```javascript
+
 ```
 
 

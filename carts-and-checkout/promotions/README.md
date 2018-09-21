@@ -1,13 +1,26 @@
 # Promotions
 
-Promotions allow you to provide discounts to customers. By defining a Promotion and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
+Promotions allow you to provide discounts to customers. A Promotion requires codes, which are then used by the end user to get a discount. For more details on promotions, see: [Developer Portal](https://developers.moltin.com/guides/create-a-promotion).
 
-The promotions you create will require codes to be attached to them, and these codes are subsequently used by end-users \(or your own system\) to apply promotions to carts and provide the discounts stipulated.
-
-## The Promotion Object
+### The Promotion Object
 
 {% tabs %}
-{% tab title="Sample Response" %}
+{% tab title="Attributes" %}
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `type` | `string` | `promotion` |
+| `name` | `string` | The name of a promotion |
+| `description` | `string` | The description of a promotion |
+| `enabled` | `boolean` | Indicates whether a promotion is active |
+| `promotion_type` | `string` |  `fixed_discount` or `percent_discount` |
+| `schema` | [object](./#the-schema-object) | `fixed_schema` or `percent_schema` |
+| `start` | `string` | The start time of the promotion DateTime |
+| `end` | `string` | The end time of the promotion DateTime |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+Sample  with `fixed_discount` as a `promotion_type`.
+
 ```javascript
 {
   "data": {
@@ -39,50 +52,55 @@ The promotions you create will require codes to be attached to them, and these c
 {% endtab %}
 {% endtabs %}
 
-A promotion is represented by a promotion object.
-
-| **Name** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `type` | `string` | "promotion" |
-| `name` | `string` | The name of your promotion |
-| `description` | `string` | A description of your promotion |
-| `enabled` | `boolean` | `true` if enabled, `false` if not |
-| `promotion_type` | `string` | One of: `fixed_discount`, `percent_discount` |
-| `schema` | `object` | One of: [`fixed_schema`](https://docs.moltin.com/?javascript#fixed-discount), [`percent_schema`](https://docs.moltin.com/?javascript#percent-discount) |
-| `start` | `string` | The start time of the promotion DateTime |
-| `end` | `string` | The end time of the promotion DateTime |
-
-## The Schema Object
+### The Schema Object
 
 Moltin offers different types of Promotion all defined by a Schema. These Schemas are used internally to verify a Promotion and calculate a discount.
 
-Below is the list of currently available promotion type Schemas - these are to be used in the [create promotion request](https://docs.moltin.com/?javascript#create-a-promotion).
+Below is the list of currently available promotion type Schemas - these are to be used in the [create promotion request](create-promotion.md).
 
 ### Fixed Discount
 
-```text
-"schema": {
-  "currencies": [
-    {
-      "currency": "GBP",
-      "amount": 1100
-    }
-  ]
-}
-```
-
 Fixed discount provides a method to give a fixed discount to a cart.
 
-| **Name** | **Type** | **Description** |
+{% tabs %}
+{% tab title="Attributes" %}
+| Name | Type | Description |
 | :--- | :--- | :--- |
 | `currencies` | `array` | An array of objects |
 | `currencies[].currency` | `string` | A currency code |
 | `currencies[].amount` | `integer` | The amount to discount by |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+```javascript
+"schema": {
+  "currencies": [
+    {
+      "currency": "GBP",
+       "amount": 1100
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Percent Discount
 
-```text
-  "schema": {
+Percent discount provides a method to give a percentage discount to a cart based on the value of cart\_items and custom\_items.
+
+{% tabs %}
+{% tab title="Attributes" %}
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `currencies` | `array` | An array of objects |
+| `currencies[].currency` | `string` | A currency code |
+| `currencies[].percentage` | `float` | The percentage to discount by |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+```javascript
+ "schema": {
     "currencies": [
       {
         "currency": "GBP",
@@ -91,28 +109,28 @@ Fixed discount provides a method to give a fixed discount to a cart.
     ]
   }
 ```
+{% endtab %}
+{% endtabs %}
 
-Percent discount provides a method to give a percentage discount to a cart based on the value of cart\_items and custom\_items.
-
-| **Name** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `currencies` | `array` | An array of objects |
-| `currencies[].currency` | `string` | A currency code |
-| `currencies[].percentage` | `float` | The percentage to discount by |
-
-## The Promotion Code Object
+### The Promotion Code Object
 
 A promotion code is represented by the following, very simple, object.
 
+{% tabs %}
+{% tab title="Attributes" %}
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `code` | `string` | Any string |
+{% endtab %}
+
+{% tab title="Sample Object" %}
 ```javascript
 {
   "code":"ZXY_CBA"
 }
 ```
-
-| **Name** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `code` | `string` | Any string |
+{% endtab %}
+{% endtabs %}
 
 
 
