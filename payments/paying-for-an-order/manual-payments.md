@@ -174,7 +174,7 @@ curl -X POST https://api.moltin.com/v2/orders/:orderId/transactions/transactionI
      -d $'{
        "data": {
          "gateway": "manual",
-         "method": "capture",
+         "method": "capture"
        }
      }'
 ```
