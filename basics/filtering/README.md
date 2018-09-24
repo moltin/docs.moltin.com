@@ -4,6 +4,12 @@ You can filter results returned from the API using a standard URI format.
 
 ## Supported operators
 
+Not all supported operators work with all endpoint attributes. Each endpoint provides a list of filter attributes. Filtering on [custom data](../../advanced/custom-data/) fields \(Flows\) is not supported.
+
+{% hint style="info" %}
+You can only filter on base object attributes. Filtering through non-base attributes will not work as expected, and will return everything.
+{% endhint %}
+
 | **Operator** | **Description** |
 | :--- | :--- |
 | `eq` | Equals |
@@ -12,10 +18,6 @@ You can filter results returned from the API using a standard URI format.
 | `ge` | Greater than or equal to |
 | `lt` | Less than |
 | `le` | Less than or equal to |
-
-{% hint style="info" %}
-Not all endpoint attributes are available for the supported operators below. Each endpoint provides a list of filter attributes.  You are not able to filter on custom data fields \(flows\).
-{% endhint %}
 
 ## Supported endpoints
 
