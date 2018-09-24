@@ -13,7 +13,7 @@ Promotions allow you to provide discounts to customers. A Promotion requires cod
 | `description` | `string` | The description of a promotion |
 | `enabled` | `boolean` | Indicates whether a promotion is active |
 | `promotion_type` | `string` |  `fixed_discount` or `percent_discount` |
-| `schema` | [object](./#the-schema-object) | `fixed_schema` or `percent_schema` |
+| `schema` | [`object`](./#the-schema-object)\`\` | `fixed_schema` or `percent_schema` |
 | `start` | `string` | The start time of the promotion DateTime |
 | `end` | `string` | The end time of the promotion DateTime |
 {% endtab %}
