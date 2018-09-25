@@ -48,7 +48,7 @@ You should never use or disclose your `client_secret` in public.
 
 Typically, you'd use the implicit authentication method for client-side browser based applications \(i.e. frontend\), and client credentials for all administrative tasks \(CRUD\) you'd need to perform at the backend.
 
-### Handle customer logging
+### Customer authentication
 
-Additional to endpoint authentication, you can provide logging capability. Use [customer token](../../orders-and-customers/customers/customer-tokens.md) to authenticate your customers with email and password.
+You may also use generate [customer tokens](../../orders-and-customers/customers/customer-tokens.md#generate-a-token) to authenticate your customers with an email and password. You can use this to create and filter orders and addresses.
 
