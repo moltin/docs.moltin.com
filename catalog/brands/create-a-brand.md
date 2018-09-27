@@ -117,7 +117,7 @@ const brand = {
   status: 'live'
 }
 
-Moltin.Brands.Update(id, brand).then(brand => {
+Moltin.Brands.Create(id, brand).then(brand => {
   // Do something
 })
 ```
