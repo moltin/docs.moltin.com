@@ -184,7 +184,7 @@ const Moltin = MoltinGateway({
 
 const id = 'XXXX'
 
-const product = {
+const data = {
   'name': 'Updated product name'
 }
 
