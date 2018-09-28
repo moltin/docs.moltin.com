@@ -185,7 +185,9 @@ const Moltin = MoltinGateway({
 const id = 'XXXX'
 
 const data = {
-  'name': 'Updated product name'
+  'name': 'Updated product name',
+  'type': 'product',
+  'id': id
 }
 
 Moltin.Products.Update(id, data).then(product => {
