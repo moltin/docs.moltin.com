@@ -39,36 +39,29 @@ A human readable description of the option
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
-```javascript
-{
-    "data": {
-        "type": "product-variation",
-        "id": "615e4e5a-e43d-4679-9900-191af4724f6d",
-        "name": "Paint colour",
-        "options": [
-            {
-                "id": "aabc3e8e-c6a6-42aa-a64b-9a7dbefedd9f",
-                "name": "Blue",
-                "description": "Our most popular color",
-                "modifiers": []
-            }
-        ],
-        "relationships": {
-            "options": {
-                "data": [
-                    {
-                        "type": "option",
-                        "id": "aabc3e8e-c6a6-42aa-a64b-9a7dbefedd9f"
-                    }
-                ]
-            }
-        }
+```bash
+{  
+  "data":{  
+    "type":"option",
+    "id":"615e4e5a-e43d-4679-9900-191af4724f6d",
+    "name":"Paint colour",
+    "description":"Our most popular color",
+    "relationships":{
+      "modifiers":{
+        "data":[
+          {  
+            "type":"sku-builder",
+            "id":"aabc3e8e-c6a6-42aa-a64b-9a7dbefedd9f"
+          }
+        ]
+      }
     }
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -78,15 +71,15 @@ A human readable description of the option
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+```bash
 curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
         "data": {
-            "type": "option",
-            "name": "Blue",
-            "description": "Our most popular color"
+            "description": "Our most popular color",
+		    "name": "Blue",
+		    "type": "product-variation-option"
         }
     }'
 ```

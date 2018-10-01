@@ -27,10 +27,10 @@ The Bearer token to get access to the API.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+Options successfully retrieved.
 {% endapi-method-response-example-description %}
 
-```javascript
+```bash
 {
     "data": [
         {
@@ -134,7 +134,7 @@ Cake successfully retrieved.
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+```bash
 curl -X GET https://api.moltin.com/v2/variations/:id/options \
      -H "Authorization: Bearer XXXX"
 ```

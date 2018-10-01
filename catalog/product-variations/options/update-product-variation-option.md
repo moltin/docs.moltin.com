@@ -28,6 +28,10 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+The **ID** of the option.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="name" type="string" required=false %}
 A human readable description of the option.
 {% endapi-method-parameter %}
@@ -48,8 +52,25 @@ Represents the type of the object being created.  \(should be option\)
 
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{  
+  "data":{  
+    "id":"1feab4d8-25b3-40d3-8843-8056713dadfc",
+    "type":"option",
+    "description":"Our other most popular color",
+    "name":"Green",
+    "relationships":{
+      "modifiers":{
+        "data":[
+          {  
+            "type":"sku-builder",
+            "id":"a43593a6-92fe-4953-bf4e-a99524918839"
+          }
+        ]
+      }
+    }
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -58,17 +79,18 @@ Represents the type of the object being created.  \(should be option\)
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
-curl -X PUT https://api.moltin.com/v2/variations/:variationId/options \
+```bash
+curl -X PUT https://api.moltin.com/v2/variations/684bceee-0ee3-4f43-ac32-50bb44c1eee5/options/39148bc3-3028-4196-9350-1b4ac927c9d6 \
      -H "Authorization: Bearer XXXX" \
-     -H "Content-Type: application/json" \
+     -H "Content-type: application/json" \
      -d $'{
         "data": {
+            "id": "39148bc3-3028-4196-9350-1b4ac927c9d6",
             "type": "option",
-            "name": "Blue",
-            "description": "Our most popular color"
+            "name": "Green",
+            "description": "Our other most popular color"
         }
-    }'
+    }
 ```
 {% endtab %}
 {% endtabs %}

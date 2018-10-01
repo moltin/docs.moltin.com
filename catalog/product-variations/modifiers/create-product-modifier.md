@@ -43,7 +43,7 @@ A payload specific to the type of modifier.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -51,33 +51,33 @@ A payload specific to the type of modifier.
 ```javascript
 {
     "data": {
-        "type": "product-variation",
-        "id": "0c02ca9f-27be-48a8-89d9-cd7c30699343",
-        "name": "Colour",
+        "id": "5ecf77e7-047a-4a3d-ad8c-b559ecd3df36",
+        "name": "Paint colour",
         "options": [
             {
-                "id": "9000b3bb-4626-4521-9b1a-e89def0ca44a",
-                "name": "Blue",
                 "description": "Our most popular color",
+                "id": "71784b68-9d82-420b-a5fc-00fe4bca8b2e",
                 "modifiers": [
                     {
-                        "id": "74004ddf-4521-4d4b-8c86-04fcd45294b0",
+                        "id": "8080083a-4765-47ac-9ea8-ea875acd0f92",
                         "type": "name_equals",
-                        "value": "Promotional product"
+                        "value": "Updated product name"
                     }
-                ]
+                ],
+                "name": "Blue"
             }
         ],
         "relationships": {
             "options": {
                 "data": [
                     {
-                        "type": "option",
-                        "id": "9000b3bb-4626-4521-9b1a-e89def0ca44a"
+                        "id": "71784b68-9d82-420b-a5fc-00fe4bca8b2e",
+                        "type": "option"
                     }
                 ]
             }
-        }
+        },
+        "type": "product-variation"
     }
 }
 ```
@@ -89,16 +89,17 @@ A payload specific to the type of modifier.
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X "POST" https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers \
+curl -X "PUT" https://api.moltin.com/v2/variations/5ecf77e7-047a-4a3d-ad8c-b559ecd3df36/options/71784b68-9d82-420b-a5fc-00fe4bca8b2e/modifiers/8080083a-4765-47ac-9ea8-ea875acd0f92 \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-      "data": {
-        "type": "modifier",
-        "modifier_type": "name_equals",
-        "value": "Promotional product"
-      }
-    }'
+  "data": {
+    "type": "modifier",
+    "id": "8080083a-4765-47ac-9ea8-ea875acd0f92",
+    "modifer_type": "name_equals",
+    "value": "Updated product name"
+  }
+}
 ```
 {% endtab %}
 {% endtabs %}

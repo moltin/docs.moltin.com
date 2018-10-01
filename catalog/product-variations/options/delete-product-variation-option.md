@@ -29,7 +29,7 @@ The Bearer token to grant access to the API.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -44,9 +44,9 @@ The Bearer token to grant access to the API.
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
-curl -X DELETE https://api.moltin.com/v2/variation/:variationId/option/:optionId \
-     -H "Authorization: Bearer XXXX"
+```bash
+curl -v -X "DELETE" https://api.moltin.com/v2/variations/684bceee-0ee3-4f43-ac32-50bb44c1eee5/options/39148bc3-3028-4196-9350-1b4ac927c9d6 \
+-H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 {% endtabs %}

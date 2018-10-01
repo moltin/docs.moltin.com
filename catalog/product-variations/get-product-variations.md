@@ -1,4 +1,4 @@
-# Get Product Variations
+# Get a Product Variation
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/variations/:id" %}
 {% api-method-summary %}
@@ -52,7 +52,7 @@ The Bearer token that gives you access to the API
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+```bash
 curl -X GET https://api.moltin.com/v2/variations/:id \
      -H "Authorization: Bearer XXXX"
 ```
