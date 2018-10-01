@@ -1,6 +1,6 @@
 # Create Promotion
 
-{% api-method method="get" host="https://api.moltin.com" path="/v2/promotions" %}
+{% api-method method="post" host="https://api.moltin.com" path="/v2/promotions" %}
 {% api-method-summary %}
 Create a Promotion
 {% endapi-method-summary %}
