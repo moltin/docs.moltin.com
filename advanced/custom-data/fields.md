@@ -2,7 +2,7 @@
 
 A Field represents a single Field of data \(for example a `Product Rating`\) to be applied to an entity. All Fields have a type \(`string`, `integer`, `boolean`, `date` or `relationship`\), a default value and an optional set of validation rules.
 
-### The Field Object
+## The Field Object
 
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
@@ -47,46 +47,40 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-    "data": {
-        "id": "102b2087-d56a-45e7-bf1c-e9517716abb3",
-        "type": "field",
-        "field_type": "integer",
-        "slug": "product-rating",
-        "name": "Product Rating",
-        "description": "Average rating as given by our users",
-        "required": false,
-        "unique": false,
-        "default": null,
-        "enabled": true,
-        "validation_rules": [
-            {
-                "type": "between",
-                "options": {
-                    "from": 1,
-                    "to": 5
+    "data": [
+        {
+            "id": "e88d03d3-d46e-40d0-8302-25e6b5b1bd33",
+            "type": "field",
+            "field_type": "boolean",
+            "slug": "on_sale",
+            "name": "On Sale?",
+            "description": "Is this on sale?",
+            "required": false,
+            "unique": false,
+            "default": null,
+            "enabled": true,
+            "order": null,
+            "omit_null": false,
+            "validation_rules": [],
+            "links": {
+                "self": "https://api.moltin.com/v2/flows/9d69c6cf-aaee-4dc6-8908-d2bd053446a2/fields/e88d03d3-d46e-40d0-8302-25e6b5b1bd33"
+            },
+            "relationships": {
+                "flow": {
+                    "data": {
+                        "id": "9d69c6cf-aaee-4dc6-8908-d2bd053446a2",
+                        "type": "flow"
+                    }
                 }
-            }
-        ],
-        "order": 1,
-        "omit_null": false,
-        "links": {
-            "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
-        },
-        "relationships": {
-            "flow": {
-                "data": {
-                    "id": "6d320b42-237d-4474-8452-d49f884d4ae1",
-                    "type": "flow"
+            },
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-08-23T10:28:43.609Z",
+                    "updated_at": "2018-08-23T10:28:43.609Z"
                 }
-            }
-        },
-        "meta": {
-            "timestamps": {
-                "created_at": "2018-05-10T18:19:11.559Z",
-                "updated_at": "2018-05-10T18:19:11.559Z"
             }
         }
-    }
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -149,72 +143,72 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-	"data": [
-		{
-			"id": "23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f",
-			"type": "field",
-			"field_type": "string",
-			"slug": "background_colour",
-			"name": "background colours",
-			"description": "background colour for the product",
-			"required": false,
-			"unique": false,
-			"default": "#ffffff",
-			"enabled": true,
-			"validation_rules": [],
-			"order": null,
-			"omit_null": false,
-			"links": {
-				"self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f"
-			},
-			"relationships": {
-				"flow": {
-					"data": {
-						"id": "248c7776-bd9f-4075-8980-461b02ed3757",
-						"type": "flow"
-					}
-				}
-			},
-			"meta": {
-				"timestamps": {
-					"created_at": "2017-06-26T12:55:33.560Z",
-					"updated_at": "2017-12-19T12:31:24.570Z"
-				}
-			}
-		},
-		{
-			"id": "5f4be5bd-0c83-417a-b744-7d8c49636ab1",
-			"type": "field",
-			"field_type": "string",
-			"slug": "background_image",
-			"name": "Background Image",
-			"description": "The background image for the category",
-			"required": false,
-			"unique": false,
-			"default": null,
-			"enabled": true,
-			"validation_rules": [],
-			"order": null,
-			"omit_null": false,
-			"links": {
-				"self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/5f4be5bd-0c83-417a-b744-7d8c49636ab1"
-			},
-			"relationships": {
-				"flow": {
-					"data": {
-						"id": "248c7776-bd9f-4075-8980-461b02ed3757",
-						"type": "flow"
-					}
-				}
-			},
-			"meta": {
-				"timestamps": {
-					"created_at": "2018-03-29T10:33:24.056Z",
-					"updated_at": "2018-03-29T10:33:24.056Z"
-				}
-			}
-		}
-	]
+    "data": [
+        {
+            "id": "23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f",
+            "type": "field",
+            "field_type": "string",
+            "slug": "background_colour",
+            "name": "background colours",
+            "description": "background colour for the product",
+            "required": false,
+            "unique": false,
+            "default": "#ffffff",
+            "enabled": true,
+            "validation_rules": [],
+            "order": null,
+            "omit_null": false,
+            "links": {
+                "self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f"
+            },
+            "relationships": {
+                "flow": {
+                    "data": {
+                        "id": "248c7776-bd9f-4075-8980-461b02ed3757",
+                        "type": "flow"
+                    }
+                }
+            },
+            "meta": {
+                "timestamps": {
+                    "created_at": "2017-06-26T12:55:33.560Z",
+                    "updated_at": "2017-12-19T12:31:24.570Z"
+                }
+            }
+        },
+        {
+            "id": "5f4be5bd-0c83-417a-b744-7d8c49636ab1",
+            "type": "field",
+            "field_type": "string",
+            "slug": "background_image",
+            "name": "Background Image",
+            "description": "The background image for the category",
+            "required": false,
+            "unique": false,
+            "default": null,
+            "enabled": true,
+            "validation_rules": [],
+            "order": null,
+            "omit_null": false,
+            "links": {
+                "self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/5f4be5bd-0c83-417a-b744-7d8c49636ab1"
+            },
+            "relationships": {
+                "flow": {
+                    "data": {
+                        "id": "248c7776-bd9f-4075-8980-461b02ed3757",
+                        "type": "flow"
+                    }
+                }
+            },
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-03-29T10:33:24.056Z",
+                    "updated_at": "2018-03-29T10:33:24.056Z"
+                }
+            }
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -284,7 +278,7 @@ The Bearer token to grant access to the API
             }
         ],
         "order": 1,
-		"omit_null": false,
+        "omit_null": false,
         "links": {
             "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
         },
@@ -432,7 +426,7 @@ A relationship object to link this field to a flow
             }
         ],
         "order": 1,
-		"omit_null": false,
+        "omit_null": false,
         "links": {
             "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
         },
@@ -549,7 +543,6 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
