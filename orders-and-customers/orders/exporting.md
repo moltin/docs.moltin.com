@@ -28,6 +28,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=true %}
+This must be set to `job`
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="job\_type" type="string" required=true %}
 The type of job, for an order export this would be `order_export`
 {% endapi-method-parameter %}
@@ -74,6 +78,13 @@ This is the same filter you would use when getting all orders.
 ```bash
 curl -X GET https://api.moltin.com/v2/jobs \
      -H "Authorization: Bearer XXXX"
+     -d $'{
+       "data": {
+         "type": "job",
+         "filter": "gt(created_at,2018-09-01):lt(created_at,2018-10-01):eq(payment,refunded)",
+         "job_type": "order_export"
+       }
+     }'
 ```
 {% endtab %}
 {% endtabs %}
