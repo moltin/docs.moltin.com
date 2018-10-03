@@ -353,10 +353,6 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="omit\_null" type="boolean" required=false %}
-Omit this field from responses if the value is `null`
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
@@ -395,6 +391,10 @@ If this field is enabled on the flow this should be `true`, otherwise `false`
 
 {% api-method-parameter name="order" type="integer" required=false %}
 Denotes the order in which this field is returned relative to the rest of the flow fields
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="omit\_null" type="boolean" required=false %}
+Omit this field from responses if the value is `null`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="relationships" type="object" required=true %}
@@ -549,9 +549,6 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="omit\_null" type="boolean" required=false %}
-Omit this field from responses if the value is `null`
-{% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
@@ -587,6 +584,10 @@ If this field is enabled on the flow this should be `true`, otherwise `false`
 
 {% api-method-parameter name="order" type="integer" required=false %}
 Denotes the order in which this field is returned relative to the rest of the flow fields
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="omit\_null" type="boolean" required=false %}
+Omit this field from responses if the value is `null`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="relationships" type="object" required=false %}
