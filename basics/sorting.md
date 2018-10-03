@@ -13,7 +13,7 @@ Currently, sorting is supported for the following endpoints, and against the fol
 | Brands | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
 | Categories | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
 | Collections | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
-| Products | `commodity_type`, `created_at`, `description`, `manage_stock`, `name`, `slug`, `status`, `updated_at` |
+| Products | `commodity_type`, `created_at`, `description`, `manage_stock`, `name`, `sku` ,`slug`, `status`, `updated_at` |
 | Product Variations | `name` |
 | Orders | `payment`, `shipping`, `status` |
 
