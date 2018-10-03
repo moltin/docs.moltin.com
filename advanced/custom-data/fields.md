@@ -19,6 +19,7 @@ A Field represents a single Field of data \(for example a `Product Rating`\) to 
 | `enabled` | `boolean` | If this field is enabled on the flow this should be `true`, otherwise `false` |
 | `order` | `integer` | Denotes the order in which this field is returned relative to the rest of the flow fields |
 | `relationships` | `object` | A relationship object to link this field to a flow |
+| `omit_null` | `boolean` | Hide this field from responses if the value is `null` |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/fields" %}
 {% api-method-summary %}
@@ -67,6 +68,7 @@ The Bearer token to grant access to the API
             }
         ],
         "order": 1,
+        "omit_null": false,
         "links": {
             "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
         },
@@ -161,6 +163,7 @@ The Bearer token to grant access to the API
 			"enabled": true,
 			"validation_rules": [],
 			"order": null,
+			"omit_null": false,
 			"links": {
 				"self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/23d26fd2-d2e2-4c72-b4b4-3ef7a31bc47f"
 			},
@@ -192,6 +195,7 @@ The Bearer token to grant access to the API
 			"enabled": true,
 			"validation_rules": [],
 			"order": null,
+			"omit_null": false,
 			"links": {
 				"self": "https://api.moltin.com/v2/flows/248c7776-bd9f-4075-8980-461b02ed3757/fields/5f4be5bd-0c83-417a-b744-7d8c49636ab1"
 			},
@@ -280,6 +284,7 @@ The Bearer token to grant access to the API
             }
         ],
         "order": 1,
+		"omit_null": false,
         "links": {
             "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
         },
@@ -348,6 +353,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="omit\_null" type="boolean" required=false %}
+Omit this field from responses if the value is `null`
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
@@ -423,6 +432,7 @@ A relationship object to link this field to a flow
             }
         ],
         "order": 1,
+		"omit_null": false,
         "links": {
             "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
         },
@@ -479,6 +489,7 @@ curl -X "POST" "https://api.moltin.com/v2/fields" \
         "default": 0,
         "enabled": true,
         "order": 1,
+        "omit_null": false,
         "relationships": {
             "flow": {
                 "data": {
@@ -538,6 +549,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="omit\_null" type="boolean" required=false %}
+Omit this field from responses if the value is `null`
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
@@ -609,6 +624,7 @@ A relationship object to link this field to a flow
             }
         ],
         "order": 1,
+        "omit_null": false,
         "links": {
             "self": "https://api.moltin.com/v2/flows/6d320b42-237d-4474-8452-d49f884d4ae1/fields/102b2087-d56a-45e7-bf1c-e9517716abb3"
         },
