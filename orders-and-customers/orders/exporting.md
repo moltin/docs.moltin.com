@@ -28,7 +28,7 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=true %}
+{% api-method-parameter name="type" type="string" required=false %}
 This must be set to `job`
 {% endapi-method-parameter %}
 
