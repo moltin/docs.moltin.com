@@ -76,7 +76,7 @@ This is the same filter you would use when getting all orders.
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X GET https://api.moltin.com/v2/jobs \
+curl -X POST https://api.moltin.com/v2/jobs \
      -H "Authorization: Bearer XXXX"
      -d $'{
        "data": {
