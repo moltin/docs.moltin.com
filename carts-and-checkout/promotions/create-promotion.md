@@ -1,5 +1,9 @@
 # Create Promotion
 
+{% hint style="info" %}
+There are two available types of promotion: [**fixed discount**](./#fixed-discount) and [**percent discount**](./#percent-discount). Be sure to look at the [example payloads](create-promotion.md#example-payloads) below when creating a new promotion record. For more details, see: [Developer Portal](https://developers.moltin.com/guides/working-with-promotions).
+{% endhint %}
+
 {% api-method method="post" host="https://api.moltin.com" path="/v2/promotions" %}
 {% api-method-summary %}
 Create a Promotion
@@ -46,22 +50,14 @@ The date at which the promotion starts.
 The date at which the promotion ends.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="amount" type="string" required=true %}
-The amount off to be used for the promotion.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="currencies" type="string" required=true %}
-The Currency code to be used for the discount.
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="schema" type="object" required=true %}
-The schema to be used for the promotion
+See example payloads below.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -99,9 +95,15 @@ The schema to be used for the promotion
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example Payloads
+
+#### Fixed Discount Request
+
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
+//Create a Fixed  Promotion
+
 curl -X "POST" "https://api.moltin.com/v2/promotions" \
      -H 'Content-Type: application/json' \
      -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
@@ -119,6 +121,39 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
     "enabled": true,
     "start": "2017-05-12T15:04:05+00:00",
     "promotion_type": "fixed_discount",
+    "type": "promotion",
+    "description": "Black Friday",
+    "name": "BF"
+  }
+}'
+```
+{% endtab %}
+{% endtabs %}
+
+#### Percent Discount Request
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+//Create a Percent  Request
+
+curl -X "POST" "https://api.moltin.com/v2/promotions" \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
+     -d $'{
+  "data": {
+    "schema": {
+      "currencies": [
+        {
+          "currency": "USD",
+          "percentage": 10
+        }
+      ]
+    },
+    "end": "2018-06-12T15:04:05+00:00",
+    "enabled": true,
+    "start": "2017-05-12T15:04:05+00:00",
+    "promotion_type": "percent_discount",
     "type": "promotion",
     "description": "Black Friday",
     "name": "BF"
