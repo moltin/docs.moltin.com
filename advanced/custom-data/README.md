@@ -1,4 +1,4 @@
-# Custom Data
+# Custom Data \(Flows\)
 
 Create and mange custom data through Flows. Flows allow you to extend an existing or create a new resource.
 
