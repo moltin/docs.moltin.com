@@ -12,7 +12,7 @@
 | `gateway` | `string` | The name of the payment gateway used |
 | `amount` | `integer` | The amount for this transaction |
 | `currency` | `string` | The transaction currency |
-| `transaction-type` | `string` | The type of transaction \(`capture`, `authorize` or `refund`\) |
+| `transaction-type` | `string` | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
 | `status` | `string` | The status provided by the gateway for this transaction. `complete` or `failed` |
 | `relationships` | `object` | This will contain the order object this transaction relates to |
 {% endtab %}
