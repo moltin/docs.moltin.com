@@ -43,11 +43,13 @@ True or False
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="start" type="string" required=true %}
-The date at which the promotion starts.
+The date and time \(optional\) at which the promotion  
+starts. If time's not provided, it will default to the time at which the request was created.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="end" type="string" required=true %}
-The date at which the promotion ends.
+The date and time \(optional\) at which the promotion  
+ends. If time's not provided, it will default to the time at which the request was created. 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="schema" type="object" required=true %}
@@ -97,10 +99,8 @@ See example payloads below.
 
 ### Example Payloads
 
-#### Fixed Discount Request
-
 {% tabs %}
-{% tab title="cURL" %}
+{% tab title="Fixed Discount Request" %}
 ```javascript
 //Create a Fixed  Promotion
 
@@ -117,9 +117,9 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
         }
       ]
     },
-    "end": "2018-06-12T15:04:05+00:00",
+    "end": "2018-06-12",
     "enabled": true,
-    "start": "2017-05-12T15:04:05+00:00",
+    "start": "2017-05-12",
     "promotion_type": "fixed_discount",
     "type": "promotion",
     "description": "Black Friday",
@@ -128,13 +128,9 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
 }'
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Percent Discount Request
-
-{% tabs %}
-{% tab title="cURL" %}
-```javascript
+{% tab title="Percent Discount Request" %}
+```bash
 //Create a Percent  Request
 
 curl -X "POST" "https://api.moltin.com/v2/promotions" \
