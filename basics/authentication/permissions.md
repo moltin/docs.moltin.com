@@ -38,7 +38,7 @@ A breakdown of the access given by the token can be seen in the following table.
 {% endtab %}
 
 {% tab title="Implicit" %}
-The table below shows a breakdown of which API endpoint actions are available to this token type.
+The table below shows a breakdown of which API endpoint actions are available to this token type. Note that you can only fetch data with live status.
 
 | **Endpoint** | **Read access** | **Write access** |
 | :--- | :--- | :--- |

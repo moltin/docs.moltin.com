@@ -1,6 +1,6 @@
 # Implicit token
 
-An `implicit` token is typically used for situations where you are requesting data on the client side and you are exposing your public key.
+An `implicit` token is typically used for situations where you are requesting data on the client side and you are exposing your public key. When authenticated implicitly, you can only fetch \(GET\) data with live status \(products, categories, brands, etc\).
 
 You will use most likely use an `implicit` token inside client-side applications, such as JavaScript.
 
