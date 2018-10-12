@@ -74,7 +74,6 @@ curl -X POST https://api.moltin.com/v2/jobs \
      -H "Authorization: Bearer XXXX"
      -d $'{
        "data": {
-         "type": "job",
          "filter": "gt(created_at,2018-09-01):lt(created_at,2018-10-01):eq(payment,refunded)",
          "job_type": "order_export"
        }

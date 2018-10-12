@@ -43,13 +43,11 @@ True or False
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="start" type="string" required=true %}
-The date and time \(optional\) at which the promotion  
-starts. If time's not provided, it will default to the time at which the request was created.
+The start time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="end" type="string" required=true %}
-The date and time \(optional\) at which the promotion  
-ends. If time's not provided, it will default to the time at which the request was created. 
+The end time of the promotion datetime \(yyy-mm-dd, yyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC. If time's not provided, it will default to the time at which the request was created. 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="schema" type="object" required=true %}
