@@ -1,6 +1,6 @@
 # Delete a Product Variation
 
-{% api-method method="delete" host="https://api.moltin.com" path="/v2/variation/:id" %}
+{% api-method method="delete" host="https://api.moltin.com" path="/v2/variations/:id" %}
 {% api-method-summary %}
 Delete a product variation
 {% endapi-method-summary %}
@@ -41,7 +41,7 @@ The Bearer used to access the API
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X DELETE https://api.moltin.com/v2/variation/:id \
+curl -X DELETE https://api.moltin.com/v2/variations/:id \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
