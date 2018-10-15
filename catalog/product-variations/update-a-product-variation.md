@@ -1,6 +1,6 @@
 # Update a Product Variation
 
-{% api-method method="put" host="https://api.moltin.com" path="/v2/variation/:id" %}
+{% api-method method="put" host="https://api.moltin.com" path="/v2/variations/:id" %}
 {% api-method-summary %}
 Update a Product Variation
 {% endapi-method-summary %}
@@ -61,7 +61,7 @@ A human readable name for this variation.
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X PUT https://api.moltin.com/v2/variation/:id \
+curl -X PUT https://api.moltin.com/v2/variations/:id \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
