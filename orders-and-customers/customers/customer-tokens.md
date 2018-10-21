@@ -108,12 +108,10 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-const customer = {
-  email: 'ron@swanson.com',
-  password: 'mysecretpassword'
-}
+const email = 'ron@swanson.com';
+const password = 'mysecretpassword';
 
-Moltin.Customers.Token(customer).then(data => {
+Moltin.Customers.Token(email,password).then(data => {
   // Do something
 })
 ```
