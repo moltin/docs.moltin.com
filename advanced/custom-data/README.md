@@ -2,7 +2,7 @@
 
 Create and mange custom data through Flows. Flows allow you to extend an existing or create a new resource.
 
-### Core vs. non-core Flow {#core-vs-non-core-flow}
+### Core vs. non-core Flow <a id="core-vs-non-core-flow"></a>
 
 The table below describes main differences between core and non-core Flows.
 
@@ -12,7 +12,7 @@ The table below describes main differences between core and non-core Flows.
 | Entries managed automatically by Moltin. | Need to manually create and manage Entries. |
 | Requests are sent to the Fields endpoint. | Requests are sent to the Entries endpoint. |
 
-### Extend a resource {#extend-a-resource}
+### Extend a resource <a id="extend-a-resource"></a>
 
 Extending a resource is applicable only to core flows. When creating a new flow, make sure the `slug` matches that of a core resource listed below.
 
@@ -32,11 +32,11 @@ Extending a resource is applicable only to core flows. When creating a new flow,
 | `order_items` | Extend the [`order_item`](https://docs.moltin.com/orders-and-customers/orders/order-items#the-order-item-object) object |
 | `promotions` | Extend the [`promotion`](https://docs.moltin.com/carts-and-checkout/promotions#the-promotion-object) object |
 
-### Add a new resource {#add-a-new-resource}
+### Add a new resource <a id="add-a-new-resource"></a>
 
 Adding a new resource is applicable only to non-core \(custom\) flows.
 
-### Resource structure {#resource-structure}
+### Resource structure <a id="resource-structure"></a>
 
 A **Flow** describes a collection of Fields. It is named after the internal entity type you wish to associate it with. For example, a Flow with a slug of `products` will be applied to all product responses in your store.
 

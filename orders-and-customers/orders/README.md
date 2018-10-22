@@ -2,7 +2,7 @@
 
 An Order is created via the [checkout](../../carts-and-checkout/checkout.md) endpoint within the Carts API.
 
-### The Order Object {#the-order-object}
+### The Order Object <a id="the-order-object"></a>
 
 The Order object is a representation of an order in Moltin.
 

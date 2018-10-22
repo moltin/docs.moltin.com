@@ -72,10 +72,10 @@ The file you want to upload
 {% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/files \
-     -H "Content-Type: multipart/form-data" \
-     -H "Authorization: Bearer XXXX" \
-     -d file=@/path/to/file \
-     -d public=true
+    -H "Content-Type: multipart/form-data" \
+    -H "Authorization: Bearer XXXX" \
+    -F file=@path/to/file \
+    -F public=true
 ```
 {% endtab %}
 {% endtabs %}
