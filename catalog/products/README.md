@@ -123,9 +123,9 @@ Products with a **`live`** status will only be returned when requesting via [imp
 
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| `price.amount` | `integer` | Value of the price in the lowest denomination for that currency |
-| `price.currency` | `string` | Currency code of this price \(3 letter ISO\) |
-| `price.includes_tax` | `boolean` | `true` if relevant taxes have been included in the price `false` if not |
+| `price[].amount` | `integer` | Value of the price in the lowest denomination for that currency |
+| `price[].currency` | `string` | Currency code of this price \(3 letter ISO\) |
+| `price[].includes_tax` | `boolean` | `true` if relevant taxes have been included in the price `false` if not |
 
 ## The `meta` object
 
