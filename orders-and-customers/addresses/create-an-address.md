@@ -32,11 +32,11 @@ The Bearer token to grant access to the API
 Represents the type of object being returned
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="first\_name" type="string" required=false %}
+{% api-method-parameter name="first\_name" type="string" required=true %}
 The first name of the recipient on this address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="last\_name" type="string" required=false %}
+{% api-method-parameter name="last\_name" type="string" required=true %}
 The last name of the recipient on this address
 {% endapi-method-parameter %}
 
@@ -56,7 +56,7 @@ Any delivery instructions for this address
 The company name at this address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="line\_1" type="string" required=false %}
+{% api-method-parameter name="line\_1" type="string" required=true %}
 The first portion of the address, usually the street address
 {% endapi-method-parameter %}
 
@@ -68,15 +68,15 @@ The second portion of the address, usually an apartment or unit number
 The city for this address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="county" type="string" required=false %}
+{% api-method-parameter name="county" type="string" required=true %}
 The county for this address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="postcode" type="string" required=false %}
+{% api-method-parameter name="postcode" type="string" required=true %}
 The ZIP Code, Postcode, or other postal reference string for this delivery address
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="country" type="string" required=false %}
+{% api-method-parameter name="country" type="string" required=true %}
 A two digit code for the country this address is in, expressed as per the ISO 3166-2 standard
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
