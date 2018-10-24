@@ -20,7 +20,7 @@ If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| `id` | `string` | The unique identifer for the cart |
+| `id` | `string` | The unique identifer for the cart. Use SDK or create it yourself. |
 | `type` | `string` | This represents the type of object being returned |
 | `links` | [`object`](./#the-links-object) | The links object |
 | `meta` | [`object`](./#the-meta-object) | The meta object |

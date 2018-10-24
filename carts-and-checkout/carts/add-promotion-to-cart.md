@@ -19,7 +19,7 @@ Add Promotion to Cart
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="reference" type="string" required=true %}
-A custom reference for the cart
+A custom reference for the cart created by you
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
