@@ -60,14 +60,13 @@ Filter attributes
     "last": null
   },
   "meta": {
-    "results": {
-      "total": 1,
-      "all": 1
-    },
     "page": {
       "limit": 100,
       "offset": 0,
       "current": 1,
+      "total": 1
+    },
+    "results": {
       "total": 1
     }
   }

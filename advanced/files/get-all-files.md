@@ -63,13 +63,13 @@ Filter attributes
         "last": null
     },
     "meta": {
-        "results": {
-            "total": 1
-        },
         "page": {
             "limit": 100,
             "offset": 0,
-            "self": 1,
+            "current": 1,
+            "total": 1
+        },
+       "results": {
             "total": 1
         }
     }

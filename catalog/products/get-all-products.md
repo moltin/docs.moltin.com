@@ -128,14 +128,13 @@ Filter the results
         "last": null
     },
     "meta": {
-        "results": {
-            "total": 10,
-            "all": 10
-        },
         "page": {
             "limit": 100,
             "offset": 0,
             "current": 1,
+            "total": 1
+        },
+        "results": {
             "total": 1
         }
     }

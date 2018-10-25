@@ -74,15 +74,14 @@ Filter the results.
         "last": null
     },
     "meta": {
-        "results": {
-            "total": 2,
-            "all": 2
-        },
         "page": {
             "limit": 100,
             "offset": 0,
             "current": 1,
             "total": 1
+        },
+        "results": {
+            "total": 2
         }
     }
 }

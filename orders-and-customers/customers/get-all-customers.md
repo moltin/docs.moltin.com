@@ -47,7 +47,18 @@ Filter the results.
             "email": "ron_@swanson.com",
             "password": true
         }
-    ]
+    ],
+    "meta": {
+        "page": {
+            "limit": 10,
+            "offset": 0,
+            "current": 1,
+            "total": 1
+        },
+        "results": {
+            "total": 2
+        }
+    }
 }
 ```
 {% endapi-method-response-example %}
