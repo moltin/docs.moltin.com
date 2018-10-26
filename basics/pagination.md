@@ -1,6 +1,40 @@
 # Pagination
 
-You can easily paginate resources using `page[offset]` and `page[limit]` query string parameters on most top-level endpoints. Both of these values are **integers**.
+### Summary
+
+Pagination is used to move through pages of results.
+
+Example:
+
+```text
+"meta": {
+   "page": {
+       "limit": 10,
+       "offset": 0,
+       "current": 1,
+       "total": 11
+   },
+   "results": {
+       "total": 108
+   }
+}
+
+```
+
+**Page** includes information about the current page.
+
+* limit is the per page limit used for this response.
+* offset is the current offset by number of records \(not pages\).
+* current is the current page.
+* total is the total page count.
+
+**Results** includes information about the whole result set.
+
+* total is the total results that match any filters applied \(or all results if no filter was applied\).
+
+Pagination fields will never be omitted from a listing response, even if there are no results.
+
+You can therefore easily paginate resources using `page[offset]` and `page[limit]` query string parameters on most top-level endpoints. Both of these values are **integers**.
 
 Pagination is also supported within our JavaScript and Swift SDK.
 
