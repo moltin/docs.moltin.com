@@ -29,13 +29,13 @@ Pagination is used to move through pages of results.
 
 **Results** includes information about the whole result set.
 
-* total is the total results that match any filters applied \(or all results if no filter was applied\).
+* total is the total results that match any filters applied \(or all results, if no filter was applied\).
 
 Pagination fields will never be omitted from a listing response, even if there are no results.
 
-You can therefore easily paginate resources using `page[offset]` and `page[limit]` query string parameters on most top-level endpoints. Both of these values are **integers**.
+You can, therefore, easily paginate resources using `page[offset]` and `page[limit]` query string parameters on most top-level endpoints. Both of these values are **integers**.
 
-Pagination is also supported within our JavaScript and Swift SDK.
+Pagination is also supported within our [JavaScript and Swift SDK](https://developers.moltin.com/developer-tools/sdks).
 
 {% hint style="info" %}
 By default, page lengths are set to `100`. You can adjust this setting globally for your project via the [settings endpoint](../advanced/settings/#available-settings).
