@@ -5,18 +5,24 @@ Links are used to allow you as an API consumer to move between requests.
 Single entities use a `self` parameter with a link to that specific resource:
 
 ```javascript
-"links": {"self": "https://api.moltin.com/carts/1"}
+{
+    "links": {
+        "self": "https://api.moltin.com/carts/1"
+    }
+}
 ```
 
 Listing pages use `current`, `first`, `last`, `next`, `previous`:
 
 ```javascript
-"links": {
-    "current": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=0",
-    "first": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=0",
-    "last": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=600",
-    "prev": null,
-    "next": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=100"
+{
+    "links": {
+        "current": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=0",
+        "first": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=0",
+        "last": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=600",
+        "prev": null,
+        "next": "https://api.moltin.com/v2/products?page[limit]=100&page[offset]=100"
+    }
 }
 ```
 
