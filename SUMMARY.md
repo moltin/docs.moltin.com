@@ -12,6 +12,7 @@
 * [Errors](basics/errors.md)
 * [Includes](basics/includes.md)
 * [Pagination](basics/pagination.md)
+* [Links](basics/links.md)
 * [Filtering](basics/filtering/README.md)
   * [Equals](basics/filtering/equals.md)
   * [Like](basics/filtering/like.md)
@@ -19,7 +20,6 @@
 * [Sorting](basics/sorting.md)
 * [Safe Characters](basics/safe-characters.md)
 * [API Status](http://status.moltin.com)
-* [Links](basics/links.md)
 
 ## Catalog
 

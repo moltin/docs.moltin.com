@@ -1,24 +1,23 @@
 # Pagination
 
-### Summary
-
 Pagination is used to move through pages of results.
 
-Example:
+**Example:**
 
-```text
-"meta": {
-   "page": {
-       "limit": 10,
-       "offset": 0,
-       "current": 1,
-       "total": 11
-   },
-   "results": {
-       "total": 108
-   }
+```javascript
+{
+    "meta": {
+       "page": {
+           "limit": 10,
+           "offset": 0,
+           "current": 1,
+           "total": 11
+       },
+       "results": {
+           "total": 108
+       }
+    }
 }
-
 ```
 
 **Page** includes information about the current page.
