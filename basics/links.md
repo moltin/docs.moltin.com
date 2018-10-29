@@ -26,7 +26,7 @@ Listing pages use `current`, `first`, `last`, `next`, `previous`:
 }
 ```
 
-Sometimes, there may not be enough entities for a store to fill multiple pages. In this situation, we will return some defaults, instead of expecting you as a consumer to check for these special cases.
+Sometimes, there may not be enough entities for a project to fill multiple pages. In this situation, we will return some defaults, instead of expecting you as a consumer to check for these special cases.
 
 | Property | ​ |
 | :--- | :--- |
