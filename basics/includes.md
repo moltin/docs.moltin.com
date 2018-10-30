@@ -4,6 +4,10 @@ You can easily include resource relationships on most top-level resources. Multi
 
 Each supported resource includes its own documentation on the available resources that can be included.
 
+If there you request a resource to be includes, but no related entities of that resource type exist for your store, the response will not have any "included" section present.
+
+Similarly, if you request to include a resource that is not supported as an include by the endpoint you are requesting from, there will be no "included" section in the response.
+
 Below are some common include examples.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/:id?include=products" %}
