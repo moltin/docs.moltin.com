@@ -1,6 +1,6 @@
 # Customer Tokens
 
-We provide a basic `/tokens` endpoint that allows you authenticate customers by `email` and `password` so you can easily allow customers to manage their [addresses](../addresses/) or [get orders](../orders/get-all-orders.md) by `customer`.  
+We provide a basic `/tokens` endpoint that allows you authenticate customers by `email` and `password` so you can easily allow customers to manage their [addresses](../addresses/) or [get orders](../orders/get-all-orders.md) by `customer`.
 
 ## The customer token object
 
@@ -137,6 +137,4 @@ You can use a `X-Moltin-Customer-Token` header with the following endpoints. The
 {% page-ref page="../orders/get-all-orders.md" %}
 
 {% page-ref page="../orders/get-an-order.md" %}
-
-
 
