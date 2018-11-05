@@ -46,6 +46,11 @@ If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you
                 "amount": 5891,
                 "currency": "USD",
                 "formatted": "$58.91"
+            },
+            "tax_subtotal": {
+                "amount": 0,
+                "currency": "USD",
+                "formatted": "$0.00"
             }
             },
             "timestamps": {
@@ -78,6 +83,9 @@ If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you
 | `meta.display_price.without_tax.amount` | integer | The raw total of this cart \(ex tax\) |
 | `meta.display_price.without_tax.currency` | string | The currency set for this cart |
 | `meta.display_price.without_tax.formatted` | string | The tax exclusive formatted total based on the currency |
+| `meta.display_price.tax_subtotal.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax_subtotal.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax_subtotal.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | object | Timestamps for this cart |
 | `meta.timestamps.created_at` | string | The creation date of this cart |
 | `meta.timestamps.updated_at` | string | The last updated date of this cart |

@@ -75,6 +75,18 @@ Products added to a cart are referred to as a cart\_item.
                         "currency": "GBP",
                         "formatted": "£89.50"
                     }
+                },
+                "tax_subtotal": {
+                    "unit": {
+                        "amount": 0,
+                        "currency": "GBP",
+                        "formatted": "£0.00"
+                    },
+                    "value": {
+                        "amount": 0,
+                        "currency": "GBP",
+                        "formatted": "£0.00"
+                    }
                 }
             },
         "timestamps": {
@@ -144,7 +156,10 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.without_tax.value` | `object` | Tax exclusive totals for this cart item based on the quantity |
 | `meta.display_price.without_tax.value.amount` | `integer` | The raw total price this cart item line \(ex tax\) |
 | `meta.display_price.without_tax.value.currency` | `string` | The currency set for this cart item |
-| `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this cart item line based on the currency |
+| `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this cart item line based on the currency | 
+| `meta.display_price.tax_subtotal.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax_subtotal.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax_subtotal.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | `object` | Timestamps for this cart item |
 | `meta.timestamps.created_at` | `string` | The creation date of this cart item |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this cart item |
