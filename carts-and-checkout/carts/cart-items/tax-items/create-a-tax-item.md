@@ -57,7 +57,7 @@ The tax rate percentage
 
 {% api-method-response-example httpCode=422 %}
 {% api-method-response-example-description %}
-In this example we skip passing `name` to fail validation
+In this example, we skip passing `name` to fail validation.
 {% endapi-method-response-example-description %}
 
 ```javascript
