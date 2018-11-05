@@ -76,17 +76,17 @@ If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you
 | :--- | :--- | :--- |
 | `meta.display_price` | `object` | A collection of fields related to the total and currency of this cart |
 | `meta.display_price.with_tax` | object | Tax inclusive totals |
-| `meta.display_price.with_tax.amount` | integer | The raw total of this cart \(inc tax\) |
+| `meta.display_price.with_tax.amount` | integer | The raw total of this cart \(incl. tax\) |
 | `meta.display_price.with_tax.currency` | string | The currency set for this cart |
 | `meta.display_price.with_tax.formatted` | string | The tax inclusive formatted total based on the currency |
 | `meta.display_price.without_tax` | object | Tax exclusive totals |
-| `meta.display_price.without_tax.amount` | integer | The raw total of this cart \(ex tax\) |
+| `meta.display_price.without_tax.amount` | integer | The raw total of this cart \(excl. tax\) |
 | `meta.display_price.without_tax.currency` | string | The currency set for this cart |
 | `meta.display_price.without_tax.formatted` | string | The tax exclusive formatted total based on the currency |
 | `meta.display_price.tax_subtotal.amount` | `integer` | The subtotal of the added tax value |
 | `meta.display_price.tax_subtotal.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax_subtotal.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | object | Timestamps for this cart |
-| `meta.timestamps.created_at` | string | The creation date of this cart |
-| `meta.timestamps.updated_at` | string | The last updated date of this cart |
+| `meta.timestamps.created_at` | string | The date this cart was created |
+| `meta.timestamps.updated_at` | string | The date this cart was last updated |
 
