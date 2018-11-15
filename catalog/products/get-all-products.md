@@ -43,7 +43,7 @@ Filter the results
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="include" type="string" required=false %}
-`main_image`, `files`, `brands`, `categories`, `collections`
+`main_images`, `files`, `brands`, `categories`, `collections`
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
