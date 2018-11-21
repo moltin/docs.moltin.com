@@ -48,7 +48,7 @@ The Bearer token to grant access to the API
       "type": "gateway"
     },
     {
-      "enabled": treue,
+      "enabled": true,
       "name": "Manual",
       "slug": "manual",
       "type": "gateway"
