@@ -52,6 +52,7 @@ The tax rate percentage
         "id": "003e2458-3415-4fd2-a10c-ed422bfac4bb",
         "type": "tax_item",
         "name": "My Updated Tax Name",
+        "jurisdiction" : "UK",
         "code": "MYTAX01",
         "rate": 21.5
     }
@@ -73,6 +74,7 @@ curl -X PUT \
             "type": "tax_item",
             "id": "003e2458-3415-4fd2-a10c-ed422bfac4bb",
             "name": "My Updated Tax Name",
+            "jurisdiction" : "UK",
             "rate": 21.5
         }
     }' https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes/:id

@@ -48,6 +48,7 @@ The tax rate percentage
         "id": "003e2458-3415-4fd2-a10c-ed422bfac4bb",
         "type": "tax_item",
         "name": "Tax Name",
+        "jurisdiction" : "UK",
         "code": "MYTAX01",
         "rate": 20.5
     }
@@ -89,6 +90,7 @@ curl -X POST \
         "data": {
             "type": "tax_item",
             "name": "Tax Name",
+            "jurisdiction" : "UK",
             "code": "MYTAX01",
             "rate": 20.5
         }
