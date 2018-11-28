@@ -26,6 +26,12 @@ A custom reference for this cart created by you
 The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="include" type="string" required=false %}
+`tax_items`
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
