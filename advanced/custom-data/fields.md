@@ -392,7 +392,8 @@ Omit this field from responses if the value is `null`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="relationships" type="object" required=true %}
-A relationship object to link this field to a flow
+A relationship object to link this field to a flow.   
+Please note that in this instance, you can link a field to only one flow.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
