@@ -62,5 +62,23 @@ Moltin.Products.Delete(id).then(response => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+
+const client = new createClient({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const id = 'XXXX'
+
+client
+  .delete(`products/${id}`)
+  .then(console.log)
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

@@ -167,6 +167,23 @@ Moltin.Products.All().then(products => {
 ```
 {% endtab %}
 
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+
+const client = new createClient({
+  client_id: 'X'
+})
+
+client
+  .get('products')
+  .then(products => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
+
 {% tab title="Swift SDK" %}
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")
@@ -185,4 +202,6 @@ self.moltin.product.include([.mainImage]).all { (result: Result<PaginatedRespons
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

@@ -178,5 +178,41 @@ Moltin.Products.Create(product).then(product => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+
+const client = new createClient({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const data = {
+  type: 'product',
+  name: 'Deck Shoe',
+  slug: 'deck-shoe',
+  sku: 'deck-shoe-001',
+  description: 'A product for testing purposes',
+  manage_stock: false,
+  price: [
+    {
+      amount: 5891,
+      currency: 'USD',
+      includes_tax: true
+    }
+  ],
+  status: 'live',
+  commodity_type: 'physical'
+}
+
+client
+  .post('products', data)
+  .then(product => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

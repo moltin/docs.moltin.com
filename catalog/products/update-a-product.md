@@ -195,5 +195,31 @@ Moltin.Products.Update(id, data).then(product => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+
+const client = new createClient({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const id = 'XXXX'
+
+const data = {
+  name: 'Updated product name',
+  type: 'product',
+  id
+}
+
+client
+  .put(`products/${id}`, data)
+  .then(product => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 
