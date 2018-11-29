@@ -52,7 +52,6 @@ If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you
                 "currency": "USD",
                 "formatted": "$0.00"
             }
-            },
             "timestamps": {
             "created_at": "0001-01-01T00:00:00Z",
             "updated_at": "0001-01-01T00:00:00Z"

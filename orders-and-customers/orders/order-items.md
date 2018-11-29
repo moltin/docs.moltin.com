@@ -78,7 +78,7 @@
                             "currency": "USD",
                             "formatted": "$400.00"
                         }
-                    },
+                    }
                 },
                 "timestamps": {
                     "created_at": "2018-05-24T09:14:58.18733387Z",

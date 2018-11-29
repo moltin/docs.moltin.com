@@ -87,7 +87,7 @@ Filter attributes
             "amount": 217500,
             "currency": "USD",
             "formatted": "$2175.00"
-          }
+          },
           "tax": {
             "amount": 0,
             "currency": "",

@@ -78,7 +78,7 @@ The Bearer token to grant access to the API
           "amount": 237500,
           "currency": "USD",
           "formatted": "$2175.00"
-        }
+        },
         "tax": {
           "amount": 0,
           "currency": "",

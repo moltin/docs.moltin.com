@@ -160,6 +160,14 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.tax.amount` | `integer` | The subtotal of the added tax value |
 | `meta.display_price.tax.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax.formatted` | `string` | The formatted value for the tax subtotal |
+| `meta.display_price.tax.unit` | object | Tax totals |
+| `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
+| `meta.display_price.tax.unit` | object | Tax totals for this cart item based on the quantity  |
+| `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | `object` | Timestamps for this cart item |
 | `meta.timestamps.created_at` | `string` | The creation date of this cart item |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this cart item |
