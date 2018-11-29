@@ -429,6 +429,11 @@ Shipping instructions
                     "currency": "USD",
                     "formatted": "$475.00"
                 }
+                "tax": {
+                    "amount": 0,
+                    "currency": "",
+                    "formatted": ""
+                }
             },
             "timestamps": {
                 "created_at": "2018-05-09T09:53:16.045565913Z",
