@@ -127,18 +127,32 @@
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | `meta.display_price` | `object` | Formatted display prices based on the currency settings for this request |
-| `meta.display_price.with_tax` | `object` | Tax inclusive prices for this product |
-| `meta.display_price.with_tax.amount` | `integer` | The raw total of this product \(includes tax\) |
-| `meta.display_price.with_tax.currency` | `string` | The currency this display price has been formatted for |
-| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total based on the currency |
-| `meta.display_price.without_tax` | `object` | Tax exclusive prices for this product |
-| `meta.display_price.without_tax.amount` | `integer` | The raw total of this product \(excludes tax\) |
-| `meta.display_price.without_tax.currency` | `string` | The currency this display price has been formatted for |
-| `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total based on the currency |
-| `meta.display_price.tax` | `object` | Tax totals |
-| `meta.display_price.tax.amount` | `integer` | The subtotal of the added tax value |
-| `meta.display_price.tax.currency` | `string` | The currency set for the tax |
-| `meta.display_price.tax.formatted` | `string` | The formatted value for the tax subtotal |
+| `meta.display_price.with_tax` | `object` | Tax inclusive totals |
+| `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single instance of this order item |
+| `meta.display_price.with_tax.unit.amount` | `integer` | The raw price of a single instance this order item \(inc tax\) |
+| `meta.display_price.with_tax.currency` | `string` | The currency set for this order item |
+| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total of a single instance of this order item based on the currency |
+| `meta.display_price.with_tax.value` | `object` | Tax inclusive totals for this order item based on the quantity |
+| `meta.display_price.with_tax.value.amount` | `integer` | The raw total price this order item \(inc tax\) |
+| `meta.display_price.with_tax.value.currency` | `string` | The currency set for this order item |
+| `meta.display_price.with_tax.value.formatted` | `string` | The tax inclusive formatted total of this order item line based on the currency |
+| `meta.display_price.without_tax` | `object` | Tax exclusive totals |
+| `meta.display_price.without_tax.unit` | `object` | Tax exclusive totals for a single instance of this order item |
+| `meta.display_price.without_tax.unit.amount` | `integer` | The raw price of a single instance this order item \(ex tax\) |
+| `meta.display_price.without_tax.currency` | `string` | The currency set for this order item |
+| `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total of a single instance of this order item based on the currency |
+| `meta.display_price.without_tax.value` | `object` | Tax exclusive totals for this order item based on the quantity |
+| `meta.display_price.without_tax.value.amount` | `integer` | The raw total price for this order item \(ex tax\) |
+| `meta.display_price.without_tax.value.currency` | `string` | The currency set for this order item |
+| `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this order item line based on the currency | 
+| `meta.display_price.tax.unit` | `object` | Tax totals |
+| `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value for a single instance of this order item |
+| `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
+| `meta.display_price.tax.value` | `object` | Tax totals for this order item based on the quantity  |
+| `meta.display_price.tax.value.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax.value.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.value.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | `object` | Timestamps for this product |
 | `meta.timestamps.created_at` | `string` | The creation date of this product |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this product |
