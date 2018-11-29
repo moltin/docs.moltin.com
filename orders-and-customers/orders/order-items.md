@@ -66,7 +66,19 @@
                             "currency": "USD",
                             "formatted": "$400.00"
                         }
-                    }
+                    },
+                    "tax": {
+                        "unit": {
+                            "amount": 40000,
+                            "currency": "USD",
+                            "formatted": "$400.00"
+                        },
+                        "value": {
+                            "amount": 40000,
+                            "currency": "USD",
+                            "formatted": "$400.00"
+                        }
+                    },
                 },
                 "timestamps": {
                     "created_at": "2018-05-24T09:14:58.18733387Z",
@@ -123,6 +135,10 @@
 | `meta.display_price.without_tax.amount` | `integer` | The raw total of this product \(excludes tax\) |
 | `meta.display_price.without_tax.currency` | `string` | The currency this display price has been formatted for |
 | `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total based on the currency |
+| `meta.display_price.tax` | `object` | Tax totals |
+| `meta.display_price.tax.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | `object` | Timestamps for this product |
 | `meta.timestamps.created_at` | `string` | The creation date of this product |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this product |
@@ -202,6 +218,18 @@ The Bearer token to grant access to the API
             }
           },
           "without_tax": {
+            "unit": {
+              "amount": 0,
+              "currency": "GBP",
+              "formatted": "£0"
+            },
+            "value": {
+              "amount": 0,
+              "currency": "GBP",
+              "formatted": "£0"
+            }
+          },
+          "tax": {
             "unit": {
               "amount": 0,
               "currency": "GBP",

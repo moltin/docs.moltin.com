@@ -79,6 +79,11 @@ The Bearer token to grant access to the API
           "currency": "USD",
           "formatted": "$2175.00"
         }
+        "tax": {
+          "amount": 0,
+          "currency": "",
+          "formatted": ""
+        }
       },
       "timestamps": {
         "created_at": "2018-04-16T10:11:59.715Z",
