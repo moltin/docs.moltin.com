@@ -31,7 +31,7 @@ A unique tax code for this kind of tax item
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="rate" type="float" required=true %}
-The tax rate percentage
+The tax rate percentage represented as a float
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -50,7 +50,7 @@ The tax rate percentage
         "name": "Tax Name",
         "jurisdiction" : "UK",
         "code": "MYTAX01",
-        "rate": 20.5
+        "rate": 0.2
     }
 }
 ```
@@ -92,7 +92,7 @@ curl -X POST \
             "name": "Tax Name",
             "jurisdiction" : "UK",
             "code": "MYTAX01",
-            "rate": 20.5
+            "rate": 0.2
         }
     }' https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes
 ```
