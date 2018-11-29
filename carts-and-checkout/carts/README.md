@@ -37,24 +37,25 @@ If you do not pass a **`X-MOLTIN-CURRENCY`** header specifying what currency you
         },
         "meta": {
             "display_price": {
-            "with_tax": {
-                "amount": 5891,
-                "currency": "USD",
-                "formatted": "$58.91"
+                "with_tax": {
+                    "amount": 5891,
+                    "currency": "USD",
+                    "formatted": "$58.91"
+                },
+                "without_tax": {
+                    "amount": 5891,
+                    "currency": "USD",
+                    "formatted": "$58.91"
+                },
+                "tax": {
+                    "amount": 0,
+                    "currency": "USD",
+                    "formatted": "$0.00"
+                }
             },
-            "without_tax": {
-                "amount": 5891,
-                "currency": "USD",
-                "formatted": "$58.91"
-            },
-            "tax": {
-                "amount": 0,
-                "currency": "USD",
-                "formatted": "$0.00"
-            }
             "timestamps": {
-            "created_at": "0001-01-01T00:00:00Z",
-            "updated_at": "0001-01-01T00:00:00Z"
+                "created_at": "0001-01-01T00:00:00Z",
+                "updated_at": "0001-01-01T00:00:00Z"
             }
         }
     }

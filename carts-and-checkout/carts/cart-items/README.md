@@ -157,14 +157,11 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.without_tax.value.amount` | `integer` | The raw total price this cart item line \(ex tax\) |
 | `meta.display_price.without_tax.value.currency` | `string` | The currency set for this cart item |
 | `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this cart item line based on the currency | 
-| `meta.display_price.tax.amount` | `integer` | The subtotal of the added tax value |
-| `meta.display_price.tax.currency` | `string` | The currency set for the tax |
-| `meta.display_price.tax.formatted` | `string` | The formatted value for the tax subtotal |
-| `meta.display_price.tax.unit` | object | Tax totals |
+| `meta.display_price.tax.unit` | `object` | Tax totals |
 | `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value |
 | `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
-| `meta.display_price.tax.unit` | object | Tax totals for this cart item based on the quantity  |
+| `meta.display_price.tax.unit` | `object` | Tax totals for this cart item based on the quantity  |
 | `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value |
 | `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
