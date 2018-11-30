@@ -130,8 +130,8 @@
 | `meta.display_price.with_tax` | `object` | Tax inclusive totals |
 | `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single instance of this order item |
 | `meta.display_price.with_tax.unit.amount` | `integer` | The raw price of a single instance this order item \(inc tax\) |
-| `meta.display_price.with_tax.currency` | `string` | The currency set for this order item |
-| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total of a single instance of this order item based on the currency |
+| `meta.display_price.with_tax.unit.currency` | `string` | The currency set for this order item |
+| `meta.display_price.with_tax.unit.formatted` | `string` | The tax inclusive formatted total of this order item line based on the currency |
 | `meta.display_price.with_tax.value` | `object` | Tax inclusive totals for this order item based on the quantity |
 | `meta.display_price.with_tax.value.amount` | `integer` | The raw total price this order item \(inc tax\) |
 | `meta.display_price.with_tax.value.currency` | `string` | The currency set for this order item |
@@ -139,13 +139,14 @@
 | `meta.display_price.without_tax` | `object` | Tax exclusive totals |
 | `meta.display_price.without_tax.unit` | `object` | Tax exclusive totals for a single instance of this order item |
 | `meta.display_price.without_tax.unit.amount` | `integer` | The raw price of a single instance this order item \(ex tax\) |
-| `meta.display_price.without_tax.currency` | `string` | The currency set for this order item |
-| `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total of a single instance of this order item based on the currency |
+| `meta.display_price.without_tax.unit.currency` | `string` | The currency set for this order item |
+| `meta.display_price.without_tax.unit.formatted` | `string` | The tax exclusive formatted total of this order item line based on the currency |
 | `meta.display_price.without_tax.value` | `object` | Tax exclusive totals for this order item based on the quantity |
 | `meta.display_price.without_tax.value.amount` | `integer` | The raw total price for this order item \(ex tax\) |
 | `meta.display_price.without_tax.value.currency` | `string` | The currency set for this order item |
-| `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this order item line based on the currency | 
-| `meta.display_price.tax.unit` | `object` | Tax totals |
+| `meta.display_price.without_tax.value.formatted` | `string` | The tax exclusive formatted total of this order item line based on the currency |
+| `meta.display_price.tax` | `object` | Tax totals |
+| `meta.display_price.tax.unit` | `object` | Tax totals for a single instance of this order item |
 | `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value for a single instance of this order item |
 | `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
