@@ -142,8 +142,8 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.with_tax` | `object` | Tax inclusive totals |
 | `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single instance of this cart item |
 | `meta.display_price.with_tax.unit.amount` | `integer` | The raw price of a single instance this cart item \(inc tax\) |
-| `meta.display_price.with_tax.currency` | `string` | The currency set for this cart item |
-| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total of a single instance of this cart item based on the currency |
+| `meta.display_price.with_tax.unit.currency` | `string` | The currency set for this cart item |
+| `meta.display_price.with_tax.unit.formatted` | `string` | The tax inclusive formatted total of a single instance of this cart item based on the currency |
 | `meta.display_price.with_tax.value` | `object` | Tax inclusive totals for this cart item based on the quantity |
 | `meta.display_price.with_tax.value.amount` | `integer` | The raw total price this cart item line \(inc tax\) |
 | `meta.display_price.with_tax.value.currency` | `string` | The currency set for this cart item |
@@ -151,8 +151,8 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.without_tax` | `object` | Tax exclusive totals |
 | `meta.display_price.without_tax.unit` | `object` | Tax exclusive totals for a single instance of this cart item |
 | `meta.display_price.without_tax.unit.amount` | `integer` | The raw price of a single instance this cart item \(ex tax\) |
-| `meta.display_price.without_tax.currency` | `string` | The currency set for this cart item |
-| `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total of a single instance of this cart item based on the currency |
+| `meta.display_price.without_tax.unit.currency` | `string` | The currency set for this cart item |
+| `meta.display_price.without_tax.unit.formatted` | `string` | The tax exclusive formatted total of a single instance of this cart item based on the currency |
 | `meta.display_price.without_tax.value` | `object` | Tax exclusive totals for this cart item based on the quantity |
 | `meta.display_price.without_tax.value.amount` | `integer` | The raw total price this cart item line \(ex tax\) |
 | `meta.display_price.without_tax.value.currency` | `string` | The currency set for this cart item |
