@@ -61,6 +61,10 @@ The amount of custom items to add to cart
 {% api-method-parameter name="price.amount" type="integer" required=true %}
 The price of the custom item
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="price.includes\_tax" type="boolean" required=false %}
+`true` if relevant taxes have been included in the price, `false` if not. Defaults to `true`
+{% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
