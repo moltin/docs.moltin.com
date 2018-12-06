@@ -166,6 +166,10 @@
 | `relationships.cart_item.data` | `object` | The associated cart |
 | `relationships.cart_item.data.type` | `string` | The type represents the object being returned |
 | `relationships.cart_item.data.id` | `string` | The unique identifier for this cart item |
+| `relationships.taxes` | `object` | The taxes object |
+| `relationships.taxes.data` | `array` | Array of tax items associated with the order item |
+| `relationships.taxes.data.type` | `string` | The type represents the object being returned |
+| `relationships.taxes.data.id` | `string` | The unique identifier for this tax item |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/orders/:id/items" %}
 {% api-method-summary %}
@@ -199,79 +203,87 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-  "data": [
-    {
-      "type": "order_item",
-      "id": "e8e2655f-3365-49f9-a2f0-1360a295019b",
-      "quantity": 1,
-      "product_id": "bf8a9d62-6ca9-45f6-85eb-f0d1d9ae7fdd",
-      "name": "Woodsy",
-      "sku": "WDLP100BRO",
-      "unit_price": {
-        "amount": 0,
-        "currency": "GBP",
-        "includes_tax": false
-      },
-      "value": {
-        "amount": 0,
-        "currency": "GBP",
-        "includes_tax": false
-      },
-      "links": {},
-      "meta": {
-        "display_price": {
-          "with_tax": {
-            "unit": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+    "data": [
+        {
+            "type": "order_item",
+            "id": "e8e2655f-3365-49f9-a2f0-1360a295019b",
+            "quantity": 1,
+            "product_id": "bf8a9d62-6ca9-45f6-85eb-f0d1d9ae7fdd",
+            "name": "Woodsy",
+            "sku": "WDLP100BRO",
+            "unit_price": {
+                "amount": 0,
+                "currency": "GBP",
+                "includes_tax": false
             },
             "value": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
-            }
-          },
-          "without_tax": {
-            "unit": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+                "amount": 0,
+                "currency": "GBP",
+                "includes_tax": false
             },
-            "value": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
-            }
-          },
-          "tax": {
-            "unit": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+            "links": {},
+            "meta": {
+                "display_price": {
+                    "with_tax": {
+                        "unit": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        },
+                        "value": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        }
+                    },
+                    "without_tax": {
+                        "unit": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        },
+                        "value": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        }
+                    },
+                    "tax": {
+                        "unit": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        },
+                        "value": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        }
+                    }
+                },
+                "timestamps": {
+                    "created_at": "2018-04-30T10:26:13.342815487Z",
+                    "updated_at": "2018-04-30T10:26:13.342815487Z"
+                }
             },
-            "value": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+            "relationships": {
+                "cart_item": {
+                    "data": {
+                        "type": "cart_item",
+                        "id": "62d93144-74ab-4acc-9151-0c96d683c201"
+                    }
+                },
+                "taxes": {
+                    "data": [
+                        {
+                            "type": "tax_item",
+                            "id": "6c111e80-9254-4592-b9f4-a30f22b5a8c4"
+                        }
+                    ]
+                }
             }
-          }
-        },
-        "timestamps": {
-          "created_at": "2018-04-30T10:26:13.342815487Z",
-          "updated_at": "2018-04-30T10:26:13.342815487Z"
         }
-      },
-      "relationships": {
-        "cart_item": {
-          "data": {
-            "type": "cart_item",
-            "id": "62d93144-74ab-4acc-9151-0c96d683c201"
-          }
-        }
-      }
-    }
-  ]
+    ]
 }
 ```
 {% endapi-method-response-example %}
