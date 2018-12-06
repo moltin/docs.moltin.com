@@ -82,6 +82,7 @@ curl -X POST https://api.moltin.com/v2/files \
 {% tab title="Moltin Request" %}
 ```javascript
 const { createClient } = require('@moltin/request')
+const FormData = require("form-data");
 
   const client = new createClient({
     client_id: 'X',
@@ -91,7 +92,8 @@ const { createClient } = require('@moltin/request')
   const formData = new FormData();
   formData.append("file_name", fileName);
   formData.append("public", "true");
-  formData.append("file", body, { filename: fileName });
+  //file need to be sent in a buffer
+  formData.append("file", buffer, { filename: fileName });
 
   const headers = {
     "Content-Type": formData.getHeaders()["content-type"]
