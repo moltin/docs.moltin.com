@@ -141,7 +141,7 @@ Delete Parent Category Relationship
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-Th of the parent category you with to delete the relationship to
+The **ID** of the parent category you with to delete the relationship to
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
