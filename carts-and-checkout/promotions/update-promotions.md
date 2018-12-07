@@ -52,11 +52,11 @@ One of: fixed\_discount or percent\_discount
 One of: fixed schema, percent schema
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="start" type="string" required=false %}
+{% api-method-parameter name="start" type="string" required=true %}
 The start time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created. 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="end" type="string" required=false %}
+{% api-method-parameter name="end" type="string" required=true %}
 The end time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
