@@ -19,6 +19,48 @@ You can only filter on base object attributes. Filtering through non-base attrib
 | `lt` | Less than |
 | `le` | Less than or equal to |
 
+Passing an incorrectly formatted filter or using an unsupported operator will return a `400` response with the following error:
+
+```javascript
+{
+  "errors": [
+    {
+      "title": "Bad Request",
+      "detail": "Could not parse the supplied filter"
+    }
+  ]
+}
+```
+
+## Supported characters
+
+As filters are passed as URL query string parameters, we must ensure all filters are URL safe and are strict about the characters that can be used in a filter.
+
+| Characters | Can be used in filter? |
+| :--- | :--- |
+| `A-Z` \(upper & lower case\) | Yes |
+| `0-9` | Yes |
+| `$` `-` `_` `*` `.`  | Yes |
+|  `` \(space\) | Yes \(an unencoded `+` will also be treated as a space\) |
+| `+` | Only when URL encoded \(`%2B`\) |
+
+Passing unsupported characters will return a `400` response with the following error:
+
+```javascript
+{
+  "errors": [
+    {
+      "title": "Bad Request",
+      "detail": "The supplied filter contained unsupported characters"
+    }
+  ]
+}
+```
+
+## URL encoding filters
+
+We recommend URL encoding filters before sending them to Moltin. For ease of use, you can encode the full filter, so `filter=eq(email,ron+1@swanson.com)` would become `filter=eq%28email%2Cron%2B1%40swanson.com%29`.
+
 ## Supported endpoints
 
 * `/brands`
