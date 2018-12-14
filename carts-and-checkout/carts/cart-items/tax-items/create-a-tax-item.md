@@ -22,15 +22,15 @@ The Bearer token to grant access to the API
 This represents the type of object being returned
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=true %}
+{% api-method-parameter name="name" type="string" required=false %}
 The name of the tax item
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="jurisdiction" type="string" required=true %}
+{% api-method-parameter name="jurisdiction" type="string" required=false %}
 The jurisdiction of the tax item
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="code" type="string" required=true %}
+{% api-method-parameter name="code" type="string" required=false %}
 A unique tax code for this kind of tax item
 {% endapi-method-parameter %}
 
@@ -98,3 +98,4 @@ curl -X POST https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes \
 ```
 {% endtab %}
 {% endtabs %}
+

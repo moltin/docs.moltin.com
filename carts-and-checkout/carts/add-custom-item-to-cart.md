@@ -29,7 +29,7 @@ A custom reference for this cart created by you
 
 {% api-method-headers %}
 {% api-method-parameter name="X-MOLTIN-CURRENCY" type="string" required=false %}
-Specifies the currency to be used for the products in the cart.  Your site's default will be used if not specified
+Specifies the currency to be used for the products in the cart. Your site's default will be used if not specified
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}

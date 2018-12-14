@@ -111,7 +111,6 @@ self.moltin.cart.items(forCartID: referenceId) { (result) in
             }
         }
     }
-
 ```
 {% endtab %}
 {% endtabs %}

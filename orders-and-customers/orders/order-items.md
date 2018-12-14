@@ -150,7 +150,7 @@
 | `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value for a single instance of this order item |
 | `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
-| `meta.display_price.tax.value` | `object` | Tax totals for this order item based on the quantity  |
+| `meta.display_price.tax.value` | `object` | Tax totals for this order item based on the quantity |
 | `meta.display_price.tax.value.amount` | `integer` | The subtotal of the added tax value |
 | `meta.display_price.tax.value.currency` | `string` | The currency set for the tax |
 | `meta.display_price.tax.value.formatted` | `string` | The formatted value for the tax subtotal |

@@ -53,7 +53,7 @@ Postcode of the billing address
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="bililng\_address.county" type="string" required=true %}
-County / state /  region of the billing address
+County / state / region of the billing address
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="billing\_address.country" type="string" required=true %}
@@ -572,6 +572,4 @@ moltin.cart.checkout(
 Once a Cart has been converted to an Order using either of the methods above, you will most likely want to capture payment for order.
 
 {% page-ref page="../payments/paying-for-an-order/" %}
-
-
 
