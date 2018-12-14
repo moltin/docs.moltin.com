@@ -79,7 +79,7 @@ In this example, we skip passing `name` to fail validation.
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST \
+curl -X POST https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer XXXX" \
     -d $'{
@@ -90,7 +90,7 @@ curl -X POST \
             "code": "MYTAX01",
             "rate": 0.2
         }
-    }' https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes
+    }'
 ```
 {% endtab %}
 {% endtabs %}
