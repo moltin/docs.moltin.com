@@ -35,7 +35,7 @@ A unique tax code in this jurisdiction
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="rate" type="float" required=true %}
-The tax rate percentage represented as a float
+The tax rate represented as a decimal \(12.5% -&gt; 0.125\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
