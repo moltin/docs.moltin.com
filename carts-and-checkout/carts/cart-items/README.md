@@ -75,6 +75,18 @@ Products added to a cart are referred to as a cart\_item.
                         "currency": "GBP",
                         "formatted": "£89.50"
                     }
+                },
+                "tax": {
+                    "unit": {
+                        "amount": 0,
+                        "currency": "GBP",
+                        "formatted": "£0.00"
+                    },
+                    "value": {
+                        "amount": 0,
+                        "currency": "GBP",
+                        "formatted": "£0.00"
+                    }
                 }
             },
         "timestamps": {
@@ -130,8 +142,8 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.with_tax` | `object` | Tax inclusive totals |
 | `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single instance of this cart item |
 | `meta.display_price.with_tax.unit.amount` | `integer` | The raw price of a single instance this cart item \(inc tax\) |
-| `meta.display_price.with_tax.currency` | `string` | The currency set for this cart item |
-| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total of a single instance of this cart item based on the currency |
+| `meta.display_price.with_tax.unit.currency` | `string` | The currency set for this cart item |
+| `meta.display_price.with_tax.unit.formatted` | `string` | The tax inclusive formatted total of a single instance of this cart item based on the currency |
 | `meta.display_price.with_tax.value` | `object` | Tax inclusive totals for this cart item based on the quantity |
 | `meta.display_price.with_tax.value.amount` | `integer` | The raw total price this cart item line \(inc tax\) |
 | `meta.display_price.with_tax.value.currency` | `string` | The currency set for this cart item |
@@ -139,12 +151,21 @@ The `image` object will be empty if there is no main image assigned.
 | `meta.display_price.without_tax` | `object` | Tax exclusive totals |
 | `meta.display_price.without_tax.unit` | `object` | Tax exclusive totals for a single instance of this cart item |
 | `meta.display_price.without_tax.unit.amount` | `integer` | The raw price of a single instance this cart item \(ex tax\) |
-| `meta.display_price.without_tax.currency` | `string` | The currency set for this cart item |
-| `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total of a single instance of this cart item based on the currency |
+| `meta.display_price.without_tax.unit.currency` | `string` | The currency set for this cart item |
+| `meta.display_price.without_tax.unit.formatted` | `string` | The tax exclusive formatted total of a single instance of this cart item based on the currency |
 | `meta.display_price.without_tax.value` | `object` | Tax exclusive totals for this cart item based on the quantity |
 | `meta.display_price.without_tax.value.amount` | `integer` | The raw total price this cart item line \(ex tax\) |
 | `meta.display_price.without_tax.value.currency` | `string` | The currency set for this cart item |
-| `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this cart item line based on the currency |
+| `meta.display_price.without_tax.value.formatted` | `string` | The tax inclusive formatted total of this cart item line based on the currency | 
+| `meta.display_price.tax` | `object` | Tax totals |
+| `meta.display_price.tax.unit` | `object` | Tax totals for a single instance of this cart item |
+| `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value for a single instance of this cart item |
+| `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
+| `meta.display_price.tax.value` | `object` | Tax totals for this cart item based on the quantity  |
+| `meta.display_price.tax.value.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax.value.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.value.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | `object` | Timestamps for this cart item |
 | `meta.timestamps.created_at` | `string` | The creation date of this cart item |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this cart item |

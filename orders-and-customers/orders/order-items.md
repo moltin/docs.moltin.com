@@ -66,6 +66,18 @@
                             "currency": "USD",
                             "formatted": "$400.00"
                         }
+                    },
+                    "tax": {
+                        "unit": {
+                            "amount": 40000,
+                            "currency": "USD",
+                            "formatted": "$400.00"
+                        },
+                        "value": {
+                            "amount": 40000,
+                            "currency": "USD",
+                            "formatted": "$400.00"
+                        }
                     }
                 },
                 "timestamps": {
@@ -115,14 +127,33 @@
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | `meta.display_price` | `object` | Formatted display prices based on the currency settings for this request |
-| `meta.display_price.with_tax` | `object` | Tax inclusive prices for this product |
-| `meta.display_price.with_tax.amount` | `integer` | The raw total of this product \(includes tax\) |
-| `meta.display_price.with_tax.currency` | `string` | The currency this display price has been formatted for |
-| `meta.display_price.with_tax.formatted` | `string` | The tax inclusive formatted total based on the currency |
-| `meta.display_price.without_tax` | `object` | Tax exclusive prices for this product |
-| `meta.display_price.without_tax.amount` | `integer` | The raw total of this product \(excludes tax\) |
-| `meta.display_price.without_tax.currency` | `string` | The currency this display price has been formatted for |
-| `meta.display_price.without_tax.formatted` | `string` | The tax exclusive formatted total based on the currency |
+| `meta.display_price.with_tax` | `object` | Tax inclusive totals |
+| `meta.display_price.with_tax.unit` | `object` | Tax inclusive totals for a single instance of this order item |
+| `meta.display_price.with_tax.unit.amount` | `integer` | The raw price of a single instance this order item \(inc tax\) |
+| `meta.display_price.with_tax.unit.currency` | `string` | The currency set for this order item |
+| `meta.display_price.with_tax.unit.formatted` | `string` | The tax inclusive formatted total of this order item line based on the currency |
+| `meta.display_price.with_tax.value` | `object` | Tax inclusive totals for this order item based on the quantity |
+| `meta.display_price.with_tax.value.amount` | `integer` | The raw total price this order item \(inc tax\) |
+| `meta.display_price.with_tax.value.currency` | `string` | The currency set for this order item |
+| `meta.display_price.with_tax.value.formatted` | `string` | The tax inclusive formatted total of this order item line based on the currency |
+| `meta.display_price.without_tax` | `object` | Tax exclusive totals |
+| `meta.display_price.without_tax.unit` | `object` | Tax exclusive totals for a single instance of this order item |
+| `meta.display_price.without_tax.unit.amount` | `integer` | The raw price of a single instance this order item \(ex tax\) |
+| `meta.display_price.without_tax.unit.currency` | `string` | The currency set for this order item |
+| `meta.display_price.without_tax.unit.formatted` | `string` | The tax exclusive formatted total of this order item line based on the currency |
+| `meta.display_price.without_tax.value` | `object` | Tax exclusive totals for this order item based on the quantity |
+| `meta.display_price.without_tax.value.amount` | `integer` | The raw total price for this order item \(ex tax\) |
+| `meta.display_price.without_tax.value.currency` | `string` | The currency set for this order item |
+| `meta.display_price.without_tax.value.formatted` | `string` | The tax exclusive formatted total of this order item line based on the currency |
+| `meta.display_price.tax` | `object` | Tax totals |
+| `meta.display_price.tax.unit` | `object` | Tax totals for a single instance of this order item |
+| `meta.display_price.tax.unit.amount` | `integer` | The subtotal of the added tax value for a single instance of this order item |
+| `meta.display_price.tax.unit.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.unit.formatted` | `string` | The formatted value for the tax subtotal |
+| `meta.display_price.tax.value` | `object` | Tax totals for this order item based on the quantity  |
+| `meta.display_price.tax.value.amount` | `integer` | The subtotal of the added tax value |
+| `meta.display_price.tax.value.currency` | `string` | The currency set for the tax |
+| `meta.display_price.tax.value.formatted` | `string` | The formatted value for the tax subtotal |
 | `meta.timestamps` | `object` | Timestamps for this product |
 | `meta.timestamps.created_at` | `string` | The creation date of this product |
 | `meta.timestamps.updated_at` | `string` | The last updated date of this product |
@@ -135,6 +166,10 @@
 | `relationships.cart_item.data` | `object` | The associated cart |
 | `relationships.cart_item.data.type` | `string` | The type represents the object being returned |
 | `relationships.cart_item.data.id` | `string` | The unique identifier for this cart item |
+| `relationships.taxes` | `object` | The taxes object |
+| `relationships.taxes.data` | `array` | Array of tax items associated with the order item |
+| `relationships.taxes.data.type` | `string` | The type represents the object being returned |
+| `relationships.taxes.data.id` | `string` | The unique identifier for this tax item |
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/orders/:id/items" %}
 {% api-method-summary %}
@@ -168,67 +203,87 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-  "data": [
-    {
-      "type": "order_item",
-      "id": "e8e2655f-3365-49f9-a2f0-1360a295019b",
-      "quantity": 1,
-      "product_id": "bf8a9d62-6ca9-45f6-85eb-f0d1d9ae7fdd",
-      "name": "Woodsy",
-      "sku": "WDLP100BRO",
-      "unit_price": {
-        "amount": 0,
-        "currency": "GBP",
-        "includes_tax": false
-      },
-      "value": {
-        "amount": 0,
-        "currency": "GBP",
-        "includes_tax": false
-      },
-      "links": {},
-      "meta": {
-        "display_price": {
-          "with_tax": {
-            "unit": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+    "data": [
+        {
+            "type": "order_item",
+            "id": "e8e2655f-3365-49f9-a2f0-1360a295019b",
+            "quantity": 1,
+            "product_id": "bf8a9d62-6ca9-45f6-85eb-f0d1d9ae7fdd",
+            "name": "Woodsy",
+            "sku": "WDLP100BRO",
+            "unit_price": {
+                "amount": 0,
+                "currency": "GBP",
+                "includes_tax": false
             },
             "value": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
-            }
-          },
-          "without_tax": {
-            "unit": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+                "amount": 0,
+                "currency": "GBP",
+                "includes_tax": false
             },
-            "value": {
-              "amount": 0,
-              "currency": "GBP",
-              "formatted": "£0"
+            "links": {},
+            "meta": {
+                "display_price": {
+                    "with_tax": {
+                        "unit": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        },
+                        "value": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        }
+                    },
+                    "without_tax": {
+                        "unit": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        },
+                        "value": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        }
+                    },
+                    "tax": {
+                        "unit": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        },
+                        "value": {
+                            "amount": 0,
+                            "currency": "GBP",
+                            "formatted": "£0"
+                        }
+                    }
+                },
+                "timestamps": {
+                    "created_at": "2018-04-30T10:26:13.342815487Z",
+                    "updated_at": "2018-04-30T10:26:13.342815487Z"
+                }
+            },
+            "relationships": {
+                "cart_item": {
+                    "data": {
+                        "type": "cart_item",
+                        "id": "62d93144-74ab-4acc-9151-0c96d683c201"
+                    }
+                },
+                "taxes": {
+                    "data": [
+                        {
+                            "type": "tax_item",
+                            "id": "6c111e80-9254-4592-b9f4-a30f22b5a8c4"
+                        }
+                    ]
+                }
             }
-          }
-        },
-        "timestamps": {
-          "created_at": "2018-04-30T10:26:13.342815487Z",
-          "updated_at": "2018-04-30T10:26:13.342815487Z"
         }
-      },
-      "relationships": {
-        "cart_item": {
-          "data": {
-            "type": "cart_item",
-            "id": "62d93144-74ab-4acc-9151-0c96d683c201"
-          }
-        }
-      }
-    }
-  ]
+    ]
 }
 ```
 {% endapi-method-response-example %}

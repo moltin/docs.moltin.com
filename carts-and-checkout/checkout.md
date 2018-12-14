@@ -428,6 +428,11 @@ Shipping instructions
                     "amount": 47500,
                     "currency": "USD",
                     "formatted": "$475.00"
+                },
+                "tax": {
+                    "amount": 0,
+                    "currency": "",
+                    "formatted": ""
                 }
             },
             "timestamps": {
