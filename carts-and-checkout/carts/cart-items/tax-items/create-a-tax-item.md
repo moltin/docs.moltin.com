@@ -27,11 +27,11 @@ The name of the tax item
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="jurisdiction" type="string" required=false %}
-The jurisdiction of the tax item
+The relevant tax jurisdiction
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="code" type="string" required=false %}
-A unique tax code for this kind of tax item
+A unique tax code in this jurisdiction
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="rate" type="float" required=true %}
