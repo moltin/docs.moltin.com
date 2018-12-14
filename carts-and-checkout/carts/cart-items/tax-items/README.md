@@ -11,7 +11,7 @@
 | `name` | `string` | Denotes the name of this tax item |
 | `jurisdiction` | `string` | The jurisdiction in which this tax applies |
 | `code` | `string` | A tax code for this type of tax item |
-| `rate` | `float` | The tax rate percentage |
+| `rate` | `float` | The tax rate as a decimal \(20.5% -&gt; 0.205\) |
 {% endtab %}
 
 {% tab title="Sample Response" %}
@@ -23,7 +23,7 @@
         "name": "Tax Name",
         "jurisdiction" : "UK",
         "code": "MYTAX01",
-        "rate": 20.5
+        "rate": 0.205
     }
 }
 ```
