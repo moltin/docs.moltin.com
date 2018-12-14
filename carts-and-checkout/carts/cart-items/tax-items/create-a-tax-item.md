@@ -26,6 +26,10 @@ This represents the type of object being returned
 The name of the tax item
 {% endapi-method-parameter %}
 
+{% api-method-parameter name="jurisdiction" type="string" required=true %}
+The jurisdiction of the tax item
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="code" type="string" required=true %}
 A unique tax code for this kind of tax item
 {% endapi-method-parameter %}
