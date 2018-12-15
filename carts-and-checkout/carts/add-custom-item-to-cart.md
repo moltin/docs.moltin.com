@@ -46,11 +46,11 @@ The Bearer token to grant access to the API
 The name of the custom item
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="sku" type="string" required=true %}
+{% api-method-parameter name="sku" type="string" required=false %}
 The SKU code to use for the custom item
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="description" type="string" required=true %}
+{% api-method-parameter name="description" type="string" required=false %}
 A description of the custom item
 {% endapi-method-parameter %}
 
