@@ -82,31 +82,31 @@ curl -X POST https://api.moltin.com/v2/files \
 {% tab title="Moltin Request" %}
 ```javascript
 const { createClient } = require('@moltin/request')
-const FormData = require("form-data");
-
-  const client = new createClient({
-    client_id: 'X',
-    client_secret: 'X'
-  })
-
-  const formData = new FormData();
-  formData.append("file_name", fileName);
-  formData.append("public", "true");
-  //file need to be sent in a buffer
-  formData.append("file", buffer, { filename: fileName });
-
-  const headers = {
-    "Content-Type": formData.getHeaders()["content-type"]
-   };
-
-   const newFiles = await newMoltin.post(
-     "files",
-        { body: formData },
-          headers
-        );
-
-  console.log(newFiles);
-
+const FormData = require("form-data")
+​
+const moltin = new createClient({
+  client_id: 'X',
+  client_secret: 'X'
+})
+​
+const formData = new FormData()
+​
+formData.append("file_name", fileName)
+formData.append("public", "true")
+formData.append("file", buffer, { filename: fileName })
+​
+const headers = {
+  "Content-Type": formData.getHeaders()["content-type"]
+}
+​
+const data = {
+  body: formData
+}
+​
+moltin
+  .post("files", data, headers)
+  .then(console.log(data))
+  .error(console.error(error))
 ```
 {% endtab %}
 {% endtabs %}
