@@ -41,9 +41,11 @@ The Bearer token to grant access to the API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X DELETE https://api.moltin.com//v2/carts/:cartID/items/:itemID/taxes/:taxItemID \
+curl -X DELETE https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes/:taxItemID \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

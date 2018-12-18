@@ -13,7 +13,7 @@ Get all product variations
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token that is used access to the API
+The Bearer token that is used access to the API,  grant\_type **client\_credentials**. 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
