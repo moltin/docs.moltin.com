@@ -77,44 +77,41 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-  "data": [
-    {
-      "id": "150ce9ca-c3a8-4214-b4f9-509987054cf4",
-      "type": "transaction",
-      "reference": "manual",
-      "gateway": "manual",
-      "amount": 50000,
-      "currency": "GBP",
-      "transaction-type": "capture",
-      "status": "complete",
-      "relationships": {
-        "order": {
-          "data": {
-            "type": "order",
-            "id": "f7a70163-5878-48a8-97a3-1872178907aa"
-          }
+    "data": [
+        {
+            "id": "015a3452-29a2-45b4-8b0d-0d697b224d45",
+            "type": "transaction",
+            "reference": "manual",
+            "gateway": "manual",
+            "amount": 19000,
+            "currency": "USD",
+            "transaction-type": "capture",
+            "status": "complete",
+            "relationships": {
+                "order": {
+                    "data": {
+                        "type": "order",
+                        "id": "24f17926-af4b-439c-ae3c-13aa371bce77"
+                    }
+                }
+            },
+            "meta": {
+                "display_price": {
+                    "amount": 19000,
+                    "currency": "USD",
+                    "formatted": "$190.00"
+                },
+                "created_at": "2018-12-17T16:19:53.379Z"
+            },
+            "order_reference": null,
+            "phone_number": null,
+            "delivery_status": null,
+            "delivery_details": null,
+            "delivery_date": null,
+            "short_id": null,
+            "confirmation_email_sent": null
         }
-      }
-    },
-    {
-      "id": "1bcc324b-659c-40ba-81df-793f91298844",
-      "type": "transaction",
-      "reference": "",
-      "gateway": "stripe",
-      "amount": 50000,
-      "currency": "GBP",
-      "transaction-type": "purchase",
-      "status": "failed",
-      "relationships": {
-        "order": {
-          "data": {
-            "type": "order",
-            "id": "f7a70163-5878-48a8-97a3-1872178907aa"
-          }
-        }
-      }
-    }
-  ]
+    ]
 }
 ```
 {% endapi-method-response-example %}
