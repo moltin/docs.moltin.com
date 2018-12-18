@@ -32,7 +32,7 @@ A breakdown of the access given by the token can be seen in the following table.
 | `/orders` | ✅ | ✅ |
 | `/payment-gateways` | ✅ | ✅ |
 | `/products` | ✅ | ✅ |
-| /variations | ✅ | ✅ |
+| `/variations` | ✅ | ✅ |
 | `/promotions` | ✅ | ✅ |
 | `/settings` | ✅ | ✅ |
 | `/jobs` | ✅ |  |
@@ -57,7 +57,7 @@ The table below shows a breakdown of which API endpoint actions are available to
 | `/orders` | ⛔️ | ⛔️ |
 | `/payment-gateways` | ⛔️ | ⛔️ |
 | `/products` | ✅ | ⛔️ |
-| /variations | ⛔️ | ⛔️ |
+| `/variations` | ⛔️ | ⛔️ |
 | `/promotions` | ⛔️ | ⛔️ |
 | `/settings` | ⛔️ | ⛔️ |
 | `/jobs` | ⛔️ | ⛔️ |
@@ -87,4 +87,6 @@ The table below shows a breakdown of which API endpoint actions are available to
 | `/jobs` | ⛔️ | ⛔️ |
 {% endtab %}
 {% endtabs %}
+
+
 
