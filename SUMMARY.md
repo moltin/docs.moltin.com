@@ -20,6 +20,7 @@
 * [Sorting](basics/sorting.md)
 * [Safe Characters](basics/safe-characters.md)
 * [API Status](http://status.moltin.com)
+* [Moltin API changelog](basics/moltin-api-changelog.md)
 
 ## Catalog
 
