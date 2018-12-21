@@ -18,7 +18,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2018, December 4** <a id="2018-december-4"></a>
 
-* Updated search to to return a 400 error explaining the search contains [unsupported characters](https://docs.moltin.com/~/drafts/-LTg_WTtsk_fgq6z4BWy/primary/basics/filtering#supported-characters).
+* Updated search to return a 400 error explaining the search contains [unsupported characters](https://docs.moltin.com/~/drafts/-LTg_WTtsk_fgq6z4BWy/primary/basics/filtering#supported-characters).
 
 ### **2018, November 20** <a id="2018-november-20"></a>
 
