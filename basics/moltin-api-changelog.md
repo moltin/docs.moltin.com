@@ -51,7 +51,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2018, October 16** <a id="2018-october-16"></a>
 
-* **​**[**DASHBOARD**](https://dashboard.moltin.com/) Added product variations.
+* **`MAJOR`​**[**DASHBOARD**](https://dashboard.moltin.com/) Added product variations.
 * **`MAJOR`** [Facebook lookbook](https://github.com/moltin/moltin-facebook-shop) is now available to allow brands to showcase their catalog on their business Facebook page.
 * Updated validation rules for POST requests on `addresses`.
 * Fixed issue with additional key returned with `product` response.
