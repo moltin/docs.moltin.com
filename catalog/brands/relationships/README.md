@@ -85,6 +85,23 @@ Moltin.Brands.Tree().then(brands => {
 ```
 {% endtab %}
 
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+
+const client = new createClient({
+  client_id: 'X'
+})
+
+client
+  .get('brands/tree')
+  .then(brands => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
+
 {% tab title="Swift SDK" %}
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")

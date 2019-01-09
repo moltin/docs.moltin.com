@@ -78,6 +78,25 @@ Moltin.Brands.Get(id).then(brand => {
 ```
 {% endtab %}
 
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+​
+const id = 'XXXX'
+​
+client
+  .get(`brands/${id}`)
+  .then(brands => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
+
 {% tab title="Swift SDK" %}
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")

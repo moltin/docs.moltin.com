@@ -122,5 +122,31 @@ Moltin.Brands.Create(id, brand).then(brand => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X',
+  client_secret: 'X'
+})
+​
+const data = {
+  type: 'brand',
+  name: 'Cool Clothing',
+  slug: 'cool-clothing',
+  description: 'Cool clothing make cool clothes.',
+  status: 'live'
+}
+​
+client
+  .post('brands', data)
+  .then(brand => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 
