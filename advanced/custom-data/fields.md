@@ -11,7 +11,7 @@ A Field represents a single Field of data \(for example a `Product Rating`\) to 
 | `name` | `string` | The name of the field |
 | `slug` | `string` | A unique slug identifier for the field |
 | `field_type` | `string` | The type of field - `string`, `integer`, `boolean`, `float`, `date`, `relationship` |
-| `validation_rules` | `array[object]` | See [`Flow Field Validation Rules`](https://docs.moltin.com/#flow-field-validation-rules) |
+| `validation_rules` | `array[object]` | See [`Flow Field Validation Rules`](https://docs.moltin.com/advanced/custom-data/flow-field-validation-rules) |
 | `description` | `string` | Any description for this field |
 | `required` | `boolean` | `true` if required on input, `false` if not. Always `false` if the `field_type` is a relationship |
 | `unique` | `boolean` | `true` if each entry should be unique, `false` if not |
