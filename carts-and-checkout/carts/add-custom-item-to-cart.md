@@ -207,5 +207,33 @@ Moltin.Cart(reference)
   })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+
+client
+  .post(`carts/${reference}/items`, {
+    type: "custom_item",
+    name: 'My Custom Item',
+    sku: 'my-custom-item',
+    description: 'My first custom item!',
+    quantity: 1,
+    price: {
+      amount: 10000
+    }
+  })
+  .then(cart => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

@@ -94,14 +94,14 @@ You will get an error if you try to perform an action with incorrect amounts
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/inventories/{PRODUCT_ID}/transactions \
+curl -X POST https://api.moltin.com/v2/inventories/:productId/transactions \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
        "data": {
          "type": "stock-transaction",
          "action": "increment",
-         "quantity": 3
+         "quantity": 10
        }
      }'
 ```
@@ -134,6 +134,30 @@ Moltin.Inventories.AllocateStock(productId, quantity).then(transaction => {
 Moltin.Inventories.DeallocateStock(productId, quantity).then(transaction => {
   // Do something
 })
+```
+{% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const productId = 'XXXX'​
+
+client
+  .post(`inventories/${productId}/transactions`, {
+    type: "stock-transaction",
+    action: "increment",
+    quantity: 10
+  })
+  .then(inventory => {
+    // Do something...
+  })
+  .catch(console.error)
 ```
 {% endtab %}
 {% endtabs %}

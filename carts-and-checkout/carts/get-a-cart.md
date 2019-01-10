@@ -108,6 +108,46 @@ Moltin.Cart(reference)
 ```
 {% endtab %}
 
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+
+client
+  .get(`carts/${reference}`)
+  .then(cart => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+
+{% hint style="info" %}
+You can import `createCartIdentifier` from `@moltin/request` to create a Cart ID. **See below.**
+{% endhint %}
+
+```javascript
+const { createClient, createCartIdentifier } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const cartId = createCartIdentifier()​
+
+client
+  .get(`carts/${cartId}`)
+  .then(cart => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
+
 {% tab title="Swift SDK" %}
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")

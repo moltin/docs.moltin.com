@@ -180,5 +180,30 @@ Moltin.Cart(reference).UpdateItemQuantity(itemId, quantity).then(cart => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+const itemId = 'XXXX'
+const quantity = 10
+
+client
+  .put(`carts/${reference}/items/${itemId}`, {
+    type: "cart_item",
+    id: itemId,
+    quantity
+  })
+  .then(items => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

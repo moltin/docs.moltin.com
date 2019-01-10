@@ -45,6 +45,27 @@ curl -X DELETE https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes/:taxI
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+const itemId = 'XXXX'
+const taxItemID = 'XXXX'
+
+client
+  .delete(`carts/${reference}/items/${itemId}/taxes/${taxItemID}`)
+  .then(items => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 
 

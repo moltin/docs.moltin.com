@@ -113,6 +113,23 @@ Moltin.Collections.all().then(collections => {
 ```
 {% endtab %}
 
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+​
+client
+  .get('collections')
+  .then(collections => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
+
 {% tab title="Swift SDK" %}
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")

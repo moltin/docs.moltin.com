@@ -97,5 +97,32 @@ curl -X POST https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes \
     }'
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+const itemId = 'XXXX'
+const taxItemID = 'XXXX'
+
+client
+  .post(`carts/${reference}/items/${itemId}/taxes/${taxItemID}`, {
+    type: "tax_item",
+    name: "Tax Name",
+    jurisdiction : "UK",
+    code: "MYTAX01",
+    rate: 0.2
+  })
+  .then(items => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

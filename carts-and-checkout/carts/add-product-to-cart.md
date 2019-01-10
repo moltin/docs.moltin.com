@@ -183,6 +183,31 @@ Moltin.Cart(referenceId)
 ```
 {% endtab %}
 
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+const productId = 'XXXX'
+const quantity = 1
+
+client
+  .post(`carts/${reference}/items`, {
+    type: "cart_item",
+    id: productId,
+    quantity
+  })
+  .then(cart => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
+
 {% tab title="Swift SDK" %}
 ```swift
 let moltin = Moltin(withClientID: "<your client ID>")

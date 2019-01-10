@@ -69,5 +69,24 @@ Moltin.Inventories.Get(productId).then(inventories => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const productId = 'XXXX'​
+
+client
+  .get(`inventories/${productId}`)
+  .then(inventory => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

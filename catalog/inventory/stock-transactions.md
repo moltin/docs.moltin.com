@@ -86,7 +86,7 @@ You will see inside the response below you get all stock transactions, including
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X GET https://api.moltin.com/v2/inventories/:product_id/transactions \
+curl -X GET https://api.moltin.com/v2/inventories/:productId/transactions \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
@@ -104,6 +104,25 @@ const productId = 'XXXX'
 Moltin.Inventories.GetTransactions(productId).then(transactions => {
   // Do something
 })
+```
+{% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const productId = 'XXXX'​
+
+client
+  .get(`inventories/${productId}/transactions`)
+  .then(inventory => {
+    // Do something...
+  })
+  .catch(console.error)
 ```
 {% endtab %}
 {% endtabs %}

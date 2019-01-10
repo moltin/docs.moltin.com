@@ -86,5 +86,25 @@ Moltin.Cart(reference)
   })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+const itemId = 'XXXX'
+
+client
+  .delete(`carts/${reference}/items/${itemId}`)
+  .then(items => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

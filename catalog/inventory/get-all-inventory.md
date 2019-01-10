@@ -107,5 +107,22 @@ Moltin.Inventories.All().then(inventories => {
 })
 ```
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+​
+client
+  .get('inventories')
+  .then(inventories => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 

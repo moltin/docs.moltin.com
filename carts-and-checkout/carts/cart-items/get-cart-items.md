@@ -1,7 +1,7 @@
 # Get Cart Items
 
 {% hint style="info" %}
-An empty cart items array will be returned for any carts that don't currently exist using the provided cart reference.
+If a Cart does not exist with a provided reference, one will be created and an empty cart items array will be returned.
 {% endhint %}
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/carts/:reference/items" %}
@@ -91,6 +91,25 @@ Moltin.Cart(reference)
   .then(cart => {
     // Do something
   })
+```
+{% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+
+const reference = 'XXXX'
+
+client
+  .delete(`carts/${reference}/items`)
+  .then(itemst => {
+    // Do something...
+  })
+  .catch(console.error)
 ```
 {% endtab %}
 
