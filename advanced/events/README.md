@@ -1,4 +1,4 @@
-# Events
+# Events \(Webhooks\)
 
 Moltin [observes several events](observable-events.md) that you can attach webhooks to. With a webhook you can attach custom code that performs actions outside of the Moltin ecosystem.
 

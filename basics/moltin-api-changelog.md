@@ -1,4 +1,4 @@
-# Moltin API changelog
+# API Changelog
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
