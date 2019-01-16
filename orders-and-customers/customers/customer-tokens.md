@@ -8,7 +8,7 @@ We provide a basic `/tokens` endpoint that allows you authenticate customers by 
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| `id` | `string` | The unique identifier for this otken |
+| `id` | `string` | The unique identifier for this token |
 | `type` | `string` | The type represents the object being returned |
 | `customer_id` | `string` | The **ID** of the customer from which the token is generated |
 | `token` | `string` | The JSON Web Token to be used for other endpoints |
