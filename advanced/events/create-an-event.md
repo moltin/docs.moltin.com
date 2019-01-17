@@ -122,7 +122,7 @@ So that we can properly fire a `webhook`, you will need to provide some configur
 Webhooks are delivered using `POST` to the configured `url`. You may specify a `secret_key` which we will forward \_\_`X-MOLTIN-SECRET-KEY` along with the request as a header.
 
 {% hint style="info" %}
-`X-MOLTIN-INTEGRATION-TRIGGER` will also be added to the request headers, this allows you to process several events at the same `url`. This will be in the format of an [observable event](https://github.com/moltin/api.docs.moltin.com/tree/5428af44944131bca0a50421e5078ffbbdafbe7a/advanced/observable-events.md) key.
+`X-MOLTIN-INTEGRATION-TRIGGER` will also be added to the request headers, this allows you to process several events at the same `url`. This will be in the format of an [observable event](observable-events.md) key.
 {% endhint %}
 
 The webhook configuration object has the following structure.
