@@ -2,8 +2,6 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
-## **Moltin Updates** <a id="moltin-updates"></a>
-
 ### **2018, December 18** <a id="2018-december-18"></a>
 
 * **`MAJOR`** Created a tax item to calculate [sales tax](https://developers.moltin.com/guides/taxes-integrate-taxjar-with-moltin) for individual cart items. GitHub now includes an [example app](https://github.com/moltin/taxjar-example) showcasing TaxJar integration.

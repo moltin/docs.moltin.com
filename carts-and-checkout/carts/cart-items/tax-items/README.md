@@ -1,10 +1,3 @@
----
-description: >-
-  Tax items allow you to attach multiple tax rate lines to each item in a cart.
-  We'll then use the rates on each cart item to calculate pre and post tax
-  prices.
----
-
 # Tax Items
 
 {% hint style="info" %}
