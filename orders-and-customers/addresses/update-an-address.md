@@ -13,7 +13,7 @@ Update by ID
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="customerId" type="string" required=true %}
-The **ID** for the customer you are adding an address for
+The **ID** for the customer you are updating an address for
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -28,6 +28,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+The **ID** for the address you are updating
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being returned
 {% endapi-method-parameter %}
