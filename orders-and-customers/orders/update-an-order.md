@@ -141,9 +141,11 @@ const Moltin = MoltinGateway({
   client_secret: 'X'
 })
 
+const id = 'XXXX'
+
 const order = {
-  "shipping_address": {
-    "first_name": "John"
+  shipping_address: {
+    first_name: "John"
   }
 }
 
