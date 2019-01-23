@@ -26,4 +26,5 @@ Below are a list of attributes and operators available for [filtering](../../bas
 
 * `with_tax` and `without_tax` should be integers without currency decimals so a value of `10000` would be equivalent to `$100.00`
 * `product_id` and `product_sku` match orders where matching product has been ordered \(but they may not have been the only ordered items\)
+* `eq` shouldn't be used with dates; instead, use a range \(`gt` & `eq`\) if you want orders for a specific day. Filtering on exact timestamps is not supported at the moment.
 
