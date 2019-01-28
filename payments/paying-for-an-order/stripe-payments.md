@@ -27,11 +27,6 @@ The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="customer" type="string" required=false %}
-The Stripe customer ID \(required if sending source\)
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="options.idempotency\_key" type="string" required=false %}
 Send a Stripe Idempotency Key
 {% endapi-method-parameter %}
@@ -42,6 +37,11 @@ Provide an email for Stripe receipts. `live` mode feature
 
 {% api-method-parameter name="payment" type="string" required=true %}
 The Stripe token or source
+{% endapi-method-parameter %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="customer" type="string" required=false %}
+The Stripe customer ID \(required if sending source\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="method" type="string" required=true %}
