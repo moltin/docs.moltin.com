@@ -40,7 +40,7 @@ Provide an email for Stripe receipts. `live` mode feature
 The Stripe token or source
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="customer" type="string" required=false %}
+{% api-method-parameter name="options.customer" type="string" required=false %}
 The Stripe customer ID \(required if sending source\)
 {% endapi-method-parameter %}
 
