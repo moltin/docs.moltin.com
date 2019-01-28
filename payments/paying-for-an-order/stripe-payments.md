@@ -28,6 +28,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="customer" type="string" required=false %}
+The Stripe customer ID \(required if sending source\)
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="options.idempotency\_key" type="string" required=false %}
 Send a Stripe Idempotency Key
 {% endapi-method-parameter %}
@@ -63,6 +67,10 @@ You will use `stripe` in this case
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% hint style="info" %}
+If you are passing a source instead of a token, you must also include the Stripe customer ID in the request
+{% endhint %}
 
 {% tabs %}
 {% tab title="cURL" %}
