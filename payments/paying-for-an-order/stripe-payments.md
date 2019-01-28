@@ -69,7 +69,7 @@ You will use `stripe` in this case
 {% endapi-method %}
 
 {% hint style="info" %}
-If you are passing a source instead of a token, you must also include the Stripe customer ID in the request
+If you are passing a `source` instead of a `token`, you must also include the Stripe customer ID in the request
 {% endhint %}
 
 {% tabs %}
