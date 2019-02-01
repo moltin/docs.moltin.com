@@ -47,7 +47,34 @@ This will always be `manual` for the manual payment gateway
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+   "data":{
+      "id":"XXXXXX",
+      "type":"transaction",
+      "reference":"manual",
+      "gateway":"manual",
+      "amount":2500,
+      "currency":"USD",
+      "transaction-type":"authorize",
+      "status":"complete",
+      "relationships":{
+         "order":{
+            "data":{
+               "type":"order",
+               "id":"XXXXXX"
+            }
+         }
+      },
+      "meta":{
+         "display_price":{
+            "amount":2500,
+            "currency":"USD",
+            "formatted":"$25.00"
+         },
+         "created_at":"2019-02-01T12:49:51.305Z"
+      }
+   }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -154,7 +181,34 @@ This will always be manual for the manual payment gateway
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+   "data":{
+      "id":"XXXXXX",
+      "type":"transaction",
+      "reference":"manual",
+      "gateway":"manual",
+      "amount":2500,
+      "currency":"USD",
+      "transaction-type":"capture",
+      "status":"complete",
+      "relationships":{
+         "order":{
+            "data":{
+               "type":"order",
+               "id":"XXXXXX"
+            }
+         }
+      },
+      "meta":{
+         "display_price":{
+            "amount":2500,
+            "currency":"USD",
+            "formatted":"$25.00"
+         },
+         "created_at":"2019-02-01T12:49:51.305Z"
+      }
+   }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

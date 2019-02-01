@@ -61,7 +61,34 @@ You will use `stripe` in this case
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+   "data":{
+      "id":"XXXXXX",
+      "type":"transaction",
+      "reference":"XXXXX",
+      "gateway":"stripe",
+      "amount":2500,
+      "currency":"USD",
+      "transaction-type":"purchase",
+      "status":"complete",
+      "relationships":{
+         "order":{
+            "data":{
+               "type":"order",
+               "id":"XXXXXX"
+            }
+         }
+      },
+      "meta":{
+         "display_price":{
+            "amount":2500,
+            "currency":"USD",
+            "formatted":"$25.00"
+         },
+         "created_at":"2019-02-01T12:49:51.305Z"
+      }
+   }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -200,7 +227,34 @@ You will use `stripe` in this case
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+   "data":{
+      "id":"XXXXXX",
+      "type":"transaction",
+      "reference":"XXXXX",
+      "gateway":"stripe",
+      "amount":2500,
+      "currency":"USD",
+      "transaction-type":"purchase",
+      "status":"complete",
+      "relationships":{
+         "order":{
+            "data":{
+               "type":"order",
+               "id":"XXXXXX"
+            }
+         }
+      },
+      "meta":{
+         "display_price":{
+            "amount":2500,
+            "currency":"USD",
+            "formatted":"$25.00"
+         },
+         "created_at":"2019-02-01T12:49:51.305Z"
+      }
+   }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -311,7 +365,34 @@ You will use stripe in this case
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+   "data":{
+      "id":"XXXXXX",
+      "type":"transaction",
+      "reference":"XXXXX",
+      "gateway":"stripe",
+      "amount":2500,
+      "currency":"USD",
+      "transaction-type":"purchase",
+      "status":"complete",
+      "relationships":{
+         "order":{
+            "data":{
+               "type":"order",
+               "id":"XXXXXX"
+            }
+         }
+      },
+      "meta":{
+         "display_price":{
+            "amount":2500,
+            "currency":"USD",
+            "formatted":"$25.00"
+         },
+         "created_at":"2019-02-01T12:49:51.305Z"
+      }
+   }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
