@@ -68,8 +68,35 @@ You will use `adyen` in this case
 
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+    "data": {
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "type": "transaction",
+        "reference": "adyen",
+        "gateway": "adyen",
+        "amount": 100,
+        "currency": "USD",
+        "transaction-type": "purchase",
+        "status": "complete",
+        "relationships": {
+            "order": {
+                "data": {
+                    "type": "order",
+                    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                }
+            }
+        },
+        "meta": {
+            "display_price": {
+                "amount": 100,
+                "currency": "USD",
+                "formatted": "$100.00"
+            },
+            "created_at": "2019-01-31T17:20:39.378Z"
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

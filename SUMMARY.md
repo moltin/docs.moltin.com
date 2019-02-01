@@ -126,6 +126,7 @@
 * [Gateways](payments/gateways/README.md)
   * [Get all Gateways](payments/gateways/get-all-gateways.md)
   * [Get a Gateway](payments/gateways/get-a-gateway.md)
+  * [Update Gateway Settings](payments/gateways/update-gateway-settings.md)
   * [Configure Adyen](payments/gateways/configure-adyen.md)
   * [Configure Braintree](payments/gateways/configure-braintree.md)
   * [Configure Stripe](payments/gateways/configure-stripe.md)

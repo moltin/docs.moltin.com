@@ -46,8 +46,35 @@ This will always be `manual` for the manual payment gateway
 
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+    "data": {
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "type": "transaction",
+        "reference": "manual",
+        "gateway": "manual",
+        "amount": 100,
+        "currency": "USD",
+        "transaction-type": "authorize",
+        "status": "complete",
+        "relationships": {
+            "order": {
+                "data": {
+                    "type": "order",
+                    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                }
+            }
+        },
+        "meta": {
+            "display_price": {
+                "amount": 100,
+                "currency": "USD",
+                "formatted": "$100.00"
+            },
+            "created_at": "2019-01-31T17:20:39.378Z"
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -153,8 +180,35 @@ This will always be manual for the manual payment gateway
 
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+    "data": {
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "type": "transaction",
+        "reference": "manual",
+        "gateway": "manual",
+        "amount": 100,
+        "currency": "USD",
+        "transaction-type": "capture",
+        "status": "complete",
+        "relationships": {
+            "order": {
+                "data": {
+                    "type": "order",
+                    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                }
+            }
+        },
+        "meta": {
+            "display_price": {
+                "amount": 100,
+                "currency": "USD",
+                "formatted": "$100.00"
+            },
+            "created_at": "2019-01-31T17:20:39.378Z"
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -201,4 +255,6 @@ Moltin.Transactions.Capture({
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
