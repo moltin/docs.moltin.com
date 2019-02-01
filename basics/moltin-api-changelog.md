@@ -1,6 +1,11 @@
 # API Changelog
 
-This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
+This change-log is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
+
+### **2019, February 1st**
+
+* Successful request to orders/:ID/payments endpoint now returns information about the transaction which was created.
+* Validation on files endpoint now checks the file parameter is passed, that it is an actual file and returns a 422 if it is not.
 
 ### **2018, December 18** <a id="2018-december-18"></a>
 
