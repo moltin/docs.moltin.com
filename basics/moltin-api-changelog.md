@@ -2,7 +2,7 @@
 
 This change-log is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
-### **2019, February 1**
+### **2019, February 4**
 
 * **`MAJOR`** Moltin's architecture now incorporates [Kubernetes](https://moltin.com/blog/2019/01/moltin-kubernetes/).
 * Successful request to orders/:ID/payments endpoint now returns information about the transaction which was created.
