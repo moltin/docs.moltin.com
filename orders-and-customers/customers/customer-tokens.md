@@ -12,7 +12,7 @@ We provide a basic `/tokens` endpoint that allows you authenticate customers by 
 | `type` | `string` | The type represents the object being returned |
 | `customer_id` | `string` | The **ID** of the customer from which the token is generated |
 | `token` | `string` | The JSON Web Token to be used for other endpoints |
-| `expires` | `timestamp` | The epoch time that this token expires at |
+| `expires` | `timestamp` | The epoch time that this token expires at. It will be 24 hours from the moment the token is generated. |
 {% endtab %}
 
 {% tab title="Sample Response" %}
