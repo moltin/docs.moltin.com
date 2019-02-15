@@ -24,7 +24,16 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-Moltin.Products.Filter({ eq: { commodity_type: 'physical' } })
+Moltin.Products.Filter({
+      eq: {
+        status: 'live',
+        slug: 'new-slug'
+      },
+      gt: {
+        stock: 2
+      }
+    })
+  .All()
   .Sort('created_at')
   .then(products => {
     // Do something
