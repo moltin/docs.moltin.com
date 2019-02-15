@@ -6,7 +6,7 @@ This feature is currently in **BETA** and you **should** expect it to change.
 
 You can chain filters to a query by using a colon \(`:`\) to separate your filters.
 
-For example, to find all draft products which are physical and sorted by `created_at`, you can make the following request:
+For example, to find all draft products with the slug 'new-slug' which have a stock greater than 2 and sorted by `created_at`, you can make the following request:
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -25,19 +25,18 @@ const Moltin = MoltinGateway({
 })
 
 Moltin.Products.Filter({
-      eq: {
-        status: 'live',
-        slug: 'new-slug'
-      },
-      gt: {
-        stock: 2
-      }
+  eq: {
+    status: 'draft',
+    slug: 'new-slug'
+    },
+  gt: {
+    stock: 2
+    }
+  }).All()
+    .Sort('created_at')
+    .then(products => {
+      // Do something
     })
-  .All()
-  .Sort('created_at')
-  .then(products => {
-    // Do something
-  })
 ```
 {% endtab %}
 
