@@ -258,6 +258,55 @@ Moltin.Cart(reference)
 `shipping` is optional. `billing` will be `shipping` if not provided.
 {% endhint %}
 {% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+​
+const data = {
+  "customer": {
+     "id": "c8c1c511-beef-4812-9b7a-9f92c587217c"
+   },
+   "billing_address": {
+     "first_name": "John",
+     "last_name": "Doe",
+     "company_name": "Moltin",
+     "line_1": "2nd Floor British India House",
+     "line_2": "15 Carliol Square",
+     "city": "Newcastle upon Tyne",
+     "postcode": "NE1 6UF",
+     "county": "Tyne & Wear",
+     "country": "UK"
+   },
+   "shipping_address": {
+     "first_name": "John",
+     "last_name": "Doe",
+     "company_name": "Moltin",
+     "phone_number": "(555) 555-1234",
+     "line_1": "2nd Floor British India House",
+     "line_2": "15 Carliol Square",
+     "city": "Newcastle upon Tyne",
+     "postcode": "NE1 6UF",
+     "county": "Tyne & Wear",
+     "country": "UK",
+     "instructions": "Leave in porch"
+   }
+}
+
+const reference = 'XXXX'
+​
+client
+  .post(`carts/${reference}/checkout`, data)
+  .then(order => {
+    // Do something...
+  })
+  .catch(console.error)
+```
+{% endtab %}
 {% endtabs %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/carts/:reference/checkout" %}
@@ -546,6 +595,56 @@ Moltin.Cart(reference)
 {% hint style="info" %}
 `shipping` is optional. `billing` will be `shipping` if not provided.
 {% endhint %}
+{% endtab %}
+
+{% tab title="Moltin Request" %}
+```javascript
+const { createClient } = require('@moltin/request')
+​
+const client = new createClient({
+  client_id: 'X'
+})
+​
+const data = {
+  "customer": {
+     "email": "john@moltin.com",
+     "name": "John Doe"
+   },
+   "billing_address": {
+     "first_name": "John",
+     "last_name": "Doe",
+     "company_name": "Moltin",
+     "line_1": "2nd Floor British India House",
+     "line_2": "15 Carliol Square",
+     "city": "Newcastle upon Tyne",
+     "postcode": "NE1 6UF",
+     "county": "Tyne & Wear",
+     "country": "UK"
+   },
+   "shipping_address": {
+     "first_name": "John",
+     "last_name": "Doe",
+     "company_name": "Moltin",
+     "phone_number": "(555) 555-1234",
+     "line_1": "2nd Floor British India House",
+     "line_2": "15 Carliol Square",
+     "city": "Newcastle upon Tyne",
+     "postcode": "NE1 6UF",
+     "county": "Tyne & Wear",
+     "country": "UK",
+     "instructions": "Leave in porch"
+   }
+}
+
+const reference = 'XXXX'
+​
+client
+  .post(`carts/${reference}/checkout`, data)
+  .then(order => {
+    // Do something...
+  })
+  .catch(console.error)
+```
 {% endtab %}
 
 {% tab title="Swift SDK" %}
