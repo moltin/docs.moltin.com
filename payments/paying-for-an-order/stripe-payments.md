@@ -295,8 +295,8 @@ const Moltin = MoltinGateway({
 const id = 'XXXX'
 
 const payment = {
-  gateway: 'manual',
-  method: 'authorize',
+  gateway: 'stripe',
+  method: 'purchase',
   first_name: "John",
   last_name: "Smith",
   number: "4242424242424242",
