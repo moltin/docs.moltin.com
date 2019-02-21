@@ -200,7 +200,7 @@ moltin.product.limit(2).all {
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="get" host="https://api.moltin.com" path="/v2/products?page\[limit\]=10&page=\[offset\]=20" %}
+{% api-method method="get" host="https://api.moltin.com" path="/v2/products?page\[limit\]=10&page\[offset\]=20" %}
 {% api-method-summary %}
 Example: Get products 21 - 30
 {% endapi-method-summary %}
