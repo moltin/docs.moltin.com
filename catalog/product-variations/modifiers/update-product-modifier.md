@@ -97,7 +97,7 @@ A payload specific to the type of modifier
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X "PUT" https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers/:modifierId \
+curl -X PUT https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers/:modifierId \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{

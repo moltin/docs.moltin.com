@@ -88,18 +88,17 @@ A payload specific to the type of modifier.
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
-curl -X "PUT" https://api.moltin.com/v2/variations/5ecf77e7-047a-4a3d-ad8c-b559ecd3df36/options/71784b68-9d82-420b-a5fc-00fe4bca8b2e/modifiers/8080083a-4765-47ac-9ea8-ea875acd0f92 \
+```bash
+curl -X POST https://api.moltin.com/v2/variations/:variationId/options/:optionId/modifiers \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-  "data": {
-    "type": "modifier",
-    "id": "8080083a-4765-47ac-9ea8-ea875acd0f92",
-    "modifer_type": "name_equals",
-    "value": "Updated product name"
-  }
-}
+      "data": {
+        "type": "modifier",
+        "modifier_type": "name_equals",
+        "value": "Updated product name"
+      }
+    }
 ```
 {% endtab %}
 {% endtabs %}

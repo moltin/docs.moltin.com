@@ -2,6 +2,8 @@
 
 ## The Product Variation Option object
 
+A variation option represents an option for selection for a single `product-variation`. For example, if your variation is "color", you may have three possible options `red`, `green`, and `blue`.
+
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
@@ -24,6 +26,4 @@
 ```
 {% endtab %}
 {% endtabs %}
-
-A variation option represents a option for selection for a single `product-variation`. For example, if your variation is "color", you may have three possible options `red`, `green`, and `blue`.
 
