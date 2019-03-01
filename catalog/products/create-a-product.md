@@ -62,7 +62,7 @@ true if relevant taxes have been included in the price, `false` if not
 `draft`, `live`
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="commodity\_type" type="string" required=false %}
+{% api-method-parameter name="commodity\_type" type="string" required=true %}
 `physical`, `digital`
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
