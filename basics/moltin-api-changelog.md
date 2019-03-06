@@ -2,6 +2,21 @@
 
 This change-log is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### **2019, March 11**
+
+* **`MAJOR`** [**DASHBOARD**](https://dashboard.moltin.com/)**:** You can now [import your catalog data](https://developers.moltin.com/guides/uploading-csv-data) into your Moltin dashboard.
+* **`MAJOR`** Moltin moved off Compose to remove unnecessary dependencies and improve the overall performance.
+* Improved caching on catalog data.
+
+### **2019, March 4**
+
+* Validation error code now returns a helpful message for SingleEqualsPriceModifierViolation.
+* Fixed an issue whereby newly created Flow Field wouldn't immediately present on resource.
+
+### 2019, February 27
+
+* **`MAJOR`** Added Zendesk integration for improved customer support.
+
 ### **2019, February 4**
 
 * **`MAJOR`** Moltin's architecture now incorporates [Kubernetes](https://moltin.com/blog/2019/01/moltin-kubernetes/).
