@@ -69,7 +69,25 @@ The Bearer token to grant access to the API
                 "self": "https://api.moltin.com/v2/flows/brands/entries/a5fcf6bc-233f-44d7-a3b0-0961eed3df9d"
             }
         }
-    ]
+    ],
+    "links": {
+        "current": "https://api.moltin.com/v2/flows/products/entries?page[limit]=2&page[offset]=0",
+        "first": "https://api.moltin.com/v2/flows/products/entries?page[limit]=2&page[offset]=0",
+        "last": "https://api.moltin.com/v2/flows/products/entries?page[limit]=2&page[offset]=36",
+        "previous": null,
+        "next": "https://api.moltin.com/v2/flows/products/entries?page[limit]=2&page[offset]=2"
+    },
+    "meta": {
+        "page": {
+            "limit": 2,
+            "offset": 0,
+            "current": 1,
+            "total": 19
+        },
+        "results": {
+            "total": 37
+        }
+    }
 }
 ```
 {% endapi-method-response-example %}
