@@ -133,7 +133,7 @@ const payment = {
   payment: 'tok_visa'
 }
 
-Moltin.Orders.Payment(id, order).then(() => {
+Moltin.Orders.Payment(id, payment).then(() => {
   // Do something
 })
 ```
@@ -305,7 +305,7 @@ const payment = {
   verification_value: "123"
 }
 
-Moltin.Orders.Payment(id, order).then(() => {
+Moltin.Orders.Payment(id, payment).then(() => {
   // Do something
 })
 ```
@@ -437,7 +437,7 @@ const payment = {
   }
 }
 
-Moltin.Orders.Payment(id, order).then(() => {
+Moltin.Orders.Payment(id, payment).then(() => {
   // Do something
 })
 ```
