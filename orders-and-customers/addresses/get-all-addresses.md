@@ -96,9 +96,8 @@ const customerToken = 'XXXX'
 
 Moltin.Addresses.All({
   customer: customerId,
-  addresss: addressId,
   token: customerToken
-}).then(address => {
+}).then(addresses => {
   // Do something
 })
 ```
@@ -128,9 +127,8 @@ const customerId = 'XXXX'
 const addressId = 'XXXX'
 
 Moltin.Addresses.All({
-  customer: customerId,
-  addresss: addressId
-}).then(address => {
+  customer: customerId
+}).then(addresses => {
   // Do something
 })
 ```
