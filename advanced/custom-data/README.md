@@ -20,7 +20,6 @@ Extending a resource is applicable only to core flows. When creating a new flow,
 | :--- | :--- |
 | `addresses` | Extend the [`address`](https://docs.moltin.com/orders-and-customers/addresses#the-address-object) object |
 | `products` | Extend the [`product`](https://docs.moltin.com/catalog/products#the-product-object) object |
-| `variations` | Extend the [`variation`](https://docs.moltin.com/catalog/product-variations#the-variation-object) object |
 | `brands` | Extend the [`brand`](https://docs.moltin.com/catalog/brands#the-brand-object) object |
 | `collections` | Extend the [`collection`](https://docs.moltin.com/catalog/collections#the-collection-object) object |
 | `categories` | Extend the [`category`](https://docs.moltin.com/catalog/categories#the-category-object) object |
