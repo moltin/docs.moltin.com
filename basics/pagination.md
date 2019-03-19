@@ -41,6 +41,10 @@ Pagination is also supported within our [JavaScript and Swift SDK](https://devel
 By default, page lengths are set to `100`. You can adjust this setting globally for your project via the [settings endpoint](../advanced/settings/#available-settings).
 {% endhint %}
 
+{% hint style="info" %}
+There is an soft offset limit of 10000 for Pagination on any enabled endpoint in the API.
+{% endhint %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories?page\[limit\]=2" %}
 {% api-method-summary %}
 Example: Get all categories, 2 per page
