@@ -8,6 +8,10 @@ If there you request a resource to be includes, but no related entities of that 
 
 Similarly, if you request to include a resource that is not supported as an include by the endpoint you are requesting from, there will be no "included" section in the response.
 
+{% hint style="info" %}
+It is highly recommend to not include a resource if there will be more than 100 entities returned by that included resource.
+{% endhint %}
+
 Below are some common include examples.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/:id?include=products" %}
