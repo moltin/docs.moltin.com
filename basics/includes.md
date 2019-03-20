@@ -12,6 +12,10 @@ Similarly, if you request to include a resource that is not supported as an incl
 It is highly recommend to not include a resource if there will be more than 100 entities returned by that included resource.
 {% endhint %}
 
+{% hint style="info" %}
+There is a soft limit of five included resources per request, where one included resource could be "main\_image", and another could be "categories" etc.
+{% endhint %}
+
 Below are some common include examples.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/:id?include=products" %}
