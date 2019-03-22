@@ -10,6 +10,10 @@ This defines the number of results per page when paginating results \(**max**: `
 | :--- | :--- | :--- | :--- |
 | `page_length` | `integer` | `100` | `100` |
 
+Resources that support pagination:
+
+* `brands`, `categories`, `collections`, `customers`, `files`, `flow_entries`, `inventory`, `orders`, `products`
+
 ## List child products
 
 This defines whether you wish to display child products in product listings.
