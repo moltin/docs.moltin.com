@@ -95,6 +95,10 @@ The Bearer token to grant access to the API
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+You can use pagination with this resource. See: [Settings](../settings/#page-length) for details.
+{% endhint %}
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
