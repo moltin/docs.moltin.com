@@ -86,6 +86,10 @@ The number of pages to offset the results by
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+You can use pagination with this resource. See: [Settings](../../advanced/settings/#page-length) for details.
+{% endhint %}
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
