@@ -12,7 +12,7 @@ This defines the number of results per page when paginating results \(**max**: `
 
 Resources that support pagination:
 
-* `brands`, `categories`, `collections`, `customers`, `files`, `flow_entries`, `inventory`, `orders`, `products`
+* `brands`, `categories`, `collections`, `customers`, `files`, `flows/:slug/entries`, `inventory`, `orders`, `products`
 
 ## List child products
 
