@@ -2,7 +2,15 @@
 
 This change-log is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
-### **2019, March 4**
+### **2019, March 19**
+
+* Added pagination to the `/v2/flows/:flowSlug/entries` endpoint with default set to 1000 entries per page.
+
+### **2019, March 12**
+
+* Fixed issue with timestamp on inventory record.
+
+### 2019, March 4
 
 * Validation error code now returns a helpful message for SingleEqualsPriceModifierViolation.
 * Fixed an issue whereby newly created Flow Field wouldn't immediately present on resource.
