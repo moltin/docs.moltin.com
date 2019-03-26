@@ -4,7 +4,7 @@ This change-log is a list of backwards-compatible updates and fixes in the API a
 
 ### **2019, March 19**
 
-* Added pagination to the `/v2/flows/:flowSlug/entries` endpoint with default set to 1000 entries per page.
+* **`MAJOR`** Added pagination to the [`/v2/flows/:flowSlug/entries`](../advanced/custom-data/entries.md#get-all-entries) endpoint with default set to 1000 entries per page.
 
 ### **2019, March 12**
 
