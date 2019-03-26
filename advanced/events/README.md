@@ -5,6 +5,10 @@ Moltin [observes several events](observable-events.md) that you can attach webho
 You may want to send a discount code or a NPS survey email a few days after an order is fulfilled. You can do this via a webhook that sends event data to your custom function.
 
 {% hint style="warning" %}
+Webhooks operate on an "at least once" delivery policy. Please take care to design your receiving app accordingly.
+{% endhint %}
+
+{% hint style="warning" %}
 Webhooks that return anything other than a 2XX status code will be considered failed.
 {% endhint %}
 
