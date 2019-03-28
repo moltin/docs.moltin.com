@@ -31,7 +31,6 @@
   * [Update a Product](catalog/products/update-a-product.md)
   * [Delete a Product](catalog/products/delete-a-product.md)
   * [Filtering](catalog/products/filtering.md)
-  * [Product Attributes](catalog/products/product-attributes.md)
   * [Relationships](catalog/products/relationships/README.md)
     * [Brand Relationship](catalog/products/relationships/brand-relationship.md)
     * [Category Relationship](catalog/products/relationships/category-relationship.md)
