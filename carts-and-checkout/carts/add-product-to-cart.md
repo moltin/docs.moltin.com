@@ -6,6 +6,10 @@ Adding a Product to Cart is the most common Cart action. If you wish to add any 
 Any requests to add a product to cart will return a collection of [cart items](cart-items/).
 {% endhint %}
 
+{% hint style="warning" %}
+Please note that there is a soft limit of up to 100 unique items in a cart at any one time.
+{% endhint %}
+
 {% hint style="danger" %}
 There are a number of actions that happen to your [inventory](https://docs.moltin.com/~/drafts/-LJsFeY2nae5ndXehUDs/primary/catalog/inventory) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://developers.moltin.com/guides/work-with-inventory) explaining the processes.
 {% endhint %}
