@@ -1,5 +1,9 @@
 # Create a Tax Item
 
+{% hint style="warning" %}
+Please note there is a soft limit of 5 unique tax items per cart item at any one time.
+{% endhint %}
+
 {% api-method method="post" host="https://api.moltin.com" path="/v2/carts/:cartID/items/:itemID/taxes" %}
 {% api-method-summary %}
 Create a Tax Item
