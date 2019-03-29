@@ -2,7 +2,7 @@ redirects:
 
 # Basics
 
-  basics/authentication: ./api/basics/authentication/README.md
+  ../basics/authentication: ./api/basics/authentication/README.md
   basics/authentication/client-credential-token: ./api/basics/authentication/client-credential-token.md
   basics/authentication/implicit-token: ./api/basics/authentication/implicit-token.md
   basics/authentication/permissions: ./api/basics/authentication/permissions.md
