@@ -1,2 +1,2 @@
 redirects:
-  basics/moltin-api-changelog.md ./api/basics/moltin-api-changelog.md
+  basics/moltin-api-changelog: ./api/basics/moltin-api-changelog
