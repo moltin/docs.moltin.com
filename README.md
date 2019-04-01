@@ -10,13 +10,22 @@ We have a two-track [authentication layer](basics/authentication/) that enables 
 
 ## SDKs
 
-Moltin officially maintains and supports both a [JavaScript SDK](https://github.com/moltin/js-sdk) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven but happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
+Moltin officially maintains and supports a [JavaScript SDK](https://github.com/moltin/js-sdk), [JS request library](https://github.com/moltin/moltin-request) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven but happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
 
 ## Examples
 
-Moltin provides a variety of frontend and server-side example projects using various modern programming languages. Visit the [moltin-examples](https://github.com/moltin-examples) organization on GitHub to see more.
+Moltin provides a variety of frontend and server-side example projects using various modern programming languages.
+
+* [Gatsby Demo Store](https://github.com/moltin/gatsby-demo-store)
+* [Vue Demo Store](https://github.com/moltin-examples/vue-demo-store)
+* [Swift Demo Store](https://github.com/moltin-examples/swift-demo-app)
+* [NextJS Demo Store](https://github.com/moltin-examples/nextjs-demo-store)
+* [GraphQL example](https://github.com/moltin/graphql)
+* [Integration examples](https://github.com/moltin/integration-examples)
+
+Visit the [moltin-examples](https://github.com/moltin-examples) organization on GitHub to see more.
 
 ## Support
 
-If you have any questions on how to use, improve or show off what you're building with Moltin, our [community forum](https://forum.moltin.com/) is where you will want to register.
+If you have any questions on how to use, improve or show off what you're building with Moltin, [join us on Spectrum](https://spectrum.chat/moltin).
 
