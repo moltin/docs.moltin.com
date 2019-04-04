@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### **2019, April 4**
+
+* **`MAJOR`** Released a [caching layer](https://www.moltin.com/blog/were-releasing-a-new-edge-caching-layer) for `/products` endpoints. Cached data is now served to stores from edge locations around the world.
+
 ### **2019, March 27**
 
 * **`MAJOR`** Released live version of the [Self Checkout ](https://moltin.com/commerce-solutions/mobile-self-checkout/)solutions.
