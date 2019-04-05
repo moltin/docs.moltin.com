@@ -8,6 +8,10 @@ To reverse the sort order, prepend the field with a minus.
 
 Currently, sorting is supported for the following endpoints, and against the following fields:
 
+{% hint style="warning" %}
+You can not sort by created\_at or updated\_at if you are using filtering. 
+{% endhint %}
+
 | Endpoint | Fields to sort against |
 | :--- | :--- |
 | Brands | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
