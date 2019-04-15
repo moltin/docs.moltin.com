@@ -7,6 +7,7 @@
 * [Authentication](basics/authentication/README.md)
   * [Client credential token](basics/authentication/client-credential-token.md)
   * [Implicit token](basics/authentication/implicit-token.md)
+  * [Customer token](basics/authentication/customer-token.md)
   * [Permissions](basics/authentication/permissions.md)
 * [Content Type](basics/content-type.md)
 * [Errors](basics/errors.md)
