@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### **2019, April 17**
+
+* [Social Commerce Solution](https://www.moltin.com/commerce-solutions/social-commerce) now available with Moltin. Plug your existing catalog to Facebook and Instagram to make them shoppable.
+
 ### **2019, April 9**
 
 * Pagination on the [`/v2/flows/:flowSlug/entries`](../advanced/custom-data/entries.md#get-all-entries) endpoint now defaults to 100 entries per page.
