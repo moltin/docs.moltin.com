@@ -38,11 +38,11 @@ You can, therefore, easily paginate resources using `page[offset]` and `page[lim
 Pagination is also supported within our [JavaScript and Swift SDK](https://developers.moltin.com/developer-tools/sdks).
 
 {% hint style="info" %}
-By default, page lengths are set to `100`. You can adjust this setting globally for your project via the [settings endpoint](../advanced/settings/#available-settings).
-{% endhint %}
+**Pagination Limitations**
 
-{% hint style="info" %}
-There is an soft offset limit of 10000 for Pagination on any enabled endpoint in the API.
+* By default, page lengths are set to `100`. You can adjust this setting globally for your project via the [settings endpoint](../advanced/settings/#available-settings) or override on any single call. There is a maximum page length of `100` for any paginated call.
+* Requests to `/v2/orders` and `/v2/files`have a hard offset limit of `10,000` records.
+* Requests to other endpoints have a soft offset limit of`10,000` records.
 {% endhint %}
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories?page\[limit\]=2" %}
