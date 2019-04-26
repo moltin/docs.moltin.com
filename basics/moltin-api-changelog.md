@@ -5,6 +5,10 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 ### **2019, April 17**
 
 * [Social Commerce Solution](https://www.moltin.com/commerce-solutions/social-commerce) now available with Moltin. Plug your existing catalog to Facebook and Instagram to make them shoppable.
+* [**DASHBOARD**](https://dashboard.moltin.com/) Fixed inconsistent behavior of pagination in the UI.
+* Fixed an issue whereby an invalid slug would cause an error with the `flows` endpoint.
+* Fixed an issue whereby a payment request without an object would cause an error.
+* Fixed an issue with the validation issue being logged as error.
 
 ### **2019, April 9**
 
