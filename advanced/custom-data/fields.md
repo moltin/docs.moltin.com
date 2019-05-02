@@ -1,6 +1,6 @@
 # Fields
 
-A Field represents a single Field of data \(for example a `Product Rating`\) to be applied to an entity. All Fields have a type \(`string`, `integer`, `boolean`, `date` or `relationship`\), a default value and an optional set of validation rules.
+A Field represents a single Field of data \(for example a `Product Rating`\) to be applied to an entity. All Fields have a field\_type \(`string`, `integer`, `boolean`, `date` or `relationship`\), a default value and an optional set of validation rules.
 
 {% hint style="info" %}
 There is a soft limit of 100 fields per flow

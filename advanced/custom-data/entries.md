@@ -1,3 +1,7 @@
+---
+description: Entries hold the pieces of data collected within the Fields.
+---
+
 # Entries
 
 | **Attribute** | **Type** | **Description** |
