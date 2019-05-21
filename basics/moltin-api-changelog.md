@@ -2,9 +2,17 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, May 21
+
+**`MINOR`** Improved the safety of carts using different currencies by rejecting requests which would mix up currencies. The following use cases apply:
+
+1. If you attempt to add a product to a cart which contains items in a different currency, you will receive a 400 error.
+2. If you attempt to check out a cart in a different currency than the products that exist in the cart, you will receive a 400 error.
+3. If you attempt to GET a cart in a different currency than the items in the cart, then the currency header should be ignored and you will see it in the original currency.
+4. If you attempt to GET cart items in a different currency than the items in the cart, then the currency header should be ignored and you will see it in the original currency.
+
 ### **2019, April 17**
 
-* [Social Commerce Solution](https://www.moltin.com/commerce-solutions/social-commerce) now available with Moltin. Plug your existing catalog to Facebook and Instagram to make them shoppable.
 * [**DASHBOARD**](https://dashboard.moltin.com/) Fixed inconsistent behavior of pagination in the UI.
 * Fixed an issue whereby an invalid slug would cause an error with the `flows` endpoint.
 * Fixed an issue whereby a payment request without an object would cause an error.
