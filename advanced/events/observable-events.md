@@ -4,6 +4,9 @@ You can pass multiple observable keys to the `observes` field of the [event obje
 
 | **Entity/Resource** | **Action** | **Observable Key** |
 | :--- | :--- | :--- |
+| **Address** | Created | `address.created` |
+|  | Updated | `address.updated` |
+|  | Deleted | `address.deleted` |
 | **Brand** | Created | `brand.created` |
 |  | Updated | `brand.updated` |
 |  | Deleted | `brand.deleted` |
