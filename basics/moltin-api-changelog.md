@@ -4,12 +4,19 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### 2019, May 21
 
-**`MINOR`** Improved the safety of carts using different currencies by rejecting requests which would mix up currencies. The following use cases apply:
+* **`MINOR`** Improved the safety of carts using different currencies by rejecting requests which would mix up currencies. The following use cases apply:
 
 1. If you attempt to add a product to a cart which contains items in a different currency, you will receive a 400 error.
 2. If you attempt to check out a cart in a different currency than the products that exist in the cart, you will receive a 400 error.
 3. If you attempt to GET a cart in a different currency than the items in the cart, then the currency header should be ignored and you will see it in the original currency.
 4. If you attempt to GET cart items in a different currency than the items in the cart, then the currency header should be ignored and you will see it in the original currency.
+
+* **`MINOR`** Fixed an issue with carts whereby changing the product quantity would change the order of cart items. This will now be preserved.
+* **`MINOR`** Added attribute validation so that only [known events](https://docs.moltin.com/api/advanced/events/observable-events) are accepted.
+* **`MINOR`** DELETE calls are now rejected to remove a relationship from a collection for incorrectly formatted requests.
+* **`MINOR`** Checkout call now returns order items in the response
+
+
 
 ### **2019, April 17**
 
