@@ -19,7 +19,7 @@ You can not sort by created\_at or updated\_at if you are using filtering.
 | Collections | `created_at`, `description`, `name`, `slug`, `status`, `updated_at` |
 | Products | `commodity_type`, `created_at`, `description`, `manage_stock`, `name`, `sku` ,`slug`, `status`, `updated_at` |
 | Product Variations | `name` |
-| Orders | `payment`, `shipping`, `status` |
+| Orders | `created_at`, `payment`, `shipping`, `status`, `with_tax` |
 
 The example below shows how to make a request to get all products, and sort them by the `created_at` timestamp.
 
