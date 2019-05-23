@@ -111,6 +111,7 @@
     * [Remove Cart Item](carts-and-checkout/carts/cart-items/remove-cart-item.md)
     * [Tax Items](carts-and-checkout/carts/cart-items/tax-items/README.md)
       * [Create a Tax Item](carts-and-checkout/carts/cart-items/tax-items/create-a-tax-item.md)
+      * [Update a Tax Item](carts-and-checkout/carts/cart-items/tax-items/update-a-tax-item.md)
       * [Delete a Tax Item](carts-and-checkout/carts/cart-items/tax-items/delete-a-tax-item.md)
 * [Checkout](carts-and-checkout/checkout.md)
 * [Promotions](carts-and-checkout/promotions/README.md)

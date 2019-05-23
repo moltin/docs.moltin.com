@@ -1,6 +1,6 @@
 # Sorting
 
-Sort results that are returned from the API by using the `sort` parameter with the field name you wish to sort against. 
+Sort results that are returned from the API by using the `sort` parameter with the field name you wish to sort against.
 
 {% hint style="info" %}
 To reverse the sort order, prepend the field with a minus.
@@ -9,7 +9,7 @@ To reverse the sort order, prepend the field with a minus.
 Currently, sorting is supported for the following endpoints, and against the following fields:
 
 {% hint style="warning" %}
-You can not sort by created\_at or updated\_at if you are using filtering. 
+You can not sort by created\_at or updated\_at if you are using filtering.
 {% endhint %}
 
 | Endpoint | Fields to sort against |
@@ -23,7 +23,7 @@ You can not sort by created\_at or updated\_at if you are using filtering.
 
 The example below shows how to make a request to get all products, and sort them by the `created_at` timestamp.
 
-### Sort products by `created_at` ASC
+## Sort products by `created_at` ASC
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -60,7 +60,7 @@ moltin.product.sort("created_at").all {
 {% endtab %}
 {% endtabs %}
 
-### Sort products by `created_at` DESC
+## Sort products by `created_at` DESC
 
 {% tabs %}
 {% tab title="cURL" %}

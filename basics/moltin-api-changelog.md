@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). This are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, May 23
+
+* **`MINOR`** Added ability to [update tax items](../carts-and-checkout/carts/cart-items/tax-items/update-a-tax-item.md) \(PUT\) once added to a cart item.
+
 ### 2019, May 21
 
 * **`MINOR`** Improved the safety of carts using different currencies by rejecting requests which would mix up currencies. The following use cases apply:
