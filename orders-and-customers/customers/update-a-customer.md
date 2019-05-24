@@ -97,7 +97,7 @@ var customer = {
     email: "ron@swanson.com"
 }
 
-Moltin.Customers.Update({customerId}, customer).then((response) => {
+Moltin.Customers.Update(customerId, customer).then((response) => {
   // Do something
 });
 ```
