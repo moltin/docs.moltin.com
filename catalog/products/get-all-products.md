@@ -173,7 +173,7 @@ Moltin.Products.All().then(products => {
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const MoltinClient = require('@moltin/request')
 
 const client = new createClient({
   client_id: 'X'

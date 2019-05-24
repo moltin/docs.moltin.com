@@ -48,7 +48,7 @@ curl -X DELETE https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes/:taxI
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const MoltinClient = require('@moltin/request')
 ​
 const client = new createClient({
   client_id: 'X'

@@ -81,7 +81,7 @@ curl -X POST https://api.moltin.com/v2/files \
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const MoltinClient = require('@moltin/request')
 const FormData = require("form-data")
 ​
 const moltin = new createClient({
