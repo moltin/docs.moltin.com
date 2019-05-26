@@ -110,9 +110,9 @@ Moltin.Cart(reference)
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 ​
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X'
 })
 
@@ -133,7 +133,7 @@ You can import `createCartIdentifier` from `@moltin/request` to create a Cart ID
 ```javascript
 const { createClient, createCartIdentifier } = require('@moltin/request')
 ​
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X'
 })
 

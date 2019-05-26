@@ -104,9 +104,9 @@ curl -X POST https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes \
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 ​
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X'
 })
 

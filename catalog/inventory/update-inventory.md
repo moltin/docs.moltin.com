@@ -139,9 +139,9 @@ Moltin.Inventories.DeallocateStock(productId, quantity).then(transaction => {
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 ​
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X',
   client_secret: 'X'
 })

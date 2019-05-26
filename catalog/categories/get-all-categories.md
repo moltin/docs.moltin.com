@@ -119,9 +119,9 @@ Moltin.Categories.All().then(categories => {
 
 {% tab title="Moltin Request" %}
 ```javascript
-const { createClient } = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 ​
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X'
 })
 ​
