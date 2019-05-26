@@ -28,9 +28,9 @@ Example string for filtering
 {% tabs %}
 {% tab title="Moltin Request" %}
 ```javascript
-const MoltinClient = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X',
   client_secret: 'X'
 })

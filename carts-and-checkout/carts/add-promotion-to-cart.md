@@ -250,9 +250,9 @@ Moltin.Cart(reference)
 
 {% tab title="Moltin Request" %}
 ```javascript
-const MoltinClient = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 ​
-const client = new createClient({
+const client = new MoltinClient({
   client_id: 'X'
 })
 
