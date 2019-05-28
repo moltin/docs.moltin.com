@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### **2019, May 28**
+
+* **`MINOR`** Cart items now returned with GET cart call
+
 ### 2019, May 23
 
 * **`MINOR`** Added ability to [update tax items](../carts-and-checkout/carts/cart-items/tax-items/update-a-tax-item.md) \(PUT\) once added to a cart item.
