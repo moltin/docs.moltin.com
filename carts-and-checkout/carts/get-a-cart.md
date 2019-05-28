@@ -1,5 +1,80 @@
 # Get a Cart
 
+{% api-method method="get" host="https://api.moltin.com" path="/v2/carts/:reference" %}
+{% api-method-summary %}
+Get a Cart by reference
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="reference" type="string" required=true %}
+A custom reference for this cart created by you
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="X-MOLTIN-CURRENCY" type="string" required=false %}
+Specifies the currency to be used for the products in the cart.  Your site's default will be used if not specified
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token to grant access to the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="include" type="string" required=false %}
+comma delimited string of entities that can be included - valid options:  
+`items`
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "data": {
+        "id": "360acb59-3fb7-4150-8066-ea54e850015b",
+        "type": "cart",
+        "links": {
+            "self": "https://api.moltin.com/carts/360acb59-3fb7-4150-8066-ea54e850015b"
+        },
+        "meta": {
+            "display_price": {
+                "with_tax": {
+                    "amount": 0,
+                    "currency": "",
+                    "formatted": "0"
+                },
+                "without_tax": {
+                    "amount": 0,
+                    "currency": "",
+                    "formatted": "0"
+                }
+            },
+            "timestamps": {
+                "created_at": "0001-01-01T00:00:00Z",
+                "updated_at": "0001-01-01T00:00:00Z"
+            }
+        }
+    }
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 You can easily get a new or existing cart by providing the unique cart reference in the request.
 
 {% hint style="warning" %}
@@ -131,7 +206,7 @@ You can import `createCartIdentifier` from `@moltin/request` to create a Cart ID
 {% endhint %}
 
 ```javascript
-const { createClient, createCartIdentifier } = require('@moltin/request')
+const { MoltinClient, createCartIdentifier } = require('@moltin/request')
 ​
 const client = new MoltinClient({
   client_id: 'X'
