@@ -10,8 +10,6 @@ Below is a list of attributes and operators available for [filtering](../../basi
 | `public` | `boolean` | `eq` | `eq(public,true)` |
 | `file_size` | `integer` | `gt` / `ge` / `lt` / `le` | `le(file_size,20953)` |
 
-
-
 ## Supported characters
 
 As filters are passed as URL query string parameters, we must ensure all filters are URL safe and are strict about the characters that can be used in a filter.
@@ -21,7 +19,7 @@ As filters are passed as URL query string parameters, we must ensure all filters
 | `A-Z` \(upper\) | No \(Must be lower case\) |
 | `0-9` | Yes |
 | `_` | Yes |
-|  `` \(space\) | No |
+| \`\` \(space\) | No |
 
 Example string for filtering
 

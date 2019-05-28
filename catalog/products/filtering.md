@@ -15,7 +15,7 @@ Below is a list of attributes and operators available for [filtering](../../basi
 | `category.id` | `string` | `eq` | `eq(category.id,id)` |
 | `collection.id` | `string` | `eq` | `eq(collection.id,id)` |
 
-### Get all products for one category
+## Get all products for one category
 
 In the example below, we will make a request to get all products that belong to one category.
 
@@ -78,6 +78,4 @@ response in
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

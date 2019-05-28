@@ -19,7 +19,7 @@ The ID for the requested Product
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API.  Implicit Bearer token only returns products with live status; products with draft status won't be included.
+The Bearer token to grant access to the API. Implicit Bearer token only returns products with live status; products with draft status won't be included.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -119,7 +119,7 @@ The Bearer token to grant access to the API.  Implicit Bearer token only returns
 {% endapi-method %}
 
 {% hint style="info" %}
-Please note that there will only be a display\_price in  your response if the product you are requesting has a price in the currency you are using as a header. If a header is not passed, the product must have a price in your default currency.
+Please note that there will only be a display\_price in your response if the product you are requesting has a price in the currency you are using as a header. If a header is not passed, the product must have a price in your default currency.
 {% endhint %}
 
 {% tabs %}

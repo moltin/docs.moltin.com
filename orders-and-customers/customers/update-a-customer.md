@@ -23,7 +23,7 @@ A customer token used to access customer implicitly.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The Bearer token to grant access to the API.  If there is no customer token the grant type must be `client_credentials.`  
+The Bearer token to grant access to the API. If there is no customer token the grant type must be `client_credentials.`
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 

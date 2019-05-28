@@ -68,5 +68,3 @@ client
 {% endtab %}
 {% endtabs %}
 
-
-
