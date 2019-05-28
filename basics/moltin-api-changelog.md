@@ -4,7 +4,8 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2019, May 28**
 
-* **`MINOR`** Cart items now returned with GET cart call
+* **`MINOR`** Cart items now returned with GET cart call.
+* **`MINOR`** Adding a promo code to an empty cart now returns 422: "At least one product must be included in your cart to qualify for this offer"
 
 ### 2019, May 23
 
