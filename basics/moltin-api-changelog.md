@@ -2,6 +2,12 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, May 30
+
+* **`MINOR`** Fixed bug where phone number associated with address would not update correctly on PUT
+
+
+
 ### **2019, May 28**
 
 * **`MINOR`** Cart items now returned with GET cart call.
