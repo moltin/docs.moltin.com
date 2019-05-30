@@ -14,6 +14,10 @@ Remove Item from Cart
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
+{% api-method-parameter name="reference" type="string" required=true %}
+A unique reference for the cart created by you
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="id" type="string" required=true %}
 The unique identifier for this cart item
 {% endapi-method-parameter %}
@@ -80,7 +84,7 @@ const reference = 'XXXX'
 const itemId = 'XXXX'
 
 Moltin.Cart(reference)
-  .RemoveItem(itemId, quantity)
+  .RemoveItem(itemId)
   .then(cart => {
     // Do something
   })

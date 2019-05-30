@@ -107,7 +107,8 @@ curl -X POST https://api.moltin.com/v2/carts/:cartID/items/:itemID/taxes \
 const { MoltinClient } = require('@moltin/request')
 ​
 const client = new MoltinClient({
-  client_id: 'X'
+  client_id: 'X',
+  client_secret: 'X'
 })
 
 const reference = 'XXXX'
