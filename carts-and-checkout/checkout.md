@@ -177,6 +177,81 @@ Shipping instructions
                 ]
             }
         }
+    },
+    "included": {
+        "items": [
+            {
+                "type": "order_item",
+                "id": "5ff8e482-da0b-4c43-b9ae-a13d384f10bd",
+                "quantity": 1,
+                "product_id": "047e3569-6889-4feb-9a22-1de5722a1a54",
+                "name": "Deck Shoe",
+                "sku": "deck-shoe-001",
+                "unit_price": {
+                    "amount": 47500,
+                    "currency": "USD",
+                    "includes_tax": true
+                },
+                "value": {
+                    "amount": 47500,
+                    "currency": "USD",
+                    "includes_tax": true
+                },
+                "links": {},
+                "meta": {
+                    "display_price": {
+                        "with_tax": {
+                            "unit": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            },
+                            "value": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            }
+                        },
+                        "without_tax": {
+                            "unit": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            },
+                            "value": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            }
+                        },
+                        "tax": {
+                            "unit": {
+                                "amount": 0,
+                                "currency": "USD",
+                                "formatted": "$0.00"
+                            },
+                            "value": {
+                                "amount": 0,
+                                "currency": "USD",
+                                "formatted": "$0.00"
+                            }
+                        }
+                    },
+                    "timestamps": {
+                        "created_at": "2019-05-31T15:54:02Z",
+                        "updated_at": "2019-05-31T15:54:02Z"
+                    }
+                },
+                "relationships": {
+                    "cart_item": {
+                        "data": {
+                            "type": "cart_item",
+                            "id": "4265f5f8-b616-45d6-90cf-d4d797777d72"
+                        }
+                    }
+                }
+            }
+        ]
     }
 }
 ```
@@ -499,6 +574,81 @@ Shipping instructions
                 ]
             }
         }
+    },
+    "included": {
+        "items": [
+            {
+                "type": "order_item",
+                "id": "5ff8e482-da0b-4c43-b9ae-a13d384f10bd",
+                "quantity": 1,
+                "product_id": "047e3569-6889-4feb-9a22-1de5722a1a54",
+                "name": "Deck Shoe",
+                "sku": "deck-shoe-001",
+                "unit_price": {
+                    "amount": 47500,
+                    "currency": "USD",
+                    "includes_tax": true
+                },
+                "value": {
+                    "amount": 47500,
+                    "currency": "USD",
+                    "includes_tax": true
+                },
+                "links": {},
+                "meta": {
+                    "display_price": {
+                        "with_tax": {
+                            "unit": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            },
+                            "value": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            }
+                        },
+                        "without_tax": {
+                            "unit": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            },
+                            "value": {
+                                "amount": 47500,
+                                "currency": "USD",
+                                "formatted": "$475.00"
+                            }
+                        },
+                        "tax": {
+                            "unit": {
+                                "amount": 0,
+                                "currency": "USD",
+                                "formatted": "$0.00"
+                            },
+                            "value": {
+                                "amount": 0,
+                                "currency": "USD",
+                                "formatted": "$0.00"
+                            }
+                        }
+                    },
+                    "timestamps": {
+                        "created_at": "2019-05-31T15:54:02Z",
+                        "updated_at": "2019-05-31T15:54:02Z"
+                    }
+                },
+                "relationships": {
+                    "cart_item": {
+                        "data": {
+                            "type": "cart_item",
+                            "id": "4265f5f8-b616-45d6-90cf-d4d797777d72"
+                        }
+                    }
+                }
+            }
+        ]
     }
 }
 ```
