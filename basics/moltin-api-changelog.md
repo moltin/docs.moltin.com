@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, June 11
+
+* **`MINOR`** Fixed bug where in some cases cart totals did not exactly reflect the order totals created after the cart was checked out. Cart totals and order totals now exactly match.
+
 ### 2019, May 30
 
 * **`MINOR`** Fixed bug where phone number associated with address would not update correctly on PUT
