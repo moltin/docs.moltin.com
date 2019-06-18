@@ -45,5 +45,22 @@ curl -X DELETE https://api.moltin.com/v2/files/:id \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
+
+{% tab title="JavaScript SDK" %}
+```javascript
+const MoltinGateway = require('@moltin/sdk').gateway
+
+const Moltin = MoltinGateway({
+  client_id: 'X',
+  client_secret: 'X'
+})
+
+const id = 'XXXX'
+
+Moltin.Files.Delete(id).then(response => {
+  // Do something
+})
+```
+{% endtab %}
 {% endtabs %}
 

@@ -17,13 +17,11 @@ Moltin officially maintains and supports a [JavaScript SDK](https://github.com/m
 Moltin provides a variety of frontend and server-side example projects using various modern programming languages.
 
 * [Gatsby Demo Store](https://github.com/moltin/gatsby-demo-store)
-* [Vue Demo Store](https://github.com/moltin-examples/vue-demo-store)
-* [Swift Demo Store](https://github.com/moltin-examples/swift-demo-app)
-* [NextJS Demo Store](https://github.com/moltin-examples/nextjs-demo-store)
+* [Vue Demo Store](https://github.com/moltin/vue-demo-store)
+* [Swift Demo Store](https://github.com/moltin/swift-demo-app)
+* [NextJS Demo Store](https://github.com/moltin/nextjs-demo-store)
 * [GraphQL example](https://github.com/moltin/graphql)
 * [Integration examples](https://github.com/moltin/integration-examples)
-
-Visit the [moltin-examples](https://github.com/moltin-examples) organization on GitHub to see more.
 
 ## Support
 
