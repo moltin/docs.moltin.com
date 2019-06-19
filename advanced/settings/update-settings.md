@@ -20,6 +20,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="calcuation\_method" type="string" required=false %}
+The method used to calculate card and order totals
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="additional\_languages" type="array" required=false %}
 An array of `alpha2` codes for supported languages
 {% endapi-method-parameter %}
@@ -70,7 +74,8 @@ curl -X PUT https://api.moltin.com/v2/settings \
          "type": "settings",
          "page_length": 70,
          "list_child_products": false,
-         "additional_languages": ["es","fr","de","pr-BR"]
+         "additional_languages": ["es","fr","de","pr-BR"],
+         "calculation_method": "simple"
        }
      }'
 ```

@@ -41,7 +41,7 @@ The Order object is a representation of an order in Moltin.
 | `billing_address.county` | `string` | Country |
 | `billing_address.country` | `string` | Any instructions with the shipping address |
 | `links` | `object` | A collection of URLs related to this resource |
-| `meta` | `object` | Additional information calculated for this order |
+| `meta` | `object` | Additional information [calculated](../../advanced/settings/#calculation-method) for this order |
 | `meta.display_price` | `object` | A collection of fields related to the totals and currency of this order |
 | `meta.display_price. with_tax` | `object` | Tax inclusive totals |
 | `meta.display_price. with_tax.amount` | `integer` | The raw total of this order \(inc tax\) |

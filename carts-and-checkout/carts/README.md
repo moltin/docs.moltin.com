@@ -3,7 +3,7 @@
 A Cart contains the product and custom cart items that a user may wish to purchase. Once a Cart is ready for Checkout, you can use the [Checkout](../checkout.md) endpoint to convert the cart to an order.
 
 {% hint style="info" %}
-Adding, modifying or removing any cart items, custom items or promotions will always return the cart meta. **This is useful to update the client with up-to-date totals.**
+Adding, modifying or removing any cart items, custom items or promotions will always return the cart meta, caculated using the [calculation method](../../advanced/settings/#calculation-method). **This is useful to update the client with up-to-date totals.**
 {% endhint %}
 
 {% hint style="warning" %}
@@ -71,6 +71,8 @@ If you do not pass a `X-MOLTIN-CURRENCY` header specifying what currency you wou
 | `self` | `string` | The URL of this cart |
 
 ## The Cart `meta` object
+
+The `meta` object includes the [calculated](../../advanced/settings/#calculation-method) card totals.
 
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |

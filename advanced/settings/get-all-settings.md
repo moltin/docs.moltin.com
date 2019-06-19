@@ -32,7 +32,8 @@ The Bearer token to grant access to the API
         "type": "settings",
         "page_length": 100,
         "list_child_products": true,
-        "additional_languages": []
+        "additional_languages": [],
+        "calculation_method": "simple"
     }
 }
 ```

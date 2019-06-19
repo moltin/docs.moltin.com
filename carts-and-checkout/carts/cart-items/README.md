@@ -18,7 +18,7 @@ Products added to a cart are referred to as a cart\_item.
 | `unit_price` | [`object`](./#the-cart-item-unit_price-object) | Contains pricing information about a single instance of this item |
 | `value` | [`object`](./#the-cart-item-value-object) | Contains pricing information total value of this item line based on the quantity |
 | `links` | [`object`](./#the-cart-item-links-object) | A collection of URLs related to this resource |
-| `meta` | [`object`](./#the-cart-item-meta-object) | Additional information calculated for this cart |
+| `meta` | [`object`](./#the-cart-item-meta-object) | Additional information [calculated](../../../advanced/settings/#calculation-method) for this cart |
 {% endtab %}
 
 {% tab title="Sample Response" %}
