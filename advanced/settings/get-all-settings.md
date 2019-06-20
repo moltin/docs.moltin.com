@@ -2,6 +2,10 @@
 
 You can get all of the project settings via one API call using a `client_credential` token. The response will be in object format as shown below.
 
+{% hint style="info" %}
+The default `calculation_method` is `simple.` Your `calculation_method` setting will not be returned unless you have updated it to use `line` by doing a PUT first.
+{% endhint %}
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/settings" %}
 {% api-method-summary %}
 Get all project settings
