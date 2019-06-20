@@ -9,7 +9,7 @@ We'll automatically delete carts 7 days after they were last updated.
 {% endhint %}
 
 {% hint style="danger" %}
-There are a number of actions that happen to your [inventory](../catalog/inventory/) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://developers.moltin.com/guides/work-with-inventory) explaining the processes.
+There are a number of actions that happen to your [inventory](../catalog/inventory/) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://www.moltin.com/developer/concepts/how-inventory-works) explaining the processes.
 {% endhint %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/carts/:reference/checkout" %}
