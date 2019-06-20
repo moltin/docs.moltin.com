@@ -40,7 +40,7 @@ Used with `sku` and `slug` builder modifiers, must contain two property-value pa
 
 > For example, use the property-value pairs to specify a color modifier: `seek`: {COLOR}, `set`: {GREEN}.
 
-* For more details, see: [Product SKU/Slug Builder Modifiers](https://developers.moltin.com/guides/product/modifiers).
+* For more details, see section: [Product SKU/Slug Builder Modifiers](https://www.moltin.com/developer/concepts/product-modifiers).
 
 ### Price modifiers objects
 
