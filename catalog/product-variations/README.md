@@ -2,7 +2,7 @@
 
 ## Product Variations
 
-Variations allow you to create the variations that your products have. Things like size or color are examples of a Variation. Using this system you can reliably create all possible combinations of your product. [Learn more about using variations](https://developers.moltin.com/guides/product/using-product-variations).
+Variations allow you to create the variations that your products have. Things like size or color are examples of a Variation. Using this system you can reliably create all possible combinations of your product. [Learn more about using variations](https://www.moltin.com/developer/concepts/product-variations).
 
  Variations are meant to be re-usable and contain multiple products, e.g. small, medium and large. You can view your product variations on the product object under relationships.
 
