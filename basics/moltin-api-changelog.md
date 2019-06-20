@@ -83,7 +83,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2018, December 18** <a id="2018-december-18"></a>
 
-* **`MAJOR`** Created a tax item to calculate [sales tax](https://developers.moltin.com/guides/taxes-integrate-taxjar-with-moltin) for individual cart items. GitHub now includes an [example app](https://github.com/moltin/taxjar-example) showcasing TaxJar integration.
+* **`MAJOR`** Created a tax item to calculate sales tax for individual cart items. GitHub now includes an [example app](https://github.com/moltin/taxjar-example) showcasing TaxJar integration.
 * [**DASHBOARD**](https://dashboard.moltin.com/) Transactions now include the `date` field and show formatted values. 
 * Fixed issue with filtering orders.
 * Added validation checks for file import.
