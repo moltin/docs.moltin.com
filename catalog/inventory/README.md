@@ -11,7 +11,7 @@ You can specify an initial stock level when you create a product. Otherwise set 
 {% endhint %}
 
 {% hint style="danger" %}
-There are a number of actions that happen to your [inventory](https://docs.moltin.com/catalog/inventory) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://developers.moltin.com/guides/work-with-inventory) explaining the processes.
+There are a number of actions that happen to your [inventory](https://docs.moltin.com/catalog/inventory) when checking out and paying for an order. For more information please be sure to evaluate our [detailed article](https://www.moltin.com/developer/concepts/how-inventory-works) explaining the processes.
 {% endhint %}
 
 ### The Stock object
