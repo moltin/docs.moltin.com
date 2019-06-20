@@ -154,7 +154,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2018, August 21** <a id="2018-august-21"></a>
 
-* **`MAJOR`** Added [​Inventory Management](https://developers.moltin.com/guides/work-with-inventory) is now available.
+* **`MAJOR`** Added ​Inventory Management is now available.
 * **`MAJOR`** Order exporting is now available.
 * POST to `variation.option` returns the newly created `option` object instead of the parent `variation`.
 * PUT to `variation.modifier` returns the updated `modifier` object instead of the parent `variation`.
@@ -163,7 +163,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2018, August 14** <a id="2018-august-14"></a>
 
-* **`MAJOR`** Added Beta access to [Inventory Management](https://developers.moltin.com/guides/work-with-inventory) with `orders`.
+* **`MAJOR`** Added Beta access to Inventory Management with `orders`.
 
 ### **2018, June 19** <a id="2018-june-19"></a>
 
@@ -173,11 +173,11 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 * Resolved an issue with using payment captured events.
 * Child `products` now display `main_images`.
-* **`MAJOR`** ​[Stripe](https://developers.moltin.com/guides/payment/payment-gateway-integration#third-party-payment-gateways-detailed-walkthrough) Connect payment method now available.
+* **`MAJOR`** ​Stripe Connect payment method now available.
 
 ### **2018, May 15** <a id="2018-may-15"></a>
 
 * Resolved issue that prevented some users from working with Promotions API correctly.
 * `flow` to `flow` relationships are now available.
-* **`MAJOR`** [CardConnect](https://developers.moltin.com/guides/payment/payment-gateway-integration#third-party-payment-gateways-detailed-walkthrough) `gateway` now available.
+* **`MAJOR`** CardConnect `gateway` now available.
 
