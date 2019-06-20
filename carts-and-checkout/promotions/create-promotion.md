@@ -1,7 +1,7 @@
 # Create Promotion
 
 {% hint style="info" %}
-There are two available types of promotion: [**fixed discount**](./#fixed-discount) and [**percent discount**](./#percent-discount). Be sure to look at the [example payloads](create-promotion.md#example-payloads) below when creating a new promotion record. For more details, see: [Developer Portal](https://developers.moltin.com/guides/working-with-promotions).
+There are two available types of promotion: [**fixed discount**](./#fixed-discount) and [**percent discount**](./#percent-discount). Be sure to look at the [example payloads](create-promotion.md#example-payloads) below when creating a new promotion record. For more details, see [How promotions work](https://www.moltin.com/developer/concepts/how-promotions-work).
 {% endhint %}
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/promotions" %}

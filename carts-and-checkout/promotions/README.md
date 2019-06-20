@@ -1,6 +1,6 @@
 # Promotions
 
-Promotions allow you to provide discounts to customers. A Promotion requires codes, which are then used by the end user to get a discount. For more details on promotions, see: [Developer Portal](https://developers.moltin.com/guides/create-a-promotion).
+Promotions allow you to provide discounts to customers. A Promotion requires codes, which are then used by the end user to get a discount. For more details, see [How promotions work](https://www.moltin.com/developer/concepts/how-promotions-work).
 
 ### The Promotion Object
 
