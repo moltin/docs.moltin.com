@@ -2,7 +2,7 @@
 
 Modifiers help augmenting properties of a variation of a product, price, etc., by creating an array of child products or prices. In each case you specify a `modifier type` and its `value`, which define how that property changes the variation option.
 
-See [Modifiers](https://developers.moltin.com/~/drafts/-LJTp18a2-7cLeeCK3px/primary/guides/modifiers) for conceptual details. 
+See [Modifiers](https://www.moltin.com/developer/concepts/product-modifiers) for conceptual details. 
 
 {% hint style="info" %}
 `variations` are containers for `options` which in turn are containers for `modifiers`.
