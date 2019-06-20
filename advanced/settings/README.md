@@ -32,7 +32,7 @@ You can define additional language codes that are enabled for a project \(**max*
 
 ## Calculation method
 
-This specifies the [method](https://docs.moltin.com/guides/guides/calculation-methods) used to calculate cart and order totals.
+This specifies the [method](https://docs.moltin.com/guides/calculation-methods) used to calculate cart and order totals.
 
 | **Name** | **Type** | **Default** |
 | :--- | :--- | :--- |
