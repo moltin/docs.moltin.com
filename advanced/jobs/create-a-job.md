@@ -1,8 +1,6 @@
 # Create a Job
 
-You can invoke the jobs service on any of the resources below that support jobs.
-
-* Also, see: [Export orders](https://docs.moltin.com/orders-and-customers/orders/exporting)
+Currently, you can invoke the jobs service to [export orders](https://docs.moltin.com/orders-and-customers/orders/exporting)
 
 {% api-method method="post" host="https://api.moltin.com" path="/v2/jobs" %}
 {% api-method-summary %}
