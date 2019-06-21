@@ -15,7 +15,7 @@ An example job would be exporting all orders from your store.
 | `job_type` | `string` | This represents the type of job. E.g. `order_export` |
 | `link` | `object` | The link object associated with this job |
 | `link.href` | `string` | The endpoint which returns a link to the exported data |
-| `status` | `string` | Displays the current status for the given job. Types: `pending`, `processing`, `completed` , `failed` |
+| `status` | `string` | Displays the current status for the given job. Types: `pending`, `processing`, `complete` , `failed` |
 | `timestamps` | `object` | Timestamps for this export |
 | `timestamps.created_at` | `string` | The creation date of this job |
 | `timestamps.updated_at` | `string` | The last updated date of this job |
