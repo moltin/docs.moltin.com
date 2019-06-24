@@ -4,17 +4,28 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### 2019, June 24
 
+* **`MINOR`** Fixed a bug where a PUT to a cart item with a quantity of `0` would return a `404`.
+* **`MINOR`** Fixed a bug where passing mismatched IDs in the URL and body, or not passing an ID in the body would cause a `5xx` error.
 * **`MINOR`** You can now add a tax item at the same time as adding a cart item. See [Add Product to Cart](../carts-and-checkout/carts/add-product-to-cart.md) or [Add Custom Item to Cart](../carts-and-checkout/carts/add-custom-item-to-cart.md) and for tax item reference see [Tax Items](../carts-and-checkout/carts/cart-items/tax-items/#the-tax-item-object).
+
+### 2019, June 21
+
+* **`MINOR`** Improved error handling when making payments.
+
+### 2019, June **19**
+
+* **`MINOR`** Fixed a bug where attempting to disable any currency would result in a `Cannot disable the default currency` error.
+
+### 2019, June **18**
+
+* **`MAJOR`** Added a [settings option](https://docs.moltin.com/api/advanced/settings#calculation-method) to allow store owners to specify [how taxes and promotions are calculated on their carts](https://docs.moltin.com/guides/calculation-methods).
 
 ### 2019, June 11
 
 * **`MINOR`** Fixed bug where in some cases cart totals did not exactly reflect the order totals created after the cart was checked out. Cart totals and order totals now exactly match.
-
-### 2019, May 30
-
 * **`MINOR`** Fixed bug where phone number associated with address would not update correctly on PUT
 
-
+### 2019, May 30
 
 ### **2019, May 28**
 
@@ -41,8 +52,6 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 * **`MINOR`** DELETE calls are now rejected to remove a relationship from a collection for incorrectly formatted requests.
 * **`MINOR`** Checkout call now returns order items in the response
 
-
-
 ### **2019, April 17**
 
 * [**DASHBOARD**](https://dashboard.moltin.com/) Fixed inconsistent behavior of pagination in the UI.
@@ -57,9 +66,6 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 ### **2019, April 4**
 
 * **`MAJOR`** Released a [caching layer](https://www.moltin.com/blog/were-releasing-a-new-edge-caching-layer) for `/products` endpoints. Cached data is now served to stores from edge locations around the world.
-
-### **2019, March 27**
-
 * **`MAJOR`** Released live version of the [Self Checkout ](https://moltin.com/commerce-solutions/mobile-self-checkout/)solutions.
 
 ### **2019, March 19**
@@ -68,15 +74,14 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### **2019, March 12**
 
+### **2019, March 27**
+
 * Fixed issue with timestamp on inventory record.
 
 ### 2019, March 4
 
 * Validation error code now returns a helpful message for SingleEqualsPriceModifierViolation.
 * Fixed an issue whereby newly created Flow Field wouldn't immediately present on resource.
-
-### 2019, February 27
-
 * **`MAJOR`** Added Zendesk integration for improved customer support.
 
 ### **2019, February 4**
@@ -91,6 +96,8 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 * [**DASHBOARD**](https://dashboard.moltin.com/) Transactions now include the `date` field and show formatted values. 
 * Fixed issue with filtering orders.
 * Added validation checks for file import.
+
+### 2019, February 27
 
 ### **2018, December 11** <a id="2018-december-11"></a>
 
