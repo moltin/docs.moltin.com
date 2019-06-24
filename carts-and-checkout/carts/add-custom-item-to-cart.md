@@ -6,6 +6,10 @@ You will want to add a custom item to the cart to handle things like shipping, t
 Any requests to add a product to cart will return a collection of [cart items](cart-items/).
 {% endhint %}
 
+{% hint style="info" %}
+[Tax items](cart-items/tax-items/#the-tax-item-object) may optionally be added with the custom item, although [client credentials](../../basics/authentication/client-credential-token.md) must be used to do this. If included, they replace any existing taxes on the item.
+{% endhint %}
+
 {% hint style="warning" %}
 Custom Cart Items are available via [**implicit authentication**](../../basics/authentication/implicit-token.md). You should **always check** each order has the correct details for each item, most importantly, price.
 {% endhint %}
@@ -38,6 +42,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="tax" type="array" required=false %}
+A list of tax items to apply to this cart item
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="type" type="string" required=true %}
 `custom_item`
 {% endapi-method-parameter %}

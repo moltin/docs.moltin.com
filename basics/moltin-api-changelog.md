@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, June 24
+
+* **`MINOR`** You can now add a tax item at the same time as adding a cart item. See [Add Product to Cart](../carts-and-checkout/carts/add-product-to-cart.md) or [Add Custom Item to Cart](../carts-and-checkout/carts/add-custom-item-to-cart.md) and for tax item reference see [Tax Items](../carts-and-checkout/carts/cart-items/tax-items/#the-tax-item-object).
+
 ### 2019, June 11
 
 * **`MINOR`** Fixed bug where in some cases cart totals did not exactly reflect the order totals created after the cart was checked out. Cart totals and order totals now exactly match.

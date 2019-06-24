@@ -6,6 +6,10 @@ Adding a Product to Cart is the most common Cart action. If you wish to add any 
 Any requests to add a product to cart will return a collection of [cart items](cart-items/).
 {% endhint %}
 
+{% hint style="info" %}
+[Tax items](cart-items/tax-items/#the-tax-item-object) may optionally be added with the product, although [client credentials](../../basics/authentication/client-credential-token.md) must be used to do this. If included, they replace any existing taxes on the product.
+{% endhint %}
+
 {% hint style="warning" %}
 Please note that there is a soft limit of up to 100 unique items in a cart at any one time.
 {% endhint %}
@@ -42,6 +46,10 @@ The Bearer token to grant access to the API
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="tax" type="array" required=false %}
+An list of tax items to apply to the cart item
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="quantity" type="integer" required=true %}
 The amount of products to add to cart
 {% endapi-method-parameter %}
