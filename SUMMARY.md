@@ -204,3 +204,11 @@
   * [Update Settings](advanced/settings/update-settings.md)
   * [Supported Languages](advanced/settings/supported-languages.md)
 
+## Additional resources
+
+* [Your First API Request](additional-resources/your-first-api-request/README.md)
+  * [1. Authentication](additional-resources/your-first-api-request/1.-authentication.md)
+  * [2. Add to Cart](additional-resources/your-first-api-request/2.-add-to-cart.md)
+  * [3. Checkout](additional-resources/your-first-api-request/3.-checkout.md)
+  * [4. Pay for your order](additional-resources/your-first-api-request/4.-pay-for-your-orderuntitled.md)
+
