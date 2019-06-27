@@ -168,7 +168,7 @@ curl -X "PUT" https://api.moltin.com/v2/products/:productId/relationships/brands
 ```
 {% endtab %}
 
-{% tab title="JavaScript" %}
+{% tab title="JavaScript SDK" %}
 ```javascript
 const MoltinGateway = require('@moltin/sdk').gateway
 
@@ -255,7 +255,7 @@ curl -X "DELETE" https://api.moltin.com/v2/products/:productId/relationships/bra
 ```
 {% endtab %}
 
-{% tab title="JavaScript" %}
+{% tab title="JavaScript SDK" %}
 ```javascript
 const MoltinGateway = require('@moltin/sdk').gateway
 
