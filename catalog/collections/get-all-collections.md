@@ -111,7 +111,7 @@ const Moltin = MoltinGateway({
   client_id: 'XXXX'
 })
 
-Moltin.Collections.all().then(collections => {
+Moltin.Collections.All().then(collections => {
   // Do something
 })
 ```
