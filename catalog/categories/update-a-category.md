@@ -51,7 +51,7 @@ curl -X PUT https://api.moltin.com/v2/categories/:id \
 ```
 {% endtab %}
 
-{% tab title="JavaScript" %}
+{% tab title="JavaScript SDK" %}
 ```javascript
 const MoltinGateway = require('@moltin/sdk').gateway
 
