@@ -85,7 +85,7 @@ const imageIds = [
   'e9737dc6-876a-4eab-b3b7-af62a1999123'
 ]
 
-Moltin.Products.CreateRelationships(productId, 'main-image', '98df7738-febe-4987-bc0e-b857297b30e9').then((relationships) => {
+Moltin.Products.CreateRelationships(productId, 'main-image', imageIds).then((relationships) => {
   // Do something
 })
 ```
