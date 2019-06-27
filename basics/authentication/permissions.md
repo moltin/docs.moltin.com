@@ -35,7 +35,7 @@ A breakdown of the access given by the token can be seen in the following table.
 | `/variations` | ✅ | ✅ |
 | `/promotions` | ✅ | ✅ |
 | `/settings` | ✅ | ✅ |
-| `/jobs` | ✅ |  |
+| `/jobs` | ✅ | ✅ |
 {% endtab %}
 
 {% tab title="Implicit" %}
