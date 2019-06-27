@@ -90,7 +90,7 @@ const Moltin = MoltinGateway({
   client_id: 'XXXX'
 })
 
-var collection = {
+const collection = {
     name: "Winter Season",
     slug: "winter-season",
     description: "Our Winter Season is now live!",
