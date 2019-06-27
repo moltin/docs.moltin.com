@@ -169,7 +169,9 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-Moltin.Products.UpdateRelationships(productId, 'main-image', 'e9737dc6-876a-4eab-b3b7-af62a1999123').then((relationships) => {
+const imageIds = 'e9737dc6-876a-4eab-b3b7-af62a1999123'
+
+Moltin.Products.UpdateRelationships(productId, 'main-image', imageIds).then((relationships) => {
   // Do something
 })
 ```
@@ -250,7 +252,9 @@ const Moltin = MoltinGateway({
 
 const productId = 'XXXX'
 
-Moltin.Products.DeleteRelationships(productId, 'main-image', 'e9737dc6-876a-4eab-b3b7-af62a1999123').then((relationships) => {
+const imageIds = 'e9737dc6-876a-4eab-b3b7-af62a1999123'
+
+Moltin.Products.DeleteRelationships(productId, 'main-image', imageIds).then((relationships) => {
   // Do something
 })
 ```
