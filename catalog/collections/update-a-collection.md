@@ -113,7 +113,7 @@ const collection = {
     status: "live"
 }
 
-Moltin.Collections.update(collectionId, collection).then(collection => {
+Moltin.Collections.Update(collectionId, collection).then(collection => {
   // Do something
 })
 ```
