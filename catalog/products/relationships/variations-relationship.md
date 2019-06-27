@@ -96,7 +96,7 @@ const variationIds = [
     '2c740aa0-7fb7-4bd6-9347-78988cf60f9a'
 ]
 
-Moltin.Products.CreateRelationships('{PRODUCT_ID}', 'product-variation', variationIds).then((relationships) => {
+Moltin.Products.CreateRelationships(productId, 'product-variation', variationIds).then((relationships) => {
   // Do something
 })
 ```
@@ -277,7 +277,7 @@ const variationIds = [
     '2c740aa0-7fb7-4bd6-9347-78988cf60f9a'
 ]
 
-Moltin.Products.DeleteRelationships(productId, variationIds, 'variation', variationIds).then((relationships) => {
+Moltin.Products.DeleteRelationships(productId, 'variation', variationIds).then((relationships) => {
   // Do something
 })
 ```
