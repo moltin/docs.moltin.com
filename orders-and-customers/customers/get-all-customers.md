@@ -83,7 +83,7 @@ curl -X GET https://api.moltin.com/v2/customers \
 const MoltinGateway = require('@moltin/sdk').gateway
 
 const Moltin = MoltinGateway({
-  client_id: 'XXXX'
+  client_id: 'X'
 })
 
 Moltin.Customers.All().then(customer => {
