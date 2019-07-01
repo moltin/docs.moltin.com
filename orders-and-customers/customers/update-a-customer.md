@@ -91,7 +91,7 @@ const Moltin = MoltinGateway({
   client_id: 'X'
 })
 
-var customerId = 'xx'
+var customerId = 'xxx'
 
 var customer = {
     email: "ron@swanson.com"
