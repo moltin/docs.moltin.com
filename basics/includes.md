@@ -231,8 +231,57 @@ The Bearer token used to access the API
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": {
+            "id": "933f837e-106d-412d-9724-e45a0760f404",
+            "type": "product",
+            "tax-code": null,
+            "name": "Sourdough bread",
+            "slug": "sourdough-bread",
+            "sku": "SRD-BR-01",
+            "manage_stock": false,
+            "description": "Sourdough bread",
+            "price": [
+                {
+                    "amount": 299,
+                    "currency": "USD",
+                    "includes_tax": true
+                }
+            ],
+            "status": "live",
+            "commodity_type": "physical",
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-06-08T09:50:59+00:00",
+                    "updated_at": "2019-05-21T02:05:42+00:00"
+                },
+                "display_price": {
+                    "with_tax": {
+                        "amount": 299,
+                        "currency": "USD",
+                        "formatted": "$2.99"
+                    },
+                    "without_tax": {
+                        "amount": 299,
+                        "currency": "USD",
+                        "formatted": "$2.99"
+                    }
+                },
+                "stock": {
+                    "level": 0,
+                    "availability": "out-stock"
+                }
+            },
+                "main_image": {
+                    "data": {
+                        "type": "main_image",
+                        "id": "147807c4-28a5-4a73-ac2a-4fe80b5f6791"
+                    }
+                }
+            }
+        }
+    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -313,8 +362,66 @@ The Bearer token used to access the API
 
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+    "data": {
+            "id": "933f837e-106d-412d-9724-e45a0760f404",
+            "type": "product",
+            "tax-code": null
+            "name": "Sourdough bread",
+            "slug": "sourdough-bread",
+            "sku": "SRD-BR-01",
+            "manage_stock": false,
+            "description": "Sourdough bread",
+            "price": [
+                {
+                    "amount": 299,
+                    "currency": "USD",
+                    "includes_tax": true
+                }
+            ],
+            "status": "live",
+            "commodity_type": "physical",
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-06-08T09:50:59+00:00",
+                    "updated_at": "2019-05-21T02:05:42+00:00"
+                },
+                "display_price": {
+                    "with_tax": {
+                        "amount": 299,
+                        "currency": "USD",
+                        "formatted": "$2.99"
+                    },
+                    "without_tax": {
+                        "amount": 299,
+                        "currency": "USD",
+                        "formatted": "$2.99"
+                    }
+                },
+                "stock": {
+                    "level": 0,
+                    "availability": "out-stock"
+                }
+            },
+            "relationships": {
+                "categories": {
+                    "data": [
+                        {
+                            "type": "category",
+                            "id": "9ea28fde-cf9b-4316-9ed1-638e3461e0f5"
+                        }
+                    ]
+                },
+                "main_image": {
+                    "data": {
+                        "type": "main_image",
+                        "id": "147807c4-28a5-4a73-ac2a-4fe80b5f6791"
+                    }
+                }
+            }
+        }
+    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
