@@ -27,7 +27,7 @@ The Bearer token to grant access to the API
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-You will get the following response when you perform any of the
+
 {% endapi-method-response-example-description %}
 
 ```javascript
