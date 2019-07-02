@@ -25,7 +25,7 @@ The Bearer token to grant access to the API
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
