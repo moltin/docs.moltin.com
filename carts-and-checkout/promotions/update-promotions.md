@@ -69,10 +69,10 @@ The end time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\)
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-cURL
+
 {% endapi-method-response-example-description %}
 
-```javascript
+```bash
 {
     "data": {
         "type": "promotion",
