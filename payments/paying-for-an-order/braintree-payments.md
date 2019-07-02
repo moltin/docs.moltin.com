@@ -67,9 +67,9 @@ Available for preconfigured custom fields in Braintree
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+Will return the updated transaction if the payment is successful.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -197,9 +197,9 @@ You will use `braintree` in this case
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+Will return the updated transaction if the payment is successful
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -312,13 +312,40 @@ Available for preconfigured custom fields in Braintree
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+Will return the updated transaction if the payment is successful.
 {% endapi-method-response-example-description %}
 
-```
-
+```bash
+{
+  "data": {
+    "id": "5c3eeef0-a5f4-4d04-b990-822521e8604d",
+    "type": "transaction",
+    "reference": "cz7dekqq",
+    "gateway": "braintree",
+    "amount": 10000,
+    "currency": "GBP",
+    "transaction-type": "purchase",
+    "status": "complete",
+    "relationships": {
+      "order": {
+        "data": {
+          "type": "order",
+          "id": "551ba7c2-7658-4abe-a530-6de0f6095010"
+        }
+      }
+    },
+    "meta": {
+      "display_price": {
+        "amount": 10000,
+        "currency": "GBP",
+        "formatted": "£100.00"
+      },
+      "created_at": "2019-07-02T10:05:42.11Z"
+    }
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -407,13 +434,12 @@ Available for preconfigured custom fields in Braintree
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+Will return the updated transaction if the payment is successful.
 {% endapi-method-response-example-description %}
 
 ```javascript
-
 {
     "data": {
         "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
@@ -442,6 +468,70 @@ Available for preconfigured custom fields in Braintree
         }
     }
 }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/payments" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+Will return the updated transaction if the payment is successful.
+{% endapi-method-response-example-description %}
+
+```bash
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/payments" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+Will return the updated transaction if the payment is successful.
+{% endapi-method-response-example-description %}
+
+```bash
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
