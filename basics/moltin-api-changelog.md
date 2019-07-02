@@ -2,6 +2,12 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+
+
+### 2019, July 2
+
+* **`MINOR`** Fixed a bug where incorrect error messages could be returned if there was an error when making a payment. For example you could get an `Insufficient Stock` error because of an incorrectly formatted payment request. 
+
 ### 2019, June 24
 
 * **`MINOR`** Fixed a bug where a PUT to a cart item with a quantity of `0` would return a `404`.
