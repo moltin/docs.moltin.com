@@ -245,7 +245,7 @@ The name of the Flow
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -350,7 +350,7 @@ Represents the type of object being returned
 The name of the Flow
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="entryID" type="string" required=false %}
+{% api-method-parameter name="entryID" type="string" required=true %}
 The **ID** of the entry
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -459,7 +459,7 @@ API
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
