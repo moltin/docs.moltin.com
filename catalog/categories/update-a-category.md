@@ -16,16 +16,6 @@ Update a Category by ID
 The Bearer token to gran access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-ID of the category to update.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="type" type="string" required=true %}
-Represents the type of the object being returned, e.g. `category`
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -34,24 +24,8 @@ Represents the type of the object being returned, e.g. `category`
 
 {% endapi-method-response-example-description %}
 
-```bash
-{
-    "data": {
-        "id": "57fbb8eb-34cc-4076-8ec8-7e6f52c07100",
-        "type": "category",
-        "status": "live",
-        "name": "Womens",
-        "slug": "Womens",
-        "description": "Womens clothing",
-        "meta": {
-            "timestamps": {
-                "created_at": "2018-10-05T15:18:48+00:00",
-                "updated_at": "2018-10-05T15:18:48+00:00"
-            }
-        },
-        "relationships": {}
-    }
-}
+```javascript
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
