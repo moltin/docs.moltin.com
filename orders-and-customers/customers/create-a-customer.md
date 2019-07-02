@@ -69,7 +69,7 @@ curl -X POST https://api.moltin.com/v2/customers \
        "type": "customer",
        "name": "Ron Swanson",
        "email": "ron@swanson.com",
-       "password": "mysecretpassword",
+       "password": "mysecretpassword"
      }
    }'
 ```
