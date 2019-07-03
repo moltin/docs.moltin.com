@@ -58,8 +58,50 @@ Always `product`
 
 {% endapi-method-response-example-description %}
 
-```text
-
+```bash
+{
+    "data": {
+        "type": "product",
+        "id": "67b482da-e9db-4eb1-b279-f63989017a66",
+        "name": "nombre del producto",
+        "slug": "producto",
+        "sku": "PROD-001",
+        "manage_stock": true,
+        "description": "descripción del producto",
+        "price": [
+            {
+                "amount": 2000,
+                "currency": "USD",
+                "includes_tax": false
+            }
+        ],
+        "status": "live",
+        "commodity_type": "physical",
+        "meta": {
+            "timestamps": {
+                "created_at": "2019-07-03T09:01:28+00:00",
+                "updated_at": "2019-07-03T09:03:04+00:00"
+            },
+            "display_price": {
+                "with_tax": {
+                    "amount": 2000,
+                    "currency": "USD",
+                    "formatted": "$20.00"
+                },
+                "without_tax": {
+                    "amount": 2000,
+                    "currency": "USD",
+                    "formatted": "$20.00"
+                }
+            },
+            "stock": {
+                "level": 0,
+                "availability": "out-stock"
+            }
+        },
+        "relationships": {}
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -77,6 +119,7 @@ curl -X PUT https://api.moltin.com/v2/products/:id \
       "data": {
         "type": "product",
         "id": "{PRODUCT_ID}",
+        "slug": "producto",
         "name": "nombre del producto",
         "description": "descripción del producto"
       }
