@@ -10,7 +10,10 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### 2019, June 24
 
-* **`MINOR`** Fixed a bug where a PUT to a cart item with a quantity of `0` would return a `404`.
+* **`MAJOR`** Added new methods, `simple` \(default\) and `line`, to [calculate totals](https://www.moltin.com/developer/concepts/how-to-calculate-cart-and-order-totals) for carts and orders.
+
+  **`MINOR`** Fixed a bug where a PUT to a cart item with a quantity of `0` would return a `404`.
+
 * **`MINOR`** Fixed a bug where passing mismatched IDs in the URL and body, or not passing an ID in the body would cause a `5xx` error.
 * **`MINOR`** You can now add a tax item at the same time as adding a cart item. See [Add Product to Cart](../carts-and-checkout/carts/add-product-to-cart.md) or [Add Custom Item to Cart](../carts-and-checkout/carts/add-custom-item-to-cart.md) and for tax item reference see [Tax Items](../carts-and-checkout/carts/cart-items/tax-items/#the-tax-item-object).
 
@@ -30,8 +33,6 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 * **`MINOR`** Fixed bug where in some cases cart totals did not exactly reflect the order totals created after the cart was checked out. Cart totals and order totals now exactly match.
 * **`MINOR`** Fixed bug where phone number associated with address would not update correctly on PUT
-
-### 2019, May 30
 
 ### **2019, May 28**
 
