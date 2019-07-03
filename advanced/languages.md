@@ -77,7 +77,7 @@ curl -X PUT https://api.moltin.com/v2/products/:id \
       "data": {
         "type": "product",
         "id": "{PRODUCT_ID}",
-        "name": "nombre del producto"
+        "name": "nombre del producto",
         "description": "descripción del producto"
       }
     }'

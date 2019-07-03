@@ -52,9 +52,10 @@ This describes the type of request payload you're sending
 {
     "data": {
         "type": "settings",
-        "page_length": 50,
+        "page_length": 70,
         "list_child_products": true,
-        "additional_languages": []
+        "additional_languages": ["es", "fr", "de"],
+        "calculation_method": "simple"
     }
 }
 ```
@@ -74,7 +75,7 @@ curl -X PUT https://api.moltin.com/v2/settings \
          "type": "settings",
          "page_length": 70,
          "list_child_products": false,
-         "additional_languages": ["es","fr","de","pr-BR"],
+         "additional_languages": ["es","fr","de"],
          "calculation_method": "simple"
        }
      }'
