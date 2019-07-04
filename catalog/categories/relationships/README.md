@@ -2,9 +2,9 @@
 
 You can use the Categories API to associate categories with each other in a hierarchical tree structure. The relationship between Categories is known as `parents` and `children`.
 
-You can create relationships between categories by attaching `parent` and `child` category IDs to the category of interest. **A category can have 1 parent but many children.** 
+You can create relationships between categories by attaching [`parent`](https://app.gitbook.com/@moltin/s/api/catalog/categories/relationships/parent-relationships) and [`child`](https://docs.moltin.com/api/catalog/categories/relationships/child-relationships) category IDs to the category of interest. **A category can have 1 parent but many children.** 
 
-The Category Relationship endpoint  allows you to specify the parent and children of a category in one request.
+The [Category Relationship](https://app.gitbook.com/@moltin/s/api/catalog/categories/relationships/category-relationships) endpoint  allows you to specify the parent and children of a category in one request.
 
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/tree" %}
 {% api-method-summary %}
