@@ -35,13 +35,29 @@ The **ID** of the parent category
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "data": {
+        "id": "59a8c4e2-bd2d-4a14-9f1a-a497330cdf11",
+        "type": "category",
+        "status": "live",
+        "name": "Mens",
+        "slug": "mens",
+        "description": "Browse our mens clothing line",
+        "meta": {
+            "timestamps": {
+                "created_at": "2019-07-04T13:18:53+00:00",
+                "updated_at": "2019-07-04T13:18:53+00:00"
+            }
+        },
+        "relationships": {}
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

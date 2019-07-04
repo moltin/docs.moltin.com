@@ -43,13 +43,27 @@ The **ID** of the Category
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "id": "59a8c4e2-bd2d-4a14-9f1a-a497330cdf11",
+    "type": "category",
+    "status": "live",
+    "name": "Mens",
+    "slug": "mens",
+    "description": "Browse our mens clothing line",
+    "meta": {
+        "timestamps": {
+            "created_at": "2019-07-04T13:18:53+00:00",
+            "updated_at": "2019-07-04T14:29:45+00:00"
+        }
+    },
+    "relationships": {}
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -66,17 +80,16 @@ curl -X POST https://api.moltin.com/v2/categories/:id/relationships/categories \
         "data": {
             "parent": {
                 "type": "category",
-                "id": "8a43aea7-79f0-4bcf-9bc8-a0f5d3d3642c"
+                "id": "6272a049-dc98-428b-ad90-65572add46c0"
             },
             "children": [
                 {
                 "type": "category",
-                "id": "1334e667-7b2b-4159-9e36-8a3b404901c8"
+                "id": "b438be03-9ae7-4e6a-8fb6-7ee41ce0ae71"
                 }
             ]
-            }
-          ]
-        }'
+        }
+    }'
 ```
 {% endtab %}
 {% endtabs %}

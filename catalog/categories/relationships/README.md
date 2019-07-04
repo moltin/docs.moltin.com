@@ -2,6 +2,10 @@
 
 You can use the Categories API to associate categories with each other in a hierarchical tree structure. The relationship between Categories is known as `parents` and `children`.
 
+You can create relationships between categories by attaching `parent` and `child` category IDs to the category of interest. **A category can have 1 parent but many children.** 
+
+The Category Relationship endpoint  allows you to specify the parent and children of a category in one request.
+
 {% api-method method="get" host="https://api.moltin.com" path="/v2/categories/tree" %}
 {% api-method-summary %}
 Get the Categories tree
@@ -28,33 +32,37 @@ The Bearer token to grant access to the API
 
 ```javascript
 {
-    "data": [
+  "data": [
+    {
+      "id": "59a8c4e2-bd2d-4a14-9f1a-a497330cdf11",
+      "type": "category",
+      "status": "live",
+      "name": "Mens",
+      "slug": "mens",
+      "description": "Browse our mens clothing line",
+      "children": [
         {
-            "id": "a636c261-0259-4975-ac8e-77246ec9cfe0",
-            "type": "category",
-            "status": "live",
-            "name": "Unique",
-            "slug": "unique",
-            "description": "Unique Category"
-        },
-        {
-            "id": "b8fac5c9-8605-48d0-bcf7-e6ada1a8c6bd",
-            "type": "category",
-            "status": "live",
-            "name": "Modern",
-            "slug": "modern",
-            "description": "Modern Category"
-        },
-        {
-            "id": "521e6029-0e0e-4704-b9a5-9777047ada04",
-            "type": "category",
-            "status": "live",
-            "name": "Bright",
-            "slug": "bright",
-            "description": "Bright Category"
+          "id": "b438be03-9ae7-4e6a-8fb6-7ee41ce0ae71",
+          "type": "category",
+          "status": "live",
+          "name": "Mens apparel",
+          "slug": "mens-apparel",
+          "description": "Browse our mens apparel",
+          "children": [
+            {
+              "id": "6272a049-dc98-428b-ad90-65572add46c0",
+              "type": "category",
+              "status": "live",
+              "name": "Clothing",
+              "slug": "clothing",
+              "description": "Browse our clothing line"
+                }
+              ]
+            }
+          ]
         }
-    ]
-}
+      ]
+    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
