@@ -4,6 +4,11 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 
 
+### 2019, July 4
+
+* **`MINOR`** Improved validation when creating and updating integrations.
+* **`MAJOR`** Added a new [`payload` field to webhooks](https://docs.moltin.com/api/advanced/events/event-payload) with the JSON representation of the updated object. _`resources` is now deprecated but will remain in place for the foreseeable future._
+
 ### 2019, July 2
 
 * **`MINOR`** Fixed a bug where incorrect error messages could be returned if there was an error when making a payment. For example you could get an `Insufficient Stock` error because of an incorrectly formatted payment request. 
