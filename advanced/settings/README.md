@@ -38,5 +38,11 @@ This specifies the [method](https://docs.moltin.com/guides/calculation-methods) 
 | :--- | :--- | :--- |
 | `calculation_method` | `string` | `simple` |
 
+## Readonly settings
 
+Readonly settings are used for internal store configuration and attempts to update them will fail silently.
+
+| Name | Type | Default |
+| :--- | :--- | :--- |
+| `currency_limit` | `integer` | `10` |
 
