@@ -6,6 +6,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 * **`MINOR`** Fixed a bug where new store settings could be empty.
 * **`MINOR`** Added new readonly settings.
+* **`MAJOR`** `OPTIONS` requests will now be handled from the nearest edge location to the client instead of our EU data centre.
 
 ### 2019, July 4
 
