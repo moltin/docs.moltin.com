@@ -1,7 +1,7 @@
 # Currencies
 
 {% hint style="info" %}
-There is a soft limit of 10 currencies per store.
+There is a hard limit of 10 currencies per store.
 {% endhint %}
 
 ## The Currency object
