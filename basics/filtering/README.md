@@ -10,6 +10,10 @@ Not all supported operators work with all endpoint attributes. Each endpoint pro
 You can only filter on base object attributes. Filtering through non-base attributes will not work as expected, and will return everything.
 {% endhint %}
 
+{% hint style="danger" %}
+There is a maximum of 10 filters allowed on a single request.
+{% endhint %}
+
 | **Operator** | **Description** |
 | :--- | :--- |
 | `eq` | Equals |

@@ -3,11 +3,9 @@
 Adding a Product to Cart is the most common Cart action. If you wish to add any [custom products](add-product-to-cart.md) or [promotions](add-promotion-to-cart.md), you'll need to do that separately.
 
 {% hint style="info" %}
-Any requests to add a product to cart will return a collection of [cart items](cart-items/).
-{% endhint %}
-
-{% hint style="info" %}
-[Tax items](cart-items/tax-items/#the-tax-item-object) may optionally be added with the product, although [client credentials](../../basics/authentication/client-credential-token.md) must be used to do this. If included, they replace any existing taxes on the product.
+* Any requests to add a product to cart will return a collection of [cart items](cart-items/).
+* [Tax items](cart-items/tax-items/#the-tax-item-object) may optionally be added with the product, although [client credentials](../../basics/authentication/client-credential-token.md) must be used to do this. If included, they replace any existing taxes on the product.
+* The product being added to the cart requires a price in the same currency as the cart. The API will return a `400` error if a price is not defined in the correct currency.
 {% endhint %}
 
 {% hint style="warning" %}

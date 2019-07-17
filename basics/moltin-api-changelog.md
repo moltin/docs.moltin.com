@@ -2,6 +2,12 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, July 17
+
+* **`MINOR`** Return an error if a user tries to add a product to a cart that does not have a price in the supplied currency.
+* **`MINOR`** Return an error if more than 10 filter parameters are applied to a request.
+* **`MINOR`** Fixed a bug where adding a relationship field to some entity types could cause a `5xx` response.
+
 ### 2019, July 10
 
 * **`MINOR`** Fixed a bug where new store settings could be empty.
