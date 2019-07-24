@@ -1,5 +1,11 @@
 # Create Promotion codes
 
+{% hint style="info" %}
+When a promotion expires, the promotion codes attached to that promotion will automatically become invalid, though they are not deleted.  
+  
+Should you re-enable the expired promotion, the promotion codes attached to that promotion will be completely deleted.
+{% endhint %}
+
 {% api-method method="post" host="https://api.moltin.com" path="/v2/promotions/:id/codes" %}
 {% api-method-summary %}
 Create Promotion Codes
