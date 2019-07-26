@@ -29,7 +29,7 @@ The Bearer token to grant the API access
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-Represents the id of object being updated. \(should be product\)
+Represents the id of object being updated.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
