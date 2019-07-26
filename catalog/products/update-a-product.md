@@ -28,6 +28,10 @@ The Bearer token to grant the API access
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+Represents the id of object being created. \(should be product\)
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="type" type="string" required=true %}
 Represents the type of object being created. \(should be product\)
 {% endapi-method-parameter %}
