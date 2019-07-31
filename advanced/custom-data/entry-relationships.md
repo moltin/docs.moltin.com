@@ -146,11 +146,11 @@ Removing a relationship between an entry and resource\(s\) deletes the relations
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/flows/:flowSlug/entries/:entryId/relationships/:fieldSlug" %}
 {% api-method-summary %}
-Delete an Entry Relationship\(s\)
+Delete Entry Relationships
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removing a relationship between an entry and resource\(s\) deletes the relationship specified in the payload
+Remove all relationships between an entry and resources
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -174,16 +174,6 @@ The slug of the Flow the entry belongs to
 The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="data.id" type="string" required=true %}
-The **ID** of the related resource
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="data.type" type="string" required=true %}
-Represents the resource type of the object
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
