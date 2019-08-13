@@ -8,7 +8,7 @@ description: Entries hold the pieces of data collected within the Fields.
 | :--- | :--- | :--- |
 | `id` | `string` | The unique identifier for this entry |
 | `type` | `string` | Represents the type of object being returned |
-| `fieldSlug` | `mixed` | The `:fieldSlug` key depends on the field's slug value. The value is of fields `field_type` |
+| `fieldSlug` | `mixed` | There can be a `:fieldSlug` attribute for each field attached to the flow. The type will depend on the field type. |
 
 If your flow has more than one field related to it, you will see multiple field slugs.
 
@@ -235,11 +235,11 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-Represents the type of object being returned
+This will always be `entry`
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="fieldSlug" type="string" required=true %}
-The name of the Flow
+{% api-method-parameter name=":fieldSlug" type="string" required=true %}
+The field slug for each field on this flow along with the corresponding value for this entry.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -343,11 +343,11 @@ The Bearer token to grant access to the API
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-Represents the type of object being returned
+This will always be `entry`
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="fieldSlug" type="string" required=true %}
-The name of the Flow
+{% api-method-parameter name=":fieldSlug" type="string" required=true %}
+The field slug for each field in this flow along with the corresponding value for this entry
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="entryID" type="string" required=true %}
@@ -426,7 +426,7 @@ Moltin.Flows.UpdateEntry(flowSlug, entryId, data).then(entry => {
 {% endtabs %}
 
 {% hint style="info" %}
-You can have multiple `{FIELD_SLUG}`s in the request body if they are related to the flow.
+You can have multiple `{FIELD_SLUG}`values in the request body if they are related to the flow.
 {% endhint %}
 
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/flows/:slug/entries/:id" %}
