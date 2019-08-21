@@ -22,6 +22,7 @@
 * [Safe Characters](basics/safe-characters.md)
 * [API Changelog](basics/moltin-api-changelog.md)
 * [API Status](http://status.moltin.com)
+* [Quotas](basics/quotas.md)
 
 ## Catalog
 
