@@ -22,3 +22,7 @@ description: >-
 | Inventories | 10,000 | pagination offset |
 | Flow fields | 100 | per flow |
 
+If you need higher quotas, and you are on our Enterprise plan or wish to upgrade your plan, please [contact us](https://www.moltin.com/contact) as we can increase your quotas on a case by case basis. 
+
+For transparency; when you reach out to us we will need to learn more about your use case and  requirements in detail so we can match our solution and capabilities with your needs.
+
