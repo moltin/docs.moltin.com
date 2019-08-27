@@ -12,9 +12,10 @@
 | `gateway` | `string` | The name of the payment gateway used |
 | `amount` | `integer` | The amount for this transaction |
 | `currency` | `string` | The transaction currency |
-| `transaction-type` | `string` | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
-| `status` | `string` | The status provided by the gateway for this transaction. `complete` or `failed` |
-| `relationships` | `object` | This will contain the order object this transaction relates to |
+| `transaction-type` | `string` | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) \(**deprecated**\) |
+| `transaction_type` | string | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
+| `status` | string | The status provided by the gateway for this transaction. `complete` or `failed` |
+| `relationships` | object | This will contain the order object this transaction relates to |
 {% endtab %}
 
 {% tab title="Sample Object" %}
@@ -28,7 +29,8 @@
 			"gateway": "stripe",
 			"amount": 40000,
 			"currency": "USD",
-			"transaction-type": "purchase",
+			"transaction-type": "purchase", // deprecated
+			"transaction_type": "purchase",
 			"status": "complete",
 			"relationships": {
 				"order": {
@@ -85,7 +87,8 @@ The Bearer token to grant access to the API
             "gateway": "manual",
             "amount": 19000,
             "currency": "USD",
-            "transaction-type": "capture",
+            "transaction-type": "capture", // deprecated
+            "transaction_type": "capture",
             "status": "complete",
             "relationships": {
                 "order": {
