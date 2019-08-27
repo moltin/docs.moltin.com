@@ -9,7 +9,7 @@ Adding a Product to Cart is the most common Cart action. If you wish to add any 
 {% endhint %}
 
 {% hint style="warning" %}
-Please note that there is a soft limit of up to 100 unique items in a cart at any one time.
+Please note that there is a hard limit of up to 100 unique items in a cart at any one time.
 {% endhint %}
 
 {% hint style="danger" %}
