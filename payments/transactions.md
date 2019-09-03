@@ -2,6 +2,14 @@
 
 ### The transaction object
 
+{% hint style="warning" %}
+**Deprecated**: The `created_at` property is deprecated. Please use the`timestamps` object instead.
+{% endhint %}
+
+{% hint style="warning" %}
+**Deprecated:** The `transaction-type`property is deprecated. Please use the `transaction_type` property instead.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
@@ -12,10 +20,11 @@
 | `gateway` | `string` | The name of the payment gateway used |
 | `amount` | `integer` | The amount for this transaction |
 | `currency` | `string` | The transaction currency |
-| `transaction-type` | `string` | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) \(**deprecated**\) |
+| `transaction-type` | `string` | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
 | `transaction_type` | string | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
 | `status` | string | The status provided by the gateway for this transaction. `complete` or `failed` |
 | `relationships` | object | This will contain the order object this transaction relates to |
+| `timestamps` | object | Contains the `created_at` and `updated_at` properties |
 {% endtab %}
 
 {% tab title="Sample Object" %}
@@ -29,7 +38,7 @@
 			"gateway": "stripe",
 			"amount": 40000,
 			"currency": "USD",
-			"transaction-type": "purchase", // deprecated
+			"transaction-type": "purchase",
 			"transaction_type": "purchase",
 			"status": "complete",
 			"relationships": {
@@ -38,6 +47,18 @@
 						"type": "order",
 						"id": "f6f63e5b-1e04-47aa-9213-993ead03d441"
 					}
+				}
+			},
+			"meta": {
+				"display_price": {
+		        	"amount": 40000,
+			        "currency": "USD",
+			        "formatted": "$400.00"
+				},
+				"created_at": "2019-06-24T13:14:21.913Z",
+				"timestamps": {
+					"created_at": "2019-06-24T13:14:21.913Z",
+					"updated_at": "2019-06-24T13:14:21.913Z"
 				}
 			}
 		}
@@ -87,7 +108,7 @@ The Bearer token to grant access to the API
             "gateway": "manual",
             "amount": 19000,
             "currency": "USD",
-            "transaction-type": "capture", // deprecated
+            "transaction-type": "capture",
             "transaction_type": "capture",
             "status": "complete",
             "relationships": {
@@ -104,15 +125,12 @@ The Bearer token to grant access to the API
                     "currency": "USD",
                     "formatted": "$190.00"
                 },
-                "created_at": "2018-12-17T16:19:53.379Z"
-            },
-            "order_reference": null,
-            "phone_number": null,
-            "delivery_status": null,
-            "delivery_details": null,
-            "delivery_date": null,
-            "short_id": null,
-            "confirmation_email_sent": null
+                "created_at": "2018-12-17T16:19:53.379Z",
+				"timestamps": {
+					"created_at": "2018-12-17T16:19:53.379Z",
+					"updated_at": "2018-12-17T16:19:53.379Z"
+				}
+            }
         }
     ]
 }
@@ -125,7 +143,7 @@ The Bearer token to grant access to the API
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X GET https://api.moltin.com/v2/inventories/:orderId/transactions \
+curl -X GET https://api.moltin.com/v2/orders/:orderId/transactions \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
