@@ -2,11 +2,6 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
-### 2019, September 2
-
-* **`MINOR`** Fixed a bug where `field_type` needed to be specified when updating a field and omitting it would cause a `5xx` response.
-* **`MINOR`** Fixed a bug where the `updated_at` on a flow was not being updated when the flow was updated
-
 ### 2019, July 17
 
 * **`MINOR`** Return an error if a user tries to add a product to a cart that does not have a price in the supplied currency.
