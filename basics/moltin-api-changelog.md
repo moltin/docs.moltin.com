@@ -2,6 +2,10 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, September 11
+
+* **`MINOR`** Order CSV exports now include the `instructions` field from the shipping address.
+
 ### 2019, September 9
 
 * **`MINOR`** Fixed an issue where the formatted money was not being formatted for transaction responses.
