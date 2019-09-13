@@ -2,6 +2,11 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
+### 2019, September 13
+
+* **`MINOR`** Currency is now formatted correctly across all `formatted` properties.
+* **`MINOR`** Product slug is now returned for cart items
+
 ### 2019, September 11
 
 * **`MINOR`** Order CSV exports now include the `instructions` field from the shipping address.
