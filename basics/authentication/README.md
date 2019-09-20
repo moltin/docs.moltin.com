@@ -7,7 +7,7 @@ All requests to the API need to be accompanied by an authorization header with a
 Authentication token gives permissions for the client to access their data, and is used to authenticate a request to the API endpoint.
 
 {% hint style="info" %}
-Read our [Quick Start guide](https://developers.moltin.com/your-first-api-request) on how to make your first API request.
+Read our [Quick Start guide](https://docs.moltin.com/api/additional-resources/your-first-api-request) on how to make your first API request.
 {% endhint %}
 
 Authentication tokens are generated via the `authentication` endpoint and expire within 1 hour. They need to be then regenerated. If you're using our [JavaScript SDK](https://github.com/moltin/js-sdk) this is automatically handled for you.
