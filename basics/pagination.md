@@ -35,7 +35,7 @@ Pagination fields will never be omitted from a listing response, even if there a
 
 You can, therefore, easily paginate resources using `page[offset]` and `page[limit]` query string parameters on most top-level endpoints. Both of these values are **integers**.
 
-Pagination is also supported within our [JavaScript and Swift SDK](https://developers.moltin.com/developer-tools/sdks).
+Pagination is also supported within our [JavaScript and Swift SDK](https://www.moltin.com/developer/sdks).
 
 {% hint style="info" %}
 **Pagination Limitations**
