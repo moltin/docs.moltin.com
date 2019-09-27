@@ -2,7 +2,7 @@
 
 ## Welcome to Moltin
 
-[Moltin](https://moltin.com) is a headless eCommerce service that enables rapid experience-first commerce development & applications.
+[Moltin](https://moltin.com) is a [headless eCommerce](https://moltin.com/headless-commerce) service that enables rapid experience-first commerce development & applications.
 
 If you're new to eCommerce APIs as a concept or you're not sure how to evaluate what makes a good one, we recommend reading our [eCommerce API 101 guide](https://www.moltin.com/blog/an-introduction-to-ecommerce-apis).
 
@@ -10,11 +10,13 @@ The Moltin API follows a microservice architecture that enables you to plug comm
 
 We have a two-track [authentication layer](basics/authentication/) that enables destructive and non-destructive actions across projects. All requests require an accompanying `API key` that is associated to users on your team.
 
-## SDKs
+If you do not have an account, project and API key already and would like to evaluate Moltin, please [reach out](https://www.moltin.com/contact) and we would be happy to get you setup.
+
+### SDKs
 
 Moltin officially maintains and supports a [JavaScript SDK](https://github.com/moltin/js-sdk), [JS request library](https://github.com/moltin/moltin-request) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven but happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
 
-## Examples
+### Examples
 
 Moltin provides a variety of frontend and server-side example projects using various modern programming languages.
 
@@ -25,7 +27,11 @@ Moltin provides a variety of frontend and server-side example projects using var
 * [GraphQL example](https://github.com/moltin/graphql)
 * [Integration examples](https://github.com/moltin/integration-examples)
 
-## Support
+### Postman
+
+If you're looking to test or develop against our APIs, we recommend leveraging the [Moltin Postman collection](https://www.moltin.com/blog/postman-collection/).
+
+### Support
 
 If you have any questions on how to use, improve or show off what you're building with Moltin, [join us on Spectrum](https://spectrum.chat/moltin).
 
