@@ -6,7 +6,7 @@
 
 The Moltin API follows a microservice architecture that enables you to plug commerce into any part of your application. The API is built on the [JSON API](http://jsonapi.org/) specification, follows predictable [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) URLs and supports [cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
-If you're new to eCommerce APIs as a concept and how to evaluate one, we recommend reading our [eCommerce API 101 guide](https://www.moltin.com/blog/an-introduction-to-ecommerce-apis).
+If you're new to eCommerce APIs as a concept or you're not sure how to evaluate what makes a good one, we recommend reading our [eCommerce API 101 guide](https://www.moltin.com/blog/an-introduction-to-ecommerce-apis).
 
 We have a two-track [authentication layer](basics/authentication/) that enables destructive and non-destructive actions across projects. All requests require an accompanying `API key` that is associated to users on your team.
 
