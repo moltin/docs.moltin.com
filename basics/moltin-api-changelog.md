@@ -60,7 +60,7 @@ This changelog is a list of backwards-compatible updates and fixes in the API an
 
 ### 2019, June **18**
 
-* **`MAJOR`** Added a [settings option](https://docs.moltin.com/api/advanced/settings#calculation-method) to allow store owners to specify [how taxes and promotions are calculated on their carts](https://docs.moltin.com/guides/calculation-methods).
+* **`MAJOR`** Added a [settings option](https://docs.moltin.com/api/advanced/settings#calculation-method) to allow store owners to specify [how taxes and promotions are calculated on their carts](https://www.moltin.com/developer/concepts/how-to-calculate-cart-and-order-totals).
 
 ### 2019, June 11
 
