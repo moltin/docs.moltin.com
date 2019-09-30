@@ -24,7 +24,7 @@ Moltin provides a variety of frontend and server-side example projects using var
 * [Vue Demo Store](https://github.com/moltin/vue-demo-store)
 * [Swift Demo Store](https://github.com/moltin/swift-demo-app)
 * [NextJS Demo Store](https://github.com/moltin/nextjs-demo-store)
-* [GraphQL example](https://github.com/moltin/graphql)
+* [GraphQL example](https://github.com/moltin/graphql-moltin-server)
 * [Integration examples](https://github.com/moltin/integration-examples)
 
 ### Postman
