@@ -1,6 +1,6 @@
 # Custom Data \(Flows\)
 
-Create and manage custom data through Flows. Flows allow you to extend an existing or create a new resource.
+Create and manage custom data through Flows. Flows allow you to extend an existing or create a new resource. For real world examples, check our [guides](https://www.moltin.com/developer/guides/tag/flows) or for a more in depth overview of Flows check our [how flows works concept](https://www.moltin.com/developer/concepts/how-flows-work).
 
 ### Core vs. non-core Flow <a id="core-vs-non-core-flow"></a>
 
