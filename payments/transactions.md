@@ -374,3 +374,111 @@ curl -X POST https://api.moltin.com/v2/orders/:orderId/transactions/:transaction
 {% endtab %}
 {% endtabs %}
 
+{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/transactions/:transactionId/confirm" %}
+{% api-method-summary %}
+Confirm payment intent
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="transactionId" type="string" required=true %}
+ID of the transaction you want to confirm
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="orderId" type="string" required=true %}
+ID of the order
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The Bearer token to grant access to the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="payment" type="string" required=true %}
+Payment method or source
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="gateway" type="string" required=true %}
+`purchase`
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="method" type="string" required=true %}
+`stripe_payment_intents`
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "data": {
+        "id": "b07c45c7-cd6d-466b-9ed9-bf44dd80696f",
+        "type": "transaction",
+        "reference": "pi_1FCnB5CTrBHFHKc35eHmhqnF",
+        "gateway": "stripe_payment_intents",
+        "amount": 5499,
+        "currency": "USD",
+        "transaction-type": "purchase",
+        "transaction_type": "purchase",
+        "status": "complete",
+        "payment_intent": {
+            "client_secret": "pi_1FCnB5CTrBHFHKc35eHmhqnF_secret_netgkKN9Cs9U4P98BG1T6esPa",
+            "status": "requires_action"
+        },
+        "relationships": {
+            "order": {
+                "data": {
+                    "type": "order",
+                    "id": "a37e7229-3539-4acb-95b9-9705da42d20e"
+                }
+            }
+        },
+        "meta": {
+            "display_price": {
+                "amount": 5499,
+                "currency": "USD",
+                "formatted": "$54.99"
+            },
+            "created_at": "2019-08-29T12:56:39.401Z",
+            "timestamps": {
+                "created_at": "2019-08-29T12:56:39Z",
+                "updated_at": "2019-08-29T12:56:43Z"
+            }
+        }
+    }
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.moltin.com/v2/orders/:orderId/transactions/:transactionId/confirm \
+     -H "Authorization: Bearer XXXX" \
+     -d $'{
+        "data": {
+          "gateway": "stripe_payment_intents",
+          "method": "purchase",
+          "payment": "pm_card_threeDSecureRequired"
+        }
+      }'
+```
+{% endtab %}
+{% endtabs %}
+

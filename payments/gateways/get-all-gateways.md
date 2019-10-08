@@ -59,6 +59,13 @@ The Bearer token to grant access to the API
       "name": "Stripe",
       "slug": "stripe",
       "type": "gateway"
+    },
+    {
+      "enabled": false,
+      "login": "",
+      "name": "Stripe Payment Intents",
+      "slug": "stripe_payment_intents",
+      "type": "gateway"
     }
   ]
 }
