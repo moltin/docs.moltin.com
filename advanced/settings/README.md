@@ -32,15 +32,11 @@ You can define additional language codes that are enabled for a project \(**max*
 
 ## Calculation method
 
-This option defines the method used to calculate cart and order totals. Currently there are two methods: `{simple}` and `{line}`
+This specifies the [method](https://docs.moltin.com/guides/calculation-methods) used to calculate cart and order totals.
 
-The `{simple}` method is our previous method for calculating cart and order totals which focuses on the total value of the cart. This should only be used in the case where Moltin is not utilised for tax calculations. The `{line}` method treats each line item individually resulting in more accurate figures after taxes and promotions are applied.
-
-| **Name** | **Type** | **Value** | **Default** |
-| :--- | :--- | :--- | :--- |
-| `calculation_method` | `string` | `simple` | ✓ |
-| `calculation_method` | `string` | `line` |  |
-|  |  |  |  |
+| **Name** | **Type** | **Default** |
+| :--- | :--- | :--- |
+| `calculation_method` | `string` | `simple` |
 
 ## Readonly settings
 

@@ -2,48 +2,6 @@
 
 This changelog is a list of backwards-compatible updates and fixes in the API and [dashboard](https://dashboard.moltin.com/app). These updates are rolled out automatically, but we would still like to keep you informed about the most current state of our API.
 
-### 2019, December 12
-
-* **`MAJOR`** Removed deprecated fields on transaction responses
-
-### 2019, November 26
-
-* **`MINOR`** Promotion code response is now paginated
-
-### 2019, November 4
-
-* **`MAJOR`** Flow slugs can no longer be pluralised versions of core entity slugs \(products, orders, etc\)
-
-### 2019, October 28
-
-* **`MINOR`** In some cases, errors to the orders endpoints would return a blank error. This has been resolved
-* **`MINOR`** Deleting a relationship on a flow will now set the fields to `null`, not a blank array
-
-### 2019, October 15
-
-* **`MINOR`** Fixed an issue where whitespace in filters would cause a 500 error
-* **`MINOR`** Fixed an issue where all flows were returned when using `?include`
-
-### 2019, October 11
-
-* **`MINOR`** Fixed an issue where meta data wasn't being returned when searching for customers
-
-### 2019, October 7
-
-* **`MINOR`** Added the ability to delete a single promotion code via a new endpoint
-
-### 2019, October 4
-
-* **`MINOR`** Added `detail` to error responses that only included `details` in preparation to deprecate `details`
-
-### 2019, October 2
-
-* **`MINOR`** Added Stripe payment gateway to attributes
-
-### 2019, September 30
-
-* **`MINOR`** Fixed an issue where updating a file would sometimes result in a 500 error
-
 ### 2019, September 13
 
 * **`MINOR`** Currency is now formatted correctly across all `formatted` properties.

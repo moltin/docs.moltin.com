@@ -2,6 +2,14 @@
 
 ### The transaction object
 
+{% hint style="warning" %}
+**Deprecated**: The `created_at` property is deprecated. Please use the`timestamps` object instead.
+{% endhint %}
+
+{% hint style="warning" %}
+**Deprecated:** The `transaction-type`property is deprecated. Please use the `transaction_type` property instead.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Attributes" %}
 | **Attribute** | **Type** | **Description** |
@@ -12,6 +20,7 @@
 | `gateway` | `string` | The name of the payment gateway used |
 | `amount` | `integer` | The amount for this transaction |
 | `currency` | `string` | The transaction currency |
+| `transaction-type` | `string` | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
 | `transaction_type` | string | The type of transaction \(`purchase`,`capture`, `authorize` or `refund`\) |
 | `status` | string | The status provided by the gateway for this transaction. `complete` or `failed` |
 | `relationships` | object | This will contain the order object this transaction relates to |
@@ -99,6 +108,7 @@ The Bearer token to grant access to the API
             "gateway": "manual",
             "amount": 19000,
             "currency": "USD",
+            "transaction-type": "capture",
             "transaction_type": "capture",
             "status": "complete",
             "relationships": {
@@ -115,6 +125,7 @@ The Bearer token to grant access to the API
                     "currency": "USD",
                     "formatted": "$190.00"
                 },
+                "created_at": "2018-12-17T16:19:53.379Z",
 				"timestamps": {
 					"created_at": "2018-12-17T16:19:53.379Z",
 					"updated_at": "2018-12-17T16:19:53.379Z"
@@ -332,7 +343,7 @@ The Bearer token to grant access to the API
         "gateway": "manual",
         "amount": 59992,
         "currency": "USD",
-        "transaction_type": "refund",
+        "transaction-type": "refund",
         "status": "complete",
         "relationships": {
             "order": {
@@ -420,6 +431,7 @@ Payment method or source
         "gateway": "stripe_payment_intents",
         "amount": 5499,
         "currency": "USD",
+        "transaction-type": "purchase",
         "transaction_type": "purchase",
         "status": "complete",
         "payment_intent": {
@@ -440,6 +452,7 @@ Payment method or source
                 "currency": "USD",
                 "formatted": "$54.99"
             },
+            "created_at": "2019-08-29T12:56:39.401Z",
             "timestamps": {
                 "created_at": "2019-08-29T12:56:39Z",
                 "updated_at": "2019-08-29T12:56:43Z"

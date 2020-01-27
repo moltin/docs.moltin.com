@@ -23,9 +23,9 @@ You can pass multiple observable keys to the `observes` field of the [event obje
 |  | Deleted | `currency.deleted` |
 | **File** | Created | `file.created` |
 |  | Deleted | `file.deleted` |
-| **Integration \(events\)** | Created | `integration.created` |
-|  | Updated | `integration.updated` |
-|  | Deleted | `integration.deleted` |
+| **Integration \(events\)** | Created | `integrations.created` |
+|  | Updated | `integrations.updated` |
+|  | Deleted | `integrations.deleted` |
 | **Order** | Created | `order.created` |
 |  | Updated | `order.updated` |
 |  | Fulfilled | `order.fulfilled` |
@@ -38,6 +38,7 @@ You can pass multiple observable keys to the `observes` field of the [event obje
 |  | Deleted | `product.deleted` |
 | **Settings** | Created | `settings.created` |
 |  | Updated | `settings.updated` |
+|  | Deleted | `settings.deleted` |
 | **Stock Transaction** | Created | `stock-transaction.created` |
 | **Transaction** | Created | `transaction.created` |
 |  | Updated | `transaction.updated` |
