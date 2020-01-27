@@ -119,6 +119,7 @@
 ## Payments
 
 * [Gateways](payments/gateways/README.md)
+  * [Configure CyberSource](payments/gateways/configure-cybersource.md)
   * [Get all Gateways](payments/gateways/get-all-gateways.md)
   * [Get a Gateway](payments/gateways/get-a-gateway.md)
   * [Update Gateway Settings](payments/gateways/update-gateway-settings.md)
@@ -136,6 +137,7 @@
   * [CardConnect Payments](payments/paying-for-an-order/cardconnect-payments.md)
   * [Adyen Payments](payments/paying-for-an-order/adyen-payments.md)
   * [Braintree Payments](payments/paying-for-an-order/braintree-payments.md)
+  * [CyberSource Payments](payments/paying-for-an-order/cybersource-payments.md)
 * [Transactions](payments/transactions.md)
 
 ## Orders & Customers
