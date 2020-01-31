@@ -119,7 +119,6 @@
 ## Payments
 
 * [Gateways](payments/gateways/README.md)
-  * [Configure CyberSource](payments/gateways/configure-cybersource.md)
   * [Get all Gateways](payments/gateways/get-all-gateways.md)
   * [Get a Gateway](payments/gateways/get-a-gateway.md)
   * [Update Gateway Settings](payments/gateways/update-gateway-settings.md)
@@ -128,6 +127,7 @@
   * [Configure Stripe](payments/gateways/configure-stripe.md)
   * [Configure Stripe Payment Intents](payments/gateways/configure-stripe-payment-intents.md)
   * [Configure Authorize.net](payments/gateways/configure-authorize.net.md)
+  * [Configure CyberSource](payments/gateways/configure-cybersource.md)
   * [Configure CardConnect](payments/gateways/configure-cardconnect.md)
 * [Paying for an order](payments/paying-for-an-order/README.md)
   * [Authorize.net Payments](payments/paying-for-an-order/authorize.net-payments.md)

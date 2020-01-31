@@ -1,10 +1,6 @@
----
-description: >-
-  You can configure Stripe programatically using the `/gateways/cyber_source`
-  endpoint.
----
-
 # Configure CyberSource
+
+You can configure CyberSource programatically using the `/gateways/cyber_source` endpoint.
 
 ### The CyberSource gateway object
 
