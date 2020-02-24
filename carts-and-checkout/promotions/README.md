@@ -130,7 +130,7 @@ An _**X** for **Y**_ discount allows items of the same product to be sold on a _
 | `x` | `integer` | Number of items required to activate promotion. |
 | `y` | `integer` | Number of items that will be used to calculate the total charge. |
 | `targets` | `array` | Array of strings |
-| `targets[]` | `string` | A string that represents the productID or SKU. |
+| `targets[]` | `string` | A list of strings that represent the productIDs and/or SKUs. |
 {% endtab %}
 
 {% tab title="Sample Object" %}
@@ -160,7 +160,7 @@ Multiples will be honoured by applying a multiple of the discount, e.g. 3 for 2 
 
 #### X for Amount
 
-An _X for Amount_ discount allows items of the same product to be sold on a **X** for fixed amount basis. e.g. 2 for $10 or 3 for $20.
+An _X for Amount_ discount allows items of the same product to be sold on a **X** for fixed amount basis. e.g. 2 for $10 or 4 for $20.
 
 {% tabs %}
 {% tab title="Attributes" %}

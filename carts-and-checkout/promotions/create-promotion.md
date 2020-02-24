@@ -202,20 +202,20 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
      -d $'{
   "data": {
     "type": "promotion",
-    "name": "BF",
-    "description": "Black Friday",
-    "enabled": true,
-    "automatic": false,
     "promotion_type": "x_for_y",
-    "schema": {
+    "name": "X for Y Promotion Example",
+    "description": "Example description for X for Y promotion.",
+    "enabled": true,
+    "automatic": true,
+    "schema":{
       "x": 3,
       "y": 2,
-      "targets": ["prodID1","prodSKU2"],
+      "targets": ["SKU-1", "SKU-2"]
     },
-    "end": "2018-06-12",
-    "start": "2017-05-12"
+    "start":"2020-01-01",
+    "end":"2030-01-01"
   }
-}'
+}
 ```
 {% endtab %}
 
@@ -230,20 +230,19 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
     "name": "BF",
     "description": "Black Friday",
     "enabled": true,
-    "automatic": false,
+    "automatic": true,
     "promotion_type": "x_for_amount",
     "schema": {
       "x": 3,
       "currencies": [
-        {"currency": "GBP", "amount": 500},
         {"currency": "USD", "amount": 500}
       ],
-      "targets": ["prodID1","prodSKU2"],
+      "targets": ["SKU-1","SKU-2"]
     },
-    "end": "2018-06-12",
-    "start": "2017-05-12"
+    "start": "2020-01-01",
+    "end": "2030-01-01"
   }
-}'
+}
 ```
 {% endtab %}
 
