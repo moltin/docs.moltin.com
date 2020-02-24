@@ -24,8 +24,7 @@ The Bearer token to grant access to the API
 
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="cURL" %}
+{% code title="cURL" %}
 ```javascript
 {
     "data": [
@@ -80,8 +79,7 @@ The Bearer token to grant access to the API
     ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}

@@ -1,8 +1,58 @@
 # Delete Promotion Codes
 
+{% api-method method="delete" host="https://api.moltin.com" path="/v2/promotions/:id/codes/:code" %}
+{% api-method-summary %}
+Delete a promotion code
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint allows you to delete a single promotion code
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+ID of the promotion associated with the codes
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+The bearer token to grant access to the API
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+This response indicates your delete request has succeeded
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% tabs %}
+{% tab title="cURL" %}
+```javascript
+curl -X DELETE https://api.moltin.com/v2/promotions/:id/codes/:code \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json"
+```
+{% endtab %}
+{% endtabs %}
+
+
+
 {% api-method method="delete" host="https://api.moltin.com" path="/v2/promotions/:id/codes" %}
 {% api-method-summary %}
-Delete promotion codes
+Delete multiple promotion codes
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -70,6 +120,4 @@ curl -X DELETE https://api.moltin.com/v2/promotions/:id/codes \
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

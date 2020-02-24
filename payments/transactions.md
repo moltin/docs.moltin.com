@@ -244,7 +244,7 @@ Capture payment
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Use this endpoint to capture a previously authorized payment. You will use this endpoint when you invoke the Manual Payments API.
+Use this endpoint to capture a previously authorized payment. You will use this endpoint when you invoke the Manual Payments API. In this step you can also pass in a custom reference, such as the payment reference from your chosen gateway.  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -264,6 +264,12 @@ The UUID of the order
 The Bearer token to grant access to the API
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="custom\_reference" type="string" required=false %}
+A custom reference you can use to identify this transaction
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -273,7 +279,38 @@ The Bearer token to grant access to the API
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    "data": {
+        "id": "bcafac29-c8ca-4293-822c-d1213e085c7c",
+        "type": "transaction",
+        "reference": "manual",
+        "custom_reference": "my_custom_reference",
+        "gateway": "manual",
+        "amount": 60000,
+        "currency": "GBP",
+        "transaction_type": "capture",
+        "status": "complete",
+        "relationships": {
+            "order": {
+                "data": {
+                    "type": "order",
+                    "id": "239f104c-0b56-433c-a5f8-b73349196269"
+                }
+            }
+        },
+        "meta": {
+            "display_price": {
+                "amount": 60000,
+                "currency": "GBP",
+                "formatted": "£600.00"
+            },
+            "timestamps": {
+                "created_at": "2020-02-17T13:24:42Z",
+                "updated_at": "2020-02-17T13:24:45Z"
+            }
+        }
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
