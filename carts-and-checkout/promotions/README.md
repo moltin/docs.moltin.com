@@ -1,6 +1,6 @@
 # Promotions
 
-Promotions allow you to provide discounts to customers. A Promotion requires codes, which are then used by the end user to get a discount. For more details, see [How promotions work](https://www.moltin.com/developer/concepts/how-promotions-work).
+Promotions allow you to provide discounts to customers. A Promotion can be automatic which will be applied provided any criteria are satisfied, or require codes, which are then used by the end user to get a discount. For more details, see [How promotions work](https://www.moltin.com/developer/concepts/how-promotions-work).
 
 ### The Promotion Object
 
@@ -12,8 +12,15 @@ Promotions allow you to provide discounts to customers. A Promotion requires cod
 | `name` | `string` | The name of a promotion |
 | `description` | `string` | The description of a promotion |
 | `enabled` | `boolean` | Indicates whether a promotion is active |
-| `promotion_type` | `string` |  `fixed_discount` or `percent_discount` |
-| `schema` | [`object`](./#the-schema-object) | [Fixed Discount](./#fixed-discount) or  [Percent Discount](./#percent-discount) |
+| `automatic` | `boolean` | Allows promotion to be applied without the need for a code. |
+| `promotion_type` | `string` | `fixed-discount`,`percent-discount`, `x-for-y`, `x-for-amount` |
+| `schema` | [`object`](./#the-schema-object) | [Fixed Discount](./#fixed-discount) , [Percent Discount](./#percent-discount), X For Y or X For Amount |
+| `min_cart_value` | `array` | array of objects |
+| `min_cart_value[].currency` | `string` | A currency code |
+| `min_cart_value[].amount` | `integer` | The minimum cart value before promotion is applied |
+| `max_discount_value` | `array` | array of objects |
+| `max_discount_value[].currency` | `string` | A currency code |
+| `max_discount_value[].amount` | `integer` | The maximum value of the discount |
 | `start` | `string` | The start time of the promotion DateTime |
 | `end` | `string` | The end time of the promotion DateTime |
 {% endtab %}
@@ -58,7 +65,7 @@ Moltin offers different types of Promotion all defined by a Schema. These Schema
 
 Below is the list of currently available promotion type Schemas - these are to be used in the [create promotion request](create-promotion.md).
 
-### Fixed Discount
+#### Fixed Discount
 
 Fixed discount provides a method to give a fixed discount to a cart.
 
@@ -73,7 +80,7 @@ Fixed discount provides a method to give a fixed discount to a cart.
 
 {% tab title="Sample Object" %}
 ```javascript
-"schema": {
+{
   "currencies": [
     {
       "currency": "GBP",
@@ -85,7 +92,7 @@ Fixed discount provides a method to give a fixed discount to a cart.
 {% endtab %}
 {% endtabs %}
 
-### Percent Discount
+#### Percent Discount
 
 Percent discount provides a method to give a percentage discount to a cart based on the value of cart\_items and custom\_items.
 
@@ -100,7 +107,7 @@ Percent discount provides a method to give a percentage discount to a cart based
 
 {% tab title="Sample Object" %}
 ```javascript
- "schema": {
+{
     "currencies": [
       {
         "currency": "GBP",
@@ -108,6 +115,86 @@ Percent discount provides a method to give a percentage discount to a cart based
       }
     ]
   }
+```
+{% endtab %}
+{% endtabs %}
+
+#### X for Y
+
+An _**X** for **Y**_ discount allows items of the same product to be sold on a _2 for 1_ or _3 for 2_ \(or any other combination\) basis. 
+
+{% tabs %}
+{% tab title="Attributes" %}
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `x` | `integer` | Number of items required to activate promotion. |
+| `y` | `integer` | Number of items that will be used to calculate the total charge. |
+| `targets` | `array` | Array of strings |
+| `targets[]` | `string` | A string that represents the productID or SKU. |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+```javascript
+{
+  "data": {
+    "type": "promotion",
+    "promotion_type": "x_for_y",
+    "name": "X for Y Promotion Example",
+    "description": "Example description for X for Y promotion.",
+    "enabled": true,
+    "automatic": true,
+    "schema":{
+      "x": 3,
+      "y": 2,
+      "targets": ["SKU-1", "SKU-2"]
+    },
+    "start":"2020-01-01",
+    "end":"2030-01-01"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Multiples will be honoured by applying a multiple of the discount, e.g. 3 for 2 with 6 of the targeted items in a cart would yield a discount value equal to the value of 2 items.
+
+#### X for Amount
+
+An _X for Amount_ discount allows items of the same product to be sold on a **X** for fixed amount basis. e.g. 2 for $10 or 3 for $20.
+
+{% tabs %}
+{% tab title="Attributes" %}
+
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `x` | `integer` | Number of items required to activate promotion. |
+| `currencies` | `array` | Array of objects |
+| `currencies[].currency` | `string` | A currency code |
+| `currencies[].amount` | `integer` | The amount to vend items for. |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+```javascript
+{
+  "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": true,
+    "promotion_type": "x_for_amount",
+    "schema": {
+      "x": 3,
+      "currencies": [
+        {"currency": "USD", "amount": 500}
+      ],
+      "targets": ["SKU-1","SKU-2"]
+    },
+    "start": "2020-01-01",
+    "end": "2030-01-01"
+  }
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -121,12 +208,16 @@ A promotion code is represented by the following, very simple, object.
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `code` | `string` | Any string |
+| `uses` | `integer` | Limit for number of times this code can be used |
+| `user` | `string` | A string used as an identifier relating to a user |
 {% endtab %}
 
 {% tab title="Sample Object" %}
 ```javascript
 {
-  "code":"ZXY_CBA"
+  "code":"ZXY_CBA",
+  "uses": 5,
+  "user": "qwertyuiop"
 }
 ```
 {% endtab %}
