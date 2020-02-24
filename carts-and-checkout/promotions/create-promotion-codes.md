@@ -34,12 +34,20 @@ The Bearer token to grant access to the API
 `promotion_codes`
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="codes\[\]" type="array" required=true %}
+{% api-method-parameter name="codes" type="array" required=true %}
 An array of objects
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="codes\[\].code" type="string" required=true %}
 A string to use as a code for the promotion
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="codes\[\].uses" type="integer" required=false %}
+Number of times code can be used
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="codes\[\].user" type="string" required=false %}
+A string that can used to identify a user
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

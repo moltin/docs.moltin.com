@@ -28,11 +28,11 @@ The unique promotion identifier
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=false %}
+{% api-method-parameter name="type" type="string" required=true %}
 "promotion"
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="id" type="number" required=false %}
+{% api-method-parameter name="id" type="number" required=true %}
 The unique promotion identifier
 {% endapi-method-parameter %}
 
@@ -56,11 +56,11 @@ One of: fixed\_discount or percent\_discount
 One of: fixed schema, percent schema
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="start" type="string" required=true %}
+{% api-method-parameter name="start" type="string" required=false %}
 The start time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created. 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="end" type="string" required=true %}
+{% api-method-parameter name="end" type="string" required=false %}
 The end time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

@@ -22,36 +22,64 @@ The Bearer token to grant access to the API.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=true %}
+`promotion`
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="name" type="string" required=true %}
-A general name for the promotion.
+A general name for the promotion
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=true %}
-A general description for the promotion.
+A general description for the promotion
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="type" type="string" required=true %}
-The type should be promotion.
+{% api-method-parameter name="enabled" type="boolean" required=true %}
+`true` , `false`
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="automatic" type="boolean" required=false %}
+`true` or `false` if promotion can be added automatically or require a code. `default: false`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="promotion\_type" type="string" required=true %}
-The type of schema being used for the promotion.  \(fixed\_discount or percent\_discount\)
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="enabled" type="string" required=true %}
-True or False
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="start" type="string" required=true %}
-The start time of the promotion datetime \(yyyy-mm-dd, yyyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="end" type="string" required=true %}
-The end time of the promotion datetime \(yyy-mm-dd, yyy-mm-ddThh:mm:ss+hh:mm\). The simpler format will start the promotion at 00:00 UTC. If time's not provided, it will default to the time at which the request was created. 
+The type of schema being used for the promotion. `fixed_discount` , `percent_discount`, `x_for_y`, `x_for_amount` , `bundle_fixed_discount`,
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="schema" type="object" required=true %}
-See example payloads below.
+Definition of the promotion based on `promotion_type`. See examples below
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="min\_cart\_value" type="array" required=false %}
+An array of currency-value objects that define a minimum value of a cart required before discount is applied
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="min\_cart\_value\[\].currency" type="string" required=false %}
+The currency of the minimum cart value threshold
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="min\_cart\_value\[\].amount" type="string" required=false %}
+The minimum cart value threshold before discount can be applied.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="max\_discount\_value" type="array" required=false %}
+An array of currency-value objects that define the maximum value of the discount
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="max\_discount\_value\[\].currency" type="string" required=false %}
+The currency of the maximum discount value
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="max\_discount\_value\[\].amount" type="integer" required=false %}
+The maximum value of the discount..
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="start" type="string" required=true %}
+The start time of the promotion datetime \(`yyyy-mm-dd`, `yyyy-mm-ddThh:mm:ss+hh:mm`\). The simpler format will start the promotion at 00:00 UTC of the datetime specified. If time is not specified, it will default to the time at which the request was created. 
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="end" type="string" required=true %}
+The end time of the promotion datetime \(`yyyy-mm-dd`, `yyyy-mm-ddThh:mm:ss+hh:mm`\). The simpler format will start the promotion at 00:00 UTC. If time's not provided, it will default to the time at which the request was created.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -95,47 +123,58 @@ See example payloads below.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example Payloads
+### Example Request Payloads
 
 {% tabs %}
-{% tab title="Fixed Discount Request" %}
-```javascript
-//Create a Fixed  Promotion
-
+{% tab title="Fixed Discount" %}
+```bash
 curl -X "POST" "https://api.moltin.com/v2/promotions" \
      -H 'Content-Type: application/json' \
      -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
      -d $'{
   "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": false,
+    "promotion_type": "fixed_discount",
     "schema": {
       "currencies": [
+        {
+          "currency": "GBP",
+          "amount": 10
+        },
         {
           "currency": "USD",
           "amount": 10
         }
       ]
     },
+    "min_cart_value": [
+      {"GBP": 20000},
+      {"USD": 19000}
+    ],
     "end": "2018-06-12",
-    "enabled": true,
-    "start": "2017-05-12",
-    "promotion_type": "fixed_discount",
-    "type": "promotion",
-    "description": "Black Friday",
-    "name": "BF"
+    "start": "2017-05-12"
   }
 }'
 ```
 {% endtab %}
 
-{% tab title="Percent Discount Request" %}
+{% tab title="Percent Discount" %}
 ```bash
-//Create a Percent  Request
-
 curl -X "POST" "https://api.moltin.com/v2/promotions" \
      -H 'Content-Type: application/json' \
      -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
      -d $'{
   "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": true,
+    "promotion_type": "percent_discount",
     "schema": {
       "currencies": [
         {
@@ -144,13 +183,105 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
         }
       ]
     },
-    "end": "2018-06-12T15:04:05+00:00",
-    "enabled": true,
+    "min_cart_value": [
+      {"GBP": 20000},
+      {"USD": 19000}
+    ],
     "start": "2017-05-12T15:04:05+00:00",
-    "promotion_type": "percent_discount",
+    "end": "2018-06-12T15:04:05+00:00"
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="X For Y Discount" %}
+```bash
+curl -X "POST" "https://api.moltin.com/v2/promotions" \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
+     -d $'{
+  "data": {
     "type": "promotion",
+    "name": "BF",
     "description": "Black Friday",
-    "name": "BF"
+    "enabled": true,
+    "automatic": false,
+    "promotion_type": "x_for_y",
+    "schema": {
+      "x": 3,
+      "y": 2,
+      "targets": ["prodID1","prodSKU2"],
+    },
+    "end": "2018-06-12",
+    "start": "2017-05-12"
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="X For Amount Discount" %}
+```bash
+curl -X "POST" "https://api.moltin.com/v2/promotions" \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
+     -d $'{
+  "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": false,
+    "promotion_type": "x_for_amount",
+    "schema": {
+      "x": 3,
+      "currencies": [
+        {"currency": "GBP", "amount": 500},
+        {"currency": "USD", "amount": 500}
+      ],
+      "targets": ["prodID1","prodSKU2"],
+    },
+    "end": "2018-06-12",
+    "start": "2017-05-12"
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="Fixed Bundle Discount" %}
+```bash
+curl -X "POST" "https://api.moltin.com/v2/promotions" \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
+     -d $'{
+  "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": false,
+    "promotion_type": "bundle_fixed_discount",
+    "schema": {
+      "requirements":[
+        {"targets":["prod1","prodX"],"quantity": 2},
+        {"targets":["prod3","prodW"],"quantity": 1},
+      ],
+      "currencies": [
+        {
+          "currency": "GBP",
+          "amount": 10
+        },
+        {
+          "currency": "USD",
+          "amount": 10
+        }
+      ]
+    },
+    "min_cart_value": [
+      {"GBP": 20000},
+      {"USD": 19000}
+    ],
+    "end": "2021-06-12",
+    "start": "2017-05-12"
   }
 }'
 ```

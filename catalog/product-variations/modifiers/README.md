@@ -36,11 +36,11 @@ There's several types of modifiers, and each has a different effect on a propert
 
 ### Seek/set modifier type
 
-Using the `{SKU}` and `{SLUG}` builder modifiers, you are able to systematically build child products and replace the preconfigured objects with your product variation options. For example, you can set `{COLOR}` and `{SIZE}` modifiers and define these in the master product details.
+Used with `sku` and `slug` builder modifiers, must contain two property-value pairs: `seek`: "xxx" and `set`: "xxxx". Use a placeholder { } so that a variation can replace it with a value you wish to set.  
 
-Let's say we set up a variation modifier of 'RED' for `{COLOR}` and 'MEDIUM' for `{SIZE}`, a SKU of `[BASIC-SHIRT-{SIZE}-{COLOR}]` would become `[BASIC-SHIRT-MEDIUM-RED]`.
+> For example, use the property-value pairs to specify a color modifier: `seek`: {COLOR}, `set`: {GREEN}.
 
-* For more details how to achieve the same results via the API, see article: [Product SKU/Slug Builder Modifiers](https://www.moltin.com/developer/concepts/product-modifiers).
+* For more details, see section: [Product SKU/Slug Builder Modifiers](https://www.moltin.com/developer/concepts/product-modifiers).
 
 ### Price modifiers objects
 
