@@ -199,6 +199,52 @@ An _X for Amount_ discount allows items of the same product to be sold on a **X*
 {% endtab %}
 {% endtabs %}
 
+#### Bundle Discount
+
+A bundle discount can be used to provide a fixed price for a selection of products when bought together. E.g. buy product x, y & z for $15 or buy 2 of product x and 3 of product y or z for $25
+
+{% tabs %}
+{% tab title="Attributes" %}
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `requirements` | `array` | Array of objects |
+| `requirements[].targets` | `array` | Array of strings |
+| `requirements[].targets[]` | `string` | A list of strings that represent the productIDs and/or SKUs. |
+| `requirements[].quantity` | `integer` | The require number of corresponding target to satisfy the promotion. |
+| `currencies` | `array` | Array of objects. |
+| `currencies[].currency` | `string` | A currency code. |
+| `currencies[].amount` | `integer` | The amount to vend items for. |
+{% endtab %}
+
+{% tab title="Sample Object" %}
+```javascript
+{
+  "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": true,
+    "promotion_type": "bundle_fixed_discount",
+    "schema": {
+      "requirements": [
+        {"targets":["prodID-1", "SKU-1", "prodID-2", "SKU-3"], "quantity": 1},
+        {"targets":["prodID-4", "SKU-5"], "quantity": 2},
+        {"targets":["prodID-12", "SKU-11"], "quantity": 1}
+      ],
+      "currencies": [
+        {"currency": "GBP", "amount": 2500},
+        {"currency": "USD", "amount": 2400}
+      ]
+    },
+    "start": "2020-01-01",
+    "end": "2030-01-01"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### The Promotion Code Object
 
 A promotion code is represented by the following, very simple, object.
