@@ -2,6 +2,8 @@
 
 Moltin provides a multilingual service for the [Product API](../catalog/products/). Using the [Settings API](settings/update-settings.md#update-project-settings) you can add additional supported languages, and when you [update a product](../catalog/products/update-a-product.md), you can specify the `X-Moltin-Language` header.
 
+To be able to create translations, you'll need to first add the desired language\(s\) to your store settings. You can read more about how you can achieve this [here](https://www.moltin.com/blog/multilingual-products/).
+
 {% hint style="info" %}
 You can create translations for both product `name` and `description` fields.
 {% endhint %}
