@@ -13,7 +13,7 @@ Promotions allow you to provide discounts to customers. A Promotion can be autom
 | `description` | `string` | The description of a promotion |
 | `enabled` | `boolean` | Indicates whether a promotion is active |
 | `automatic` | `boolean` | Allows promotion to be applied without the need for a code. |
-| `promotion_type` | `string` | `fixed-discount`,`percent-discount`, `x-for-y`, `x-for-amount` |
+| `promotion_type` | `string` | `fixed_discount`,`percent_discount`, `x_for_y`, `x_for_amount` |
 | `schema` | [`object`](./#the-schema-object) | [Fixed Discount](./#fixed-discount) , [Percent Discount](./#percent-discount), [X For Y](./#x-for-y), [X For Amount](./#x-for-amount), or [Bundle Discount](./#bundle-discount) |
 | `min_cart_value` | `array` | array of objects |
 | `min_cart_value[].currency` | `string` | A currency code |
