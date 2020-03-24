@@ -108,8 +108,6 @@ const Moltin = MoltinGateway({
   client_secret: 'X'
 })
 
-const id = 'XXXX'
-
 const brand = {
   name: 'Cool Clothing',
   slug: 'cool-clothing',
