@@ -298,11 +298,11 @@ You will use `braintree` in this case
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="payment" type="string" required=true %}
-The Braintree Customer ID you want to bill
+The payment method token to charge
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="options.payment\_method\_token" type="string" required=true %}
-The payment method token to charge
+You will use `true` in this case
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="options.custom\_fields" type="string" required=false %}
@@ -361,9 +361,9 @@ curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
   "data": {
     "gateway": "braintree",
     "method": "purchase",
-    "payment": BRAINTREE_CUSTOMER_ID,
+    "payment": BRAINTREE_PAYMENT_METHOD_TOKEN,
     "options": {
-        "payment_method_token": BRAINTREE_PAYMENT_METHOD_TOKEN
+        "payment_method_token": true
     }
   }
 }'
@@ -474,74 +474,10 @@ Will return the updated transaction if the payment is successful.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/payments" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Will return the updated transaction if the payment is successful.
-{% endapi-method-response-example-description %}
-
-```bash
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host="https://api.moltin.com" path="/v2/orders/:orderId/payments" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Will return the updated transaction if the payment is successful.
-{% endapi-method-response-example-description %}
-
-```bash
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
 {% tabs %}
-{% tab title="cURL" %}
+{% tab title="cUrl" %}
 ```bash
-curl -X POST https://api.moltin.com/v2/orders/{ORDER_ID}/payments \
+curl -X POST https://api.moltin.com/v2/orders/:order_id/payments \
      -H "Authorization: Bearer XXXX" \
      -d $'{
   "data": {
@@ -553,21 +489,6 @@ curl -X POST https://api.moltin.com/v2/orders/{ORDER_ID}/payments \
     }
   }
 }'
-```
-{% endtab %}
-
-{% tab title="JavaScript SDK" %}
-```javascript
-Moltin.Orders.Payment('orderId', {
-  gateway: "braintree",
-  method: "purchase",
-  payment: BRAINTREE_PAYMENT_NONCE,
-  options: {
-      payment_method_nonce: true
-  }
-}).then(() => {
-  // Do something
-});
 ```
 {% endtab %}
 {% endtabs %}
