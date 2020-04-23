@@ -281,5 +281,70 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
 }'
 ```
 {% endtab %}
+
+{% tab title="Item Fixed Discount" %}
+```bash
+curl -X "POST" "https://api.moltin.com/v2/promotions" \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
+     -d $'{
+  "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": false,
+    "promotion_type": "item_fixed_discount",
+    "schema": {
+      "targets":["prod1","prodX"],
+      "currencies": [
+        {
+          "currency": "GBP",
+          "amount": 10
+        },
+        {
+          "currency": "USD",
+          "amount": 10
+        }
+      ]
+    },
+    "min_cart_value": [
+      {"GBP": 20000},
+      {"USD": 19000}
+    ],
+    "end": "2018-06-12",
+    "start": "2017-05-12"
+  }
+}'
+```
+{% endtab %}
+
+{% tab title="Item Percent Discount" %}
+```bash
+curl -X "POST" "https://api.moltin.com/v2/promotions" \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: 1af41d46cb18d11b3abffb66c3cb20944d3452e7' \
+     -d $'{
+  "data": {
+    "type": "promotion",
+    "name": "BF",
+    "description": "Black Friday",
+    "enabled": true,
+    "automatic": true,
+    "promotion_type": "item_percent_discount",
+    "schema": {
+      "targets":["prod1","prodX"],
+      "percent":25.0
+    },
+    "min_cart_value": [
+      {"GBP": 20000},
+      {"USD": 19000}
+    ],
+    "start": "2017-05-12T15:04:05+00:00",
+    "end": "2028-06-12T15:04:05+00:00"
+  }
+}'
+```
+{% endtab %}
 {% endtabs %}
 
