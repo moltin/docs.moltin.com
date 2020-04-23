@@ -148,8 +148,14 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
       ]
     },
     "min_cart_value": [
-      {"GBP": 20000},
-      {"USD": 19000}
+      {
+        "currency": "GBP",
+        "amount": 20000
+      },
+      {
+        "currency":"USD",
+        "amount": 19000
+      }
     ],
     "end": "2018-06-12",
     "start": "2017-05-12"
@@ -180,8 +186,14 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
       ]
     },
     "min_cart_value": [
-      {"GBP": 20000},
-      {"USD": 19000}
+      {
+        "currency": "GBP",
+        "amount": 20000
+      },
+      {
+        "currency":"USD",
+        "amount": 19000
+      }
     ],
     "start": "2017-05-12T15:04:05+00:00",
     "end": "2018-06-12T15:04:05+00:00"
@@ -272,8 +284,14 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
       ]
     },
     "min_cart_value": [
-      {"GBP": 20000},
-      {"USD": 19000}
+      {
+        "currency": "GBP",
+        "amount": 20000
+      },
+      {
+        "currency":"USD",
+        "amount": 19000
+      }
     ],
     "end": "2021-06-12",
     "start": "2017-05-12"
@@ -309,8 +327,14 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
       ]
     },
     "min_cart_value": [
-      {"GBP": 20000},
-      {"USD": 19000}
+      {
+        "currency": "GBP",
+        "amount": 20000
+      },
+      {
+        "currency":"USD",
+        "amount": 19000
+      }
     ],
     "end": "2018-06-12",
     "start": "2017-05-12"
@@ -337,8 +361,14 @@ curl -X "POST" "https://api.moltin.com/v2/promotions" \
       "percent":25.0
     },
     "min_cart_value": [
-      {"GBP": 20000},
-      {"USD": 19000}
+      {
+        "currency": "GBP",
+        "amount": 20000
+      },
+      {
+        "currency":"USD",
+        "amount": 19000
+      }
     ],
     "start": "2017-05-12T15:04:05+00:00",
     "end": "2028-06-12T15:04:05+00:00"
