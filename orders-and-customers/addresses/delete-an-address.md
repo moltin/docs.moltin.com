@@ -71,7 +71,7 @@ const customerToken = 'XXXX'
 
 Moltin.Addresses.Delete({
   customer: customerId,
-  addresss: addressId,
+  address: addressId,
   token: customerToken
 }).then(response => {
   // Do something
@@ -85,7 +85,8 @@ Moltin.Addresses.Delete({
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X DELETE https://api.moltin.com/v2/customers/:customer_id/addresses/:address_id \
+curl -X DELETE https://api.moltin.com/v2/custom
+ers/:customer_id/addresses/:address_id \
      -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
@@ -104,7 +105,7 @@ const addressId = 'XXXX'
 
 Moltin.Addresses.Delete({
   customer: customerId,
-  addresss: addressId
+  address: addressId
 }).then(response => {
   // Do something
 })
